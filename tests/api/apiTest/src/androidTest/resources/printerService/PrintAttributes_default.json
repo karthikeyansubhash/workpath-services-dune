@@ -1,0 +1,16 @@
+{
+    "mColorMode": "AUTO",
+    "mPlex": "NONE",
+    "mCopies": 1,
+    "mAutoFit": "DEFAULT",
+    "mStapleMode": "NONE",
+    "mPaperSource": "DEFAULT",
+    "mPaperSize": "LETTER",
+    "mPaperType": "PLAIN",
+    "mDocumentFormat": "AUTO",
+    "mOrientation": "PORTRAIT",
+    "mPrintQuality": "NORMAL",
+    "mOutputBin": "FACE_DOWN",
+    "mCollateMode": "DEFAULT",
+    "mSource": "AUTO"
+}

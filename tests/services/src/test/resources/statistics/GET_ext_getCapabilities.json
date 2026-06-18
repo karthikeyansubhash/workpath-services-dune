@@ -1,0 +1,40 @@
+{
+    "$opMeta": {
+        "contentFilter": [
+            "*"
+        ]
+    },
+    "apiVersion": "1.0",
+    "description": "The job statistics service.",
+    "implInfo": [
+        {
+            "typeGUN": "com.hp.ext.service.extensibility.version.1.impl.futuresmart.type.apiInformation",
+            "value": {
+                "apiMajorVersion": 1,
+                "apiMinorVersion": 0,
+                "releaseLevel": "Beta",
+                "releaseSequence": 7,
+                "toolVersions": [
+                    "dsl 2.19.0.202505142133",
+                    "umsgen 1.0.0"
+                ]
+            }
+        }
+    ],
+    "implVersion": "v=6.37.0.416-202601262237;r=6.37.0.416;d=202601262237;s=6.37;p=6D6664-0035",
+    "links": [
+        {
+            "href": "/ext/jobStatistics/v1/capabilities",
+            "rel": "self"
+        },
+        {
+            "href": "/ext/jobStatistics/v1/capabilities",
+            "rel": "capabilities"
+        },
+        {
+            "href": "/ext/jobStatistics/v1/jobStatisticsAgents",
+            "rel": "jobStatisticsAgents"
+        }
+    ],
+    "serviceGun": "com.hp.ext.service.jobStatistics.version.1"
+}

@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.library'
+}
+
+android {
+    namespace 'com.hp.oxpdlib'
+
+    compileSdk rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled rootProject.ext.libraryMinify
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), rootProject.ext.libraryProguardFile
+        }
+
+        releaseForSim {
+            initWith release
+        }
+
+        debugForSim {
+            initWith debug
+        }
+    }
+
+    sourceSets {
+        main {
+            java.srcDirs = ['java']
+            res.srcDirs = ['res']
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+    }
+}
+
+dependencies {
+    implementation project(':DeviceServices-Interfaces')
+    compileOnly project(":Util-Jabberwocky")
+    implementation rootProject.ext.nanoHttpd
+}
+
+// Task to export contents as jar TODO
+//task exportJar(type: Jar, group: "link_tasks") {
+//    from (zipTree(buildDir.absolutePath.concat('/intermediates/bundles/debug/classes.jar')),
+//          zipTree(projectDir.absolutePath.concat('/nanohttpd-2.3.1.jar')),
+//          zipTree(buildDir.absolutePath.concat('/../Util-Jabberwocky/intermediates/bundles/debug/classes.jar')))
+//    archiveFileName = 'oxpdlib.jar'
+//    exclude('com/hp/oxpdlib/BuildConfig.*')
+//}
+
+configurations {
+    oneJar
+    oneJar.extendsFrom(implementation)
+}
+
+//artifacts {
+//    oneJar exportJar
+//}
+
+//exportJar.dependsOn ':Util-Jabberwocky:compileDebugSources', 'compileDebugSources'

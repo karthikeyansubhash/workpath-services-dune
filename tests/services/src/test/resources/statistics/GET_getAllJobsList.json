@@ -1,0 +1,29 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "availableJobEntries": 250,
+  "highestSequenceNumberCompleted": 9,
+  "jobSubmissionLocked": false,
+  "lastSequenceNumberNotified": 1,
+  "lastSequenceNumberProcessed": 8,
+  "links": [
+    {
+      "href": "/ext/jobStatistics/v1/jobStatisticsAgents/1fd8aff1-88c5-405e-a56b-66786dd57625/jobs",
+      "rel": "self"
+    },
+    {
+      "hrefTemplate": "/ext/jobStatistics/v1/jobStatisticsAgents/1fd8aff1-88c5-405e-a56b-66786dd57625/jobs/{sequenceNumber}",
+      "rel": "job"
+    }
+  ],
+  "memberIds": [
+    9
+  ],
+  "offset": 0,
+  "selectedCount": 1,
+  "totalCount": 1,
+  "totalJobEntries": 250
+}

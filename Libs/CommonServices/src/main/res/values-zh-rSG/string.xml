@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">获取 HP Workpath SDK 权限失败。请调用 JetAdvantageLink.requestPermissions() 以获取权限。</string>
+<string name="sps_permission">HP Workpath SDK 权限</string>
+<string name="sps_self_permission">HP Workpath SDK 权限</string>
+<string name="grant">允许</string>
+<string name="deny">拒绝</string>
+<string name="permission_text" formatted="false">是否要授予 %s (%s) 应用程序对 HP Workpath SDK 的完全访问权限？</string>
+<string name="more_permission_text_small">更多详细信息</string>
+<string name="more_permission_text_big">利用 HP Workpath SDK，该应用程序将能够使用任何已连接的打印机所拥有的扫描、打印、复印和传真功能。如要撤销所有已接受的权限，请转至“应用管理”，然后清除 HP Workpath SDK 应用程序的所有数据。</string>
+<string name="sps_sd_card">HP Workpath SDK 需要使用设备的 SD 卡来保存扫描的文件。请在以下系统对话框中授予权限。</string>
+<string name="permission_not_granted">已禁止该应用程序写入您的存储。因此，它可能无法正常工作。请考虑授予它此项权限。</string>
+</resources>

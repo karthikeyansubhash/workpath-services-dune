@@ -1,0 +1,1831 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "base": {
+    "definitions": [
+      {
+        "isAvailable": true,
+        "optionName": "scanProgressMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spmNone",
+                "spmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "scanCaptureMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "scmBook",
+                "scmIdCard",
+                "scmJobBuild",
+                "scmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "imagePreviewMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ipmNone",
+                "ipmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "autoColorDetect",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "acdmDetectOnly",
+                "acdmTreatNonColorAsGrayscale",
+                "acdmTreatNonColorAsMonochrome"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "colorMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cmAutoColorAndBlack",
+                "cmAutoColorAndGray",
+                "cmAutoDetect",
+                "cmBlackAndWhite",
+                "cmColor",
+                "cmGrayscale",
+                "cmGrayscaleAutoDetect",
+                "cmMonochrome",
+                "cmTrueBlack"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "outputFileFormat",
+                  "optionValue": "ffJpeg"
+                }
+              },
+              "message": "JPEG file format does not support Monochrome color mode.",
+              "optionValues": [
+                "cmColor",
+                "cmGrayscale"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaSource",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miAdf",
+                "miAlternate",
+                "miAlternateRoll",
+                "miAuto",
+                "miBottom",
+                "miBypassTray",
+                "miCenter",
+                "miDisc",
+                "miDuplexer",
+                "miEnvelopeFeed",
+                "miEnvelopeFeedJobSettings",
+                "miExternal",
+                "miExternalTray1",
+                "miExternalTray10",
+                "miExternalTray2",
+                "miExternalTray3",
+                "miExternalTray4",
+                "miExternalTray5",
+                "miExternalTray6",
+                "miExternalTray7",
+                "miExternalTray8",
+                "miExternalTray9",
+                "miFlatbed",
+                "miHagaki",
+                "miLargeCapacity",
+                "miLeft",
+                "miMain",
+                "miMainRoll",
+                "miManualFeedTray",
+                "miMdf",
+                "miMiddle",
+                "miMultipurposeTray",
+                "miOther",
+                "miPhotoTray",
+                "miRearManualFeed",
+                "miRight",
+                "miRoll",
+                "miRoll1",
+                "miRoll10",
+                "miRoll11",
+                "miRoll2",
+                "miRoll3",
+                "miRoll4",
+                "miRoll5",
+                "miRoll6",
+                "miRoll7",
+                "miRoll8",
+                "miRoll9",
+                "miSide",
+                "miTextile",
+                "miTop",
+                "miTray1",
+                "miTray10",
+                "miTray11",
+                "miTray12",
+                "miTray13",
+                "miTray14",
+                "miTray15",
+                "miTray16",
+                "miTray1JobSettings",
+                "miTray2",
+                "miTray3",
+                "miTray4",
+                "miTray5",
+                "miTray6",
+                "miTray7",
+                "miTray8",
+                "miTray9"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msANSI_B_11x17in",
+                "msANSI_C_17x22in",
+                "msANSI_D_22x34in",
+                "msANSI_E_34x44in",
+                "msANSI_F_28x40in",
+                "msAny",
+                "msAnyCustom",
+                "msArchitectural_A_9x12in",
+                "msArchitectural_B_12x18in",
+                "msArchitectural_C_18x24in",
+                "msArchitectural_D_24x36in",
+                "msArchitectural_E1_30x42in",
+                "msArchitectural_E2_26x38in",
+                "msArchitectural_E3_27x39in",
+                "msArchitectural_E_36x48in",
+                "msCustom",
+                "msDIN_2A0_1189x1682mm",
+                "msDIN_4A0_1682x2378mm",
+                "msDL_99x210mm",
+                "msEnvelope_A2_4point375x5point75in",
+                "msEnvelope_Catalog1_6x9in",
+                "msEnvelope_Comm10_4point125x9point5in",
+                "msEnvelope_Comm6point75_3point625x6point5in",
+                "msEnvelope_DL_110x220mm",
+                "msEnvelope_Monarch_3point875x7point5in",
+                "msEnvelope_Windsor_3point875x8point875in",
+                "msExecutive_7point25x10point5in",
+                "msExecutive_Rotated_7point25x10point5in",
+                "msFoolscap_8point5x13in",
+                "msGeneral_10x11in",
+                "msGeneral_10x13in",
+                "msGeneral_10x14in",
+                "msGeneral_10x15in",
+                "msGeneral_11x12in",
+                "msGeneral_11x14in",
+                "msGeneral_11x15in",
+                "msGeneral_11x19in",
+                "msGeneral_12x12in",
+                "msGeneral_12x14in",
+                "msGeneral_12x19in",
+                "msGeneral_3point5x5in",
+                "msGeneral_3x5in",
+                "msGeneral_4x12in",
+                "msGeneral_4x6in",
+                "msGeneral_4x8in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msGeneral_6x8in",
+                "msGeneral_7x9in",
+                "msGeneral_9x11in",
+                "msGovt_Legal_8x13in",
+                "msGovt_Letter_8x10in",
+                "msISO_A0_841x1189mm",
+                "msISO_A10_26x37mm",
+                "msISO_A1_594x841mm",
+                "msISO_A2_420x594mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A4_Rotated_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msISO_A7_74x105mm",
+                "msISO_A8_52x74mm",
+                "msISO_A9_37x52mm",
+                "msISO_B0_1000x1414mm",
+                "msISO_B10_31x44mm",
+                "msISO_B1_707x1000mm",
+                "msISO_B2_500x707mm",
+                "msISO_B3_353x500mm",
+                "msISO_B4_250x353mm",
+                "msISO_B5_176x250mm",
+                "msISO_B6_125x176mm",
+                "msISO_B7_88x125mm",
+                "msISO_B8_62x88mm",
+                "msISO_B9_44x62mm",
+                "msISO_C0_917x1297mm",
+                "msISO_C10_28x40mm",
+                "msISO_C1_648x917mm",
+                "msISO_C2_458x648mm",
+                "msISO_C3_324x458mm",
+                "msISO_C4_229x324mm",
+                "msISO_C5_162x229mm",
+                "msISO_C6_114x162mm",
+                "msISO_C7_81x114mm",
+                "msISO_C8_57x81mm",
+                "msISO_C9_40x57mm",
+                "msISO_INDEXCARD_100x150mm",
+                "msInvoice_5point5x8point5in",
+                "msJBusinessCard_55x91mm",
+                "msJDoublePostcard_148x200mm",
+                "msJDoublePostcard_Rotated_148x200mm",
+                "msJIS_B0_1030x1456mm",
+                "msJIS_B10_32x45mm",
+                "msJIS_B1_728x1030mm",
+                "msJIS_B2_515x728mm",
+                "msJIS_B3_364x515mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msJIS_B7_91x128mm",
+                "msJIS_B8_64x91mm",
+                "msJIS_B9_45x64mm",
+                "msJIS_Chou3_120x235mm",
+                "msJIS_Chou4_90x205mm",
+                "msJIS_Exec_216x330mm",
+                "msJIS_Kaku2_240x332mm",
+                "msJPhoto2L_127x177point8mm",
+                "msJPostcard_100x148mm",
+                "msK16_184x260mm",
+                "msK16_195x270mm",
+                "msK16_197x273mm",
+                "msK8_260x368mm",
+                "msK8_270x390mm",
+                "msK8_273x394mm",
+                "msLegal_8point5x14in",
+                "msLongScan_8point5x34in",
+                "msMatchOriginal",
+                "msMixedA4A3",
+                "msMixedLetterLedger",
+                "msMixedLetterLegal",
+                "msMutsugiri_203x254mm",
+                "msOE_PHoto18x22in",
+                "msOE_Photo_10x12in",
+                "msOE_Photo_12x16in",
+                "msOE_Photo_14x17in",
+                "msOE_Photo_14x18in",
+                "msOE_Photo_16x20in",
+                "msOE_Photo_20x24in",
+                "msOE_Photo_22x28in",
+                "msOE_Photo_24x30in",
+                "msOE_Photo_3point5x5in",
+                "msOE_Photo_4x12in",
+                "msOE_Photo_4x5in",
+                "msOE_Photo_5x5in",
+                "msOM_Photo_100x150mm",
+                "msOM_Photo_130x180mm",
+                "msOM_Photo_300x400mm",
+                "msOM_Photo_300x450",
+                "msOM_Photo_350x460mm",
+                "msOM_Photo_400x600mm",
+                "msOM_Photo_500x760mm",
+                "msOM_Photo_600x900mm",
+                "msOficio_216x340mm",
+                "msOther",
+                "msRA0_860x1220mm",
+                "msRA1_610x860mm",
+                "msRA2_430x610mm",
+                "msRA3_305x430mm",
+                "msRA4_215x305mm",
+                "msSRA0_900x1280mm",
+                "msSRA1_640x900mm",
+                "msSRA2_450x640mm",
+                "msSRA3_320x450mm",
+                "msSRA4_225x320mm",
+                "msSuper_B_13x19in",
+                "msUnknown",
+                "msUnknownEnvelope"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "xOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "yOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "plexMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "pmAutoDetect",
+                "pmDuplex",
+                "pmSimplex"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "resolution",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dpi100",
+                "dpi1200",
+                "dpi150",
+                "dpi200",
+                "dpi240",
+                "dpi300",
+                "dpi400",
+                "dpi500",
+                "dpi600",
+                "dpi75"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dctAutoDetect",
+                "dctGlossy",
+                "dctImage",
+                "dctLineDrawing",
+                "dctMixed",
+                "dctPhoto",
+                "dctText"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentOrientation",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "coAutoDetect",
+                "coLandscape",
+                "coPortrait",
+                "coReverseLandscape",
+                "coReversePortrait",
+                "coUndefined"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaBindingFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bfFlipLeft",
+                "bfFlipUp"
+              ]
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                "value": {
+                  "optionName": "originalPlexMode",
+                  "optionValue": "pmDuplex"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "blackBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "mediaType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "mtAdvancedResistanceCoated",
+                "mtAdvancedResistancePlain",
+                "mtAny",
+                "mtAuto",
+                "mtBacklitMaterial",
+                "mtBlueprint",
+                "mtBlueprintDark",
+                "mtBond",
+                "mtBrochureGlossy",
+                "mtBrochureMatte",
+                "mtCardstockGloss_176to220g",
+                "mtCardstock_176to220g",
+                "mtClearFilm",
+                "mtColor",
+                "mtCoverMatte",
+                "mtCustom",
+                "mtCustomAdhesiveBacklit",
+                "mtCustomAdhesivePolypropyleneLabels",
+                "mtCustomAdhesivePolypropyleneLabelsGlossy",
+                "mtCustomAdhesivePolypropyleneLabelsMatte",
+                "mtCustomBlueprintPaperRedStampsColored",
+                "mtCustomCanvas",
+                "mtCustomClearFilmKod",
+                "mtCustomCoatedCad",
+                "mtCustomDigitalBlueprintPaperColored",
+                "mtCustomGenericNaturalTracingPaper",
+                "mtCustomGenericNaturalTracingPaperOver65gsm",
+                "mtCustomGenericNaturalTracingPaperUnder65gsm",
+                "mtCustomHeatTransfer",
+                "mtCustomMatteFilm",
+                "mtCustomNaturalTracingPaperRubberResistant",
+                "mtCustomPetBacklit",
+                "mtCustomPetFrontlit",
+                "mtCustomPetFrontlitTransparent",
+                "mtCustomPhotoMatte",
+                "mtCustomPlainPaperForRetail",
+                "mtCustomPlainPaperInkDensity100pct",
+                "mtCustomPlainPaperInkDensity50pct",
+                "mtCustomPlainPaperInkDensity60pct",
+                "mtCustomPlainPaperInkDensity70pct",
+                "mtCustomPlainPaperInkDensity80pct",
+                "mtCustomPlainPaperInkDensity90pct",
+                "mtCustomPolyesterBacklit",
+                "mtCustomPolypropylene",
+                "mtCustomPolypropylenePhotoSatin",
+                "mtCustomPppeBanner",
+                "mtCustomPvcBanner",
+                "mtCustomSelfAdhesiveTransparent",
+                "mtCustomStationeryBacklit",
+                "mtCustomStationeryBlueback",
+                "mtCustomStationeryGraphics",
+                "mtCustomSuperHeavyCoated",
+                "mtCustomSuperHeavyPlusMatte",
+                "mtCustomSynthetic",
+                "mtCustomSyntheticBacklit",
+                "mtCustomTextile",
+                "mtCustomTextileBacklit",
+                "mtCustomUncoated",
+                "mtCustomWallpaperNonWoven",
+                "mtCustomWallpaperWoven",
+                "mtCustomYellowPaper",
+                "mtEnvelope",
+                "mtEverydayInstantDryGloss",
+                "mtEverydayInstantDrySatin",
+                "mtExtraHeavyGloss_131to175g",
+                "mtExtraHeavy_131to175g",
+                "mtHP20PoundBondColorPro",
+                "mtHP24BondColorproTechnology",
+                "mtHPAdvancedPhoto",
+                "mtHPBrightWhiteBond",
+                "mtHPBrightWhiteStationaryInkJet",
+                "mtHPBrochureGloss_180g",
+                "mtHPBrochureMatte_180g",
+                "mtHPCoverMatte_200g",
+                "mtHPDoubleMatteFilm",
+                "mtHPEcoFFICIENT",
+                "mtHPEverydayAdhesiveGlossPolypropyleneLabels",
+                "mtHPEverydayAdhesiveMattePolypropyleneLabels",
+                "mtHPEverydayMattePolypropylene",
+                "mtHPEverydayPhotoMatte",
+                "mtHPFoldableDocumentMaterial",
+                "mtHPGenericSelfAdhesiveVinylPaper",
+                "mtHPGloss_130g",
+                "mtHPGloss_160g",
+                "mtHPGloss_220g",
+                "mtHPGlossyEdgeline180G",
+                "mtHPGlossyPosterPaper",
+                "mtHPMatteBrochure",
+                "mtHPMatteBrochureAndFlyer_180g",
+                "mtHPMatteFilm",
+                "mtHPMatteInkJet",
+                "mtHPMattePhotoDuplex",
+                "mtHPMattePresentation",
+                "mtHPMatte_105g",
+                "mtHPMatte_120g",
+                "mtHPMatte_160g",
+                "mtHPMatte_200g",
+                "mtHPMatte_90g",
+                "mtHPNaturalTracingPaper",
+                "mtHPOpaqueScrimBanner",
+                "mtHPOpaqueScrimBannerUnattended",
+                "mtHPPhoto",
+                "mtHPPhotoPlus",
+                "mtHPPhotographicGlossy",
+                "mtHPPhotographicInkJet",
+                "mtHPPolyesterBacklit",
+                "mtHPPremiumBond",
+                "mtHPPremiumInkjetTransparency",
+                "mtHPPremiumMattePolypropylene",
+                "mtHPPremiumMatte_120g",
+                "mtHPProductionGlossyPhoto",
+                "mtHPProductionMatteCanvas",
+                "mtHPProductionMattePolypropylene",
+                "mtHPProductionMattePoster",
+                "mtHPProductionSatinPhoto",
+                "mtHPProductionSatinPoster",
+                "mtHPRecycled",
+                "mtHPRecycledBondPaper",
+                "mtHPRecycledRemovableAdhesiveFabric",
+                "mtHPRemovableAdhesiveFabric",
+                "mtHPReycledRemovableAdhesiveFabric",
+                "mtHPSoftGloss_120g",
+                "mtHPSpecialInkjet",
+                "mtHPSpecialtyGlossy",
+                "mtHPSpecialtyGlossyInkJet",
+                "mtHPSpecialtyHagaki",
+                "mtHPStationeryBondUniversal",
+                "mtHPStationeryCoated",
+                "mtHPStationeryHeavyweightCoated",
+                "mtHPStationeryLight",
+                "mtHPTough",
+                "mtHPTranslucentPaper",
+                "mtHPTrifoldBrochureGlossy150gsm",
+                "mtHPTrifoldBrochureGlossy180gms",
+                "mtHPTrifoldGloss_160g",
+                "mtHPUniveralHeavyweightCoatedStationery",
+                "mtHPUniversalAdhesiveVinylLabels",
+                "mtHPUniversalCoatedStationery",
+                "mtHPUniversalInstantDryPhotoGlossy",
+                "mtHPUniversalInstantDrySatinPhotoSemiGloss",
+                "mtHPUniversalPhotoGlossy",
+                "mtHPUniversalPhotoSatin",
+                "mtHeavyBond",
+                "mtHeavyEnvelope",
+                "mtHeavyGloss_111to130g",
+                "mtHeavyPaperboard",
+                "mtHeavyRough",
+                "mtHeavy_111to130g",
+                "mtIntermediate_85to95g",
+                "mtLabels",
+                "mtLetterhead",
+                "mtLightBond",
+                "mtLightPaperboard",
+                "mtLightRough",
+                "mtLight_60to74g",
+                "mtMatte",
+                "mtMidweightGloss_96to110g",
+                "mtMidweight_96to110g",
+                "mtObject3D",
+                "mtOpaqueFilm",
+                "mtOther",
+                "mtOtherGlossy",
+                "mtPaperboard",
+                "mtPhoto",
+                "mtPhotoGlossy",
+                "mtPhotoSatin",
+                "mtPhotoSemiGlossy",
+                "mtPlain",
+                "mtPlasticMatte",
+                "mtPremiumInkjet",
+                "mtPremiumInstantDryGloss",
+                "mtPremiumInstantDrySatin",
+                "mtPremiumPhotoMattePaper",
+                "mtPreprinted",
+                "mtPrepunched",
+                "mtProductionGlossPhotoPaperUnattended",
+                "mtProductionMatteCanvas",
+                "mtProductionSatinPhotoPaperUnattended",
+                "mtPvcBannerBacklit",
+                "mtRecovered",
+                "mtRecycled",
+                "mtRemovableAdhesiveFabric",
+                "mtRough",
+                "mtSatinWrappingPaper",
+                "mtSelfAdhesiveLabels",
+                "mtShelfEdgeLabels",
+                "mtStationaryThick",
+                "mtStationery",
+                "mtStationeryBond",
+                "mtStationeryCoated",
+                "mtStationeryColored",
+                "mtStationeryFine",
+                "mtStationeryHeavyweight",
+                "mtStationeryHeavyweightCoated",
+                "mtStationeryLetterhead",
+                "mtStationeryLightweight",
+                "mtStationeryPrePrinted",
+                "mtStationeryPrePunched",
+                "mtSuperHeavyCoatedUnattended",
+                "mtSuperHeavyweightCoatedMattePlusAreaFills",
+                "mtTab",
+                "mtThickPlain",
+                "mtTranser",
+                "mtTranslucentPaper",
+                "mtTransparency",
+                "mtUserDefined1",
+                "mtUserDefined10",
+                "mtUserDefined11",
+                "mtUserDefined12",
+                "mtUserDefined13",
+                "mtUserDefined14",
+                "mtUserDefined15",
+                "mtUserDefined16",
+                "mtUserDefined2",
+                "mtUserDefined3",
+                "mtUserDefined4",
+                "mtUserDefined5",
+                "mtUserDefined6",
+                "mtUserDefined7",
+                "mtUserDefined8",
+                "mtUserDefined9",
+                "mtVellum",
+                "mtWallpaper",
+                "mtWhitePaperEnhanced",
+                "mtYBCoated",
+                "mtYBHeavyCoated",
+                "mtYBPhotoGloss",
+                "mtYBPhotoSatin",
+                "mtYBStationary",
+                "mtYCHeavyCoated",
+                "mtYCPhotoGloss",
+                "mtYCPhotoSatin",
+                "mtYCStationary",
+                "mtYCoated"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoExposure",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "exposureLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "gamma",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 2000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "highlightLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 9
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorSensitivity",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorRange",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "ccdChannel",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cctBlue",
+                "cctGray",
+                "cctGrayEmulated",
+                "cctGreen",
+                "cctNtsc",
+                "cctRed"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "binaryRendering",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "brErrorDiffusion",
+                "brHalftone",
+                "brThreshold"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "descreen",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "misfeedDetection",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "shadowLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "compressionFactor",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "threshold",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanningSpeed",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ssAuto",
+                "ssSlow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoDeskew",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "edgeToEdgeScan",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "longPlotScan",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "invertColors",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "sharpness",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "backgroundCleanup",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contrast",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "blankPageSuppression",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bpdDetectAndSuppress",
+                "bpdDetectOnly",
+                "bpdDisable"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "pagesPerSheet",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ppsEightUp",
+                "ppsFourUp",
+                "ppsOneUp",
+                "ppsTwoUp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "backgroundNoiseRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemovalLevel",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "blackEnhancementLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 255
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputFileFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ffAuto",
+                "ffBmp",
+                "ffCals",
+                "ffCgrft",
+                "ffDoc",
+                "ffGrftCb",
+                "ffHpgl2",
+                "ffHprip",
+                "ffIsf",
+                "ffJpeg",
+                "ffJpegFax",
+                "ffMtiff",
+                "ffNativeOffice",
+                "ffOcrCsv",
+                "ffOcrHtml",
+                "ffOcrPdf",
+                "ffOcrPdfa",
+                "ffOcrRtf",
+                "ffOcrText",
+                "ffOcrUnicode",
+                "ffPcl",
+                "ffPcl3Gui",
+                "ffPcl5",
+                "ffPclm",
+                "ffPclxl",
+                "ffPdf",
+                "ffPdfa",
+                "ffPgm",
+                "ffPng",
+                "ffPnm",
+                "ffPpm",
+                "ffPpt",
+                "ffPrn",
+                "ffPs",
+                "ffPwgRaster",
+                "ffRasterStream",
+                "ffRaw",
+                "ffTbmrc",
+                "ffTgrft",
+                "ffTgrftHw",
+                "ffTiff",
+                "ffTxt",
+                "ffUrf",
+                "ffZLib"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputQualityVsSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "qvsHigh",
+                "qvsHighest",
+                "qvsLow",
+                "qvsLowest",
+                "qvsMedium",
+                "qvsNone"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputFileCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffTiff"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffMiff"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "monoCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdfa"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmColor"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmGrayscale"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ctAuto",
+                "ctDefault",
+                "ctFlate",
+                "ctG3",
+                "ctG4",
+                "ctJbig",
+                "ctJbig2",
+                "ctJpeg",
+                "ctJpeg2000",
+                "ctJpegFax",
+                "ctJpegStrip",
+                "ctJpgD",
+                "ctLzw",
+                "ctMh",
+                "ctMmr",
+                "ctMr",
+                "ctMrc",
+                "ctMrcSeg",
+                "ctOJpeg",
+                "ctOcrCsv",
+                "ctOcrHtml",
+                "ctOcrPdf",
+                "ctOcrPdfa",
+                "ctOcrRtf",
+                "ctOcrText",
+                "ctOcrUnicode",
+                "ctPcl5Packbits",
+                "ctPcl5Uncompressed",
+                "ctPng",
+                "ctPnm",
+                "ctRaw",
+                "ctUrf",
+                "ctZJpeg",
+                "ctZJpgD"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "colorAndGrayCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdfa"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmMonochrome"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ctAuto",
+                "ctDefault",
+                "ctFlate",
+                "ctG3",
+                "ctG4",
+                "ctJbig",
+                "ctJbig2",
+                "ctJpeg",
+                "ctJpeg2000",
+                "ctJpegFax",
+                "ctJpegStrip",
+                "ctJpgD",
+                "ctLzw",
+                "ctMh",
+                "ctMmr",
+                "ctMr",
+                "ctMrc",
+                "ctMrcSeg",
+                "ctOJpeg",
+                "ctOcrCsv",
+                "ctOcrHtml",
+                "ctOcrPdf",
+                "ctOcrPdfa",
+                "ctOcrRtf",
+                "ctOcrText",
+                "ctOcrUnicode",
+                "ctPcl5Packbits",
+                "ctPcl5Uncompressed",
+                "ctPng",
+                "ctPnm",
+                "ctRaw",
+                "ctUrf",
+                "ctZJpeg",
+                "ctZJpgD"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputFileEncryption",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                "value": {
+                  "optionName": "outputFileFormat",
+                  "optionValue": "ffPdf"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "encryptionPassword",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileEncryption",
+                        "optionValue": "true"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "fileTransmissionMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "tmImage",
+                "tmJob"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoCropMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "acmtContentCrop",
+                "acmtOff",
+                "acmtPageCrop"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msANSI_B_11x17in",
+                "msANSI_C_17x22in",
+                "msANSI_D_22x34in",
+                "msANSI_E_34x44in",
+                "msANSI_F_28x40in",
+                "msAny",
+                "msAnyCustom",
+                "msArchitectural_A_9x12in",
+                "msArchitectural_B_12x18in",
+                "msArchitectural_C_18x24in",
+                "msArchitectural_D_24x36in",
+                "msArchitectural_E1_30x42in",
+                "msArchitectural_E2_26x38in",
+                "msArchitectural_E3_27x39in",
+                "msArchitectural_E_36x48in",
+                "msCustom",
+                "msDIN_2A0_1189x1682mm",
+                "msDIN_4A0_1682x2378mm",
+                "msDL_99x210mm",
+                "msEnvelope_A2_4point375x5point75in",
+                "msEnvelope_Catalog1_6x9in",
+                "msEnvelope_Comm10_4point125x9point5in",
+                "msEnvelope_Comm6point75_3point625x6point5in",
+                "msEnvelope_DL_110x220mm",
+                "msEnvelope_Monarch_3point875x7point5in",
+                "msEnvelope_Windsor_3point875x8point875in",
+                "msExecutive_7point25x10point5in",
+                "msExecutive_Rotated_7point25x10point5in",
+                "msFoolscap_8point5x13in",
+                "msGeneral_10x11in",
+                "msGeneral_10x13in",
+                "msGeneral_10x14in",
+                "msGeneral_10x15in",
+                "msGeneral_11x12in",
+                "msGeneral_11x14in",
+                "msGeneral_11x15in",
+                "msGeneral_11x19in",
+                "msGeneral_12x12in",
+                "msGeneral_12x14in",
+                "msGeneral_12x19in",
+                "msGeneral_3point5x5in",
+                "msGeneral_3x5in",
+                "msGeneral_4x12in",
+                "msGeneral_4x6in",
+                "msGeneral_4x8in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msGeneral_6x8in",
+                "msGeneral_7x9in",
+                "msGeneral_9x11in",
+                "msGovt_Legal_8x13in",
+                "msGovt_Letter_8x10in",
+                "msISO_A0_841x1189mm",
+                "msISO_A10_26x37mm",
+                "msISO_A1_594x841mm",
+                "msISO_A2_420x594mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A4_Rotated_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msISO_A7_74x105mm",
+                "msISO_A8_52x74mm",
+                "msISO_A9_37x52mm",
+                "msISO_B0_1000x1414mm",
+                "msISO_B10_31x44mm",
+                "msISO_B1_707x1000mm",
+                "msISO_B2_500x707mm",
+                "msISO_B3_353x500mm",
+                "msISO_B4_250x353mm",
+                "msISO_B5_176x250mm",
+                "msISO_B6_125x176mm",
+                "msISO_B7_88x125mm",
+                "msISO_B8_62x88mm",
+                "msISO_B9_44x62mm",
+                "msISO_C0_917x1297mm",
+                "msISO_C10_28x40mm",
+                "msISO_C1_648x917mm",
+                "msISO_C2_458x648mm",
+                "msISO_C3_324x458mm",
+                "msISO_C4_229x324mm",
+                "msISO_C5_162x229mm",
+                "msISO_C6_114x162mm",
+                "msISO_C7_81x114mm",
+                "msISO_C8_57x81mm",
+                "msISO_C9_40x57mm",
+                "msISO_INDEXCARD_100x150mm",
+                "msInvoice_5point5x8point5in",
+                "msJBusinessCard_55x91mm",
+                "msJDoublePostcard_148x200mm",
+                "msJDoublePostcard_Rotated_148x200mm",
+                "msJIS_B0_1030x1456mm",
+                "msJIS_B10_32x45mm",
+                "msJIS_B1_728x1030mm",
+                "msJIS_B2_515x728mm",
+                "msJIS_B3_364x515mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msJIS_B7_91x128mm",
+                "msJIS_B8_64x91mm",
+                "msJIS_B9_45x64mm",
+                "msJIS_Chou3_120x235mm",
+                "msJIS_Chou4_90x205mm",
+                "msJIS_Exec_216x330mm",
+                "msJIS_Kaku2_240x332mm",
+                "msJPhoto2L_127x177point8mm",
+                "msJPostcard_100x148mm",
+                "msK16_184x260mm",
+                "msK16_195x270mm",
+                "msK16_197x273mm",
+                "msK8_260x368mm",
+                "msK8_270x390mm",
+                "msK8_273x394mm",
+                "msLegal_8point5x14in",
+                "msLongScan_8point5x34in",
+                "msMatchOriginal",
+                "msMixedA4A3",
+                "msMixedLetterLedger",
+                "msMixedLetterLegal",
+                "msMutsugiri_203x254mm",
+                "msOE_PHoto18x22in",
+                "msOE_Photo_10x12in",
+                "msOE_Photo_12x16in",
+                "msOE_Photo_14x17in",
+                "msOE_Photo_14x18in",
+                "msOE_Photo_16x20in",
+                "msOE_Photo_20x24in",
+                "msOE_Photo_22x28in",
+                "msOE_Photo_24x30in",
+                "msOE_Photo_3point5x5in",
+                "msOE_Photo_4x12in",
+                "msOE_Photo_4x5in",
+                "msOE_Photo_5x5in",
+                "msOM_Photo_100x150mm",
+                "msOM_Photo_130x180mm",
+                "msOM_Photo_300x400mm",
+                "msOM_Photo_300x450",
+                "msOM_Photo_350x460mm",
+                "msOM_Photo_400x600mm",
+                "msOM_Photo_500x760mm",
+                "msOM_Photo_600x900mm",
+                "msOficio_216x340mm",
+                "msOther",
+                "msRA0_860x1220mm",
+                "msRA1_610x860mm",
+                "msRA2_430x610mm",
+                "msRA3_305x430mm",
+                "msRA4_215x305mm",
+                "msSRA0_900x1280mm",
+                "msSRA1_640x900mm",
+                "msSRA2_450x640mm",
+                "msSRA3_320x450mm",
+                "msSRA4_225x320mm",
+                "msSuper_B_13x19in",
+                "msUnknown",
+                "msUnknownEnvelope"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSource",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miAdf",
+                "miAlternate",
+                "miAlternateRoll",
+                "miAuto",
+                "miBottom",
+                "miBypassTray",
+                "miCenter",
+                "miDisc",
+                "miDuplexer",
+                "miEnvelopeFeed",
+                "miEnvelopeFeedJobSettings",
+                "miExternal",
+                "miExternalTray1",
+                "miExternalTray10",
+                "miExternalTray2",
+                "miExternalTray3",
+                "miExternalTray4",
+                "miExternalTray5",
+                "miExternalTray6",
+                "miExternalTray7",
+                "miExternalTray8",
+                "miExternalTray9",
+                "miFlatbed",
+                "miHagaki",
+                "miLargeCapacity",
+                "miLeft",
+                "miMain",
+                "miMainRoll",
+                "miManualFeedTray",
+                "miMdf",
+                "miMiddle",
+                "miMultipurposeTray",
+                "miOther",
+                "miPhotoTray",
+                "miRearManualFeed",
+                "miRight",
+                "miRoll",
+                "miRoll1",
+                "miRoll10",
+                "miRoll11",
+                "miRoll2",
+                "miRoll3",
+                "miRoll4",
+                "miRoll5",
+                "miRoll6",
+                "miRoll7",
+                "miRoll8",
+                "miRoll9",
+                "miSide",
+                "miTextile",
+                "miTop",
+                "miTray1",
+                "miTray10",
+                "miTray11",
+                "miTray12",
+                "miTray13",
+                "miTray14",
+                "miTray15",
+                "miTray16",
+                "miTray1JobSettings",
+                "miTray2",
+                "miTray3",
+                "miTray4",
+                "miTray5",
+                "miTray6",
+                "miTray7",
+                "miTray8",
+                "miTray9"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasXExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasYExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasAnchor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ocaBottomCenter",
+                "ocaBottomLeft",
+                "ocaBottomRight",
+                "ocaCenter",
+                "ocaMiddleCenter",
+                "ocaMiddleLeft",
+                "ocaMiddleRight",
+                "ocaRight",
+                "ocaTopLeft"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasOrientation",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "coAutoDetect",
+                "coLandscape",
+                "coPortrait",
+                "coReverseLandscape",
+                "coReversePortrait",
+                "coUndefined"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "filename.explicit.explicitValue",
+        "rules": [
+          {
+            "stringLength": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "filename.isExplicit",
+                  "optionValue": "true"
+                }
+              },
+              "maximumLength": 255,
+              "minimumLength": 1
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "filename.expression.expressionPattern",
+        "rules": [
+          {
+            "stringLength": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "filename.isExpression",
+                  "optionValue": "true"
+                }
+              },
+              "maximumLength": 1024,
+              "minimumLength": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "jobStorage": {
+    "definitions": [
+      {
+        "isAvailable": true,
+        "optionName": "resolution",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dpi150",
+                "dpi200",
+                "dpi300"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputFileFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ffJpeg",
+                "ffPdf"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "fileTransmissionMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "tmJob"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "http": {
+    "definitions": [
+      {
+        "isAvailable": true,
+        "optionName": "fileTransmissionMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "tmJob",
+                "tmImage"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.andOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffTiff"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "tmJob"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/scanJob/v1/profile",
+      "rel": "self"
+    }
+  ]
+}

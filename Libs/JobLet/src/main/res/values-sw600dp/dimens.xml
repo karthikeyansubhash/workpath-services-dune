@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="progress_width">700dp</dimen>
+    <dimen name="progress_height">500dp</dimen>
+    <dimen name="progress_title_height">69dp</dimen>
+    <dimen name="progress_title_text_size">27sp</dimen>
+    <dimen name="progress_title_close_text_size">24sp</dimen>
+    <dimen name="progress_cancel_text_size">16sp</dimen>
+    <dimen name="progress_common_margin">25dp</dimen>
+    <dimen name="progress_text_end_margin">50dp</dimen>
+
+    <dimen name="progress_bar_width">530dp</dimen>
+    <dimen name="progress_close_btn_width">52dp</dimen>
+    <dimen name="progress_close_btn_height">52dp</dimen>
+
+    <dimen name="progress_labels_bottom_margin">15dp</dimen>
+</resources>

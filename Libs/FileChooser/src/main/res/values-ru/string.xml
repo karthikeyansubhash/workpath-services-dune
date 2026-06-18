@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">Пустой каталог</string>
+<string name="storage_removed">Устройство хранение было извлечено или отключено.</string>
+<string name="choose_file">Выберите файл</string>
+<string name="error_selecting_file">Ошибка выбора файла</string>
+<string name="internal_storage">Внутренняя память</string>
+<string name="base_path_name">Устройство хранения</string>
+<string name="select_file_source">Выберите источник файла</string>
+<string name="input_address">Предоставить общий доступ к выбранному объекту</string>
+<string name="input_address_toast">Введите адрес для общего доступа!</string>
+<string name="shares_discovery_wifi_only">Доступ к функции поиска можно предоставить только по сети Wi-Fi.</string>
+<string name="change_host">Изменить хост</string>
+<string name="invalid_ip_input">Введите допустимый IP-адрес</string>
+<string name="downloading">Загрузка</string>
+<string name="downloading_message">%s загружается на ваше устройство…</string>
+<string name="share_login">Войти</string>
+<string name="input_login_text">Введите учетные данные для пользователя: %s</string>
+<string name="input_login_label_domain">Домен:</string>
+<string name="input_login_label_user">Имя пользователя:</string>
+<string name="input_login_label_password">Пароль:</string>
+<string name="can_be_empty">Поле не может быть пустым.</string>
+<string name="download_failed">Не удалось загрузить. Попробуйте еще раз.</string>
+<string name="downloaded_to">Файл скачан в каталог: %s</string>
+<string name="failed_to_access">Не удалось получить доступ к общему ресурсу. Попробуйте еще раз.</string>
+<string name="failed_to_login">Не удалось войти в систему. Используйте данные другой учетной записи или попробуйте позже.</string>
+<string name="failed_to_access_share">Не удалось получить доступ к общей папке. Попробуйте позже, используя другой адрес.</string>
+<string name="enter_ip">Введите IP</string>
+<string name="choose_list_ip">Из списка</string>
+<string name="ip_address_label">Введите IP:</string>
+<string name="ip_address_select">Выберите IP</string>
+<string name="loading_hosts">Поиск хоста…</string>
+<string name="no_hosts">Хост не найден</string>
+<string name="refresh">Обновить</string>
+<string name="please_select_ip">Введите или выберите IP из списка.</string>
+<string name="error_file_format">Могут быть распечатаны только файлы PDF и JPG.</string>
+</resources>

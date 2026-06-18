@@ -1,0 +1,13 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.ipaulpro.afilechooser'
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+}

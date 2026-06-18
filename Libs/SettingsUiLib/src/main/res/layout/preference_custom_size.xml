@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="?attr/dialogPreferredPadding">
+
+    <EditText
+        android:id="@+id/value"
+        style="@style/NumberPickerTextApperance"
+        android:layout_width="@dimen/picker_text_width"
+        android:layout_height="@dimen/picker_height"
+        android:layout_centerInParent="true"
+        android:background="@drawable/co_list_input_bg"
+        android:digits="0123456789."
+        android:gravity="center"
+        android:imeOptions="actionNone"
+        android:inputType="numberDecimal"
+        android:paddingLeft="?attr/dialogPreferredPadding"
+        android:paddingRight="?attr/dialogPreferredPadding"
+        android:singleLine="true"
+        android:text="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="?attr/dialogPreferredPadding"
+        android:orientation="vertical">
+
+        <SeekBar
+            android:id="@+id/bar_value"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_max"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,57 @@
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application>
+        <!-- replace conflicted content providers here for Android instrumented tests -->
+        <provider
+            android:name="com.hp.jetadvantage.link.services.storagelet.provider.StorageLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.storageletcp.test"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.model.JobDataContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.internalcp.jobs.test"
+            android:exported="false"
+            tools:node="replace" />
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.provider.JobletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.model.JobDataContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.internalcp.jobs.test"
+            android:exported="false"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SPSVersionContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.spsvcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedPrinterContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.lsmcp.oxp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedAccessContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accesslet.internalcp.access.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedAccessoryContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accessorylet.internalcp.accessory.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+    </application>
+
+</manifest>

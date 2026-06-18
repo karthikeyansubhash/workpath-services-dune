@@ -1,0 +1,23 @@
+name: Remove Label on PR Close
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  remove-label:
+    if: false # disable this action temporary
+    runs-on: [ self-hosted ]
+
+    steps:
+      - name: Remove specific label
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            github.issues.removeLabel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              name: 'ready for review'
+            })

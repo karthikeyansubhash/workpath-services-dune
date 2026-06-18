@@ -1,0 +1,56 @@
+{
+  "cdmPubMessage": {
+    "message": {
+      "continuingReports": "true",
+      "reports": [{
+        "data": {
+          "actions": {
+            "links": [{
+              "href": "/cdm/media/v1/alerts/1127143951/action",
+              "rel": "alertAction"
+            }
+            ],
+            "propertyPointer": "/selectedAction",
+            "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaAction",
+            "resourcePath": "/cdm/media/v1/mediaAction",
+            "supported": [{
+              "value": {
+                "seValue": "hideOnUi"
+              }
+            }
+            ]
+          },
+          "alertCode": 5308180,
+          "category": "fuserWrapJam",
+          "code": "50.FF.14",
+          "dateTime": "2024-07-03T04:24:26Z",
+          "id": 1127143951,
+          "instanceId": "0",
+          "links": [{
+            "href": "/cdm/media/v1/alerts/1127143951",
+            "rel": "self"
+          }
+          ],
+          "priority": 88,
+          "sequenceNum": 15,
+          "severity": "error",
+          "stringId": 83045
+        },
+        "eTag": "1000001",
+        "gSeqNum": 27,
+        "gun": "com.hp.cdm.service.alert.version.1.resource.alert",
+        "method": "add",
+        "path": "/cdm/alert/v1/alerts/1127143951",
+        "resourceId": {
+          "name": "id",
+          "value": "1127143951"
+        },
+        "updateType": "delta"
+      }
+      ],
+      "subscriptionId": "631382224",
+      "version": "2.3.0"
+    },
+    "subscriptionId": "631382224"
+  }
+}

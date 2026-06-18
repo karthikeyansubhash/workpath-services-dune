@@ -1,0 +1,82 @@
+@startuml
+class com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService {
++ List<RemovableDevice> getStorages()
+}
+class com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService$CDMUrl {
++ {static} String STORAGE_DEVICES_DUNE
+}
+class com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceManagementService {
++ {static} DeviceManagementService getInstance()
++ void initialize(String,String)
++ String getDeviceIPAddress()
++ boolean isDeviceConnected()
++ ServicesDiscoveryImpl getDiscoveryTree()
++ CDMClient getCDMClient()
+}
+class com.hp.jetadvantage.link.device.services.standard.receivers.DeviceReadyReceiver {
++ void onReceive(Context,Intent)
+}
+abstract class com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService {
+# String TAG
+# DeviceManagementService deviceManagementService
++ boolean isDeviceConnected()
++ String getDeviceIPAddress()
++ ServicesDiscoveryImpl getDiscoveryTree()
++ CDMClient getCDMClient()
++ T perform(E2call<T>)
++ T perform(E2callUniParam<T,P>,P)
++ T perform(E2callBiParam<T,P,Q>,P,Q)
++ T perform(CdmCall,Class<T>)
++ void perform(CdmCall)
+}
+interface com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2call {
+}
+interface com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2callUniParam {
+}
+interface com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2callBiParam {
+}
+interface com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$CdmCall {
+}
+interface com.hp.jetadvantage.link.device.services.standard.common.DeviceManagementService {
++ void initialize(String,String)
++ String getDeviceIPAddress()
++ boolean isDeviceConnected()
++ ServicesDiscoveryImpl getDiscoveryTree()
++ CDMClient getCDMClient()
+}
+class com.hp.jetadvantage.link.device.services.standard.StandardDeviceScanJobService {
++ DefaultOptions getDefaultOptions()
++ Profile getProfile()
++ ScanJob createScanJob(String,ScanJob_Create)
++ ScanJob getScanJob(String,String)
++ ScanJob_Cancel cancelScanJob(String,String)
+}
+class com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService {
++ void switchToDevice()
+}
+class com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService$CDMUrl {
++ {static} String WORKPATH_GATEWAY
+}
+enum com.hp.jetadvantage.link.device.services.standard.common.StandardJsonParser {
++  INSTANCE
++ T fromJson(String,Class<T>)
++ T fromJson(String,Type)
++ String toJson(Object)
+}
+
+
+com.hp.jetadvantage.link.device.services.interfaces.IDeviceStorageService <|.. com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService <|-- com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService
+com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService +.. com.hp.jetadvantage.link.device.services.standard.StandardDeviceStorageService$CDMUrl
+com.hp.jetadvantage.link.device.services.standard.common.DeviceManagementService <|.. com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceManagementService
+android.content.BroadcastReceiver <|-- com.hp.jetadvantage.link.device.services.standard.receivers.DeviceReadyReceiver
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService +.. com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2call
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService +.. com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2callUniParam
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService +.. com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$E2callBiParam
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService +.. com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService$CdmCall
+com.hp.jetadvantage.link.device.services.interfaces.IDeviceScanJobService <|.. com.hp.jetadvantage.link.device.services.standard.StandardDeviceScanJobService
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService <|-- com.hp.jetadvantage.link.device.services.standard.StandardDeviceScanJobService
+com.hp.jetadvantage.link.device.services.interfaces.IDeviceUISwitchService <|.. com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService
+com.hp.jetadvantage.link.device.services.standard.common.StandardDeviceService <|-- com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService
+com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService +.. com.hp.jetadvantage.link.device.services.standard.StandardDeviceUISwitchService$CDMUrl
+@enduml

@@ -1,0 +1,12 @@
+{
+  "metadataFile": {
+    "jobId": "$JOB(ID)$",
+    "jobName": "$JOB(NAME)$",
+    "userName": "$SECURITY_CONTEXT(USER_NAME)$",
+    "scanSize": "$SCAN(MEDIA_SIZE)$",
+    "scanSource": "$SCAN(SOURCE)$",
+    "scanCount": "$SCAN(TOTAL_IMAGE_COUNT)$",
+    "attachmentCount": "$ATTACHMENT(TOTAL)$",
+    "extension": "$ATTACHMENT(EXTENSION)$"
+  }
+}

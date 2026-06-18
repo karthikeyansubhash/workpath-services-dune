@@ -1,0 +1,222 @@
+{
+    "$opMeta": {
+        "contentFilter": [
+            "*"
+        ]
+    },
+    "faxUsage": {
+        "archivedAnalogReceivedImages": 0,
+        "receivedAnalogImages": 0,
+        "receivedFromPcImages": 0,
+        "sentAnalogImages": 0
+    },
+    "jobUsage": {
+        "copyJobCount": 4,
+        "emailJobCount": 0,
+        "internalStorageJobCount": 0,
+        "lastJobSequenceId": 11,
+        "networkFolderJobCount": 0,
+        "printJobCount": 7,
+        "receiveFaxJobCount": 0,
+        "removableStorageJobCount": 0,
+        "sendFaxJobCount": 0
+    },
+    "links": [
+        {
+            "href": "/ext/deviceUsage/v1/deviceUsageAgents/e6d29da1-c3e5-4d2b-b61d-e75971440569/lifetimeCounters",
+            "rel": "self"
+        }
+    ],
+    "printUsage": {
+        "a4EquivalentCopyImpressions": {
+            "blank": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "color": {
+                "exponent": -4,
+                "significand": 10000
+            },
+            "monochrome": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "total": {
+                "exponent": -4,
+                "significand": 10000
+            }
+        },
+        "a4EquivalentFaxInImpressions": {
+            "blank": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "color": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "monochrome": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "total": {
+                "exponent": 0,
+                "significand": 0
+            }
+        },
+        "a4EquivalentPrintImpressions": {
+            "blank": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "color": {
+                "exponent": -4,
+                "significand": 50000
+            },
+            "monochrome": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "total": {
+                "exponent": -4,
+                "significand": 50000
+            }
+        },
+        "a4EquivalentPrintOtherImpressions": {
+            "blank": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "color": {
+                "exponent": -4,
+                "significand": 40000
+            },
+            "monochrome": {
+                "exponent": 0,
+                "significand": 0
+            },
+            "total": {
+                "exponent": -4,
+                "significand": 40000
+            }
+        },
+        "copyImpressions": {
+            "blank": -21474836480,
+            "color": 1,
+            "monochrome": 21474836470,
+            "total": 1
+        },
+        "faxInImpressions": {
+            "blank": 0,
+            "color": 0,
+            "monochrome": 0,
+            "total": 0
+        },
+        "impressionsByMediaSize": [
+            {
+                "copyImpressions": {
+                    "blank": 0,
+                    "color": 1,
+                    "monochrome": 0,
+                    "total": 1
+                },
+                "mediaSize": "msANSI_A_8point5x11in",
+                "printImpressions": {
+                    "blank": 0,
+                    "color": 1,
+                    "monochrome": 0,
+                    "total": 1
+                },
+                "printOtherImpressions": {
+                    "blank": 0,
+                    "color": 1,
+                    "monochrome": 0,
+                    "total": 1
+                }
+            }
+        ],
+        "printImpressions": {
+            "blank": 0,
+            "color": 5,
+            "monochrome": 0,
+            "total": 5
+        },
+        "printOtherImpressions": {
+            "blank": 0,
+            "color": 4,
+            "monochrome": 0,
+            "total": 4
+        },
+        "printSheets": {
+            "duplex": 0,
+            "simplex": 5,
+            "total": 5
+        },
+        "sheetsByMediaInput": [
+            {
+                "mediaInput": "miTray3",
+                "total": 4
+            },
+            {
+                "mediaInput": "miTray2",
+                "total": 1
+            }
+        ],
+        "sheetsByMediaOutput": [
+            {
+                "faceDown": 5,
+                "faceUp": 0,
+                "mediaOutput": "moStandard",
+                "total": 5
+            }
+        ],
+        "sheetsByMediaSize": [
+            {
+                "mediaSize": "msANSI_A_8point5x11in",
+                "sheets": {
+                    "duplex": 0,
+                    "simplex": 4,
+                    "total": 4
+                }
+            },
+            {
+                "mediaSize": "msISO_A4_210x297mm",
+                "sheets": {
+                    "duplex": 0,
+                    "simplex": 1,
+                    "total": 1
+                }
+            }
+        ],
+        "sheetsByMediaType": [
+            {
+                "mediaType": "mtPlain",
+                "total": 5
+            }
+        ]
+    },
+    "scanUsage": {
+        "adfDuplexImages": 0,
+        "adfImages": 1,
+        "adfSimplexImages": 1,
+        "copyImages": 6,
+        "faxImages": 0,
+        "flatbedImages": 5,
+        "imagesByMediaSize": [
+            {
+                "images": 4,
+                "mediaSize": "msANSI_A_8point5x11in"
+            },
+            {
+                "images": 1,
+                "mediaSize": "msISO_A4_210x297mm"
+            },
+            {
+                "images": 1,
+                "mediaSize": "msLegal_8point5x14in"
+            }
+        ],
+        "sendImages": 0,
+        "totalImages": 6
+    }
+}

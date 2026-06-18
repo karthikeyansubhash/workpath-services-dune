@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+    <uses-permission android:name="${SDK_ACCESS_DEVICE_EVENTS_PERMISSION}" />
+
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.DeviceEventsLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.deviceeventsletcp"
+            android:exported="true"
+            android:permission="${SDK_ACCESS_DEVICE_EVENTS_PERMISSION}" />
+
+        <receiver
+            android:name=".receiver.DeviceEventReceiver"
+            android:exported="true"
+            android:process=":DeviceEvents"
+            tools:ignore="ExportedReceiver"
+            android:permission="${SYSTEM_PERMISSION}">
+            <intent-filter>
+                <action android:name="${WORKPATH_SERVICE_READY}" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

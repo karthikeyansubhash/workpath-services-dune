@@ -1,0 +1,17 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/authentication/v1/session/forceLogout",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/authentication/v1/session",
+      "rel": "resource"
+    }
+  ]
+}

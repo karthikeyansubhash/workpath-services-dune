@@ -1,0 +1,52 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+    <uses-permission android:name="com.hp.datacollector.permission.READ_WRITE_PROVIDERS" />
+    
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <!-- make app persistent to allow unlimited restarting of JobletService -->
+    <application>
+        <activity
+            android:permission="${SERVICES_PERMISSION}"
+            android:name=".activities.JobProgressActivity"
+            android:label="@string/app_name"
+            android:theme="@style/Transparent"
+            android:exported="true"
+            android:configChanges="orientation|screenSize"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="com.hp.jetadvantage.link.intent.action.JOBPROGRESSUI" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- Permissions are checked dynamically -->
+        <provider
+            android:name=".provider.JobletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet"
+            android:exported="true"/>
+
+        <provider
+            android:name=".model.JobDataContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.internalcp.jobs"
+            android:exported="false" />
+
+        <receiver
+            android:name=".receiver.JobletReceiver"
+            android:exported="true">
+            <intent-filter android:priority="1">
+                <action android:name="com.hp.jetadvantage.link.intent.action.JOBPROGRESS" />
+                <action android:name="com.hp.jetadvantage.link.intent.action.ALL_JOBPROGRESS" />
+                <action android:name="com.hp.jetadvantage.link.intent.action.ALL_JOBPROGRESS_STOP" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.JobletService"/>
+        <service
+            android:name="com.hp.jetadvantage.link.services.joblet.service.ForegroundActivityTracker"
+            android:exported="true"/>
+    </application>
+
+</manifest>

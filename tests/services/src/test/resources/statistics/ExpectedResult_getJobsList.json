@@ -1,0 +1,121 @@
+{
+	"memberIds": [
+		"97304a09-bc43-43c7-8e2c-2ce58d89567c"
+	],
+	"members": [
+		{
+			"aFaxInInfo": null,
+			"aFaxOutInfo": null,
+			"driverInfo": {
+				"applicationName": "Windows Explorer",
+				"clientHostName": "JUNPYOKIM",
+				"fileName": "Explorer.EXE",
+				"jobAcct13": "",
+				"jobAcct14": "",
+				"jobAcct15": "",
+				"jobAcct16": "",
+				"jobId": "bac64b28-8efe-4248-8c7c-4bc80a970d62",
+				"userDomain": "AUTH",
+				"userName": "kimjun"
+			},
+			"emailInfo": null,
+			"extendedUserInfo": {
+				"authenticatedUserInfo": {
+					"SECURITY_CONTEXT_AUTH_CONTEXT_ID": "linkAuthenticationContextId",
+					"SECURITY_CONTEXT_AUTH_PROVIDER_ID": "linkAuthenticationProviderId",
+					"authenticationType": "Windows",
+					"displayName": null,
+					"emailAddress": null,
+					"exchangeMailboxUri": null,
+					"fullyQualifiedUserName": "AUTH\\kimjun",
+					"homeFolderPath": null,
+					"keyValuePairs": null,
+					"ldapBindUser": null,
+					"ndsContext": null,
+					"ndsTreeName": null,
+					"sAMAccountName": null,
+					"sidString": null,
+					"userDomain": "AUTH",
+					"userName": "kimjun",
+					"userPrincipalName": null
+				},
+				"authenticationAgentId": "5470b2ae-29cf-415b-a22d-349b50c9cb13",
+				"authenticationAgentName": "Windows",
+				"authorizationAgentId": null,
+				"authorizationAgentName": null
+			},
+			"folderInfo": null,
+			"ftpInfo": null,
+			"httpInfo": null,
+			"ipFaxInInfo": null,
+			"ipFaxOutInfo": null,
+			"jobId": "97304a09-bc43-43c7-8e2c-2ce58d89567c",
+			"jobInfo": {
+				"applicationName": "Windows Explorer",
+				"deviceJobName": "Test Page",
+				"jobCategory": "Print",
+				"jobDataSource": "NetworkIO",
+				"jobDestinations": [
+					"PrintEngine"
+				],
+				"jobDoneStatus": "Succeeded",
+				"jobDoneTimestamp": {
+					"offset": 0,
+					"time": "2026-03-23T10:57:50Z"
+				},
+				"jobId": null,
+				"jobPaused": "False",
+				"jobStartedTimestamp": {
+					"offset": 0,
+					"time": "2026-03-23T10:57:40Z"
+				},
+				"parentJobId": null,
+				"processedBy": "DEVICE"
+			},
+			"jobSequence": null,
+			"printInfo": {
+				"a4EquivalentBlankDeciSides": 0,
+				"a4EquivalentColorDeciImpressions": 1,
+				"a4EquivalentDuplexDeciSheets": 0,
+				"a4EquivalentMonoChromeDeciImpressions": 0,
+				"a4EquivalentSimplexDeciSheets": 1,
+				"a4EquivalentTotalDeciImpressions": 1,
+				"a4EquivalentTotalDeciSheets": 1,
+				"agents": [],
+				"blankSides": 0,
+				"colorImpressions": 1,
+				"duplexSheets": 0,
+				"monochromeImpressions": 0,
+				"printSettings": {
+					"econoMode": false
+				},
+				"printedSheetInfo": {
+					"description": null,
+					"otherPrintedSheets": 0,
+					"printedSheetSets": [
+						{
+							"backImpressionClassification": "None",
+							"count": 1,
+							"frontImpressionClassification": "Color",
+							"logicalMediaOutputId": "Standard",
+							"mediaInputId": "Tray2",
+							"mediaSizeId": "ANSI_A_8point5x11in",
+							"mediaTypeId": "Plain",
+							"physicalMediaOutputId": "Standard",
+							"plex": "Simplex"
+						}
+					]
+				},
+				"simplexSheets": 1,
+				"totalImpressions": 1,
+				"totalSheets": 1
+			},
+			"resourceId": "97304a09-bc43-43c7-8e2c-2ce58d89567c",
+			"scanInfo": null
+		}
+	],
+	"offset": 0,
+	"selectedCount": 22,
+	"totalCount": 22,
+	"totalJobEntries": 250
+}

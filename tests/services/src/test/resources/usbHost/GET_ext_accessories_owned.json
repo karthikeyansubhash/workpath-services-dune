@@ -1,0 +1,45 @@
+{
+  "$opMeta": {
+    "contentFilter": ["*"]
+  },
+  "links": [{
+    "href": "/ext/usbAccessories/v1/accessories",
+    "rel": "self"
+  }, {
+    "hrefTemplate": "/ext/usbAccessories/v1/accessories/{accessoryID}",
+    "rel": "accessory"
+  }
+  ],
+  "memberIds": ["f8d7b010-cef3-4bbf-906d-b39e43496668"],
+  "members": [{
+    "accessoryID": "f8d7b010-cef3-4bbf-906d-b39e43496668",
+    "activeConfiguration": 1,
+    "deviceClass": 3,
+    "deviceProtocol": 0,
+    "deviceSubclass": 0,
+    "deviceVersion": 4096,
+    "links": [{
+      "href": "/ext/usbAccessories/v1/accessories/f8d7b010-cef3-4bbf-906d-b39e43496668",
+      "rel": "self"
+    }, {
+      "href": "/ext/usbAccessories/v1/accessories/f8d7b010-cef3-4bbf-906d-b39e43496668/generic",
+      "rel": "generic"
+    }, {
+      "href": "/ext/usbAccessories/v1/accessories/f8d7b010-cef3-4bbf-906d-b39e43496668/hid",
+      "rel": "hid"
+    }
+    ],
+    "manufacturerName": "Hewlett-Packard",
+    "productId": 69,
+    "productName": "HP Proximity Reader (CZ208A)",
+    "registration": "rkOwned",
+    "resourceId": "f8d7b010-cef3-4bbf-906d-b39e43496668",
+    "serialNumber": "",
+    "usbVersion": 1,
+    "vendorId": 1008
+  }
+  ],
+  "offset": 0,
+  "selectedCount": 1,
+  "totalCount": 1
+}

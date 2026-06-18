@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">Erhalten von HP Workpath SDK Berechtigungen fehlgeschlagen. Gehen Sie auf JetAdvantageLink.requestPermissions(), um Berechtigungen zu erhalten.</string>
+<string name="sps_permission">HP Workpath SDK Berechtigungen</string>
+<string name="sps_self_permission">Berechtigungen für HP Workpath SDK</string>
+<string name="grant">Gewähren</string>
+<string name="deny">Verweigern</string>
+<string name="permission_text" formatted="false">Möchten Sie der Anwendung %s (%s) vollen Zugriff auf HP Workpath SDK gewähren?</string>
+<string name="more_permission_text_small">Weitere Informationen</string>
+<string name="more_permission_text_big">Die Anwendung kann von jedem Drucker mit HP Workpath SDK aus scannen, drucken, kopieren und faxen. Um alle akzeptierten Berechtigungen zu widerrufen, gehen Sie auf App-Verwaltung und löschen Sie alle Daten für die Anwendung HP Workpath SDK.</string>
+<string name="sps_sd_card">HP Workpath SDK möchte die SD-Karte Ihres Geräts zum Speichern gescannter Dateien verwenden. Gewähren Sie in den folgenden Systemdialogen die entsprechenden Berechtigungen.</string>
+<string name="permission_not_granted">Die App konnte Ihren Speicher nicht nutzen und funktioniert daher möglicherweise nicht ordnungsgemäß. Gewähren Sie ihr ggf. die entsprechende Berechtigung.</string>
+</resources>

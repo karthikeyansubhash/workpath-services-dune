@@ -1,0 +1,80 @@
+@startuml
+title Stored Copy Job - Create Stored Copy Job
+hide footbox
+autonumber "<b>#."
+skinparam sequenceArrowThickness 1
+skinparam ArrowColor black
+skinparam SequenceLifeLineBorderColor black
+skinparam ParticipantBorderColor black
+skinparam SequenceBoxBorderColor black
+skinparam NoteBorderColor black
+skinparam NoteFontSize 12  // Adjust the value as needed for smaller text
+
+
+note right App
+"The Dune E2 API separates the creation of stored copy jobs into scan jobs (destination: jobStorage) and the release into copy jobs. 
+ To use the redesigned E2 API while maintaining the existing Workpath API, 
+ the Workpath copy service must persist the full set of copy settings received from the app to disk when creating a stored copy job and retrieve them when releasing the job. 
+ Internally, it creates an E2 scan job but provides the job information and job status to the app as a Workpath copy job type."
+end note
+
+' Participants
+participant "Workpath App" as App
+box "Workpath Services" #d6f5d6
+participant "Copy Service" as CopyService #85e085
+participant "Scan Service" as ScanService #85e085
+participant "Job Service" as JobService #85e085
+endbox
+
+box "E2/Dune Platform" #b3d9ff
+participant "E2 Copy Agent" as E2CopyAgent #66b3ff
+participant "E2 Scan Agent" as E2ScanAgent #66b3ff
+endbox
+
+' Submit Stored Copy Job
+App -> CopyService : submit(Context, CopyAttributes, CopyletAttributes)
+activate CopyService
+note over CopyService #orange
+Persist the original CopyJobIntent to disk : StoredCopyJobMap <RID, CopyJobIntent>
+Extract scan options from CopyJobIntent and create a new ScanJobIntent
+end note
+CopyService -> ScanService : Send "Scan to JobStorage" JobIntent
+activate ScanService
+CopyService --> App : return RID
+deactivate CopyService
+
+' Note for ScanService
+note over ScanService #orange
+The scan service processes the scan job as a Workpath copy job using:
+- JobType.COPY, CopyJobState, CopyJobData for JobBundle
+This ensures backward compatibility.
+end note
+
+' Scan Job Creation
+ScanService -> ScanService : createJobBundle(JobType.COPY)
+ScanService -> E2ScanAgent : POST /ext/scanJob/v1/scanJobAgents/{agentId}/scanJobs
+note right ScanService #white
+{"scanTicket": {"destinationOptions": {"jobStorage": {}}}}
+end note
+
+' Scan Job Notification
+activate E2ScanAgent
+E2ScanAgent --> ScanService : scanJobId
+ScanService --> CopyService : <RID, scanJobId>
+CopyService -> CopyService : Replace RID with JobId\nin StoredCopyJobMap <JobId, CopyJobIntent>
+E2ScanAgent --> ScanService : scanNotification
+deactivate E2ScanAgent
+
+' Job State and Data
+ScanService -> JobService : CopyJobState + CopyJobData
+activate JobService
+deactivate ScanService
+
+' Return Job State and Data
+JobService --> App : CopyJobState + CopyJobData
+deactivate JobService
+deactivate App
+
+@enduml
+
+

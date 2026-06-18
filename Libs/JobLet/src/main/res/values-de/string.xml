@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">Auftrags-Fortschritt</string>
+<string name="progress_dialog_progressing_message">Auftrag zu %1$s in Bearbeitung ...</string>
+<string name="progress_dialog_complete_message">Auftrag zu %1$s abgeschlossen …</string>
+<string name="job_number_label">Auftragsnummer:</string>
+<string name="job_name_label">Auftragsname:</string>
+<string name="confirmation_dialog_title">Auftragsbestätigung</string>
+<string name="confirmation_dialog_message">Möchten Sie die nächste Seite scannen?</string>
+<string name="yes">Ja</string>
+<string name="no">Nein</string>
+<string name="close">Schließen</string>
+<string name="cancel">Abbrechen</string>
+<string name="completed">Abgeschlossen</string>
+<string name="pages">Seite(n)</string>
+<string name="job_sending">Wird gesendet</string>
+<string name="job_cancelling">Wird abgebrochen</string>
+<string name="job_scanning">Scanvorgang läuft</string>
+<string name="job_progressing">In Bearbeitung</string>
+<string name="job_waiting">Bitte warten</string>
+<string name="job_image_number">Seite %1$d</string>
+<string name="job_dst_number">bis %1$s</string>
+<string name="job_canceled">Abgebrochen</string>
+<string name="job_failed">Fehlgeschlagen</string>
+<string name="job_completed">Abgeschlossen. Insgesamt</string>
+<string name="job_progress_notification_title">Auftrags-Fortschritt</string>
+<string name="job_progress_notification_message">Berühren, um zum Auftrags-Fortschritt zurückzukehren</string>
+<string name="copying">Kopiervorgang läuft</string>
+<string name="faxing">Faxvorgang läuft</string>
+<string name="printing">Druckvorgang läuft</string>
+<string name="scanning">Scanvorgang läuft</string>
+<string name="sending">Wird gesendet</string>
+<string name="saving">Wird gespeichert</string>
+<string name="copies">Exemplare</string>
+<string name="set">/ Satz %1$s</string>
+<string name="noti_jobs_progressing">%1$s Fortschritt des Auftrags/der Aufträge</string>
+<string name="noti_jobs_waiting">%1$s Auftrag/Aufträge in Warteschleife</string>
+<string name="noti_jobs_canceled">%1$s Auftrag/Aufträge abgebrochen</string>
+<string name="failed">Mit Ergebniscode %1$s fehlgeschlagen</string>
+<string name="job_confirmation_title">Weitere Scans</string>
+</resources>

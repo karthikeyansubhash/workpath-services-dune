@@ -1,0 +1,39 @@
+{
+  "version": "1.8.0-alpha.1",
+  "alerts": [
+    {
+      "id": 784758017,
+      "category": "printerCoolingDown",
+      "instanceId": "1",
+      "sequenceNum": 16,
+      "dateTime": "2024-07-03T04:51:03Z",
+      "severity": "information",
+      "priority": 4000,
+      "stringId": 90000,
+      "actions": {
+        "resourceGun": "com.hp.cdm.service.sensor.version.1.resource.sensorsAction",
+        "resourcePath": "/cdm/sensor/v1/sensorsAction",
+        "propertyPointer": "/selectedAction",
+        "supported": [
+          {
+            "value": {
+              "seValue": "hideOnUi"
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "/cdm/sensor/v1/alerts/784758017/action",
+            "rel": "alertAction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "/cdm/sensor/v1/alerts/784758017",
+          "rel": "self"
+        }
+      ]
+    }
+  ]
+}

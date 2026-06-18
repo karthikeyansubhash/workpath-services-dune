@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popupView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" >
+
+    <RelativeLayout
+        android:layout_width="@dimen/progress_width"
+        android:layout_height="@dimen/progress_height" >
+
+        <!-- Job Progress Titlebar Start -->
+
+        <RelativeLayout
+            android:id="@+id/titleBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/progress_title_height"
+            android:background="@drawable/popup_title"
+            android:gravity="center_vertical" >
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:shadowColor="@color/popupTextShadow"
+                android:shadowDy="1"
+                android:singleLine="true"
+                android:text="@string/progress_dialog_title"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/progress_title_text_size" />
+
+            <LinearLayout
+                android:id="@+id/closeLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="12dp"
+                android:background="@drawable/action_button_bg_all"
+                android:orientation="horizontal"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="5dp" >
+
+                <TextView
+                    android:id="@+id/close"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginRight="10dp"
+                    android:paddingLeft="5dp"
+                    android:shadowColor="@color/popupTextShadow"
+                    android:shadowDy="1"
+                    android:text="@string/close"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/progress_title_close_text_size" />
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- Job Progress Titlebar End -->
+
+        <!-- Everything below Title Bar -->
+        <LinearLayout
+            android:id="@+id/previewAndList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleBar"
+            android:layout_gravity="center"
+            android:background="@drawable/popup_bg"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/progressbarLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titleBar"
+                android:layout_gravity="center"
+                android:layout_marginBottom="35dp" >
+
+                <TextView
+                    android:id="@+id/job_number_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/progress_labels_bottom_margin"
+                    android:layout_marginStart="@dimen/progress_common_margin"
+                    android:layout_marginLeft="@dimen/progress_common_margin"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="@dimen/progress_common_margin"
+                    android:text="@string/job_number_label"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/job_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/progress_labels_bottom_margin"
+                    android:layout_marginTop="@dimen/progress_common_margin"
+                    android:layout_toRightOf="@id/job_number_label"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/job_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/job_number_label"
+                    android:layout_marginBottom="@dimen/progress_labels_bottom_margin"
+                    android:layout_marginStart="@dimen/progress_common_margin"
+                    android:layout_marginLeft="@dimen/progress_common_margin"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/job_name_label"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/job_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@id/job_number"
+                    android:layout_below="@id/job_number"
+                    android:layout_marginBottom="@dimen/progress_labels_bottom_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/job_name_label"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="20sp"
+                    android:visibility="invisible" />
+
+                <TextView
+                    android:id="@+id/progress_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/job_name_label"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="3dp"
+                    android:layout_marginStart="@dimen/progress_common_margin"
+                    android:layout_marginLeft="@dimen/progress_common_margin"
+                    android:layout_marginEnd="@dimen/progress_text_end_margin"
+                    android:layout_marginRight="@dimen/progress_text_end_margin"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <ProgressBar
+                    android:id="@+id/job_progressbar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="@dimen/progress_bar_width"
+                    android:layout_height="15dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@id/progress_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/progress_labels_bottom_margin"
+                    android:layout_marginLeft="@dimen/progress_common_margin"
+                    android:layout_marginRight="@dimen/progress_common_margin"
+                    android:layout_marginTop="@dimen/progress_common_margin"
+                    android:indeterminateDrawable="@drawable/jobprogress_scan_anim"
+                    android:indeterminateOnly="true"
+                    android:maxHeight="@dimen/progress_common_margin"
+                    android:progressDrawable="@drawable/jobprogressbar_drawable" />
+
+                <LinearLayout
+                    android:id="@+id/cancelJobLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/job_progressbar"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginEnd="@dimen/progress_common_margin"
+                    android:layout_marginRight="@dimen/progress_common_margin"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/job_progressbar"
+                    android:layout_toEndOf="@id/job_progressbar"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                 <Button
+                    android:id="@+id/cancelJob"
+                    android:layout_width="@dimen/progress_close_btn_width"
+                    android:layout_height="@dimen/progress_close_btn_height"
+                    android:background="@drawable/popup_stop_button"
+                    android:layout_marginTop="10dp" />
+
+                <TextView
+                    android:id="@+id/cancelText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="center"
+                    android:maxWidth="70dp"
+                    android:minWidth="70dp"
+                    android:layout_marginTop="-5dp"
+                    android:singleLine="true"
+                    android:text="@string/cancel"
+                    android:textAlignment="center"
+                    android:textColor="@color/popupTextColor"
+                    android:textSize="@dimen/progress_cancel_text_size" />
+
+                </LinearLayout>
+           </RelativeLayout>
+       </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

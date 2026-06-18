@@ -1,0 +1,151 @@
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="${PACMAN_LIST_PACKAGES_PERMISSION}" />
+    <uses-permission android:name="${PACMAN_READ_PROVIDERS_PERMISSION}" />
+
+    <application>
+        <!-- replace conflicted content providers here for Android instrumented tests -->
+        <provider
+            android:name="com.hp.jetadvantage.link.services.scanlet.provider.ScanletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.oxp.scanletcp.test"
+            android:exported="true"
+            tools:node="replace" />
+
+        <provider android:name="com.hp.jetadvantage.link.services.scanlet.provider.ScanFileContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.oxp.scanletcp.test"
+            android:exported="true"
+            tools:node="replace" />
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.printlet.provider.OXPPrintletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.oxp.printletcp.test"
+            android:exported="true"
+            tools:node="replace" />
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.copylet.provider.OXPCopyletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.oxp.copyletcp.test"
+            android:exported="true"
+            tools:node="replace" />
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.attestationlet.provider.AttestationletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.attestationletcp.test"
+            android:exported="true"
+            tools:node="replace" />
+            
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider.test"
+            android:exported="false"
+            android:grantUriPermissions="true"
+            tools:node="replace">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths"/>
+        </provider>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.deviceeventslet.provider.DeviceEventsLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.deviceeventsletcp.test"
+            android:enabled="true"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.storagelet.provider.StorageLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.storageletcp.test"
+            android:grantUriPermissions="true"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.model.JobDataContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.internalcp.jobs.test"
+            android:exported="false"
+            tools:node="replace" />
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.provider.JobletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.joblet.model.JobDataContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.joblet.internalcp.jobs.test"
+            android:exported="false"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SPSVersionContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.spsvcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedPrinterContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.lsmcp.oxp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedAccessContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accesslet.internalcp.access.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.common.providers.SelectedAccessoryContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accessorylet.internalcp.accessory.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.accessorylet.provider.AccessoryLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accessoryletcp.test"
+            android:enabled="true"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.deviceusagelet.provider.DeviceUsageLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.deviceusageletcp.test"
+            android:enabled="true"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.configlet.provider.ConfigLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.configletcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.devicelet.provider.DeviceletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.deviceletcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.emaillet.provider.EmailContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.emailletcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.statisticslet.provider.StatisticsLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.statisticsletcp.test"
+            android:exported="true"
+            tools:node="replace"/>
+
+        <service android:name="com.hp.jetadvantage.link.services.accessorylet.service.ItAppAccessoryServiceTest"
+            android:exported="true"
+            android:permission="${SERVICES_PERMISSION}">
+            <intent-filter>
+                <action android:name="com.hp.jetadvantage.link.api.action.ACCESSORY" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

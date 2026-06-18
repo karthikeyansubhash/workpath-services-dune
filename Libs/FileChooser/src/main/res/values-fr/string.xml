@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">Répertoire vide</string>
+<string name="storage_removed">Stockage supprimé ou démonté.</string>
+<string name="choose_file">Sélectionner un fichier</string>
+<string name="error_selecting_file">Erreur de sélection du fichier</string>
+<string name="internal_storage">Stockage interne</string>
+<string name="base_path_name">Stockage</string>
+<string name="select_file_source">Sélectionner la source du fichier</string>
+<string name="input_address">Partager la sélection</string>
+<string name="input_address_toast">Saisissez l\'adresse pour la partager !</string>
+<string name="shares_discovery_wifi_only">Le partage de la détection peut s\'effectuer uniquement via le Wi-Fi.</string>
+<string name="change_host">Modifier l\'hôte</string>
+<string name="invalid_ip_input">Veuillez saisir une adresse IP valide.</string>
+<string name="downloading">Téléchargement</string>
+<string name="downloading_message">Téléchargement de %s sur votre périphérique…</string>
+<string name="share_login">Connexion</string>
+<string name="input_login_text">Saisissez les informations de connexion pour %s</string>
+<string name="input_login_label_domain">Domaine :</string>
+<string name="input_login_label_user">Nom d\'utilisateur :</string>
+<string name="input_login_label_password">Mot de passe :</string>
+<string name="can_be_empty">Peut rester vide</string>
+<string name="download_failed">Échec du téléchargement. Veuillez réessayer</string>
+<string name="downloaded_to">Fichier téléchargé vers %s</string>
+<string name="failed_to_access">Impossible d\'accéder au partage. Veuillez réessayer.</string>
+<string name="failed_to_login">Échec de la connexion. Veuillez réessayer ultérieurement ou avec d\'autres informations d\'identification.</string>
+<string name="failed_to_access_share">Échec de l\'accès au dossier partagé. Veuillez réessayer ultérieurement ou avec une autre adresse.</string>
+<string name="enter_ip">Saisir l\'adresse IP</string>
+<string name="choose_list_ip">Dans la liste</string>
+<string name="ip_address_label">Saisissez l\'adresse IP :</string>
+<string name="ip_address_select">Sélectionner l\'adresse IP</string>
+<string name="loading_hosts">Recherche d\'hôtes…</string>
+<string name="no_hosts">Aucun hôte trouvé</string>
+<string name="refresh">Actualiser</string>
+<string name="please_select_ip">Veuillez sélectionner l\'adresse IP dans la liste ou saisissez-la manuellement.</string>
+<string name="error_file_format">Seuls les fichiers PDF et JPG peuvent être imprimés.</string>
+</resources>

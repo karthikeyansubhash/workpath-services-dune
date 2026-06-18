@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+    <uses-permission android:name="${PACMAN_LIST_PACKAGES_PERMISSION}" />
+    <uses-permission android:name="${PACMAN_READ_PROVIDERS_PERMISSION}" />
+    <uses-permission android:name="${PACMAN_PACKAGE_LIFECYCLE_EVENTS_PERMISSION}"/>
+
+    <application>
+        <receiver
+            android:name=".receivers.DeviceReadyReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="${SYSTEM_PERMISSION}">
+            <intent-filter>
+                <action android:name="${DEVICE_READY}" />
+                <action android:name="${WORKPATH_SERVICE_READY}" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.hp.jetadvantage.link.device.services.standard.services.StandardWebsocketCallbackService"
+            android:enabled="true"
+            android:exported="true">
+        </service>
+
+        <service
+            android:name="com.hp.jetadvantage.link.device.services.standard.services.StandardDeviceInitService">
+        </service>
+    </application>
+</manifest>

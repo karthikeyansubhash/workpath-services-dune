@@ -1,0 +1,34 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.device.services.clients'
+
+    buildFeatures {
+        aidl true
+    }
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation project(':DeviceServices-Interfaces')
+
+    implementation rootProject.ext.okhttpVersion
+    implementation rootProject.ext.gsonVersion
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoCoreVersion
+    testImplementation rootProject.ext.mockWebserverVersion
+    testImplementation rootProject.ext.orgJsonVersion
+
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+}

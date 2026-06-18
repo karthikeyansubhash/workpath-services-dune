@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:order="1"
+        android:title="@string/pref_source"
+        android:key="source_category">
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_source"
+            android:title="@string/pref_source"
+            android:dialogTitle="@string/pref_source"
+            android:entries="@array/pref_sources"
+            android:entryValues="@array/pref_source_values"
+            android:defaultValue="@string/pref_source_default"
+            android:order="1"
+            android:layout="@layout/layout_option_list"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:order="2"
+        android:title="@string/pref_source_storage"
+        android:key="source_storage_category">
+
+        <Preference
+            android:key="pref_filename"
+            android:title="@string/pref_filename_required"
+            android:dialogTitle="@string/pref_filename_required"
+            android:inputType="textNoSuggestions"
+            android:layout="@layout/layout_option_list"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:order="3"
+        android:title="@string/pref_source_http"
+        android:key="source_http_category">
+
+        <EditTextPreference
+            android:key="pref_uri"
+            android:title="@string/pref_uri"
+            android:dialogTitle="@string/pref_uri"
+            android:inputType="textNoSuggestions"
+            android:layout="@layout/layout_option_list"/>
+
+        <EditTextPreference
+            android:key="pref_uri_username"
+            android:title="@string/pref_uri_username"
+            android:dialogTitle="@string/pref_uri_username"
+            android:inputType="textNoSuggestions"
+            android:layout="@layout/layout_option_list"/>
+
+        <EditTextPreference
+            android:key="pref_uri_password"
+            android:title="@string/pref_uri_password"
+            android:dialogTitle="@string/pref_uri_password"
+            android:password="true"
+            android:inputType="textPassword"
+            android:layout="@layout/layout_option_list"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:order="4"
+        android:title="@string/pref_source_usb"
+        android:key="source_usb_category">
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_usb_storage"
+            android:title="@string/pref_usb_storage"
+            android:dialogTitle="@string/pref_usb_storage"
+            android:entries="@array/pref_empty_entries"
+            android:entryValues="@array/pref_empty_entries"
+            android:layout="@layout/layout_option_list"/>
+
+        <Preference
+            android:key="pref_usb_filename"
+            android:title="@string/pref_filename_required"
+            android:dialogTitle="@string/pref_filename_required"
+            android:inputType="textNoSuggestions"
+            android:layout="@layout/layout_option_list"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:order="5"
+        android:title="@string/pref_source_stream"
+        android:key="source_stream_category">
+
+        <Preference
+            android:key="pref_stream_filename"
+            android:title="@string/pref_filename_required"
+            android:dialogTitle="@string/pref_filename_required"
+            android:inputType="textNoSuggestions"
+            android:layout="@layout/layout_option_list"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="@string/general"
+        android:key="pref_generalCategory"
+        android:order="6"
+        android:layout="@layout/layout_title_list">
+        
+        <com.hp.jetadvantage.link.services.settingsui.preferences.NumberPickerPreference
+            android:key="pref_copies"
+            android:title="@string/pref_copies"
+            android:defaultValue="1"
+            android:dialogTitle="@string/pref_copies"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_colorMode"
+            android:title="@string/pref_colorMode"
+            android:dialogTitle="@string/pref_colorMode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_duplexMode"
+            android:title="@string/pref_duplexMode"
+            android:dialogTitle="@string/pref_duplexMode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_autoFit"
+            android:title="@string/pref_autoFit"
+            android:dialogTitle="@string/pref_autoFit"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_stapleMode"
+            android:title="@string/pref_staple_mode"
+            android:dialogTitle="@string/pref_staple_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_paperSource"
+            android:title="@string/pref_paper_source"
+            android:dialogTitle="@string/pref_paper_source"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_paperSize"
+            android:title="@string/pref_paper_size"
+            android:dialogTitle="@string/pref_paper_size"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_paperType"
+            android:title="@string/pref_paper_type"
+            android:dialogTitle="@string/pref_paper_type"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_documentFormat"
+            android:title="@string/pref_docFormat"
+            android:dialogTitle="@string/pref_docFormat"
+            android:entries="@array/pref_auto_entries"
+            android:entryValues="@array/pref_auto_entries"
+            android:defaultValue="@string/pref_value_auto"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_collateMode"
+            android:title="@string/pref_collate_mode"
+            android:dialogTitle="@string/pref_collate_mode"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_print_orientation"
+            android:title="@string/pref_print_orientation"
+            android:dialogTitle="@string/pref_print_orientation"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_print_quality"
+            android:title="@string/pref_print_quality"
+            android:dialogTitle="@string/pref_print_quality"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.IconsListPreference
+            android:key="pref_print_output_bin"
+            android:title="@string/pref_print_output_bin"
+            android:dialogTitle="@string/pref_print_output_bin"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@string/pref_value_default"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.NumberPickerPreference
+            android:key="pref_print_start_pageRanges"
+            android:title="@string/pref_print_start_pageRanges"
+            android:defaultValue="0"
+            android:dialogTitle="@string/pref_print_start_pageRanges"
+            android:layout="@layout/layout_option_list"/>
+
+        <com.hp.jetadvantage.link.services.settingsui.preferences.NumberPickerPreference
+            android:key="pref_print_end_pageRanges"
+            android:title="@string/pref_print_end_pageRanges"
+            android:defaultValue="0"
+            android:dialogTitle="@string/pref_print_end_pageRanges"
+            android:layout="@layout/layout_option_list"/>
+
+        <MultiSelectListPreference
+            android:key="pref_print_finishings"
+            android:title="@string/pref_print_finishings"
+            android:dialogTitle="@string/pref_print_finishings"
+            android:entries="@array/pref_default_entries"
+            android:entryValues="@array/pref_default_entries"
+            android:defaultValue="@array/pref_default_entries"
+            android:layout="@layout/layout_option_list" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

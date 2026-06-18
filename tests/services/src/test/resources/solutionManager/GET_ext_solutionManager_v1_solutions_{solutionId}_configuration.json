@@ -1,0 +1,19 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "description": "test description",
+  "links": [
+    {
+      "href": "/ext/solutionManager/v1/solutions/11111111-1111-1111-9995-111111111111/configuration",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/solutionManager/v1/solutions/11111111-1111-1111-9995-111111111111/configuration/data",
+      "rel": "data"
+    }
+  ],
+  "mimeType": "application/json"
+}

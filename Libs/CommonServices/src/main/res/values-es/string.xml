@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">Error al obtener los permisos de HP Workpath SDK. Solicite JetAdvantageLink.requestPermissions() para obtener los permisos.</string>
+<string name="sps_permission">Permisos de HP Workpath SDK</string>
+<string name="sps_self_permission">Permisos de HP Workpath SDK</string>
+<string name="grant">Conceder</string>
+<string name="deny">Denegar</string>
+<string name="permission_text" formatted="false">¿Desea que la aplicación %s (%s) tenga acceso completo a HP Workpath SDK?</string>
+<string name="more_permission_text_small">Más información</string>
+<string name="more_permission_text_big">La aplicación podrá utilizar las funciones de escaneado, impresión, copia y fax en cualquier impresora que esté conectada y utilice HP Workpath SDK. Para revocar todos los permisos concedidos, vaya a Administrar aplicaciones y borre todos los datos de la aplicación HP Workpath SDK.</string>
+<string name="sps_sd_card">HP Workpath SDK necesita utilizar la tarjeta SD de su dispositivo para poder guardar los archivos escaneados. Concédale permisos a la aplicación en los siguientes cuadros de diálogo del sistema.</string>
+<string name="permission_not_granted">La aplicación no puede escribir en el almacenamiento, por lo que puede que no funcione correctamente. Conceda los permisos necesarios para poder utilizarla.</string>
+</resources>

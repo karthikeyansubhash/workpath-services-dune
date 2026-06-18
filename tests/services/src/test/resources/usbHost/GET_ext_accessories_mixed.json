@@ -1,0 +1,85 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/usbAccessories/v1/accessories",
+      "rel": "self"
+    },
+    {
+      "hrefTemplate": "/ext/usbAccessories/v1/accessories/{accessoryID}",
+      "rel": "accessory"
+    }
+  ],
+  "memberIds": [
+    "a06bdec4-8dac-4016-b03f-538c7718bac1"
+  ],
+  "members": [
+    {
+      "accessoryID": "a06bdec4-8dac-4016-b03f-538c7718bac1",
+      "activeConfiguration": 1,
+      "deviceClass": 3,
+      "deviceProtocol": 0,
+      "deviceSubclass": 0,
+      "deviceVersion": 4096,
+      "links": [
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac1",
+          "rel": "self"
+        },
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac1/generic",
+          "rel": "generic"
+        },
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac1/hid",
+          "rel": "hid"
+        }
+      ],
+      "manufacturerName": "Hewlett-Packard",
+      "productId": 69,
+      "productName": "HP Proximity Reader (CZ208A)",
+      "registration": "rkOwned",
+      "resourceId": "a06bdec4-8dac-4016-b03f-538c7718bac1",
+      "serialNumber": "",
+      "usbVersion": 1,
+      "vendorId": 1008
+    },
+    {
+      "accessoryID": "a06bdec4-8dac-4016-b03f-538c7718bac2",
+      "activeConfiguration": 1,
+      "deviceClass": 3,
+      "deviceProtocol": 0,
+      "deviceSubclass": 0,
+      "deviceVersion": 4096,
+      "links": [
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac2",
+          "rel": "self"
+        },
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac2/generic",
+          "rel": "generic"
+        },
+        {
+          "href": "/ext/usbAccessories/v1/accessories/a06bdec4-8dac-4016-b03f-538c7718bac2/hid",
+          "rel": "hid"
+        }
+      ],
+      "manufacturerName": "Hewlett-Packard",
+      "productId": 272,
+      "productName": "Inepro Card Reader",
+      "registration": "rkShared",
+      "resourceId": "a06bdec4-8dac-4016-b03f-538c7718bac2",
+      "serialNumber": "1",
+      "usbVersion": 1,
+      "vendorId": 7590
+    }
+  ],
+  "offset": 0,
+  "selectedCount": 1,
+  "totalCount": 1
+}

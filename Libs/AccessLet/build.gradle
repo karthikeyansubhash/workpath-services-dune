@@ -1,0 +1,25 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.services.accesslet'
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    implementation project(':Util-CommonServices')
+    //TODO : remove this dependency when AccessLet is refactored for Dune
+    implementation project(':DeviceServices-Clients')
+    implementation project(':DeviceServices-Interfaces')
+    implementation project(':DeviceServices-Standard')
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoCoreVersion
+}

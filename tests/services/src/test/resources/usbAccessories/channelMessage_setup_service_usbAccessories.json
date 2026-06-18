@@ -1,0 +1,16 @@
+{
+  "channelMessage": {
+    "channelId": "3589ced8-b038-4114-8f62-b9e1a94fda55",
+    "message": {
+      "setup": {
+        "details": {
+          "service": {
+            "e2ServiceGun": "com.hp.ext.service.usbAccessories.version.1",
+            "serviceGun": "com.hp.ext.service.usbAccessories.version.1.clientService.accessoriesAgentServiceTarget"
+          }
+        },
+        "packageId": "com.hp.workpath.sample.accessoryagentsample"
+      }
+    }
+  }
+}

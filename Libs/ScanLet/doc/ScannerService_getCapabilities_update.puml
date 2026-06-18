@@ -1,0 +1,232 @@
+@startuml
+title
+<font size=20><b>ScannerService API : getCapabilities() - Destination-based Capabilities</b></font>
+<font size=16>Support for TransmissionMode and Destination parameters</font>
+end title
+
+box "Workpath App" #FFFFFF
+actor User as "Workpath ScanApp"
+participant lib as "WorkpathLib"
+end box
+box "Workpath services " #C9FFB0
+    'participant ScanBR as "ScanLet\nBroadcastReceiver"
+    participant ScanCP as "ScanLet [provider]\nContentProvider"
+    participant ScanAdapter as "ScanLet [adapter]\nScanOptionProfileAdapter"
+    'participant ScanIS as "[service]\nScanJob\nIntentService"
+    'participant ScanSM as "[service]\nScanJob\nStateMachine"
+    participant ScanDS as "DeviceService"
+
+box "Workpath PacMan" #C9FFB0
+    participant PacMan as "PacMan"
+end box
+
+box "Dune" #aliceblue
+participant E2 as "    E2    "
+end box
+
+/'
+rnote right of User
+end note
+'/
+
+autonumber
+== Get Scan Capabilities ==
+alt API 1 (Current) - getCapabilities(Context, Result)
+    User -> lib : ScannerService.\ngetCapabilities(Context, Result)
+    activate lib
+    lib -> lib : Intent intent = create request
+    note right of lib #white
+    Bundle : {"clientVersion" : 8}
+    **// NO transmissionMode**
+    **// NO destination**
+    end note
+    note right of lib #lightblue
+    **API 1: No extra parameters**
+    Defaults to:
+    - transmissionMode = JOB
+    - destination = HTTP
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_caps", Bundle)
+
+else API 1 (Advanced) - getCapabilities(Context, TransmissionMode, Result)
+    User -> lib : ScannerService.\ngetCapabilities(Context, **TransmissionMode**, Result)
+    activate lib
+    lib -> lib : Intent intent = create request
+    note right of lib #white
+    Bundle : {"clientVersion" : 8,
+              **"transmissionMode": IMAGE|JOB**}
+    **// NO destination (defaults to HTTP)**
+    end note
+    note right of lib #lightblue
+    **API 1 Advanced: Only transmissionMode specified**
+    Defaults to:
+    - destination = HTTP
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_caps", Bundle)
+
+else <color:red><b>API 2 (Future) - getCapabilities(Context, Destination, Result)</b></color>
+    User -> lib : ScannerService.\ngetCapabilities(Context, <color:red><b>Destination</b></color>, Result)
+    activate lib
+    lib -> lib : Intent intent = create request
+    lib -> lib : <color:red><b>intent.putExtra("DESTINATION", destination)</b></color>
+    note right of lib #lightgreen
+    Bundle : {"clientVersion" : 8,
+              <color:red><b>"destination": HTTP|FTP|NETWORK_FOLDER|ME|EMAIL|USB</b></color>}
+    **// NO transmissionMode (defaults to JOB)**
+    end note
+    note right of lib #lightgreen
+    <color:red><b>API 2: Destination-specific capabilities</b></color>
+    Defaults to:
+    - transmissionMode = JOB
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_caps", Bundle)
+
+else <color:red><b>API 2 (Advanced) - getCapabilities(Context, Destination, TransmissionMode, Result)</b></color>
+    User -> lib : ScannerService.\ngetCapabilities(Context, <color:red><b>Destination</b></color>, <color:red><b>TransmissionMode</b></color>, Result)
+    activate lib
+    lib -> lib : Intent intent = create request
+    lib -> lib : <color:red><b>intent.putExtra("DESTINATION", destination)</b></color>
+    note right of lib #lightgreen
+    Bundle : {"clientVersion" : 8,
+              <color:red><b>"destination": HTTP|FTP|NETWORK_FOLDER|ME|EMAIL|USB</b></color>,
+              <color:red><b>"transmissionMode": IMAGE|JOB</b></color>}
+    end note
+    note right of lib #lightgreen
+    <color:red><b>API 2 Advanced: Full control</b></color>
+    Both destination and transmissionMode specified
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_caps", Bundle)
+end
+
+activate ScanCP
+ScanCP -> ScanCP : extract parameters from Bundle
+note right of ScanCP #lightyellow
+**Extract parameters with defaults:**
+
+// TransmissionMode (default: JOB)
+TransmissionMode transmissionMode = 
+    extras != null && extras.containsKey("transmissionMode")
+        ? extras.getSerializable("transmissionMode")
+        : **TransmissionMode.JOB**;
+
+<color:red><b>// Destination (default: <color:blue>Global.Destination.HTTP</color>)
+Destination destination = 
+    extras != null && extras.containsKey("DESTINATION")
+        ? extras.getSerializable("DESTINATION")
+        : Destination.HTTP;</b></color>
+end note
+
+ScanCP -> ScanAdapter : getCapabilities(\n  appPackageName,\n  deviceService,\n  transmissionMode,\n  <color:red><b>destination</b></color>)
+activate ScanAdapter
+
+note right of ScanAdapter #lightblue
+**Destination affects Profile selection:**
+- **HTTP**: Uses http profile section
+- **FTP/NETWORK_FOLDER**: Uses networkFolder profile section
+- <color:red><b>**ME/EMAIL/USB**: Uses jobStorage profile section</b></color>
+
+TransmissionMode filters available options:
+- **IMAGE mode**: Limited document formats
+- **JOB mode**: Full capabilities
+end note
+
+ScanAdapter -> ScanDS : getProfile(appPackageName)
+activate ScanDS
+opt Not cached (Token & Profile)
+    ScanDS [#0000FF]-> PacMan : <<IPC>>\n queryUuidByPackageName\n(appPackageName)
+    activate PacMan
+    PacMan [#0000FF]--> ScanDS : <<IPC>>\n application UUID
+    deactivate PacMan
+    ScanDS [#0000FF]-> E2 : GET /cdm/e2WorkpathInterop/v1/appToken/{applicationId}
+    activate E2
+    note right of ScanDS #white
+    Request solution token for authorization
+    end note
+    E2 [#0000FF]--> ScanDS : solutionToken
+    deactivate E2
+end opt
+
+ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/profile
+activate E2
+note right of ScanDS #white
+GET /ext/scanJob/v1/profile HTTP/1.1
+Authorization: Bearer solutionToken
+end note
+E2 [#0000FF]--> ScanDS : scan profile
+deactivate E2
+note right of ScanDS #white
+**E2 Profile Response:**
+{ "base": { "definitions" : [...] },
+  **"http"**: { "definitions" : [...] },
+  **"networkFolder"**: { "definitions" : [...] },
+  <color:red><b>**"jobStorage"**: { "definitions" : [...] }</b></color>
+}
+// Different sections for different destinations
+end note
+ScanDS --> ScanAdapter : Return Profile<E2Type>
+deactivate ScanDS
+
+ScanAdapter -> ScanAdapter : createScanAttributesCapsBuilder(\nProfile, transmissionMode, **destination**)
+activate ScanAdapter
+
+note right of ScanAdapter #lightyellow
+**Profile → Capabilities Conversion:**
+
+1. **Select OptionProfileHelper by destination:**
+- HTTP → uses profile.getHttp()
+- FTP/NETWORK_FOLDER → uses profile.getNetworkFolder()
+- ME/EMAIL/USB → uses profile.getJobStorage()
+
+2. **Filter options by TransmissionMode:**
+- IMAGE mode: Only image formats (JPEG, PNG)
+- JOB mode: All formats (PDF, TIFF, etc.)
+
+3. **Extract capabilities from Profile**
+4. **Convert E2 → Workpath API types**
+end note
+
+alt destination is HTTP
+ ScanAdapter -> ScanAdapter : helper = getOptionProfileHelper(profile, **HTTP**)
+ ScanAdapter -> ScanAdapter : extract HTTP-specific capabilities
+else destination is FTP or NETWORK_FOLDER
+ ScanAdapter -> ScanAdapter : helper = getOptionProfileHelper(profile, **NETWORK_FOLDER**)
+ ScanAdapter -> ScanAdapter : extract NetworkFolder-specific capabilities
+else destination is ME, EMAIL, or USB
+ ScanAdapter -> ScanAdapter : <color:red><b>helper = getOptionProfileHelper(profile, **ME**) // EMAIL or USB</b></color>
+ ScanAdapter -> ScanAdapter : <color:red><b>extract JobStorage-specific capabilities</b></color>
+ note right of ScanAdapter #pink
+ <color:red><b>ME/EMAIL/USB use JobStorage profile</b></color>
+ JobStorage section provides destination-specific capabilities
+ end note
+end
+
+ScanAdapter -> ScanAdapter : Filter by transmissionMode:\n- Extract documentFormat list\n- Extract colorMode list\n- Extract resolution list\n- etc.
+
+ScanAdapter -> ScanAdapter : Convert E2Type to WorkpathAPIType\nusing ScanTypeMapping converters
+note right of ScanAdapter #white
+**ScanTypeMapping Examples:**
+- ColorMode: E2.ColorMode → ScanAttributes.ColorMode
+- Resolution: E2.Resolution → Integer (DPI)
+- PlexMode + BindingFormat → ScanAttributes.Duplex
+end note
+
+ScanAdapter -> ScanAdapter : Build ScanAttributesCaps object
+deactivate ScanAdapter
+
+ScanAdapter -> ScanAdapter : JsonParser.toJson(ScanAttributesCaps)
+ScanAdapter --> ScanCP : Return Json String\n(ScanAttributesCaps)
+deactivate ScanAdapter
+
+ScanCP -[#0000FF]-> lib : <<IPC>>\n Return Bundle
+deactivate ScanCP
+note left of ScanCP #white
+**Response Bundle:**
+{"resultCode": -1,
+ "result": ScanAttributesCaps Json String }
+end note
+
+lib -> lib : JsonParser.fromJson(jsonStr, ScanAttributesCaps.class)
+lib --> User : Return\nScanAttributesCaps
+deactivate lib
+
+@enduml

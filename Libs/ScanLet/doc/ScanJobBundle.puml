@@ -1,0 +1,37 @@
+@startuml
+
+object JobBundle {
+    KEY_CLIENTS_VERSION : int
+    KEY_JOB_TYPE : JobInfo.JobType
+    KEY_SCAN_IMAGE_COUNT : int
+    KEY_DST_TOTAL : int
+    JOB_EMULATED_TAG : boolean
+    JOB_SOURCE_TAG : String
+    KEY_JOB_INFO : JobInfo
+}
+
+object JobInfo {
+    mVersion : int
+    mJobId : String
+    mJobName : String
+    mJobType : JobType
+    mOwner : String
+    mStartTime : long
+    mCompleteTime : long
+    mJobData : ScanJobData
+}
+note right : jetadvantage.link.api.job
+
+object ScanJobData {
+    mDuplex : ScanAttributes.Duplex
+    mScanSize : ScanAttributes.ScanSize
+    mJobState : ScanJobState
+    mDestination : ScanAttributes.Destination
+}
+note right : jetadvantage.link.api.job
+
+JobBundle "1" *-- "1" JobInfo : contains
+JobInfo "1" *-- "1" ScanJobData : contains
+
+
+@enduml

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:minHeight="?attr/listPreferredItemHeightSmall"
+    android:paddingLeft="@dimen/local_abc_select_dialog_padding_start_material"
+    android:paddingRight="?attr/dialogPreferredPadding"
+    android:paddingStart="@dimen/local_abc_select_dialog_padding_start_material"
+    android:paddingEnd="?attr/dialogPreferredPadding"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:background="?attr/selectableItemBackgroundBorderless"
+    android:focusable="true"
+    android:clickable="true">
+
+    <RadioButton
+        android:id="@+id/btn_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="?android:attr/listChoiceIndicatorSingle"
+        android:clickable="false"
+        android:focusable="false"
+        android:paddingRight="5dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/listPreferredItemHeightSmall"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/icon"
+        android:contentDescription="@null" />
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="?attr/textColorAlertDialogListItem"
+        android:gravity="center_vertical"
+        android:ellipsize="marquee"/>
+
+</LinearLayout>
+

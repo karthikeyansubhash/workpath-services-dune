@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="com.hp.packagemanager.permission.READ_WRITE_ATTESTATION" />
+    <uses-permission android:name="com.hp.packagemanager.permission.READ_WRITE_SYSTEMCONFIG" />
+    
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.AttestationletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.attestationletcp"
+            android:exported="true"/>
+    </application>
+
+</manifest>

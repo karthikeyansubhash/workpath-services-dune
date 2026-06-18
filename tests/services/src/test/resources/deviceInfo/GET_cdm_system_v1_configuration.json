@@ -1,0 +1,17 @@
+{
+  "assetNumber": "",
+  "companyContact": "",
+  "companyName": "",
+  "deviceDescription": "",
+  "deviceLanguage": "ko",
+  "deviceLocation": "",
+  "displayUnitOfMeasure": "metric",
+  "supportContact": "",
+  "links": [
+    {
+      "href": "/cdm/system/v1/configuration/constraints",
+      "rel": "constraints"
+    }
+  ],
+  "version": "1.6.0"
+}

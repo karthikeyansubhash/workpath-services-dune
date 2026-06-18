@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.oxpdlib'
+
+    buildFeatures {
+        aidl true
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    api project(path: ':Util-OXPd')
+    implementation rootProject.ext.okhttpVersion
+    implementation rootProject.ext.gsonVersion
+    implementation rootProject.ext.nanoHttpd
+//    api project(path: ':Util-OXPd', configuration: 'oneJar')
+//    pacManApi files(buildDir.absolutePath.concat('/../Util-OXPd/libs/oxpdlib.jar'))
+}

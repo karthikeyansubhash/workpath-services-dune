@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+
+    <string name="status_other">other</string>
+    <string name="status_unknown">unknown</string>
+    <string name="status_idle">idle</string>
+    <string name="status_printing">printing</string>
+    <string name="status_warmup">Warmup</string>
+</resources>

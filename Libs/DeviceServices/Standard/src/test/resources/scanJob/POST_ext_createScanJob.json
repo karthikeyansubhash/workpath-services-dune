@@ -1,0 +1,117 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/scanJob/v1/scanJobAgents/26c78c4c-b81b-4812-9e56-c8f8830589dd/scanJobs/afc620c8-c37c-4850-81c4-e3fc3330c883",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/scanJob/v1/scanJobAgents/26c78c4c-b81b-4812-9e56-c8f8830589dd/scanJobs/afc620c8-c37c-4850-81c4-e3fc3330c883/cancel",
+      "rel": "cancel"
+    }
+  ],
+  "resourceId": "afc620c8-c37c-4850-81c4-e3fc3330c883",
+  "scanJobId": "afc620c8-c37c-4850-81c4-e3fc3330c883",
+  "scanJobStatus": {
+    "jobActivity": [
+      {
+        "activity": "jasNotStarted",
+        "timestamp": "2024-05-22T05:13:42.234Z"
+      }
+    ],
+    "jobDoneStatus": "jdsActive",
+    "jobDoneStatusDetail": "Initializing",
+    "processingRestartCount": 0,
+    "totalImagesProcessed": 0,
+    "totalImagesScanned": 0,
+    "totalImagesTransmitted": 0,
+    "transmissionConsecutiveRetryCount": 0,
+    "transmissionRetryCount": 0
+  },
+  "scanTicket": {
+    "destinationOptions": {
+      "http": {
+        "destination": {
+          "host": {
+            "explicit": {
+              "explicitValue": "15.26.148.134:8080"
+            }
+          },
+          "path": {
+            "explicit": {
+              "explicitValue": "HTTPpages/file"
+            }
+          },
+          "scheme": "http"
+        }
+      }
+    },
+    "scanOptions": {
+      "autoColorDetect": "acdmDetectOnly",
+      "autoDeskew": false,
+      "autoExposure": false,
+      "backgroundCleanup": 2,
+      "backgroundColorRemoval": false,
+      "backgroundColorRemovalLevel": 0,
+      "backgroundNoiseRemoval": false,
+      "binaryRendering": "brHalftone",
+      "blackBackground": false,
+      "blackEnhancementLevel": 60,
+      "blankPageSuppression": "bpdDisable",
+      "ccdChannel": "cctGrayEmulated",
+      "colorAndGrayCompression": "ctJpeg",
+      "colorMode": "cmColor",
+      "colorRange": 0,
+      "colorSensitivity": 0,
+      "compressionFactor": 0,
+      "contentOrientation": "coPortrait",
+      "contentType": "dctMixed",
+      "contrast": 1,
+      "descreen": false,
+      "edgeToEdgeScan": false,
+      "encryptionPassword": "",
+      "exposureLevel": 5,
+      "fileName": {
+        "explicit": {
+          "explicitValue": "testScanJob"
+        }
+      },
+      "fileTransmissionMode": "tmJob",
+      "gamma": 100,
+      "highlightLevel": 1,
+      "invertColors": false,
+      "longPlotScan": false,
+      "mediaBindingFormat": "bfFlipLeft",
+      "mediaSize": "msANSI_A_8point5x11in",
+      "mediaSource": "miAdf",
+      "mediaType": "mtPlain",
+      "misfeedDetection": false,
+      "monoCompression": "ctAuto",
+      "outputCanvasAnchor": "ocaTopLeft",
+      "outputCanvasMediaSize": "msAny",
+      "outputCanvasMediaSource": "miAuto",
+      "outputCanvasOrientation": "coPortrait",
+      "outputCanvasXExtent": 0,
+      "outputCanvasYExtent": 0,
+      "outputFileCompression": false,
+      "outputFileEncryption": false,
+      "outputFileFormat": "ffJpeg",
+      "outputQualityVsSize": "qvsMedium",
+      "pagesPerSheet": "ppsOneUp",
+      "plexMode": "pmSimplex",
+      "resolution": "dpi300",
+      "scanCaptureMode": "scmStandard",
+      "scanProgressMode": "spmStandard",
+      "scanningSpeed": "ssAuto",
+      "shadowLevel": 0,
+      "sharpness": 1,
+      "threshold": 0,
+      "xOffset": 0,
+      "yOffset": 0
+    }
+  }
+}

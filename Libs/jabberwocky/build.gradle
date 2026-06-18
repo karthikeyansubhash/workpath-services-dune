@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+}
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.sdd.jabberwocky'
+
+    sourceSets {
+        main {
+            java.srcDirs = ['java']
+            manifest.srcFile 'AndroidManifest.xml'
+        }
+    }
+}
+

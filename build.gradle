@@ -1,0 +1,119 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    id 'com.android.application' version '8.2.2' apply false
+    id 'com.android.library' version '8.2.2' apply false
+}
+
+ext {
+    // Common values for build tools, compile android version, libs
+    compileSdkVersion = System.getenv("LINK_SDK_COMPILE_SDK_VERSION") ?: 31
+    buildToolsVersion = "34.0.0"
+    minSdkVersion = System.getenv("LINK_SDK_MIN_SDK_VERSION") ?: 29
+    targetSdkVersion = System.getenv("LINK_SDK_TARGET_SDK_VERSION") ?: 29
+
+    libraryProguardFile = new File(projectDir.absolutePath.concat(File.separator).concat("proguard-library-rules.txt"))
+    libraryMinify = false
+    linkLibMinify = true
+
+    Properties versionProps = new Properties()
+    file("version.properties").withInputStream { versionProps.load(it) }
+
+    version = versionProps['version']
+    versionCode = versionProps['versionCode'].toInteger()
+
+    javaVersion = JavaVersion.VERSION_17
+
+    // Common manifest placeholders grouped by category, sorted alphabetically
+    manifestPlaceholdersBroadcastActions = [
+            DEVICE_READY          : "com.hp.workpath.system.DEVICE_READY",
+            WORKPATH_SERVICE_READY: "com.hp.workpath.system.WORKPATH_SERVICE_READY"
+    ]
+    manifestPlaceholdersPermissions = [
+            PACMAN_LIST_PACKAGES_PERMISSION           : "com.hp.packagemanager.permission.LIST_PACKAGES",
+            PACMAN_PACKAGE_LIFECYCLE_EVENTS_PERMISSION: "com.hp.packagemanager.permission.PACKAGE_LIFECYCLE_EVENTS",
+            PACMAN_READ_PROVIDERS_PERMISSION          : "com.hp.packagemanager.permission.READ_PROVIDERS",
+            SDK_ACCESS_DEVICE_EVENTS_PERMISSION       : "com.hp.workpath.permission.sdk.ACCESS_DEVICE_EVENTS_PERMISSION",
+            SDK_ACCESS_DEVICE_USAGE_PERMISSION        : "com.hp.workpath.permission.sdk.ACCESS_DEVICE_USAGE_PERMISSION",
+            SDK_ACCESS_STATISTICS_PERMISSION          : "com.hp.workpath.permission.sdk.ACCESS_STATISTICS_PERMISSION",
+            SDK_ACCESS_SUPPLIES_PERMISSION            : "com.hp.workpath.permission.sdk.ACCESS_SUPPLIES_PERMISSION",
+            SERVICES_PERMISSION                       : "com.hp.jetadvantage.link.permission.SERVICES_PERMISSION",
+            SERVICES_PERMISSION_INTERNAL              : "com.hp.jetadvantage.link.permission.SERVICES_PERMISSION_INTERNAL",
+            SYSTEM_PERMISSION                         : "com.hp.jetadvantage.link.system.SYSTEM_PERMISSION",
+            SYSTEM_ENABLED_PACKAGES_PERMISSION        : "com.hp.workpath.system.ENABLED_PACKAGES_PERMISSION",
+            DISABLE_PRINTING_PORTS_PERMISSION         : "com.hp.workpath.permission.admin.DISABLE_PRINTING_PORTS"
+    ]
+
+    commonManifestPlaceholders = manifestPlaceholdersPermissions + manifestPlaceholdersBroadcastActions
+
+    //------ library versions
+    support_v4 = 'androidx.appcompat:appcompat:1.4.1'
+    okhttpVersion = "com.squareup.okhttp3:okhttp:4.12.0"
+    gsonVersion = "com.google.code.gson:gson:2.13.2"
+    androidMaterialVersion = "com.google.android.material:material:1.5.0"
+    androidXAnnotation = "androidx.annotation:annotation:1.8.2"
+    androidXMultidex = "androidx.multidex:multidex:2.0.1"
+    androidXWork = "androidx.work:work-runtime:2.7.0"
+    jacksonCore = "com.fasterxml.jackson.core:jackson-core:2.8.8"
+    jacksonAnnotations = "com.fasterxml.jackson.core:jackson-annotations:2.8.8"
+    jacksonDatabind = "com.fasterxml.jackson.core:jackson-databind:2.8.8"
+    nanoHttpd = "org.nanohttpd:nanohttpd:2.3.1"
+    guavaVersion = "com.google.guava:guava:31.1-android"
+    localBroadcastManager = "androidx.localbroadcastmanager:localbroadcastmanager:1.1.0"
+    apacheCommonsEmail = "org.apache.commons:commons-email:1.5"
+    sunMailAndroidMail = "com.sun.mail:android-mail:1.6.0"
+
+    //------ Test tool versions
+    junitVersion = "junit:junit:4.12"
+    mockitoCoreVersion = "org.mockito:mockito-core:4.8.0"
+    mockWebserverVersion = "com.squareup.okhttp3:mockwebserver:4.8.1"
+    orgJsonVersion = "org.json:json:20210307"
+    androidxJunitVersion = "androidx.test.ext:junit:1.1.2"
+    mockitoInlineVersion = "org.mockito:mockito-inline:4.8.0"
+    mockitoAndroidVersion = "org.mockito:mockito-android:3.12.4"
+    androidxTestCore = "androidx.test:core:1.6.0"
+    androidxEspressoVersion = "androidx.test.espresso:espresso-core:3.5.1"
+    androidxWorkTestingVersion = "androidx.work:work-testing:2.7.0"
+}
+
+//allprojects {
+//    String projName = "${project.name}"
+//
+//    if (rootProject.name != projName) {
+//        buildDir = rootProject.buildDir.absolutePath.concat(File.separator)
+//                .concat("modules").concat(File.separator).concat(projName)
+//    } else {
+//        println("Building SDK using minSdkVersion=" + ext.minSdkVersion
+//            + ", compileSdkVersion=" + ext.compileSdkVersion + ", targetSdkVersion=" + ext.targetSdkVersion)
+//    }
+//
+//    repositories {
+//        google()
+//        mavenCentral()
+//        maven {
+//            url 'https://maven.google.com'
+//        }
+//        flatDir {
+//            dirs "$rootProject.projectDir/Libs"
+//        }
+//    }
+//}
+//
+//subprojects {
+//    afterEvaluate {
+//        if (getPlugins().hasPlugin('android') ||
+//                getPlugins().hasPlugin('android-library')) {
+//
+//            project.ext.set("archivesBaseName", project.name.substring(project.name.indexOf("-") + 1))
+//
+//            configure(android.lintOptions) {
+//                abortOnError false
+//                htmlReport false
+//                checkReleaseBuilds false
+//            }
+//        }
+//    }
+//}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

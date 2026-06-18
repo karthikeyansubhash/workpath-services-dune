@@ -1,0 +1,401 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/supplies/v1/suppliesAgents/d50ec0d8-b16b-434b-abe2-5d2202aad652/suppliesInfo",
+      "rel": "self"
+    }
+  ],
+  "suppliesList": [
+    {
+      "approximatePagesRemainingSymbol": "ardsDepleted",
+      "brand": "HP",
+      "colors": [
+        "sccK"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2020-01-02T12:00:00Z",
+      "percentLifeRemaining": 20,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9150MC",
+      "serialNumber": "CN11N110CQ",
+      "slotId": 1,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccK",
+      "supplyType": "stTonerCartridge",
+      "supplyUniqueId": "017071480000CN11N110CQ20200102"
+    },
+    {
+      "approximatePagesRemainingSymbol": "ardsDepleted",
+      "brand": "HP    ",
+      "colors": [
+        "sccC"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2020-01-03T12:00:00Z",
+      "percentLifeRemaining": 40,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9151MC",
+      "serialNumber": "CN11N120DC",
+      "slotId": 2,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccC",
+      "supplyType": "stTonerCartridge",
+      "supplyUniqueId": "01715dc00000CN11N120DC20200103"
+    },
+    {
+      "approximatePagesRemainingSymbol": "ardsDepleted",
+      "brand": "HP    ",
+      "colors": [
+        "sccM"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2020-01-02T12:00:00Z",
+      "percentLifeRemaining": 70,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9153MC",
+      "serialNumber": "CN11N1104Z",
+      "slotId": 3,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccM",
+      "supplyType": "stTonerCartridge",
+      "supplyUniqueId": "01725dc00000CN11N1104Z20200102"
+    },
+    {
+      "approximatePagesRemainingSymbol": "ardsDepleted",
+      "brand": "HP    ",
+      "colors": [
+        "sccY"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2020-01-03T12:00:00Z",
+      "percentLifeRemaining": 70,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9152MC",
+      "serialNumber": "CN11N1209D",
+      "slotId": 4,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccY",
+      "supplyType": "stTonerCartridge",
+      "supplyUniqueId": "01735dc00000CN11N1209D20200103"
+    },
+    {
+      "approximatePagesRemaining": 160000,
+      "approximatePagesRemainingSymbol": "ardsGreaterThan",
+      "brand": "HP    ",
+      "colors": [
+        "sccK"
+      ],
+      "firstInstallDate": "2020-04-02T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2019-11-25T12:00:00Z",
+      "percentLifeRemaining": 90,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9074MC",
+      "serialNumber": "191125-0014",
+      "slotId": 5,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccK",
+      "supplyType": "stImageDrum",
+      "supplyUniqueId": "017430d400000191125-00142019112"
+    },
+    {
+      "approximatePagesRemaining": 108000,
+      "approximatePagesRemainingSymbol": "ardsGreaterThan",
+      "brand": "HP    ",
+      "colors": [
+        "sccC"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2019-12-27T12:00:00Z",
+      "percentLifeRemaining": 90,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9075MC",
+      "serialNumber": "CNE3JC9612961A660AMCR0093",
+      "slotId": 6,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccC",
+      "supplyType": "stImageDrum",
+      "supplyUniqueId": "017520f580000CNE3JC9612961A660A"
+    },
+    {
+      "approximatePagesRemaining": 108000,
+      "approximatePagesRemainingSymbol": "ardsGreaterThan",
+      "brand": "HP    ",
+      "colors": [
+        "sccM"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2019-12-27T12:00:00Z",
+      "percentLifeRemaining": 90,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9075MC",
+      "serialNumber": "CNE3JC9612961A660AMCR0009",
+      "slotId": 7,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccM",
+      "supplyType": "stImageDrum",
+      "supplyUniqueId": "017520f580000CNE3JC9612961A660A"
+    },
+    {
+      "approximatePagesRemaining": 108000,
+      "approximatePagesRemainingSymbol": "ardsGreaterThan",
+      "brand": "HP    ",
+      "colors": [
+        "sccY"
+      ],
+      "firstInstallDate": "2020-02-17T12:00:00Z",
+      "lastUsedDate": "2022-02-17T12:00:00Z",
+      "levelState": "slsOk",
+      "manufactureDate": "2019-12-27T12:00:00Z",
+      "percentLifeRemaining": 90,
+      "percentLifeRemainingSymbol": "ardsNone",
+      "productNumber": "W9075MC",
+      "serialNumber": "CNE3JC9612961A660AMCR0007",
+      "slotId": 8,
+      "slotRole": "ssRoleMain",
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satMarking",
+      "supplyColor": "sccY",
+      "supplyType": "stImageDrum",
+      "supplyUniqueId": "017520f580000CNE3JC9612961A660A"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 109,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stFuser",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsOk",
+      "productNumber": "",
+      "slotId": 110,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTonerCollectionUnit",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 140,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTrayPickupRoller",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 141,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTrayPickupRoller",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 142,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTrayPickupRoller",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 143,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTrayPickupRoller",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 144,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTrayPickupRoller",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsOk",
+      "productNumber": "",
+      "slotId": 101,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stDeveloper",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsOk",
+      "productNumber": "",
+      "slotId": 102,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stDeveloper",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsOk",
+      "productNumber": "",
+      "slotId": 103,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stDeveloper",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsOk",
+      "productNumber": "",
+      "slotId": 104,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stDeveloper",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 105,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stImageTransferBelt",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 106,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stOther",
+      "supplyUniqueId": "00"
+    },
+    {
+      "levelState": "slsUnknown",
+      "productNumber": "",
+      "slotId": 107,
+      "state": "ssOk",
+      "stateReasons": [
+        "ssrNone"
+      ],
+      "supplyAgentType": "satOther",
+      "supplyDescription": "",
+      "supplyType": "stTransferRoller",
+      "supplyUniqueId": "00"
+    }
+  ]
+}

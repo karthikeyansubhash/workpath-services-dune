@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">빈 디렉터리</string>
+<string name="storage_removed">저장소가 제거되었거나 장착되지 않았습니다.</string>
+<string name="choose_file">파일을 선택해주십시오.</string>
+<string name="error_selecting_file">파일 선택 오류</string>
+<string name="internal_storage">내부 저장소</string>
+<string name="base_path_name">저장소</string>
+<string name="select_file_source">파일 원본 선택</string>
+<string name="input_address">선택 사항 공유</string>
+<string name="input_address_toast">공유할 주소를 입력하세요!</string>
+<string name="shares_discovery_wifi_only">Wi-Fi를 통해서만 검색 항목을 공유할 수 있습니다.</string>
+<string name="change_host">호스트 변경</string>
+<string name="invalid_ip_input">유효한 IP 주소를 입력하세요.</string>
+<string name="downloading">다운로드 중</string>
+<string name="downloading_message">%s을(를) 장치에 다운로드 중…</string>
+<string name="share_login">로그인</string>
+<string name="input_login_text">%s의 로그인 정보 입력</string>
+<string name="input_login_label_domain">도메인:</string>
+<string name="input_login_label_user">사용자 이름:</string>
+<string name="input_login_label_password">비밀번호:</string>
+<string name="can_be_empty">비워둘 수 없음</string>
+<string name="download_failed">다운로드 실패. 다시 시도하세요.</string>
+<string name="downloaded_to">파일을 %s에 다운로드함</string>
+<string name="failed_to_access">공유에 액세스할 수 없습니다. 다시 시도하세요.</string>
+<string name="failed_to_login">로그인 실패. 나중에 다시 시도하거나 다른 자격 증명으로 시도하세요.</string>
+<string name="failed_to_access_share">공유된 폴더에 액세스하지 못했습니다. 다른 주소로 나중에 다시 시도하세요.</string>
+<string name="enter_ip">IP 입력</string>
+<string name="choose_list_ip">발신 목록</string>
+<string name="ip_address_label">IP 입력:</string>
+<string name="ip_address_select">IP 선택</string>
+<string name="loading_hosts">호스트 검색 중...</string>
+<string name="no_hosts">호스트를 찾을 수 없음</string>
+<string name="refresh">새로고침</string>
+<string name="please_select_ip">목록에서 IP를 선택하거나 수동으로 입력하세요.</string>
+<string name="error_file_format">PDF 및 JPG 파일만 인쇄할 수 있습니다.</string>
+</resources>

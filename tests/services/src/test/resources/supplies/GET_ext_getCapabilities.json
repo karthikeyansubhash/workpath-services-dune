@@ -1,0 +1,40 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "apiVersion": "1.0",
+  "description": "APIs to acquire device supplies and consumables information and statistics",
+  "implInfo": [
+    {
+      "typeGUN": "com.hp.ext.service.extensibility.version.1.impl.futuresmart.type.apiInformation",
+      "value": {
+        "apiMajorVersion": 1,
+        "apiMinorVersion": 0,
+        "releaseLevel": "Beta",
+        "releaseSequence": 2,
+        "toolVersions": [
+          "dsl 2.16.0.202404140815",
+          "umsgen 0.5.0"
+        ]
+      }
+    }
+  ],
+  "implVersion": "v=6.26.0.479-202407312315;r=6.26.0.479;d=202407312315;s=6.26;p=6D6664-0035",
+  "links": [
+    {
+      "href": "/ext/supplies/v1/capabilities",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/supplies/v1/capabilities",
+      "rel": "capabilities"
+    },
+    {
+      "href": "/ext/supplies/v1/suppliesAgents",
+      "rel": "suppliesAgents"
+    }
+  ],
+  "serviceGun": "com.hp.ext.service.supplies.version.1"
+}

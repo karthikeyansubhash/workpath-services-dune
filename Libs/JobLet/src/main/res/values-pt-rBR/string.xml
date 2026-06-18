@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">Progresso do trabalho</string>
+<string name="progress_dialog_progressing_message">Trabalho %1$s em progresso...</string>
+<string name="progress_dialog_complete_message">Trabalho %1$s concluído…</string>
+<string name="job_number_label">Número do trabalho:</string>
+<string name="job_name_label">Nome do trabalho:</string>
+<string name="confirmation_dialog_title">Confirmação do trabalho</string>
+<string name="confirmation_dialog_message">Deseja digitalizar a próxima página?</string>
+<string name="yes">Sim</string>
+<string name="no">Não</string>
+<string name="close">Fechar</string>
+<string name="cancel">Cancelar</string>
+<string name="completed">Concluído</string>
+<string name="pages">Página(s)</string>
+<string name="job_sending">Envio</string>
+<string name="job_cancelling">Cancelando</string>
+<string name="job_scanning">Digitalização</string>
+<string name="job_progressing">Em progresso</string>
+<string name="job_waiting">Aguardando</string>
+<string name="job_image_number">Página %1$d</string>
+<string name="job_dst_number">para %1$s</string>
+<string name="job_canceled">Cancelado</string>
+<string name="job_failed">Falha</string>
+<string name="job_completed">Concluído. Total</string>
+<string name="job_progress_notification_title">Progresso de trabalhos</string>
+<string name="job_progress_notification_message">Toque para retornar ao Progresso do trabalho</string>
+<string name="copying">Copiando</string>
+<string name="faxing">Envio de fax</string>
+<string name="printing">Imprimir</string>
+<string name="scanning">Digitalização</string>
+<string name="sending">Envio</string>
+<string name="saving">Salvando</string>
+<string name="copies">cópias</string>
+<string name="set">/ conjunto %1$s</string>
+<string name="noti_jobs_progressing">%1$s trabalho(s) em progresso</string>
+<string name="noti_jobs_waiting">%1$s trabalho(s) aguardando</string>
+<string name="noti_jobs_canceled">%1$s trabalho(s) cancelado(s)</string>
+<string name="failed">Falha com código de resultado %1$s</string>
+<string name="job_confirmation_title">Digitalizar mais</string>
+</resources>

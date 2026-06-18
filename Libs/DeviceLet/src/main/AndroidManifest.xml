@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.DeviceletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.deviceletcp"
+            android:exported="true"/>
+    </application>
+</manifest>

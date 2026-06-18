@@ -1,0 +1,17 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/authentication/v1/authenticationAccessPoints/b03bcde3-56b6-4a27-8ff6-a1b451c5a487/initiateLogin",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/authentication/v1/authenticationAccessPoints/b03bcde3-56b6-4a27-8ff6-a1b451c5a487",
+      "rel": "resource"
+    }
+  ]
+}

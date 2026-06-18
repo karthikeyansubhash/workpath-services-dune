@@ -1,0 +1,345 @@
+{
+    "mCapsCreator": {
+        "mBackgroundCleanupList": [
+            "DEFAULT"
+        ],
+        "mBookletBordersEachPageList": [
+            "DEFAULT"
+        ],
+        "mBookletFinishingOptionList": [
+            "DEFAULT"
+        ],
+        "mBookletFormatList": [
+            "DEFAULT"
+        ],
+        "mCaptureModeList": [
+            "DEFAULT",
+            "STANDARD",
+            "BOOK_CAPTURE"
+        ],
+        "mCollateModeList": [
+            "DEFAULT",
+            "COLLATED",
+            "UNCOLLATED"
+        ],
+        "mColorModeList": [
+            "DEFAULT",
+            "AUTO",
+            "COLOR",
+            "GRAY"
+        ],
+        "mContrastAdjustmentList": [
+            "DEFAULT"
+        ],
+        "mCopiesRange": {
+            "mLowerBound": 1,
+            "mUpperBound": 9999
+        },
+        "mCopyPreviewList": [
+            "DEFAULT",
+            "FALSE",
+            "TRUE"
+        ],
+        "mDarknessAdjustmentList": [
+            "DEFAULT"
+        ],
+        "mEraseBackBottomRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseBackLeftRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseBackRightRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseBackTopRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseFrontBottomRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseFrontLeftRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseFrontRightRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseFrontTopRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mEraseMarginUnitList": [
+            "DEFAULT"
+        ],
+        "mFoldMode": [
+            "DEFAULT",
+            "NONE"
+        ],
+        "mImageShiftReduceToFitList": [
+            "DEFAULT"
+        ],
+        "mImageShiftUnitsList": [
+            "DEFAULT"
+        ],
+        "mImageShiftXBackRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mImageShiftXFrontRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mImageShiftYBackRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mImageShiftYFrontRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mJobAssemblyModeList": [
+            "DEFAULT"
+        ],
+        "mJobExecutionModeList": [
+            "NORMAL"
+        ],
+        "mNumberUpDirectionMap": {
+            "DEFAULT": [
+                "DEFAULT"
+            ]
+        },
+        "mNumberUpModeList": [
+            "DEFAULT",
+            "DEFAULT",
+            "TWO_UP"
+        ],
+        "mOrientationList": [
+            "DEFAULT",
+            "PORTRAIT",
+            "LANDSCAPE"
+        ],
+        "mOutputBinList": [
+            "DEFAULT",
+            "STANDARD"
+        ],
+        "mPaperSourceList": [
+            "DEFAULT",
+            "AUTO",
+            "TRAY_1",
+            "TRAY_2",
+            "TRAY_3"
+        ],
+        "mPaperTypeList": [
+            "DEFAULT",
+            "ANY",
+            "HP_MATTE_90G",
+            "RECYCLED",
+            "HP_MATTE_105G",
+            "HP_MATTE_120G",
+            "HP_GLOSSY_120G",
+            "HP_MATTE_150G",
+            "HP_GLOSSY_150G",
+            "HP_MATTE_200G",
+            "HP_GLOSSY_200G",
+            "TRANSPARENCY",
+            "LABELS",
+            "ENVELOPE"
+        ],
+        "mPasswordTypeList": [],
+        "mPrintCustomLengthRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mPrintCustomWidthRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mPrintDuplexList": [
+            "DEFAULT",
+            "BOOK",
+            "FLIP",
+            "NONE"
+        ],
+        "mPrintSizeList": [
+            "DEFAULT",
+            "LETTER",
+            "LEGAL",
+            "EXECUTIVE",
+            "STATEMENT",
+            "LEDGER",
+            "GENERAL_4X6in",
+            "GENERAL_5X7in",
+            "GENERAL_5X8in",
+            "INCH8POINT5X13",
+            "OFICIO",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "B5",
+            "C5",
+            "C6",
+            "RA3",
+            "SRA3",
+            "RA4",
+            "SRA4",
+            "JB4",
+            "JB5",
+            "JB6",
+            "K8",
+            "K8_260X368mm",
+            "PK8",
+            "K16",
+            "K16_184X260mm",
+            "PK16",
+            "JPOSTCARD",
+            "JDOUBLE_POSTCARD",
+            "ENVELOPE_DL",
+            "ENVELOPE_MONARCH",
+            "ENVELOPE_9",
+            "ENVELOPE_COMM10",
+            "CUSTOM",
+            "ANY_CUSTOM"
+        ],
+        "mProgressDialogModeList": [
+            "DEFAULT",
+            "OFF",
+            "ON"
+        ],
+        "mPunchMode": [
+            "DEFAULT",
+            "NONE"
+        ],
+        "mScaleModeList": [
+            "DEFAULT",
+            "AUTO",
+            "MANUAL"
+        ],
+        "mScalePercentRangeMap": {
+            "DEFAULT": {
+                "mLowerBound": 100,
+                "mUpperBound": 100
+            },
+            "ADF": {
+                "mLowerBound": 1,
+                "mUpperBound": 100
+            }
+        },
+        "mScanCustomLengthRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mScanCustomWidthRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mScanDuplexList": [
+            "DEFAULT",
+            "NONE"
+        ],
+        "mScanSizeList": [
+            "DEFAULT",
+            "LETTER",
+            "LEGAL",
+            "EXECUTIVE",
+            "STATEMENT",
+            "LEDGER",
+            "GENERAL_5X7in",
+            "GENERAL_5X8in",
+            "INCH8POINT5X13",
+            "OFICIO",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "RA4",
+            "JB4",
+            "JB5",
+            "JB6",
+            "K16",
+            "K16_184X260mm",
+            "PK16",
+            "JDOUBLE_POSTCARD"
+        ],
+        "mScanSourceList": [
+            "DEFAULT",
+            "ADF",
+            "FLATBED"
+        ],
+        "mSharpnessAdjustmentList": [
+            "DEFAULT"
+        ],
+        "mStampOptionMap": {
+            "TOP_LEFT": {
+                "format": {
+                    "font": "",
+                    "startingPage": 1,
+                    "textColor": "",
+                    "textSize": 10,
+                    "whiteBackground": false
+                },
+                "policyType": "NONE",
+                "stampFormatFontList": [],
+                "stampFormatTextColorList": [],
+                "stampFormatTextSizeList": [],
+                "stampFormatTextStartingPage": {
+                    "mLowerBound": 0,
+                    "mUpperBound": 0
+                },
+                "stampFormatWhiteBackgroundList": [],
+                "stampPolicyTypeList": [],
+                "stampTypeList": [],
+                "text": "",
+                "type": "NONE"
+            }
+        },
+        "mStapleOption": [
+            "DEFAULT",
+            "NONE"
+        ],
+        "mTextGraphicsOptimizationList": [
+            "DEFAULT",
+            "TEXT",
+            "PHOTOGRAPH",
+            "MIXED",
+            "GRAPHIC"
+        ],
+        "mWatermarkBackgroundColorList": [],
+        "mWatermarkBackgroundPatternList": [
+            "SCROLL"
+        ],
+        "mWatermarkDarknessRange": {
+            "mLowerBound": 1,
+            "mUpperBound": 5
+        },
+        "mWatermarkFontList": [],
+        "mWatermarkMessageTypeList": [
+            "NONE"
+        ],
+        "mWatermarkOnlyFirstPageList": [
+            "DEFAULT"
+        ],
+        "mWatermarkRotate45List": [
+            "DEFAULT"
+        ],
+        "mWatermarkTextColorList": [],
+        "mWatermarkTextSizeList": [
+            10
+        ],
+        "mWatermarkTransparencyRange": {
+            "mLowerBound": 0,
+            "mUpperBound": 0
+        },
+        "mWatermarkTypeList": [
+            "DEFAULT",
+            "NONE"
+        ]
+    }
+}

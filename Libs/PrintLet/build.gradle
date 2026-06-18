@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.services.printlet.oxp'
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.nanoHttpd
+    implementation rootProject.ext.localBroadcastManager
+    implementation project(':Util-CommonServices')
+    implementation project(':Let-JobLet')
+    implementation project(':Let-StorageLet')
+    implementation project(':UI-SettingsUiLib')
+    implementation project(':Util-Jabberwocky')
+    implementation project(':DeviceServices-Standard')
+}

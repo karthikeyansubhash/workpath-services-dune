@@ -1,0 +1,36 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.scanlet.oxp'
+
+    sourceSets {
+        main {
+            res.srcDirs = ['res']
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.localBroadcastManager
+    implementation project(':Util-CommonServices')
+    implementation project(':Let-EmailLet')
+    implementation project(':Let-JobLet')
+    implementation project(':Let-StorageLet')
+    implementation project(':UI-SettingsUiLib')
+    implementation project(':DeviceServices-Interfaces')
+    implementation project(':DeviceServices-Standard')
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoInlineVersion
+
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+}

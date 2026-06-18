@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="MissingTranslation">
+
+    <string name="sps_permission_not_granted">Failed to get HP Workpath SDK permissions. Call JetAdvantageLink.requestPermissions() to obtain permissions.</string>
+    <string name="sps_permission">HP Workpath SDK Permissions</string>
+    <string name="sps_self_permission">HP Workpath SDK Permissions</string>
+    <string name="grant">Grant</string>
+    <string name="deny">Deny</string>
+    <string name="permission_text" formatted="false">Do you want to give %s (%s) application full access to HP Workpath SDK?</string>
+    <string name="more_permission_text_small">More details</string>
+    <string name="more_permission_text_big">The application will be able to use the Scan, Print, Copy and Fax capabilities of any connected printer using HP JetAdvantage Link SDK. In order to revoke all accepted permissions, please go to App Management and clear all data for the HP Workpath SDK.</string>
+    <string name="sps_sd_card">HP Workpath SDK needs to use your device\'s SD card in order to save scanned files. Please grant permissions in the following system dialogs.</string>
+    <string name="permission_not_granted">The app was not allowed to write to your storage. Therefore, it may not work properly. Please consider granting it this permission.</string>
+    <string name="never_ask_again">Never ask again</string>
+    <string name="notification_success_message">Successfully connected to %1$s</string>
+    <string name="notification_title">HP Workpath</string>
+    <string name="connected">Connected</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="ok">OK</string>
+</resources>

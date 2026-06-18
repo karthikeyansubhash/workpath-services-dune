@@ -1,0 +1,24 @@
+{
+  "channelMessage": {
+    "channelId": "aba754e6-e1df-4f9f-aa07-4a269b9eca82",
+    "message": {
+      "service": {
+        "attachments": [],
+        "httpMethod": "POST",
+        "path": "/registration",
+        "requestBody": {
+          "typeGUN": "com.hp.ext.service.usbAccessories.version.1.type.registrationRequest",
+          "value": {
+            "registrationPayload": {
+              "usbAttached": {
+                "resourceId": "5add062b-2f22-48f7-84c4-6359f422dda1",
+                "resourceLink": "/ext/usbAccessories/v1/accessories/5add062b-2f22-48f7-84c4-6359f422dda1"
+              }
+            }
+          }
+        },
+        "serviceCallId": "6b0a9e6b-240b-4065-bfa6-40fdb1c4cdde"
+      }
+    }
+  }
+}

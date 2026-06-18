@@ -1,0 +1,40 @@
+{
+    "$opMeta": {
+        "contentFilter": [
+            "*"
+        ]
+    },
+    "accessoryID": "4e596c92-b9b5-49fe-bbb7-96a986f210f5",
+    "activeConfiguration": 12,
+    "deviceClass": 3,
+    "deviceProtocol": 4,
+    "deviceSubclass": 0,
+    "deviceVersion": 1,
+    "languagesSupported": [
+        345,
+        654,
+        123
+    ],
+    "links": [
+        {
+            "href": "/ext/usbAccessories/v1/accessories/4e596c92-b9b5-49fe-bbb7-96a986f210f5",
+            "rel": "self"
+        },
+        {
+            "href": "/ext/usbAccessories/v1/accessories/4e596c92-b9b5-49fe-bbb7-96a986f210f5/generic",
+            "rel": "generic"
+        },
+        {
+            "href": "/ext/usbAccessories/v1/accessories/4e596c92-b9b5-49fe-bbb7-96a986f210f5/hid",
+            "rel": "hid"
+        }
+    ],
+    "manufacturerName": "Acme, Inc.",
+    "productId": 69,
+    "productName": "X6001",
+    "registration": "rkOwned",
+    "resourceId": "4e596c92-b9b5-49fe-bbb7-96a986f210f5",
+    "serialNumber": "NULL",
+    "usbVersion": 1,
+    "vendorId": 1008
+}

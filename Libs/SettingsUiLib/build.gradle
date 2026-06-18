@@ -1,0 +1,17 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.services.settingsui'
+}
+
+dependencies {
+    implementation project(':Util-CommonServices')
+    implementation project(':Let-StorageLet')
+    implementation project(':UI-FileChooser')
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+}

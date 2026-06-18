@@ -1,0 +1,11 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+        <provider
+            android:authorities="com.hp.jetadvantage.link.authority.emailletcp"
+            android:name=".provider.EmailContentProvider"
+            android:exported="true"/>
+    </application>
+</manifest>

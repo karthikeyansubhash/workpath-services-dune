@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="pref_default_entries">
+        <item>DEFAULT</item>
+    </string-array>
+
+    <string-array name="pref_auto_entries">
+        <item>AUTO</item>
+    </string-array>
+
+    <string-array name="pref_MultiPage_entries_enabled">
+        <item>Default</item>
+        <item>True</item>
+        <item>False</item>
+    </string-array>
+
+    <string-array name="pref_MultiPage_values_enabled">
+        <item>DEFAULT</item>
+        <item>TRUE</item>
+        <item>FALSE</item>
+    </string-array>
+
+    <string-array name="pref_destinations">
+        <item>Me</item>
+    </string-array>
+    <string-array name="pref_destination_values">
+        <item>ME</item>
+    </string-array>
+
+    <string-array name="pref_sources">
+        <item>Storage</item>
+    </string-array>
+    <string-array name="pref_source_values">
+        <item>Storage</item>
+    </string-array>
+
+    <string-array name="pref_empty_entries"/>
+
+    <string-array name="pref_copy_destinations">
+        <item>NORMAL</item>
+    </string-array>
+
+    <string-array name="pref_default_password_entries">
+        <item>NONE</item>
+    </string-array>
+</resources>

@@ -1,0 +1,77 @@
+plugins {
+    id 'com.android.application'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.workpath.apitest'
+
+    signingConfigs {
+        debug {
+            storeFile project.getRootProject().file("ForBuild/keys/emulator.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        release {
+            storeFile project.getRootProject().file("ForBuild/keys/emulator.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        debugForSim {
+            storeFile project.getRootProject().file("ForBuild/keys/emulator.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+        releaseForSim {
+            storeFile project.getRootProject().file("ForBuild/keys/emulator.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+            v1SigningEnabled true
+            v2SigningEnabled true
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            signingConfig signingConfigs.release
+        }
+        debugForSim {
+            signingConfig signingConfigs.debugForSim
+        }
+        releaseForSim {
+            signingConfig signingConfigs.releaseForSim
+        }
+    }
+}
+
+dependencies {
+
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+    implementation rootProject.ext.androidXMultidex
+    implementation 'androidx.preference:preference:1.2.0'
+    implementation rootProject.ext.gsonVersion
+
+    implementation project(':Test-WorkpathLib')
+
+    testImplementation rootProject.ext.junitVersion
+
+    androidTestImplementation rootProject.ext.support_v4
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+    androidTestImplementation project(':DeviceServices-Clients')
+}

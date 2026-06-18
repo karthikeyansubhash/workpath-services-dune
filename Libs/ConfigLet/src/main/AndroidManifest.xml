@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.ConfigLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.configletcp"
+            android:exported="true" />
+
+        <receiver
+            android:name=".receiver.ConfigWorkpathReadyReceiver"
+            android:permission="${SYSTEM_PERMISSION}"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${WORKPATH_SERVICE_READY}" />
+            </intent-filter>
+        </receiver>
+        <service android:name=".service.ConfigNotificationService" />
+    </application>
+</manifest>

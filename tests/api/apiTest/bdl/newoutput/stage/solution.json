@@ -1,0 +1,333 @@
+{
+  "archiveVersion" : "2.0.0",
+  "configuration" : {
+    "archiveDataPath" : "/assets/configs/default.json",
+    "description" : "Default configuration",
+    "mimeType" : "application/json"
+  },
+  "contextProfile" : {
+    "contextDefinitions" : [ ]
+  },
+  "description" : {
+    "date" : "20251209",
+    "description" : "Workpath APITest",
+    "name" : "Workpath APITest",
+    "vendor" : "HP",
+    "version" : "0.0.3",
+    "versionNumber" : 3
+  },
+  "packages" : [ {
+    "workpathPlatformPackage" : {
+      "platformVersion" : "31.8",
+      "workpathPackagePath" : "base.apk"
+    }
+  } ],
+  "registrations" : [ {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.application.version.1.type.i18nAssetRegistrationRecord",
+      "value" : {
+        "assetContent" : {
+          "i18nAssetInlineContent" : {
+            "languages" : [ {
+              "languageTag" : "en-US",
+              "strings" : [ {
+                "stringId" : "application_title0",
+                "value" : "api test"
+              }, {
+                "stringId" : "application_description0",
+                "value" : "api test"
+              }, {
+                "stringId" : "accessories_title",
+                "value" : "Workpath APITest_accessories"
+              }, {
+                "stringId" : "accessories_description",
+                "value" : "Workpath APITest_accessories"
+              }, {
+                "stringId" : "copyAgent_title",
+                "value" : "Workpath APITest_copyAgent"
+              }, {
+                "stringId" : "copyAgent_description",
+                "value" : "Workpath APITest_copyAgent"
+              }, {
+                "stringId" : "printAgent_title",
+                "value" : "Workpath APITest_printAgent"
+              }, {
+                "stringId" : "printAgent_description",
+                "value" : "Workpath APITest_printAgent"
+              }, {
+                "stringId" : "scanAgent_title",
+                "value" : "Workpath APITest_scanAgent"
+              }, {
+                "stringId" : "scanAgent_description",
+                "value" : "Workpath APITest_scanAgent"
+              }, {
+                "stringId" : "deviceUsageAgent_title",
+                "value" : "Workpath APITest_deviceUsageAgent"
+              }, {
+                "stringId" : "deviceUsageAgent_description",
+                "value" : "Workpath APITest_deviceUsageAgent"
+              }, {
+                "stringId" : "suppliesAgent_title",
+                "value" : "Workpath APITest_suppliesAgent"
+              }, {
+                "stringId" : "suppliesAgent_description",
+                "value" : "Workpath APITest_suppliesAgent"
+              }, {
+                "stringId" : "securityAgent_title",
+                "value" : "Workpath APITest_securityAgent"
+              }, {
+                "stringId" : "securityAgent_description",
+                "value" : "Workpath APITest_securityAgent"
+              }, {
+                "stringId" : "solutionDiagnostics_title",
+                "value" : "Workpath APITest_solutionDiagnosticsAgent"
+              }, {
+                "stringId" : "solutionDiagnostics_description",
+                "value" : "Workpath APITest_solutionDiagnosticsAgent"
+              } ]
+            } ]
+          }
+        },
+        "assetId" : "53244c8d-5e4d-481c-9f65-041622764f9f"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.application.version.1.type.applicationAgentRegistrationRecord",
+      "value" : {
+        "category" : "acStandardWalkup",
+        "icon" : {
+          "localImage" : {
+            "fileType" : "image/png",
+            "path" : "/assets/icons/ic_launcher.png"
+          }
+        },
+        "iconSet" : [ {
+          "icon" : {
+            "localImage" : {
+              "fileType" : "image/png",
+              "path" : "/assets/icons/140x140/ic_launcher.png"
+            }
+          },
+          "key" : "140x140"
+        }, {
+          "icon" : {
+            "localImage" : {
+              "fileType" : "image/png",
+              "path" : "/assets/icons/90x90/ic_launcher.png"
+            }
+          },
+          "key" : "90x90"
+        }, {
+          "icon" : {
+            "localImage" : {
+              "fileType" : "image/png",
+              "path" : "/assets/icons/179x179/ic_launcher.png"
+            }
+          },
+          "key" : "179x179"
+        } ],
+        "localizedTitle" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "application_title0"
+        },
+        "platform" : "apWorkpath",
+        "target" : {
+          "workpathApplicationTarget" : {
+            "package" : "main=com.hp.workpath.apitest./com.hp.workpath.apitest.MainActivity"
+          }
+        },
+        "agentId" : "a8c33621-ee8d-4680-8279-df74b49fa279",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "application_description0"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "application_title0"
+        },
+        "name" : "Workpath APITest"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.usbAccessories.version.1.type.usbAccessoriesAgentRegistrationRecord",
+      "value" : {
+        "enablePostRegistrationPromptCheck" : false,
+        "registrationTarget" : {
+          "workpath" : {
+            "package" : "com.hp.workpath.apitest"
+          }
+        },
+        "registrations" : [ {
+          "productId" : 77,
+          "registrationKind" : "rkOwned",
+          "vendorId" : 3333
+        }, {
+          "productId" : 88,
+          "registrationKind" : "rkShared",
+          "serialNumber" : "",
+          "vendorId" : 5555
+        } ],
+        "agentId" : "eb3e01b9-b421-40ef-9f2e-42f1742b16ab",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "accessories_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "accessories_title"
+        },
+        "name" : "Workpath APITest_accessories"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.copy.version.1.type.copyAgentRegistrationRecord",
+      "value" : {
+        "copyNotificationTarget" : {
+          "workpath" : {
+            "package" : "com.hp.workpath.apitest"
+          }
+        },
+        "agentId" : "fab6247f-d687-453d-8fbe-90473d66f179",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "copyAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "copyAgent_title"
+        },
+        "name" : "Workpath APITest_copyAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.printJob.version.1.type.printJobAgentRegistrationRecord",
+      "value" : {
+        "agentId" : "064740ed-c305-4ef7-8ff7-12200d1724b5",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "printAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "printAgent_title"
+        },
+        "name" : "Workpath APITest_printAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.scanJob.version.1.type.scanJobAgentRegistrationRecord",
+      "value" : {
+        "scanNotificationTarget" : {
+          "workpath" : {
+            "package" : "com.hp.workpath.apitest"
+          }
+        },
+        "agentId" : "4179b4ef-b73f-4e7b-a7a4-7dc46c14deba",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "scanAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "scanAgent_title"
+        },
+        "name" : "Workpath APITest_scanAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.deviceUsage.version.1.type.deviceUsageAgentRegistrationRecord",
+      "value" : {
+        "agentId" : "e6d29da1-c3e5-4d2b-b61d-e75971440569",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "deviceUsageAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "deviceUsageAgent_title"
+        },
+        "name" : "Workpath APITest_deviceUsageAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.supplies.version.1.type.suppliesAgentRegistrationRecord",
+      "value" : {
+        "agentId" : "19cb99a7-f9fd-44db-ae16-0b07bd9b65fb",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "suppliesAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "suppliesAgent_title"
+        },
+        "name" : "Workpath APITest_suppliesAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.security.version.1.type.securityAgentRegistrationRecord",
+      "value" : {
+        "declaredExpressionOperators" : [ "EMAIL_ADDRESS", "USER_NAME", "USER_DOMAIN", "AUTH_TYPE", "FQ_USER_NAME", "DISPLAY_NAME", "AUTH_AGENT_ID", "HOME_FOLDER" ],
+        "agentId" : "a7e67c62-1e95-41cf-a2c3-02cb44108447",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "securityAgent_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "securityAgent_title"
+        },
+        "name" : "Workpath APITest_securityAgent"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.solutionManager.version.1.type.solutionNotificationAgentRegistrationRecord",
+      "value" : {
+        "notificationTarget" : {
+          "workpath" : {
+            "package" : "com.hp.workpath.apitest"
+          }
+        },
+        "notificationsToReceive" : {
+          "explicit" : {
+            "explicitValue" : [ "ntConfigurationModified" ]
+          }
+        },
+        "agentId" : "661e156a-daca-491f-bc66-dd52bc514c41"
+      }
+    }
+  }, {
+    "record" : {
+      "typeGUN" : "com.hp.ext.service.solutionDiagnostics.version.1.type.solutionDiagnosticsAgentRegistrationRecord",
+      "value" : {
+        "agentId" : "ba465941-3beb-4a9e-91ce-ff58b7c604f1",
+        "localizedDescription" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "solutionDiagnostics_description"
+        },
+        "localizedName" : {
+          "i18nAssetId" : "53244c8d-5e4d-481c-9f65-041622764f9f",
+          "stringId" : "solutionDiagnostics_title"
+        },
+        "name" : "Workpath APITest_solutionDiagnosticsAgent"
+      }
+    }
+  } ],
+  "solutionId" : "b081727d-bb2e-46f6-94c0-5f17c4587b16",
+  "trustedSites" : {
+    "sites" : {
+      "explicit" : {
+        "explicitValue" : "*"
+      }
+    }
+  }
+}

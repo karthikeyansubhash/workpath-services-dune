@@ -1,0 +1,55 @@
+@startuml
+class com.hp.jetadvantage.link.device.services.clients.TestConnector {
++ UdwClient getUdwClient(String)
+}
+class com.hp.jetadvantage.link.device.services.clients.CDMResponse {
++ Integer httpStatusCode
++ T httpBody
++ {static} CDMResponse<T> create(Integer,T)
++ String toString()
+}
+class com.hp.jetadvantage.link.device.services.clients.CDMClient {
++ CDMResponse<String> sendGetRequest(String)
++ CDMResponse<String> sendPatchRequest(String,String)
++ CDMResponse<String> sendPostRequest(String,String)
++ CDMResponse<String> sendPutRequest(String,String)
++ CDMResponse<String> sendDeleteRequest(String)
+}
+class com.hp.jetadvantage.link.device.services.clients.E2Client {
++ String getResponseAsString(Request)
++ byte[] getResponseAsByteArray(Request)
+}
+abstract class com.hp.jetadvantage.link.device.services.clients.DeviceClient {
+# Object lock
+# String TAG
+# OkHttpClient httpClient
+# String deviceIpAddress
+# String token
+# CDMResponse<String> send(Request)
+# CDMResponse<ResponseBody> sendRaw(Request)
++ void updateDeviceInfo(String,String)
+}
+class com.hp.jetadvantage.link.device.services.clients.DeviceClient$Constant {
++ {static} long HTTP_CONNECTION_REQUEST_TIMEOUT
+}
+class com.hp.jetadvantage.link.device.services.clients.DeviceConnector {
++ void updateDeviceInfo(String,String)
++ InjectedHttpClient getE2Client()
++ CDMClient getCDMClient()
+}
+class com.hp.jetadvantage.link.device.services.clients.UdwClient {
++ String getTestToken()
++ CDMResponse<String> sendUnderwareCommand(String,String,String)
+}
+class com.hp.jetadvantage.link.device.services.clients.DeviceConnectorHelper {
++ {static} OkHttpClient createUnsafeOkHttpClient(OkHttpClient.Builder)
++ {static} String generateHttpsPrefixURL(String,int)
+}
+
+
+com.hp.jetadvantage.link.device.services.clients.DeviceClient <|-- com.hp.jetadvantage.link.device.services.clients.CDMClient
+com.hp.ext.clients.InjectedHttpClient <|.. com.hp.jetadvantage.link.device.services.clients.E2Client
+com.hp.jetadvantage.link.device.services.clients.DeviceClient <|-- com.hp.jetadvantage.link.device.services.clients.E2Client
+com.hp.jetadvantage.link.device.services.clients.DeviceClient +.. com.hp.jetadvantage.link.device.services.clients.DeviceClient$Constant
+com.hp.jetadvantage.link.device.services.clients.DeviceClient <|-- com.hp.jetadvantage.link.device.services.clients.UdwClient
+@enduml

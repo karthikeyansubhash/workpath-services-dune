@@ -1,0 +1,3005 @@
+{
+  "base": {
+    "definitions": [
+      {
+        "isAvailable": false,
+        "optionName": "autoColorDetect",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "acdmDetectOnly",
+                "acdmTreatNonColorAsMonochrome",
+                "acdmTreatNonColorAsGrayscale"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "autoCropMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "acmtOff",
+                "acmtPageCrop",
+                "acmtContentCrop"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoDeskew",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "autoExposure",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoPaperColorRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoPaperColorRemovalLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 5
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoTone",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoToneLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 5
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundCleanup",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemoval",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "colorMode",
+                  "optionValue": "cmGrayscale"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemovalLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmGrayscale"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "backgroundColorRemoval",
+                        "optionValue": false
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "backgroundNoiseRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "binaryRendering",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "brHalftone",
+                "brThreshold",
+                "brErrorDiffusion"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "blackBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "blackEnhancementLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 255
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "blankPageSuppression",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bpdDisable"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "bookletMakerOption",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bmoNone",
+                "bmoSaddleStitch"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "ccdChannel",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cctNtsc",
+                "cctGray",
+                "cctGrayEmulated",
+                "cctRed",
+                "cctGreen",
+                "cctBlue"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "collationType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sctCollated",
+                "sctUncollated"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "colorMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cmAutoDetect",
+                "cmColor",
+                "cmGrayscale"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorRange",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorSensitivity",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentOrientation",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "coPortrait",
+                "coLandscape"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "scanCaptureMode",
+                        "optionValue": "scmIdCard"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "coPortrait"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dctAutoDetect",
+                "dctText",
+                "dctPhoto",
+                "dctMixed",
+                "dctImage"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contrast",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 9
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "copies",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 9999
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "customMediaXFeedDimension",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 38600,
+              "step": 1,
+              "upperBoundary": 125900
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "customMediaYFeedDimension",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 55000,
+              "step": 1,
+              "upperBoundary": 180000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "descreen",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "edgeToEdgePrint",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "edgeToEdgeScan",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseBackBottom",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseBackLeft",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseBackRight",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseBackTop",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseEdgesEnabled",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseFrontBottom",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseFrontLeft",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseFrontRight",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "eraseFrontTop",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "exposureLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 9
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "foldOption",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "foNone",
+                "foCInwardTop",
+                "foCInwardBottom",
+                "foCOutwardTop",
+                "foCOutwardBottom",
+                "foVInwardTop",
+                "foVOutwardTop"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "foldSetSheetsCFold",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 3
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "foldSetSheetsFoldAndStitch ",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 25
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "foldSetSheetsFoldAndStitchAutomatic ",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "foldSetSheetsVFold ",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 5
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "gamma",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "highlightLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "imagePreviewMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ipmNone",
+                "ipmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "invertColors",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "jobOffset",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "longPlotScan",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaBindingFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bfFlipLeft",
+                "bfFlipUp"
+              ]
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                "value": {
+                  "optionName": "originalPlexMode",
+                  "optionValue": "pmDuplex"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "misfeedDetection",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "misfeedDetectionAutoRetry",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "originalMediaSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msAny",
+                "msMixedLetterLegal",
+                "msMixedLetterLedger",
+                "msMixedA4A3",
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msLegal_8point5x14in",
+                "msExecutive_7point25x10point5in",
+                "msInvoice_5point5x8point5in",
+                "msANSI_B_11x17in",
+                "msGeneral_3x5in",
+                "msGeneral_4x6in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msFoolscap_8point5x13in",
+                "msOficio_216x340mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A4_Rotated_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msRA4_215x305mm",
+                "msOM_Photo_100x150mm",
+                "msJPostcard_100x148mm",
+                "msJDoublePostcard_148x200mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msK16_195x270mm",
+                "msK16_184x260mm",
+                "msK16_197x273mm"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "scanCaptureMode",
+                        "optionValue": "scmBook"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "scanCaptureMode",
+                        "optionValue": "scmIdCard"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "msANSI_A_8point5x11in",
+                "msISO_A4_210x297mm"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "originalMediaSource",
+                  "optionValue": "miAdf"
+                }
+              },
+              "optionValues": [
+                "msAny",
+                "msMixedLetterLedger",
+                "msMixedA4A3",
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msANSI_B_11x17in",
+                "msLegal_8point5x14in",
+                "msExecutive_7point25x10point5in",
+                "msInvoice_5point5x8point5in",
+                "msGeneral_3x5in",
+                "msGeneral_4x6in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msFoolscap_8point5x13in",
+                "msOficio_216x340mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A4_Rotated_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msRA4_215x305mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msK16_184x260mm",
+                "msK16_195x270mm",
+                "msMixedLetterLegal",
+                "msJPostcard_100x148mm",
+                "msJDoublePostcard_148x200mm",
+                "msK16_197x273mm",
+                "msOM_Photo_100x150mm"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "originalMediaSource",
+                  "optionValue": "miFlatbed"
+                }
+              },
+              "optionValues": [
+                "msAny",
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msLegal_8point5x14in",
+                "msExecutive_7point25x10point5in",
+                "msFoolscap_8point5x13in",
+                "msOficio_216x340mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A4_Rotated_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msRA4_215x305mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msK16_184x260mm",
+                "msK16_195x270mm",
+                "msMixedLetterLegal",
+                "msMixedA4A3",
+                "msMixedLetterLedger",
+                "msInvoice_5point5x8point5in",
+                "msANSI_B_11x17in",
+                "msGeneral_3x5in",
+                "msGeneral_4x6in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msOM_Photo_100x150mm",
+                "msJPostcard_100x148mm",
+                "msJDoublePostcard_148x200mm",
+                "msK16_197x273mm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "originalMediaSource",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miAdf",
+                "miFlatbed",
+                "miAuto"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "originalMediaType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "mtAny",
+                "mtPlain",
+                "mtPhoto",
+                "mtRecycled",
+                "mtLabels",
+                "mtTransparency",
+                "mtEnvelope"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "originalPlexMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "pmSimplex",
+                "pmDuplex"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "scanCaptureMode",
+                        "optionValue": "scmBook"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "pmSimplex"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "scanCaptureMode",
+                  "optionValue": "scmIdCard"
+                }
+              },
+              "optionValues": [
+                "pmDuplex"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasAnchor",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSize",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSource",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasOrientation",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasXExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasYExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputDuplexBinding",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dbfDuplexLongEdge",
+                "dbfDuplexShortEdge",
+                "dbfOneSided"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "outputPlexMode",
+                  "optionValue": "pmDuplex"
+                }
+              },
+              "optionValues": [
+                "dbfDuplexLongEdge",
+                "dbfDuplexShortEdge"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "outputPlexMode",
+                  "optionValue": "pmSimplex"
+                }
+              },
+              "optionValues": [
+                "dbfOneSided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputMediaDestination",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "moStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputMediaSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msLegal_8point5x14in",
+                "msExecutive_7point25x10point5in",
+                "msInvoice_5point5x8point5in",
+                "msANSI_B_11x17in",
+                "msArchitectural_B_12x18in",
+                "msGeneral_4x6in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msFoolscap_8point5x13in",
+                "msOficio_216x340mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A5_Rotated_148x210mm",
+                "msISO_A6_105x148mm",
+                "msISO_B5_176x250mm",
+                "msISO_C5_162x229mm",
+                "msISO_C6_114x162mm",
+                "msRA3_305x430mm",
+                "msSRA3_320x450mm",
+                "msRA4_215x305mm",
+                "msSRA4_225x320mm",
+                "msJIS_B4_257x364mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B5_Rotated_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msK8_270x390mm",
+                "msK8_260x368mm",
+                "msK8_273x394mm",
+                "msK16_195x270mm",
+                "msK16_184x260mm",
+                "msK16_197x273mm",
+                "msJPostcard_100x148mm",
+                "msJDoublePostcard_148x200mm",
+                "msEnvelope_DL_110x220mm",
+                "msEnvelope_Monarch_3point875x7point5in",
+                "msEnvelope_Windsor_3point875x8point875in",
+                "msEnvelope_Comm10_4point125x9point5in",
+                "msCustom",
+                "msAnyCustom",
+                "msAny"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputMediaSource",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miAuto",
+                "miTray1",
+                "miTray2",
+                "miTray3"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputMediaType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "mtPlain",
+                "mtHPEcoFFICIENT",
+                "mtHPMatte_90g",
+                "mtLight_60to74g",
+                "mtIntermediate_85to95g",
+                "mtBond",
+                "mtRecycled",
+                "mtHPMatte_105g",
+                "mtHPMatte_120g",
+                "mtHPGloss_130g",
+                "mtMidweight_96to110g",
+                "mtHeavyGloss_111to130g",
+                "mtHPMatte_160g",
+                "mtHPGloss_160g",
+                "mtExtraHeavy_131to175g",
+                "mtExtraHeavyGloss_131to175g",
+                "mtHPMatte_200g",
+                "mtHPGloss_220g",
+                "mtCardstock_176to220g",
+                "mtTransparency",
+                "mtLabels",
+                "mtLetterhead",
+                "mtEnvelope",
+                "mtHeavyEnvelope",
+                "mtPreprinted",
+                "mtPrepunched",
+                "mtColor",
+                "mtRough",
+                "mtHeavyRough",
+                "mtOpaqueFilm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputPlexMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "pmSimplex",
+                "pmDuplex"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputQuality",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "qmBest",
+                "qmDraft",
+                "qmNormal"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "pagesPerSheet",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ppsOneUp",
+                "ppsTwoUp",
+                "ppsFourUp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "punchOption",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "poNone",
+                "poTwoPointAny",
+                "poLeftTwoPointDin",
+                "poRightTwoPointDin",
+                "poTopTwoPointDin",
+                "poBottomTwoPointDin",
+                "poTwoPointDin",
+                "poLeftTwoPointUs",
+                "poRightTwoPointUs",
+                "poTopTwoPointUs",
+                "poBottomTwoPointUs",
+                "poTwoPointUs",
+                "poLeftThreePointUs",
+                "poRightThreePointUs",
+                "poTopThreePointUs",
+                "poBottomThreePointUs",
+                "poThreePointUs",
+                "poThreePointAny",
+                "poLeftFourPointDin",
+                "poRightFourPointDin",
+                "poBottomFourPointDin",
+                "poFourPointDin",
+                "poLeftFourPointSwd",
+                "poRightFourPointSwd",
+                "poBottomFourPointSwd",
+                "poFourPointSwd",
+                "poFourPointAny",
+                "poLeftTwoPoint",
+                "poRightTwoPoint",
+                "poTopTwoPoint",
+                "poBottomTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soNone"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poTwoPointAny",
+                "poLeftTwoPointDin",
+                "poRightTwoPointDin",
+                "poTopTwoPointDin",
+                "poBottomTwoPointDin",
+                "poTwoPointDin",
+                "poLeftTwoPointUs",
+                "poRightTwoPointUs",
+                "poTopTwoPointUs",
+                "poBottomTwoPointUs",
+                "poTwoPointUs",
+                "poLeftThreePointUs",
+                "poRightThreePointUs",
+                "poTopThreePointUs",
+                "poBottomThreePointUs",
+                "poThreePointUs",
+                "poThreePointAny",
+                "poLeftFourPointDin",
+                "poRightFourPointDin",
+                "poBottomFourPointDin",
+                "poFourPointDin",
+                "poLeftFourPointSwd",
+                "poRightFourPointSwd",
+                "poBottomFourPointSwd",
+                "poFourPointSwd",
+                "poFourPointAny",
+                "poLeftTwoPoint",
+                "poRightTwoPoint",
+                "poTopTwoPoint",
+                "poBottomTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soTopLeftOnePointAny"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poLeftTwoPointDin",
+                "poTopTwoPointDin",
+                "poLeftTwoPointUs",
+                "poTopTwoPointUs",
+                "poTwoPointUs",
+                "poLeftThreePointUs",
+                "poTopThreePointUs",
+                "poLeftTwoPoint",
+                "poTopTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soLeftTwoPoints"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poLeftTwoPointDin",
+                "poLeftTwoPointUs",
+                "poLeftThreePointUs",
+                "poLeftTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soRightTwoPoints"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poRightTwoPointDin",
+                "poRightTwoPointUs",
+                "poLeftThreePointUs",
+                "poRightTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soTopTwoPoints"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poTopTwoPointDin",
+                "poTopTwoPointUs",
+                "poTopThreePointUs",
+                "poTopTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soTopRightOnePointAny"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poRightTwoPointDin",
+                "poTopTwoPointDin",
+                "poRightTwoPointUs",
+                "poTopTwoPointUs",
+                "poRightThreePointUs",
+                "poTopThreePointUs",
+                "poRightTwoPoint",
+                "poTopTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "stapleOption",
+                  "optionValue": "soRightTwoPoints"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poRightTwoPointDin",
+                "poRightTwoPointUs",
+                "poRightThreePointUs",
+                "poRightTwoPoint"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "bookletMakerOption",
+                  "optionValue": "bmoBookletMaker"
+                }
+              },
+              "optionValues": [
+                "poNone",
+                "poLeftTwoPointDin",
+                "poRightTwoPointDin",
+                "poTopTwoPointDin",
+                "poTwoPointDin",
+                "poLeftTwoPointUs",
+                "poRightTwoPointUs",
+                "poTopTwoPointUs",
+                "poTwoPointUs",
+                "poLeftThreePointUs",
+                "poRightThreePointUs",
+                "poTopThreePointUs",
+                "poLeftTwoPoint",
+                "poRightTwoPoint",
+                "poTopTwoPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "resolution",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dpi75",
+                "dpi150",
+                "dpi200",
+                "dpi300",
+                "dpi400",
+                "dpi600"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "scaleSelection",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sstNone",
+                "sstCustom",
+                "sstFitToPage",
+                "sstLegalToLetter"
+              ]
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "pagesPerSheet",
+                        "optionValue": "ppsOneUp"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "originalMediaSize",
+                  "optionValue": "msLegal_8point5x14in"
+                }
+              },
+              "optionValues": [
+                "sstLegalToLetter"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "originalMediaSize",
+                  "optionValue": "msISO_A4_210x297mm"
+                }
+              },
+              "optionValues": [
+                "sstA4ToLetter"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "originalMediaSize",
+                  "optionValue": "msANSI_A_8point5x11in"
+                }
+              },
+              "optionValues": [
+                "sstLetterToA4"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scaleToFitEnabled",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scaleToOutput",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miAuto",
+                "miTray1",
+                "miTray2",
+                "miTray3"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scaleToSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msISO_A4_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A6_105x148mm",
+                "msISO_B5_176x250mm",
+                "msISO_B6_125x176mm",
+                "msISO_C5_162x229mm",
+                "msISO_C6_114x162mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msJIS_Chou3_120x235mm",
+                "msJDoublePostcard_148x200mm",
+                "msExecutive_7point25x10point5in",
+                "msFoolscap_8point5x13in",
+                "msGovt_Letter_8x10in",
+                "msLegal_8point5x14in",
+                "msANSI_A_8point5x11in",
+                "msK16_184x260mm",
+                "msK16_195x270mm",
+                "msInvoice_5point5x8point5in"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanCaptureMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "scmStandard",
+                "scmJobBuild",
+                "scmBook",
+                "scmIdCard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "scanProgressMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spmNone",
+                "spmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanningSpeed",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ssAuto",
+                "ssSlow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "shadowLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "sharpness",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 5
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomCenter.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomLeft.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampBottomRight.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopCenter.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopLeft.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.numberOfDigits",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.pageNumberingStyle",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spnstNumber",
+                "spnstPagePlusNumber",
+                "spnstHyphenNumberHyphen"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.policy",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "sptNone",
+                "sptEnforced",
+                "sptGuided"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.startingNumber",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.startingPage",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 1000000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstEightPoint",
+                "swtstTwelvePoint",
+                "swtstTwentyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "stNone",
+                "stIpAddress",
+                "stUserName",
+                "stProductInformation",
+                "stPageNumber",
+                "stDateAndTime",
+                "stDate",
+                "stAdminDefined1",
+                "stAdminDefined2",
+                "stAdminDefined3",
+                "stAdminDefined4",
+                "stUserDefined1",
+                "stUserDefined2"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "stampTopRight.whiteBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "stapleOptions",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "threshold",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.darkness",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 1,
+              "step": 1,
+              "upperBoundary": 5
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.firstPageOnly",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.rotate45",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.secureBackgroundColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "wbctGray",
+                "wbctCyan",
+                "wbctMagenta"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.secureBackgroundPattern",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "wbptFlat",
+                "wbptLeaf",
+                "wbptScroll"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.textColor",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtctBlack",
+                "swtctBlue",
+                "swtctGreen",
+                "swtctPurple",
+                "swtctRed",
+                "swtctSkyBlue",
+                "swtctYellow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.textFont",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtftLetterGothic",
+                "swtftAntiqueOlive",
+                "swtftCenturySchoolbook",
+                "swtftGaramond"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.textSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "swtstThirtyPoint",
+                "swtstFortyPoint",
+                "swtstSixtyPoint"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.textType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "wttNone",
+                "wttDraft",
+                "wttConfidential",
+                "wttSecret",
+                "wttTopSecret",
+                "wttUrgent",
+                "wttUserDefined1",
+                "wttAdminDefined1",
+                "wttAdminDefined2",
+                "wttAdminDefined3",
+                "wttAdminDefined4",
+                "wttAdminDefined5",
+                "wttAdminDefined6",
+                "wttAdminDefined7",
+                "wttAdminDefined8"
+              ]
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "watermark.type",
+                        "optionValue": "wtNone"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "watermark.type",
+                        "optionValue": "wtSecure"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.type",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "wtNone",
+                "wtText"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "watermark.userText",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "xOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "xScalePercent",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 25,
+              "step": 1,
+              "upperBoundary": 400
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "scaleSelection",
+                        "optionValue": "sstCustom"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "yOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "yScalePercent",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 25,
+              "step": 1,
+              "upperBoundary": 400
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "scaleSelection",
+                        "optionValue": "sstCustom"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "stapleOption",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "soNone",
+                "soTopLeftOnePointAny",
+                "soTopRightOnePointAny",
+                "soLeftTwoPoints",
+                "soRightTwoPoints",
+                "soTopTwoPoints"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.dune.itsm.model.extensibility.jobticket.condition.EqualsOperator",
+                "value": {
+                  "optionName": "punchOption",
+                  "optionValue": "poNone"
+                }
+              },
+              "optionValues": [
+                "soNone",
+                "soTopLeftOnePointAny",
+                "soTopRightOnePointAny",
+                "soLeftTwoPoints",
+                "soRightTwoPoints",
+                "soTopTwoPoints"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftTwoPointDin"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftTwoPointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftThreePointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftFourPointDin"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftFourPointSwd"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poLeftTwoPoint"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "soNone",
+                "soTopLeftOnePointAny",
+                "soLeftTwoPoints"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poTopThreePointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poTopTwoPointDin"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poTopTwoPointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poTopTwoPoint"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "soNone",
+                "soTopLeftOnePointAny",
+                "soTopTwoPoints",
+                "soTopRightOnePointAny"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightTwoPointDin"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightTwoPointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightThreePointUs"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightFourPointDin"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightFourPointSwd"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "punchOption",
+                        "optionValue": "poRightTwoPoint"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "soNone",
+                "soTopRightOnePointAny",
+                "soRightTwoPoints"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "punchOption",
+                  "optionValue": "poBottomFourPointDin"
+                }
+              },
+              "optionValues": [
+                "soNone"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/copy/v1/profile",
+      "rel": "self"
+    }
+  ],
+  "storedCopy": {
+    "definitions": [
+      {
+        "isAvailable": false,
+        "optionName": "autoDeskew"
+      },
+      {
+        "isAvailable": false,
+        "optionName": "edgeToEdgeScan"
+      },
+      {
+        "isAvailable": false,
+        "optionName": "misfeedDetection"
+      },
+      {
+        "isAvailable": false,
+        "optionName": "originalMediaSize"
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanCaptureMode"
+      }
+    ]
+  }
+}

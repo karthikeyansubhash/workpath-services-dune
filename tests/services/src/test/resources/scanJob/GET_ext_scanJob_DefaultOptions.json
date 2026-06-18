@@ -1,0 +1,1778 @@
+{
+    "email": {
+        "autoColorDetect": {
+            "jsonLiteral": "acdmTreatNonColorAsMonochrome",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.autoColorDetectMode",
+            "typeName": "autoColorDetectMode",
+            "value": "acdmTreatNonColorAsMonochrome",
+            "versionAdded": "1.0"
+        },
+        "autoDeskew": false,
+        "autoExposure": false,
+        "backgroundCleanup": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "backgroundColorRemoval": false,
+        "backgroundColorRemovalLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "backgroundNoiseRemoval": false,
+        "binaryRendering": {
+            "jsonLiteral": "brHalftone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.binaryRenderingType",
+            "typeName": "binaryRenderingType",
+            "value": "brHalftone",
+            "versionAdded": "1.0"
+        },
+        "blackBackground": false,
+        "blackEnhancementLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 60,
+            "versionAdded": "1.0"
+        },
+        "blankPageSuppression": {
+            "jsonLiteral": "bpdDisable",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.blankPageDetectionMode",
+            "typeName": "blankPageDetectionMode",
+            "value": "bpdDisable",
+            "versionAdded": "1.0"
+        },
+        "ccdChannel": {
+            "jsonLiteral": "cctGrayEmulated",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.ccdChannelType",
+            "typeName": "ccdChannelType",
+            "value": "cctGrayEmulated",
+            "versionAdded": "1.0"
+        },
+        "colorAndGrayCompression": {
+            "jsonLiteral": "ctJpeg",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctJpeg",
+            "versionAdded": "1.0"
+        },
+        "colorMode": {
+            "jsonLiteral": "cmAutoDetect",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.colorMode",
+            "typeName": "colorMode",
+            "value": "cmAutoDetect",
+            "versionAdded": "1.0"
+        },
+        "colorRange": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "colorSensitivity": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "compressionFactor": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "contentOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "contentType": {
+            "jsonLiteral": "dctMixed",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.documentContentType",
+            "typeName": "documentContentType",
+            "value": "dctMixed",
+            "versionAdded": "1.0"
+        },
+        "contrast": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "descreen": false,
+        "edgeToEdgeScan": false,
+        "encryptionPassword": "",
+        "exposureLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "fileName": {
+            "majorVersion": 1,
+            "polymorphInstance": {
+                "explicitValue": "scan",
+                "majorVersion": 1,
+                "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_value",
+                "typeName": "scanOptions_fileName_value",
+                "versionAdded": "1.0"
+            },
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_binding",
+            "typeName": "scanOptions_fileName_binding",
+            "versionAdded": "1.0"
+        },
+        "gamma": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 100,
+            "versionAdded": "1.0"
+        },
+        "highlightLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "imagePreviewMode": {
+            "jsonLiteral": "ipmNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.imagePreviewMode",
+            "typeName": "imagePreviewMode",
+            "value": "ipmNone",
+            "versionAdded": "1.0"
+        },
+        "invertColors": false,
+        "longPlotScan": false,
+        "majorVersion": 1,
+        "mediaBindingFormat": {
+            "jsonLiteral": "bfFlipLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.bindingFormat",
+            "typeName": "bindingFormat",
+            "value": "bfFlipLeft",
+            "versionAdded": "1.0"
+        },
+        "mediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "mediaSource": {
+            "jsonLiteral": "miAdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAdf",
+            "versionAdded": "1.0"
+        },
+        "mediaType": {
+            "jsonLiteral": "mtPlain",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaTypeId",
+            "typeName": "mediaTypeId",
+            "value": "mtPlain",
+            "versionAdded": "1.0"
+        },
+        "misfeedDetection": true,
+        "monoCompression": {
+            "jsonLiteral": "ctAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasAnchor": {
+            "jsonLiteral": "ocaTopLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.outputCanvasAnchor",
+            "typeName": "outputCanvasAnchor",
+            "value": "ocaTopLeft",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSource": {
+            "jsonLiteral": "miAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasXExtent": 0,
+        "outputCanvasYExtent": 0,
+        "outputFileCompression": true,
+        "outputFileEncryption": false,
+        "outputFileFormat": {
+            "jsonLiteral": "ffPdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.fileFormat",
+            "typeName": "fileFormat",
+            "value": "ffPdf",
+            "versionAdded": "1.0"
+        },
+        "outputQualityVsSize": {
+            "jsonLiteral": "qvsMedium",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.qualityVsSize",
+            "typeName": "qualityVsSize",
+            "value": "qvsMedium",
+            "versionAdded": "1.0"
+        },
+        "pagesPerSheet": {
+            "jsonLiteral": "ppsOneUp",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.pagesPerSheetType",
+            "typeName": "pagesPerSheetType",
+            "value": "ppsOneUp",
+            "versionAdded": "1.0"
+        },
+        "plexMode": {
+            "jsonLiteral": "pmSimplex",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.plexMode",
+            "typeName": "plexMode",
+            "value": "pmSimplex",
+            "versionAdded": "1.0"
+        },
+        "resolution": {
+            "jsonLiteral": "dpi200",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.resolution",
+            "typeName": "resolution",
+            "value": "dpi200",
+            "versionAdded": "1.0"
+        },
+        "scanCaptureMode": {
+            "jsonLiteral": "scmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanCaptureMode",
+            "typeName": "scanCaptureMode",
+            "value": "scmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanProgressMode": {
+            "jsonLiteral": "spmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanProgressMode",
+            "typeName": "scanProgressMode",
+            "value": "spmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanningSpeed": {
+            "jsonLiteral": "ssAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanSpeedType",
+            "typeName": "scanSpeedType",
+            "value": "ssAuto",
+            "versionAdded": "1.0"
+        },
+        "shadowLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "sharpness": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "threshold": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions",
+        "typeName": "scanOptions",
+        "versionAdded": "1.0",
+        "xOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "yOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        }
+    },
+    "http": {
+        "autoColorDetect": {
+            "jsonLiteral": "acdmDetectOnly",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.autoColorDetectMode",
+            "typeName": "autoColorDetectMode",
+            "value": "acdmDetectOnly",
+            "versionAdded": "1.0"
+        },
+        "autoDeskew": false,
+        "autoExposure": false,
+        "backgroundCleanup": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "backgroundColorRemoval": false,
+        "backgroundColorRemovalLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "backgroundNoiseRemoval": false,
+        "binaryRendering": {
+            "jsonLiteral": "brHalftone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.binaryRenderingType",
+            "typeName": "binaryRenderingType",
+            "value": "brHalftone",
+            "versionAdded": "1.0"
+        },
+        "blackBackground": false,
+        "blackEnhancementLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 60,
+            "versionAdded": "1.0"
+        },
+        "blankPageSuppression": {
+            "jsonLiteral": "bpdDisable",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.blankPageDetectionMode",
+            "typeName": "blankPageDetectionMode",
+            "value": "bpdDisable",
+            "versionAdded": "1.0"
+        },
+        "ccdChannel": {
+            "jsonLiteral": "cctGrayEmulated",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.ccdChannelType",
+            "typeName": "ccdChannelType",
+            "value": "cctGrayEmulated",
+            "versionAdded": "1.0"
+        },
+        "colorAndGrayCompression": {
+            "jsonLiteral": "ctJpeg",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctJpeg",
+            "versionAdded": "1.0"
+        },
+        "colorMode": {
+            "jsonLiteral": "cmColor",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.colorMode",
+            "typeName": "colorMode",
+            "value": "cmColor",
+            "versionAdded": "1.0"
+        },
+        "colorRange": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "colorSensitivity": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "compressionFactor": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "contentOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "contentType": {
+            "jsonLiteral": "dctMixed",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.documentContentType",
+            "typeName": "documentContentType",
+            "value": "dctMixed",
+            "versionAdded": "1.0"
+        },
+        "contrast": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "descreen": false,
+        "edgeToEdgeScan": false,
+        "encryptionPassword": "",
+        "exposureLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 5,
+            "versionAdded": "1.0"
+        },
+        "fileName": {
+            "majorVersion": 1,
+            "polymorphInstance": {
+                "explicitValue": "scan",
+                "majorVersion": 1,
+                "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_value",
+                "typeName": "scanOptions_fileName_value",
+                "versionAdded": "1.0"
+            },
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_binding",
+            "typeName": "scanOptions_fileName_binding",
+            "versionAdded": "1.0"
+        },
+        "fileTransmissionMode": {
+            "jsonLiteral": "tmJob",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.transmissionMode",
+            "typeName": "transmissionMode",
+            "value": "tmJob",
+            "versionAdded": "1.0"
+        },
+        "gamma": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 100,
+            "versionAdded": "1.0"
+        },
+        "highlightLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "imagePreviewMode": {
+            "jsonLiteral": "ipmNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.imagePreviewMode",
+            "typeName": "imagePreviewMode",
+            "value": "ipmNone",
+            "versionAdded": "1.0"
+        },
+        "invertColors": false,
+        "longPlotScan": false,
+        "majorVersion": 1,
+        "mediaBindingFormat": {
+            "jsonLiteral": "bfFlipLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.bindingFormat",
+            "typeName": "bindingFormat",
+            "value": "bfFlipLeft",
+            "versionAdded": "1.0"
+        },
+        "mediaSize": {
+            "jsonLiteral": "msANSI_A_8point5x11in",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msANSI_A_8point5x11in",
+            "versionAdded": "1.0"
+        },
+        "mediaSource": {
+            "jsonLiteral": "miAdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAdf",
+            "versionAdded": "1.0"
+        },
+        "mediaType": {
+            "jsonLiteral": "mtPlain",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaTypeId",
+            "typeName": "mediaTypeId",
+            "value": "mtPlain",
+            "versionAdded": "1.0"
+        },
+        "misfeedDetection": false,
+        "monoCompression": {
+            "jsonLiteral": "ctAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasAnchor": {
+            "jsonLiteral": "ocaTopLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.outputCanvasAnchor",
+            "typeName": "outputCanvasAnchor",
+            "value": "ocaTopLeft",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSource": {
+            "jsonLiteral": "miAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasXExtent": 0,
+        "outputCanvasYExtent": 0,
+        "outputFileCompression": false,
+        "outputFileEncryption": false,
+        "outputFileFormat": {
+            "jsonLiteral": "ffPdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.fileFormat",
+            "typeName": "fileFormat",
+            "value": "ffPdf",
+            "versionAdded": "1.0"
+        },
+        "outputQualityVsSize": {
+            "jsonLiteral": "qvsMedium",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.qualityVsSize",
+            "typeName": "qualityVsSize",
+            "value": "qvsMedium",
+            "versionAdded": "1.0"
+        },
+        "pagesPerSheet": {
+            "jsonLiteral": "ppsOneUp",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.pagesPerSheetType",
+            "typeName": "pagesPerSheetType",
+            "value": "ppsOneUp",
+            "versionAdded": "1.0"
+        },
+        "plexMode": {
+            "jsonLiteral": "pmSimplex",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.plexMode",
+            "typeName": "plexMode",
+            "value": "pmSimplex",
+            "versionAdded": "1.0"
+        },
+        "resolution": {
+            "jsonLiteral": "dpi300",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.resolution",
+            "typeName": "resolution",
+            "value": "dpi300",
+            "versionAdded": "1.0"
+        },
+        "scanCaptureMode": {
+            "jsonLiteral": "scmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanCaptureMode",
+            "typeName": "scanCaptureMode",
+            "value": "scmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanProgressMode": {
+            "jsonLiteral": "spmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanProgressMode",
+            "typeName": "scanProgressMode",
+            "value": "spmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanningSpeed": {
+            "jsonLiteral": "ssAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanSpeedType",
+            "typeName": "scanSpeedType",
+            "value": "ssAuto",
+            "versionAdded": "1.0"
+        },
+        "shadowLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "sharpness": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "threshold": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions",
+        "typeName": "scanOptions",
+        "versionAdded": "1.0",
+        "xOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "yOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        }
+    },
+    "jobStorage": {
+        "autoColorDetect": {
+            "jsonLiteral": "acdmDetectOnly",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.autoColorDetectMode",
+            "typeName": "autoColorDetectMode",
+            "value": "acdmDetectOnly",
+            "versionAdded": "1.0"
+        },
+        "autoDeskew": false,
+        "autoExposure": false,
+        "backgroundCleanup": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "backgroundColorRemoval": false,
+        "backgroundColorRemovalLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "backgroundNoiseRemoval": false,
+        "binaryRendering": {
+            "jsonLiteral": "brHalftone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.binaryRenderingType",
+            "typeName": "binaryRenderingType",
+            "value": "brHalftone",
+            "versionAdded": "1.0"
+        },
+        "blackBackground": false,
+        "blackEnhancementLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 60,
+            "versionAdded": "1.0"
+        },
+        "blankPageSuppression": {
+            "jsonLiteral": "bpdDisable",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.blankPageDetectionMode",
+            "typeName": "blankPageDetectionMode",
+            "value": "bpdDisable",
+            "versionAdded": "1.0"
+        },
+        "ccdChannel": {
+            "jsonLiteral": "cctGrayEmulated",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.ccdChannelType",
+            "typeName": "ccdChannelType",
+            "value": "cctGrayEmulated",
+            "versionAdded": "1.0"
+        },
+        "colorAndGrayCompression": {
+            "jsonLiteral": "ctDefault",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctDefault",
+            "versionAdded": "1.0"
+        },
+        "colorMode": {
+            "jsonLiteral": "cmColor",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.colorMode",
+            "typeName": "colorMode",
+            "value": "cmColor",
+            "versionAdded": "1.0"
+        },
+        "colorRange": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "colorSensitivity": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "compressionFactor": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "contentOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "contentType": {
+            "jsonLiteral": "dctMixed",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.documentContentType",
+            "typeName": "documentContentType",
+            "value": "dctMixed",
+            "versionAdded": "1.0"
+        },
+        "contrast": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "descreen": false,
+        "edgeToEdgeScan": false,
+        "encryptionPassword": "",
+        "exposureLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "fileName": {
+            "majorVersion": 1,
+            "polymorphInstance": {
+                "explicitValue": "scan",
+                "majorVersion": 1,
+                "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_value",
+                "typeName": "scanOptions_fileName_value",
+                "versionAdded": "1.0"
+            },
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_binding",
+            "typeName": "scanOptions_fileName_binding",
+            "versionAdded": "1.0"
+        },
+        "gamma": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 100,
+            "versionAdded": "1.0"
+        },
+        "highlightLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "imagePreviewMode": {
+            "jsonLiteral": "ipmNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.imagePreviewMode",
+            "typeName": "imagePreviewMode",
+            "value": "ipmNone",
+            "versionAdded": "1.0"
+        },
+        "invertColors": false,
+        "longPlotScan": false,
+        "majorVersion": 1,
+        "mediaBindingFormat": {
+            "jsonLiteral": "bfFlipLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.bindingFormat",
+            "typeName": "bindingFormat",
+            "value": "bfFlipLeft",
+            "versionAdded": "1.0"
+        },
+        "mediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "mediaSource": {
+            "jsonLiteral": "miAdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAdf",
+            "versionAdded": "1.0"
+        },
+        "mediaType": {
+            "jsonLiteral": "mtPlain",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaTypeId",
+            "typeName": "mediaTypeId",
+            "value": "mtPlain",
+            "versionAdded": "1.0"
+        },
+        "misfeedDetection": false,
+        "monoCompression": {
+            "jsonLiteral": "ctDefault",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctDefault",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasAnchor": {
+            "jsonLiteral": "ocaTopLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.outputCanvasAnchor",
+            "typeName": "outputCanvasAnchor",
+            "value": "ocaTopLeft",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSource": {
+            "jsonLiteral": "miAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasXExtent": 0,
+        "outputCanvasYExtent": 0,
+        "outputFileCompression": false,
+        "outputFileEncryption": false,
+        "outputFileFormat": {
+            "jsonLiteral": "ffJpeg",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.fileFormat",
+            "typeName": "fileFormat",
+            "value": "ffJpeg",
+            "versionAdded": "1.0"
+        },
+        "outputQualityVsSize": {
+            "jsonLiteral": "qvsNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.qualityVsSize",
+            "typeName": "qualityVsSize",
+            "value": "qvsNone",
+            "versionAdded": "1.0"
+        },
+        "pagesPerSheet": {
+            "jsonLiteral": "ppsOneUp",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.pagesPerSheetType",
+            "typeName": "pagesPerSheetType",
+            "value": "ppsOneUp",
+            "versionAdded": "1.0"
+        },
+        "plexMode": {
+            "jsonLiteral": "pmSimplex",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.plexMode",
+            "typeName": "plexMode",
+            "value": "pmSimplex",
+            "versionAdded": "1.0"
+        },
+        "resolution": {
+            "jsonLiteral": "dpi300",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.resolution",
+            "typeName": "resolution",
+            "value": "dpi300",
+            "versionAdded": "1.0"
+        },
+        "scanCaptureMode": {
+            "jsonLiteral": "scmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanCaptureMode",
+            "typeName": "scanCaptureMode",
+            "value": "scmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanProgressMode": {
+            "jsonLiteral": "spmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanProgressMode",
+            "typeName": "scanProgressMode",
+            "value": "spmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanningSpeed": {
+            "jsonLiteral": "ssAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanSpeedType",
+            "typeName": "scanSpeedType",
+            "value": "ssAuto",
+            "versionAdded": "1.0"
+        },
+        "shadowLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "sharpness": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "threshold": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions",
+        "typeName": "scanOptions",
+        "versionAdded": "1.0",
+        "xOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "yOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        }
+    },
+    "links": [{
+            "href": "/ext/scanJob/v1/defaultOptions",
+            "majorVersion": 1,
+            "rel": "self",
+            "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.link",
+            "typeName": "link",
+            "versionAdded": "1.0"
+        }
+    ],
+    "localFolder": {
+        "autoColorDetect": {
+            "jsonLiteral": "acdmTreatNonColorAsMonochrome",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.autoColorDetectMode",
+            "typeName": "autoColorDetectMode",
+            "value": "acdmTreatNonColorAsMonochrome",
+            "versionAdded": "1.0"
+        },
+        "autoDeskew": false,
+        "autoExposure": false,
+        "backgroundCleanup": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "backgroundColorRemoval": false,
+        "backgroundColorRemovalLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "backgroundNoiseRemoval": false,
+        "binaryRendering": {
+            "jsonLiteral": "brHalftone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.binaryRenderingType",
+            "typeName": "binaryRenderingType",
+            "value": "brHalftone",
+            "versionAdded": "1.0"
+        },
+        "blackBackground": false,
+        "blackEnhancementLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 60,
+            "versionAdded": "1.0"
+        },
+        "blankPageSuppression": {
+            "jsonLiteral": "bpdDisable",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.blankPageDetectionMode",
+            "typeName": "blankPageDetectionMode",
+            "value": "bpdDisable",
+            "versionAdded": "1.0"
+        },
+        "ccdChannel": {
+            "jsonLiteral": "cctGrayEmulated",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.ccdChannelType",
+            "typeName": "ccdChannelType",
+            "value": "cctGrayEmulated",
+            "versionAdded": "1.0"
+        },
+        "colorAndGrayCompression": {
+            "jsonLiteral": "ctJpeg",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctJpeg",
+            "versionAdded": "1.0"
+        },
+        "colorMode": {
+            "jsonLiteral": "cmAutoDetect",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.colorMode",
+            "typeName": "colorMode",
+            "value": "cmAutoDetect",
+            "versionAdded": "1.0"
+        },
+        "colorRange": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "colorSensitivity": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "compressionFactor": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "contentOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "contentType": {
+            "jsonLiteral": "dctMixed",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.documentContentType",
+            "typeName": "documentContentType",
+            "value": "dctMixed",
+            "versionAdded": "1.0"
+        },
+        "contrast": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "descreen": false,
+        "edgeToEdgeScan": false,
+        "encryptionPassword": "",
+        "exposureLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "fileName": {
+            "majorVersion": 1,
+            "polymorphInstance": {
+                "explicitValue": "scan",
+                "majorVersion": 1,
+                "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_value",
+                "typeName": "scanOptions_fileName_value",
+                "versionAdded": "1.0"
+            },
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_binding",
+            "typeName": "scanOptions_fileName_binding",
+            "versionAdded": "1.0"
+        },
+        "gamma": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 100,
+            "versionAdded": "1.0"
+        },
+        "highlightLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "imagePreviewMode": {
+            "jsonLiteral": "ipmNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.imagePreviewMode",
+            "typeName": "imagePreviewMode",
+            "value": "ipmNone",
+            "versionAdded": "1.0"
+        },
+        "invertColors": false,
+        "longPlotScan": false,
+        "majorVersion": 1,
+        "mediaBindingFormat": {
+            "jsonLiteral": "bfFlipLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.bindingFormat",
+            "typeName": "bindingFormat",
+            "value": "bfFlipLeft",
+            "versionAdded": "1.0"
+        },
+        "mediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "mediaSource": {
+            "jsonLiteral": "miAdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAdf",
+            "versionAdded": "1.0"
+        },
+        "mediaType": {
+            "jsonLiteral": "mtPlain",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaTypeId",
+            "typeName": "mediaTypeId",
+            "value": "mtPlain",
+            "versionAdded": "1.0"
+        },
+        "misfeedDetection": true,
+        "monoCompression": {
+            "jsonLiteral": "ctAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasAnchor": {
+            "jsonLiteral": "ocaTopLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.outputCanvasAnchor",
+            "typeName": "outputCanvasAnchor",
+            "value": "ocaTopLeft",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSource": {
+            "jsonLiteral": "miAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasXExtent": 0,
+        "outputCanvasYExtent": 0,
+        "outputFileCompression": true,
+        "outputFileEncryption": false,
+        "outputFileFormat": {
+            "jsonLiteral": "ffPdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.fileFormat",
+            "typeName": "fileFormat",
+            "value": "ffPdf",
+            "versionAdded": "1.0"
+        },
+        "outputQualityVsSize": {
+            "jsonLiteral": "qvsMedium",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.qualityVsSize",
+            "typeName": "qualityVsSize",
+            "value": "qvsMedium",
+            "versionAdded": "1.0"
+        },
+        "pagesPerSheet": {
+            "jsonLiteral": "ppsOneUp",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.pagesPerSheetType",
+            "typeName": "pagesPerSheetType",
+            "value": "ppsOneUp",
+            "versionAdded": "1.0"
+        },
+        "plexMode": {
+            "jsonLiteral": "pmSimplex",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.plexMode",
+            "typeName": "plexMode",
+            "value": "pmSimplex",
+            "versionAdded": "1.0"
+        },
+        "resolution": {
+            "jsonLiteral": "dpi200",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.resolution",
+            "typeName": "resolution",
+            "value": "dpi200",
+            "versionAdded": "1.0"
+        },
+        "scanCaptureMode": {
+            "jsonLiteral": "scmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanCaptureMode",
+            "typeName": "scanCaptureMode",
+            "value": "scmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanProgressMode": {
+            "jsonLiteral": "spmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanProgressMode",
+            "typeName": "scanProgressMode",
+            "value": "spmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanningSpeed": {
+            "jsonLiteral": "ssAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanSpeedType",
+            "typeName": "scanSpeedType",
+            "value": "ssAuto",
+            "versionAdded": "1.0"
+        },
+        "shadowLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "sharpness": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "threshold": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions",
+        "typeName": "scanOptions",
+        "versionAdded": "1.0",
+        "xOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "yOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        }
+    },
+    "majorVersion": 1,
+    "networkFolder": {
+        "autoColorDetect": {
+            "jsonLiteral": "acdmTreatNonColorAsMonochrome",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.autoColorDetectMode",
+            "typeName": "autoColorDetectMode",
+            "value": "acdmTreatNonColorAsMonochrome",
+            "versionAdded": "1.0"
+        },
+        "autoDeskew": false,
+        "autoExposure": false,
+        "backgroundCleanup": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "backgroundColorRemoval": false,
+        "backgroundColorRemovalLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "backgroundNoiseRemoval": false,
+        "binaryRendering": {
+            "jsonLiteral": "brHalftone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.binaryRenderingType",
+            "typeName": "binaryRenderingType",
+            "value": "brHalftone",
+            "versionAdded": "1.0"
+        },
+        "blackBackground": false,
+        "blackEnhancementLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 60,
+            "versionAdded": "1.0"
+        },
+        "blankPageSuppression": {
+            "jsonLiteral": "bpdDisable",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.blankPageDetectionMode",
+            "typeName": "blankPageDetectionMode",
+            "value": "bpdDisable",
+            "versionAdded": "1.0"
+        },
+        "ccdChannel": {
+            "jsonLiteral": "cctGrayEmulated",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.ccdChannelType",
+            "typeName": "ccdChannelType",
+            "value": "cctGrayEmulated",
+            "versionAdded": "1.0"
+        },
+        "colorAndGrayCompression": {
+            "jsonLiteral": "ctJpeg",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctJpeg",
+            "versionAdded": "1.0"
+        },
+        "colorMode": {
+            "jsonLiteral": "cmAutoDetect",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.colorMode",
+            "typeName": "colorMode",
+            "value": "cmAutoDetect",
+            "versionAdded": "1.0"
+        },
+        "colorRange": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "colorSensitivity": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "compressionFactor": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "contentOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "contentType": {
+            "jsonLiteral": "dctMixed",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.documentContentType",
+            "typeName": "documentContentType",
+            "value": "dctMixed",
+            "versionAdded": "1.0"
+        },
+        "contrast": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 4,
+            "versionAdded": "1.0"
+        },
+        "descreen": false,
+        "edgeToEdgeScan": false,
+        "encryptionPassword": "",
+        "exposureLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 7,
+            "versionAdded": "1.0"
+        },
+        "fileName": {
+            "majorVersion": 1,
+            "polymorphInstance": {
+                "explicitValue": "scan",
+                "majorVersion": 1,
+                "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_value",
+                "typeName": "scanOptions_fileName_value",
+                "versionAdded": "1.0"
+            },
+            "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions_fileName_binding",
+            "typeName": "scanOptions_fileName_binding",
+            "versionAdded": "1.0"
+        },
+        "gamma": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 100,
+            "versionAdded": "1.0"
+        },
+        "highlightLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 1,
+            "versionAdded": "1.0"
+        },
+        "imagePreviewMode": {
+            "jsonLiteral": "ipmNone",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.imagePreviewMode",
+            "typeName": "imagePreviewMode",
+            "value": "ipmNone",
+            "versionAdded": "1.0"
+        },
+        "invertColors": false,
+        "longPlotScan": false,
+        "majorVersion": 1,
+        "mediaBindingFormat": {
+            "jsonLiteral": "bfFlipLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.bindingFormat",
+            "typeName": "bindingFormat",
+            "value": "bfFlipLeft",
+            "versionAdded": "1.0"
+        },
+        "mediaSize": {
+            "jsonLiteral": "msANSI_A_Rotated_8point5x11in",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msANSI_A_Rotated_8point5x11in",
+            "versionAdded": "1.0"
+        },
+        "mediaSource": {
+            "jsonLiteral": "miAdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAdf",
+            "versionAdded": "1.0"
+        },
+        "mediaType": {
+            "jsonLiteral": "mtPlain",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaTypeId",
+            "typeName": "mediaTypeId",
+            "value": "mtPlain",
+            "versionAdded": "1.0"
+        },
+        "misfeedDetection": false,
+        "monoCompression": {
+            "jsonLiteral": "ctAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.compressionType",
+            "typeName": "compressionType",
+            "value": "ctAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasAnchor": {
+            "jsonLiteral": "ocaTopLeft",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.outputCanvasAnchor",
+            "typeName": "outputCanvasAnchor",
+            "value": "ocaTopLeft",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSize": {
+            "jsonLiteral": "msAny",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaSizeId",
+            "typeName": "mediaSizeId",
+            "value": "msAny",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasMediaSource": {
+            "jsonLiteral": "miAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.media.version.1.type.mediaInputId",
+            "typeName": "mediaInputId",
+            "value": "miAuto",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasOrientation": {
+            "jsonLiteral": "coPortrait",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.contentOrientation",
+            "typeName": "contentOrientation",
+            "value": "coPortrait",
+            "versionAdded": "1.0"
+        },
+        "outputCanvasXExtent": 0,
+        "outputCanvasYExtent": 0,
+        "outputFileCompression": false,
+        "outputFileEncryption": false,
+        "outputFileFormat": {
+            "jsonLiteral": "ffPdf",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.fileFormat",
+            "typeName": "fileFormat",
+            "value": "ffPdf",
+            "versionAdded": "1.0"
+        },
+        "outputQualityVsSize": {
+            "jsonLiteral": "qvsMedium",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.qualityVsSize",
+            "typeName": "qualityVsSize",
+            "value": "qvsMedium",
+            "versionAdded": "1.0"
+        },
+        "pagesPerSheet": {
+            "jsonLiteral": "ppsOneUp",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.pagesPerSheetType",
+            "typeName": "pagesPerSheetType",
+            "value": "ppsOneUp",
+            "versionAdded": "1.0"
+        },
+        "plexMode": {
+            "jsonLiteral": "pmSimplex",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.plexMode",
+            "typeName": "plexMode",
+            "value": "pmSimplex",
+            "versionAdded": "1.0"
+        },
+        "resolution": {
+            "jsonLiteral": "dpi200",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.resolution",
+            "typeName": "resolution",
+            "value": "dpi200",
+            "versionAdded": "1.0"
+        },
+        "scanCaptureMode": {
+            "jsonLiteral": "scmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanCaptureMode",
+            "typeName": "scanCaptureMode",
+            "value": "scmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanProgressMode": {
+            "jsonLiteral": "spmStandard",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanProgressMode",
+            "typeName": "scanProgressMode",
+            "value": "spmStandard",
+            "versionAdded": "1.0"
+        },
+        "scanningSpeed": {
+            "jsonLiteral": "ssAuto",
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.imaging.version.1.type.scanSpeedType",
+            "typeName": "scanSpeedType",
+            "value": "ssAuto",
+            "versionAdded": "1.0"
+        },
+        "shadowLevel": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "sharpness": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 2,
+            "versionAdded": "1.0"
+        },
+        "threshold": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "typeGUN": "com.hp.ext.service.scanJob.version.1.type.scanOptions",
+        "typeName": "scanOptions",
+        "versionAdded": "1.0",
+        "xOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        },
+        "yOffset": {
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+            "typeName": "unsigned32",
+            "value": 0,
+            "versionAdded": "1.0"
+        }
+    },
+    "opMeta": {
+        "contentFilter": {
+            "items": [{
+                    "majorVersion": 1,
+                    "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.contentFilterString",
+                    "typeName": "contentFilterString",
+                    "value": "*",
+                    "versionAdded": "1.0"
+                }
+            ],
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.contentFilter",
+            "typeName": "contentFilter",
+            "versionAdded": "1.0"
+        },
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.operationMeta",
+        "typeName": "operationMeta",
+        "versionAdded": "1.0"
+    },
+    "typeGUN": "com.hp.ext.service.scanJob.version.1.type.defaultOptions",
+    "typeName": "defaultOptions",
+    "versionAdded": "1.0"
+}

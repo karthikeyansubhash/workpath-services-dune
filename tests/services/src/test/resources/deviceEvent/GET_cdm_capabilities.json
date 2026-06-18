@@ -1,0 +1,23 @@
+{
+  "version": "1.2.0",
+  "validators": [
+    {
+      "resourceGun": "com.hp.cdm.service.alert.version.1.resource.alert",
+      "propertyPointer": "/category",
+      "options": [
+        {
+          "seValue": "OobePaperLoadingFlow"
+        }
+      ]
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.alert.version.1.resource.alert",
+      "propertyPointer": "/stringId",
+      "options": [
+        {
+          "iValue": 1
+        }
+      ]
+    }
+  ]
+}

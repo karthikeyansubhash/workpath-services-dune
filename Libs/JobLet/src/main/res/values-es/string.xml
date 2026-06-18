@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">Progreso de la tarea</string>
+<string name="progress_dialog_progressing_message">La tarea está en curso (%1$s)…</string>
+<string name="progress_dialog_complete_message">La tarea se ha completado (%1$s)…</string>
+<string name="job_number_label">Número de tarea:</string>
+<string name="job_name_label">Nombre de la tarea:</string>
+<string name="confirmation_dialog_title">Confirmación de la tarea</string>
+<string name="confirmation_dialog_message">¿Desea escanear la siguiente página?</string>
+<string name="yes">Sí</string>
+<string name="no">No</string>
+<string name="close">Cerrar</string>
+<string name="cancel">Cancelar</string>
+<string name="completed">Completada</string>
+<string name="pages">Páginas</string>
+<string name="job_sending">Enviando</string>
+<string name="job_cancelling">Cancelando</string>
+<string name="job_scanning">Escaneando</string>
+<string name="job_progressing">En curso</string>
+<string name="job_waiting">En espera</string>
+<string name="job_image_number">Página %1d</string>
+<string name="job_dst_number">de %1$s</string>
+<string name="job_canceled">Cancelada</string>
+<string name="job_failed">Error</string>
+<string name="job_completed">Completada. Total</string>
+<string name="job_progress_notification_title">Progreso de la tarea</string>
+<string name="job_progress_notification_message">Tocar para volver al progreso de las tareas</string>
+<string name="copying">Copiando</string>
+<string name="faxing">Enviando por fax</string>
+<string name="printing">Imprimiendo</string>
+<string name="scanning">Escaneando</string>
+<string name="sending">Enviando</string>
+<string name="saving">Guardando</string>
+<string name="copies">copias</string>
+<string name="set">/ ha configurado %1$s</string>
+<string name="noti_jobs_progressing">Tareas en curso (%1$s)</string>
+<string name="noti_jobs_waiting">Tareas en espera (%1$s)</string>
+<string name="noti_jobs_canceled">Tareas canceladas (%1$s)</string>
+<string name="failed">Error con el código de resultados %1$s</string>
+<string name="job_confirmation_title">Escanear más</string>
+</resources>

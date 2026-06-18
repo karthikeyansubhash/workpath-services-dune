@@ -1,0 +1,89 @@
+@startuml
+title
+<font size=20><b>ScannerService API : getCapabilities(), getDefaults() </b></font>
+<font size=16></font>
+end title
+
+box "Workpath App" #FFFFFF
+actor User as "Workpath ScanApp"
+participant lib as "WorkpathLib"
+end box
+box "Workpath services " #C9FFB0
+    'participant ScanBR as "ScanLet\nBroadcastReceiver"
+    participant ScanCP as "ScanLet [provider]\nContentProvider"
+    participant ScanAdapter as "ScanLet [adapter]\nScanAdapter"
+    'participant ScanIS as "[service]\nScanJob\nIntentService"
+    'participant ScanSM as "[service]\nScanJob\nStateMachine"
+    participant ScanDS as "DeviceService"
+
+box "Workpath PacMan" #C9FFB0
+    participant PacMan as "PacMan"
+end box
+
+box "Dune" #aliceblue
+participant E2 as "    E2    "
+end box
+
+/'
+rnote right of User
+end note
+'/
+
+autonumber
+== Get Scan Capabilities  ==
+User -> lib : ScannerService.\ngetCapabilities(Context, Result)
+activate lib
+lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_caps", Bundle)
+note right of lib #white
+Uri: com.hp.jetadvantage.link.authority.oxp.scanletcp
+Bundle : {"clientVersion" : 8}
+end note
+
+
+activate ScanCP
+ScanCP -> ScanAdapter : getCapabilities(\n  appPackageName,\n  deviceService, \n  transmissionMode)
+activate ScanAdapter
+ScanAdapter -> ScanDS : getProfile(appPackageName)
+activate ScanDS
+opt Not cached
+    ScanDS [#0000FF]-> PacMan : <<IPC>>\n queryUuidByPackageName\n(appPackageName)
+    activate PacMan
+    PacMan [#0000FF]--> ScanDS : <<IPC>>\n application UUID
+    deactivate PacMan
+    ScanDS [#0000FF]-> E2 : GET /cdm/e2WorkpathInterop/v1/appToken/{applicationId}
+    activate E2
+    E2 [#0000FF]--> ScanDS : solutionToken
+    deactivate E2
+end opt
+ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/profile
+activate E2
+note right of ScanDS #white
+GET /ext/scanJob/v1/profile HTTP/1.1
+Authorization: Bearer solutionToken
+end note
+E2 [#0000FF]--> ScanDS : scan profile
+deactivate E2
+note right of ScanDS #white
+{ "base": { "definitions" : [
+                        {"isAvailable": true,
+                         "optionaName": "fileTransmissionMode",
+                         "rules": []}]},
+  "http": { "definitions" : []}
+}
+end note
+ScanDS --> ScanAdapter : Return Profile<E2Type>
+deactivate ScanDS
+ScanAdapter -> ScanAdapter : convert E2Type to\n WorkpathAPIType\n(Profile-> ScanAttributesCaps)
+ScanAdapter --> ScanCP : Return  Json String\n(ScanAttributesCaps)
+deactivate ScanAdapter
+ScanCP -[#0000FF]-> lib : <<IPC>>\n Return Bundle
+deactivate ScanCP
+note left of ScanCP #white
+{"resultCode": -1,
+ "result": ScanAttributesCaps Json String }
+end note
+lib --> User : Return\nScanAttributesCaps
+deactivate lib
+
+== Get Scan Default Job Options ==
+@enduml

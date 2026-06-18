@@ -1,0 +1,30 @@
+android {
+    compileSdk rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    compileOptions {
+        sourceCompatibility rootProject.ext.javaVersion
+        targetCompatibility rootProject.ext.javaVersion
+    }
+
+    defaultConfig {
+        minSdk rootProject.ext.minSdkVersion
+        targetSdk rootProject.ext.targetSdkVersion
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        manifestPlaceholders = rootProject.ext.commonManifestPlaceholders
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled rootProject.ext.libraryMinify
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), rootProject.ext.libraryProguardFile
+        }
+        releaseForSim {
+            initWith release
+        }
+        debugForSim {
+            initWith debug
+        }
+    }
+}

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">Avanzamento lavoro</string>
+<string name="progress_dialog_progressing_message">Avanzamento lavoro %1$s…</string>
+<string name="progress_dialog_complete_message">Lavoro %1$s completato…</string>
+<string name="job_number_label">Numero lavoro:</string>
+<string name="job_name_label">Nome lavoro:</string>
+<string name="confirmation_dialog_title">Conferma lavoro</string>
+<string name="confirmation_dialog_message">Digitalizzare la pagina successiva?</string>
+<string name="yes">Sì</string>
+<string name="no">No</string>
+<string name="close">Chiudi</string>
+<string name="cancel">Annulla</string>
+<string name="completed">Completato</string>
+<string name="pages">Pagine</string>
+<string name="job_sending">Invio in corso</string>
+<string name="job_cancelling">Annullamento in corso</string>
+<string name="job_scanning">Digitalizzazione in corso</string>
+<string name="job_progressing">Avanzamento in corso</string>
+<string name="job_waiting">In attesa</string>
+<string name="job_image_number">Pagina %1$d</string>
+<string name="job_dst_number">a %1$s</string>
+<string name="job_canceled">Annullato</string>
+<string name="job_failed">Non riuscito</string>
+<string name="job_completed">Completato. Totale</string>
+<string name="job_progress_notification_title">Avanzamento lavoro</string>
+<string name="job_progress_notification_message">Toccare per ritornare a Avanzamento lavoro</string>
+<string name="copying">Copia in corso</string>
+<string name="faxing">Fax in corso</string>
+<string name="printing">Stampa in corso</string>
+<string name="scanning">Digitalizzazione in corso</string>
+<string name="sending">Invio in corso</string>
+<string name="saving">Salvataggio in corso</string>
+<string name="copies">copie</string>
+<string name="set">/ set %1$s</string>
+<string name="noti_jobs_progressing">Avanzamento %1$s  lavori in corso</string>
+<string name="noti_jobs_waiting">%1$s lavori in attesa</string>
+<string name="noti_jobs_canceled">%1$s lavori annullati</string>
+<string name="failed">Non riuscito con Codice risultato %1$s</string>
+<string name="job_confirmation_title">Continua a digitalizzare</string>
+</resources>

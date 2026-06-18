@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">Diretório vazio</string>
+<string name="storage_removed">Armazenamento removido ou desinstalado.</string>
+<string name="choose_file">Selecione um arquivo</string>
+<string name="error_selecting_file">Erro ao selecionar arquivo</string>
+<string name="internal_storage">Armazenamento interno</string>
+<string name="base_path_name">Armazenamento</string>
+<string name="select_file_source">Selecionar fonte do arquivo</string>
+<string name="input_address">Compartilhar seleção</string>
+<string name="input_address_toast">Insira o endereço de compartilhamento!</string>
+<string name="shares_discovery_wifi_only">A descoberta só pode ser compartilhada via Wi-Fi.</string>
+<string name="change_host">Alterar Host</string>
+<string name="invalid_ip_input">Insira um endereço IP válido</string>
+<string name="downloading">Baixando</string>
+<string name="downloading_message">Baixando %s para seu dispositivo…</string>
+<string name="share_login">Login</string>
+<string name="input_login_text">Insira informações de login para %s</string>
+<string name="input_login_label_domain">Domínio:</string>
+<string name="input_login_label_user">Nome do usuário:</string>
+<string name="input_login_label_password">Senha:</string>
+<string name="can_be_empty">Pode estar vazia</string>
+<string name="download_failed">Falha no download. Tente novamente</string>
+<string name="downloaded_to">Baixando arquivo para %s.</string>
+<string name="failed_to_access">Não é possível acessar o compartilhamento. Tente novamente.</string>
+<string name="failed_to_login">Falha no login. Tente novamente mais tarde ou com credenciais diferentes.</string>
+<string name="failed_to_access_share">Falha em acessar a pasta compartilhada. Tente novamente mais tarde com um endereço diferente.</string>
+<string name="enter_ip">Inserir IP</string>
+<string name="choose_list_ip">Lista de</string>
+<string name="ip_address_label">Inserir IP:</string>
+<string name="ip_address_select">Selecionar IP</string>
+<string name="loading_hosts">Pesquisando hosts…</string>
+<string name="no_hosts">Nenhum host encontrado</string>
+<string name="refresh">Atualizar</string>
+<string name="please_select_ip">Selecione o IP da lista ou insira-o manualmente.</string>
+<string name="error_file_format">Somente os arquivos PDF e JPG podem ser impressos.</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/co_actionbar_tab_pre" android:state_pressed="true"></item>
+    <item android:drawable="@drawable/action_button_bg" android:state_selected="true"></item>
+
+</selector>

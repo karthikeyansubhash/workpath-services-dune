@@ -1,0 +1,8 @@
+{"$opMeta":{"contentFilter":["*"]},
+  "adfOutputBinIsFull":"unknown",
+  "hasPaperInAdf":"true",
+  "hasPaperOnFlatbed":"true",
+  "isBusy":false,
+  "isOnline":true,
+  "links":[{"href":"/ext/device/v1/scanner","rel":"self"}]
+}

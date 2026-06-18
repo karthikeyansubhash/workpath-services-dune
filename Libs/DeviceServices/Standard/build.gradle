@@ -1,0 +1,37 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.device.services.standard'
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    api rootProject.ext.jacksonCore
+    api rootProject.ext.jacksonAnnotations
+    api rootProject.ext.jacksonDatabind
+
+    api project(':DeviceServices-Clients')
+    api project(':DeviceServices-Interfaces')
+    api project(':Util-Common')
+    api project(':Util-OXPd2')
+
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+
+    implementation rootProject.ext.androidXWork
+    implementation 'androidx.security:security-crypto:1.1.0-alpha03'
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoCoreVersion
+
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+    androidTestImplementation rootProject.ext.mockitoAndroidVersion
+}

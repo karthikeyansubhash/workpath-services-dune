@@ -1,0 +1,94 @@
+Version : 0.1
+ 
+@startuml Dune Copy Job Sequence
+
+box "Workpath" #LightBlue
+
+participant "App" as app
+participant "Workpath Lib" as lib
+participant "Workpath Service(CopyLet)" as sdk
+participant "Device Service" as ds
+
+end box
+
+box "Dune"
+participant "E2" as E2
+end box
+
+
+
+autonumber
+title This is the Copy Job Scenario of Workpath for Dune
+
+==Copy service support==
+app -> lib : Call CopierService.isSupported method
+lib -> sdk : Call OXPCopyletContentProvider.call method (Let-CopyLet)
+group #lightgreen NEW IMPLEMENTATION
+sdk -> ds : Call IDeviceCopyJob.isSupported interface
+ds -> E2 : Call E2 endpoint /copy/capabilities
+E2 -> ds : Return Json copy profile data
+ds -> ds : Change Json data type to boolean type
+ds -> sdk : Return true or false data
+end
+sdk -> lib : Return true or false data
+lib -> app : Return true or false data
+
+
+==Copy Job Get Capability==
+app -> lib : Call CopierService.getCapabilities method
+lib -> sdk : Call OXPCopyletContentProvider.call method (Let-CopyLet)
+group #lightgreen NEW IMPLEMENTATION
+sdk -> ds : Call IDeviceCopyJobService.getProfile interface
+ds -> E2 : Call E2 endpoint /copy/profile
+E2 -> ds : Return Json copy profile data
+ds -> ds : Change Json data type to Workpath CopyAttributesCaps class type
+ds -> sdk : Return the CopyAttributesCaps object
+sdk -> sdk : CopyAttributeBuilder.addPossibleOptions
+end
+sdk -> lib : Return the CopyAttributesCaps object
+lib -> app : Return the CopyAttributesCaps object
+
+
+==Copy Job Get Default==
+app -> lib : Call CopierService.getDefaults method
+lib -> sdk : Call OXPCopyletContentProvider.call method (Let-CopyLet)
+group #lightgreen NEW IMPLEMENTATION
+sdk -> ds : Call IDeviceCopyJobService.getDefaultOptions interface
+ds -> E2 : Call E2 endpoint /copy/defaultOptions
+E2 -> ds : Return Json copy defaults data
+ds -> ds : Change Json data type to Workpath CopyAttributes class type
+ds -> sdk : Return the CopyAttributes object
+sdk -> sdk : CopyTypeConverter.TypeConverter(E2, Workpath)
+sdk -> sdk : CopyAttributes.CopyBuilder().setCopyAttributes
+end
+sdk -> lib : Return the CopyAttributes object
+lib -> app : Return the CopyAttributes object
+
+==Copy Job Submit==
+app -> lib : Call CopierService.submit method
+lib -> sdk : Generate rid(Workapth Lib), Broadcast Submit copy job
+lib -> app : return rid
+lib -> sdk : Call OXPOXPCopyletBroadcastReceiver broadcast (Let-CopyLet)
+group #lightgreen NEW IMPLEMENTATION
+sdk -> sdk : OXPCopyletBroadcastReceiver.onReceive -> OXPCreateCopyJobIntentService.startCopy
+sdk -> sdk : OXPCopyHandler.executeCopy -> CopyJobData.setCopyAttributes
+sdk -> sdk : CopyTypeConverter.TypeConverter(Workpath, E2)
+sdk -> ds : Call IDeviceCopyJobService.createCopyJob interface
+ds -> E2 : Call E2 endpoint /copy/copyAgents/{agentId}/copyJobs  with rid
+E2 -> ds : Return Json copy job data
+'ds -> ds : Change Json data type to Workpath new CopyJob class type (Not defined)
+ds -> sdk : Return copy job id
+end
+
+
+==Copy Job Progressing==
+group #lightgreen NEW IMPLEMENTATION
+E2 -> ds : Callback Json Job notification data from E2
+ds -> ds : Change Json Job notification data to Job State
+end
+ds -> sdk : Job State (JobInfo - Scanning, Processing, Transmitting, ...)
+sdk -> lib : Send message progressing (JobInfo)
+lib -> app : Call JobObserver onProgress (rid, JobInfo)
+
+
+@enduml

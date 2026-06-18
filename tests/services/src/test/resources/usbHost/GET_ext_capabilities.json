@@ -1,0 +1,44 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "apiVersion": "1.0",
+  "description": "The accessories service, containing APIs for accessing connected \naccessories such as card readers.",
+  "implInfo": [
+    {
+      "typeGUN": "com.hp.ext.service.extensibility.version.1.impl.futuresmart.type.apiInformation",
+      "value": {
+        "apiMajorVersion": 1,
+        "apiMinorVersion": 0,
+        "releaseLevel": "Beta",
+        "releaseSequence": 5,
+        "toolVersions": [
+          "dsl 2.12.5.202305061829",
+          "umsgen 0.5.0"
+        ]
+      }
+    }
+  ],
+  "implVersion": "v=6.24.0.644+2b322e48-202404110144;r=6.24.0.644+2b322e48;d=202404110144;s=6.24;p=6D6664-0050",
+  "links": [
+    {
+      "href": "/ext/usbAccessories/v1/capabilities",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/usbAccessories/v1/accessories",
+      "rel": "accessories"
+    },
+    {
+      "href": "/ext/usbAccessories/v1/capabilities",
+      "rel": "capabilities"
+    },
+    {
+      "href": "/ext/usbAccessories/v1/usbAccessoriesAgents",
+      "rel": "usbAccessoriesAgents"
+    }
+  ],
+  "serviceGun": "com.hp.ext.service.usbAccessories.version.1"
+}

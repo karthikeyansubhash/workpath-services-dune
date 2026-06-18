@@ -1,0 +1,11 @@
+* Preparation
+1. Latest HPKTool
+2. Latest Test-WorkpathAPIs-debug.bdl file
+
+When you add new agent or needs to update this test bdl file, you can proceed in the following order.
+
+1. Execute HPKTool
+2. File -> Open Test-WorkpathAPIs-debug.bdl file
+3. DO NOT Change apk file
+4. Add or modify information
+5. Create 

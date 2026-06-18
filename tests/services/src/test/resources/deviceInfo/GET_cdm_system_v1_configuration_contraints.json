@@ -1,0 +1,875 @@
+{
+  "version": "1.3.0",
+  "validators": [
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/deviceLanguage",
+      "options": [
+        {
+          "seValue": "en"
+        },
+        {
+          "seValue": "es"
+        },
+        {
+          "seValue": "fr"
+        },
+        {
+          "seValue": "pt"
+        },
+        {
+          "seValue": "id"
+        },
+        {
+          "seValue": "ko"
+        },
+        {
+          "seValue": "zh-CN"
+        },
+        {
+          "seValue": "zh-TW"
+        },
+        {
+          "seValue": "ja"
+        },
+        {
+          "seValue": "th"
+        },
+        {
+          "seValue": "it"
+        },
+        {
+          "seValue": "de"
+        },
+        {
+          "seValue": "da"
+        },
+        {
+          "seValue": "nl"
+        },
+        {
+          "seValue": "fi"
+        },
+        {
+          "seValue": "nb"
+        },
+        {
+          "seValue": "sv"
+        },
+        {
+          "seValue": "ru"
+        },
+        {
+          "seValue": "tr"
+        },
+        {
+          "seValue": "pl"
+        },
+        {
+          "seValue": "cs"
+        },
+        {
+          "seValue": "hu"
+        },
+        {
+          "seValue": "ca"
+        },
+        {
+          "seValue": "ro"
+        },
+        {
+          "seValue": "hr"
+        },
+        {
+          "seValue": "sl"
+        },
+        {
+          "seValue": "sk"
+        },
+        {
+          "seValue": "el"
+        },
+        {
+          "seValue": "bg"
+        },
+        {
+          "seValue": "ar"
+        },
+        {
+          "seValue": "he"
+        }
+      ]
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/deviceLocation",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/deviceDescription",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/assetNumber",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/companyName",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/companyContact",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/supportContact",
+      "pattern": {
+        "value": "^[^&:<>\"']{0,382}$",
+        "messageId": 0
+      },
+      "minLength": {
+        "value": 0,
+        "messageId": 0
+      },
+      "maxLength": {
+        "value": 127,
+        "messageId": 0
+      }
+    },
+    {
+      "resourceGun": "com.hp.cdm.service.system.version.1.resource.configuration",
+      "propertyPointer": "/countryRegion",
+      "options": [
+        {
+          "seValue": "AF"
+        },
+        {
+          "seValue": "AL"
+        },
+        {
+          "seValue": "DZ"
+        },
+        {
+          "seValue": "AS"
+        },
+        {
+          "seValue": "AD"
+        },
+        {
+          "seValue": "AO"
+        },
+        {
+          "seValue": "AI"
+        },
+        {
+          "seValue": "AQ"
+        },
+        {
+          "seValue": "AG"
+        },
+        {
+          "seValue": "AR"
+        },
+        {
+          "seValue": "AM"
+        },
+        {
+          "seValue": "AW"
+        },
+        {
+          "seValue": "AU"
+        },
+        {
+          "seValue": "AT"
+        },
+        {
+          "seValue": "AZ"
+        },
+        {
+          "seValue": "BS"
+        },
+        {
+          "seValue": "BH"
+        },
+        {
+          "seValue": "BD"
+        },
+        {
+          "seValue": "BB"
+        },
+        {
+          "seValue": "BY"
+        },
+        {
+          "seValue": "BE"
+        },
+        {
+          "seValue": "BZ"
+        },
+        {
+          "seValue": "BJ"
+        },
+        {
+          "seValue": "BM"
+        },
+        {
+          "seValue": "BT"
+        },
+        {
+          "seValue": "BO"
+        },
+        {
+          "seValue": "BQ"
+        },
+        {
+          "seValue": "BA"
+        },
+        {
+          "seValue": "BW"
+        },
+        {
+          "seValue": "BR"
+        },
+        {
+          "seValue": "VG"
+        },
+        {
+          "seValue": "BN"
+        },
+        {
+          "seValue": "BG"
+        },
+        {
+          "seValue": "BF"
+        },
+        {
+          "seValue": "BI"
+        },
+        {
+          "seValue": "KH"
+        },
+        {
+          "seValue": "CM"
+        },
+        {
+          "seValue": "CA"
+        },
+        {
+          "seValue": "CV"
+        },
+        {
+          "seValue": "KY"
+        },
+        {
+          "seValue": "CF"
+        },
+        {
+          "seValue": "TD"
+        },
+        {
+          "seValue": "CL"
+        },
+        {
+          "seValue": "CN"
+        },
+        {
+          "seValue": "CO"
+        },
+        {
+          "seValue": "KM"
+        },
+        {
+          "seValue": "CR"
+        },
+        {
+          "seValue": "HR"
+        },
+        {
+          "seValue": "CW"
+        },
+        {
+          "seValue": "CY"
+        },
+        {
+          "seValue": "CZ"
+        },
+        {
+          "seValue": "CD"
+        },
+        {
+          "seValue": "DK"
+        },
+        {
+          "seValue": "DJ"
+        },
+        {
+          "seValue": "DM"
+        },
+        {
+          "seValue": "DO"
+        },
+        {
+          "seValue": "EC"
+        },
+        {
+          "seValue": "EG"
+        },
+        {
+          "seValue": "SV"
+        },
+        {
+          "seValue": "GQ"
+        },
+        {
+          "seValue": "ER"
+        },
+        {
+          "seValue": "EE"
+        },
+        {
+          "seValue": "SZ"
+        },
+        {
+          "seValue": "ET"
+        },
+        {
+          "seValue": "FK"
+        },
+        {
+          "seValue": "FO"
+        },
+        {
+          "seValue": "FM"
+        },
+        {
+          "seValue": "FJ"
+        },
+        {
+          "seValue": "FI"
+        },
+        {
+          "seValue": "FR"
+        },
+        {
+          "seValue": "GF"
+        },
+        {
+          "seValue": "PF"
+        },
+        {
+          "seValue": "GA"
+        },
+        {
+          "seValue": "GM"
+        },
+        {
+          "seValue": "GE"
+        },
+        {
+          "seValue": "DE"
+        },
+        {
+          "seValue": "GH"
+        },
+        {
+          "seValue": "GI"
+        },
+        {
+          "seValue": "GR"
+        },
+        {
+          "seValue": "GL"
+        },
+        {
+          "seValue": "GD"
+        },
+        {
+          "seValue": "GP"
+        },
+        {
+          "seValue": "GU"
+        },
+        {
+          "seValue": "GT"
+        },
+        {
+          "seValue": "GN"
+        },
+        {
+          "seValue": "GW"
+        },
+        {
+          "seValue": "GY"
+        },
+        {
+          "seValue": "HT"
+        },
+        {
+          "seValue": "HN"
+        },
+        {
+          "seValue": "HK"
+        },
+        {
+          "seValue": "HU"
+        },
+        {
+          "seValue": "IS"
+        },
+        {
+          "seValue": "IN"
+        },
+        {
+          "seValue": "ID"
+        },
+        {
+          "seValue": "IQ"
+        },
+        {
+          "seValue": "IE"
+        },
+        {
+          "seValue": "IL"
+        },
+        {
+          "seValue": "IT"
+        },
+        {
+          "seValue": "CI"
+        },
+        {
+          "seValue": "JM"
+        },
+        {
+          "seValue": "JP"
+        },
+        {
+          "seValue": "JO"
+        },
+        {
+          "seValue": "KZ"
+        },
+        {
+          "seValue": "KE"
+        },
+        {
+          "seValue": "KI"
+        },
+        {
+          "seValue": "XK"
+        },
+        {
+          "seValue": "KW"
+        },
+        {
+          "seValue": "KG"
+        },
+        {
+          "seValue": "LA"
+        },
+        {
+          "seValue": "LV"
+        },
+        {
+          "seValue": "LB"
+        },
+        {
+          "seValue": "LS"
+        },
+        {
+          "seValue": "LR"
+        },
+        {
+          "seValue": "LY"
+        },
+        {
+          "seValue": "LI"
+        },
+        {
+          "seValue": "LT"
+        },
+        {
+          "seValue": "LU"
+        },
+        {
+          "seValue": "MO"
+        },
+        {
+          "seValue": "MG"
+        },
+        {
+          "seValue": "MW"
+        },
+        {
+          "seValue": "MY"
+        },
+        {
+          "seValue": "MV"
+        },
+        {
+          "seValue": "ML"
+        },
+        {
+          "seValue": "MT"
+        },
+        {
+          "seValue": "MH"
+        },
+        {
+          "seValue": "MQ"
+        },
+        {
+          "seValue": "MR"
+        },
+        {
+          "seValue": "MU"
+        },
+        {
+          "seValue": "YT"
+        },
+        {
+          "seValue": "MX"
+        },
+        {
+          "seValue": "MD"
+        },
+        {
+          "seValue": "MC"
+        },
+        {
+          "seValue": "MN"
+        },
+        {
+          "seValue": "ME"
+        },
+        {
+          "seValue": "MS"
+        },
+        {
+          "seValue": "MA"
+        },
+        {
+          "seValue": "MZ"
+        },
+        {
+          "seValue": "MM"
+        },
+        {
+          "seValue": "NA"
+        },
+        {
+          "seValue": "NR"
+        },
+        {
+          "seValue": "NP"
+        },
+        {
+          "seValue": "NL"
+        },
+        {
+          "seValue": "NC"
+        },
+        {
+          "seValue": "NZ"
+        },
+        {
+          "seValue": "NI"
+        },
+        {
+          "seValue": "NE"
+        },
+        {
+          "seValue": "NG"
+        },
+        {
+          "seValue": "NU"
+        },
+        {
+          "seValue": "MK"
+        },
+        {
+          "seValue": "MP"
+        },
+        {
+          "seValue": "NO"
+        },
+        {
+          "seValue": "OM"
+        },
+        {
+          "seValue": "PK"
+        },
+        {
+          "seValue": "PW"
+        },
+        {
+          "seValue": "PS"
+        },
+        {
+          "seValue": "PA"
+        },
+        {
+          "seValue": "PG"
+        },
+        {
+          "seValue": "PY"
+        },
+        {
+          "seValue": "PE"
+        },
+        {
+          "seValue": "PH"
+        },
+        {
+          "seValue": "PL"
+        },
+        {
+          "seValue": "PT"
+        },
+        {
+          "seValue": "PR"
+        },
+        {
+          "seValue": "QA"
+        },
+        {
+          "seValue": "CG"
+        },
+        {
+          "seValue": "RO"
+        },
+        {
+          "seValue": "RU"
+        },
+        {
+          "seValue": "RW"
+        },
+        {
+          "seValue": "KN"
+        },
+        {
+          "seValue": "LC"
+        },
+        {
+          "seValue": "MF"
+        },
+        {
+          "seValue": "VC"
+        },
+        {
+          "seValue": "WS"
+        },
+        {
+          "seValue": "SM"
+        },
+        {
+          "seValue": "ST"
+        },
+        {
+          "seValue": "SA"
+        },
+        {
+          "seValue": "SN"
+        },
+        {
+          "seValue": "RS"
+        },
+        {
+          "seValue": "SC"
+        },
+        {
+          "seValue": "SL"
+        },
+        {
+          "seValue": "SG"
+        },
+        {
+          "seValue": "SX"
+        },
+        {
+          "seValue": "SK"
+        },
+        {
+          "seValue": "SI"
+        },
+        {
+          "seValue": "SB"
+        },
+        {
+          "seValue": "SO"
+        },
+        {
+          "seValue": "ZA"
+        },
+        {
+          "seValue": "KR"
+        },
+        {
+          "seValue": "SS"
+        },
+        {
+          "seValue": "ES"
+        },
+        {
+          "seValue": "LK"
+        },
+        {
+          "seValue": "SR"
+        },
+        {
+          "seValue": "SE"
+        },
+        {
+          "seValue": "CH"
+        },
+        {
+          "seValue": "TW"
+        },
+        {
+          "seValue": "TJ"
+        },
+        {
+          "seValue": "TZ"
+        },
+        {
+          "seValue": "TH"
+        },
+        {
+          "seValue": "TL"
+        },
+        {
+          "seValue": "TG"
+        },
+        {
+          "seValue": "TO"
+        },
+        {
+          "seValue": "TT"
+        },
+        {
+          "seValue": "TN"
+        },
+        {
+          "seValue": "TR"
+        },
+        {
+          "seValue": "TM"
+        },
+        {
+          "seValue": "TC"
+        },
+        {
+          "seValue": "TV"
+        },
+        {
+          "seValue": "VI"
+        },
+        {
+          "seValue": "UG"
+        },
+        {
+          "seValue": "UA"
+        },
+        {
+          "seValue": "AE"
+        },
+        {
+          "seValue": "GB"
+        },
+        {
+          "seValue": "US"
+        },
+        {
+          "seValue": "UY"
+        },
+        {
+          "seValue": "UZ"
+        },
+        {
+          "seValue": "VU"
+        },
+        {
+          "seValue": "VA"
+        },
+        {
+          "seValue": "VE"
+        },
+        {
+          "seValue": "VN"
+        },
+        {
+          "seValue": "EH"
+        },
+        {
+          "seValue": "YE"
+        },
+        {
+          "seValue": "ZM"
+        },
+        {
+          "seValue": "ZW"
+        }
+      ]
+    }
+  ]
+}

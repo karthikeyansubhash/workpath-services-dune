@@ -1,0 +1,300 @@
+@startuml
+title
+<font size=20><b>ScannerService API : getDefaults() - Destination-based Defaults</b></font>
+<font size=16>Support for Destination parameter (API 1: HTTP only, API 2: All destinations)</font>
+end title
+
+box "Workpath App" #FFFFFF
+actor User as "Workpath ScanApp"
+participant lib as "WorkpathLib"
+end box
+box "Workpath services " #C9FFB0
+    'participant ScanBR as "ScanLet\nBroadcastReceiver"
+    participant ScanCP as "ScanLet [provider]\nContentProvider"
+    participant ScanAdapter as "ScanLet [adapter]\nScanDefaultOptionAdapter"
+    'participant ScanIS as "[service]\nScanJob\nIntentService"
+    'participant ScanSM as "[service]\nScanJob\nStateMachine"
+    participant ScanDS as "DeviceService"
+
+box "Workpath PacMan" #C9FFB0
+    participant PacMan as "PacMan"
+end box
+
+box "Dune" #aliceblue
+participant E2 as "    E2    "
+end box
+
+/'
+rnote right of User
+end note
+'/
+
+autonumber
+== Get Scan Default Job Options ==
+alt API 1 (Current) - getDefaults(Context, Result)
+    User -> lib : ScannerService.\ngetDefaults(Context, Result)
+    activate lib
+    lib -> lib : Create request Bundle
+    note right of lib #white
+    Bundle : {"clientVersion" : 8}
+    **// NO destination key**
+    end note
+    note right of lib #lightblue
+    **API 1: No extra parameter**
+    Defaults to: destination = HTTP
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_defaults", Bundle)
+
+else <color:red><b>API 2 (Future) - getDefaults(Context, Destination, Result)</b></color>
+    User -> lib : ScannerService.\ngetDefaults(Context, <color:red><b>Destination</b></color>, Result)
+    activate lib
+    lib -> lib : Create request Bundle
+    lib -> lib : <color:red><b>bundle.putSerializable("DESTINATION", destination)</b></color>
+    note right of lib #lightgreen
+    Bundle : {"clientVersion" : 8,
+              <color:red><b>"DESTINATION": HTTP|FTP|NETWORK_FOLDER|ME|EMAIL|USB</b></color>}
+    end note
+    note right of lib #lightgreen
+    <color:red><b>API 2: Destination-specific defaults</b></color>
+    Uses specified destination
+    end note
+    lib [#0000FF]-> ScanCP : <<IPC>>\n ContentResolver.call(Uri, "get_defaults", Bundle)
+end
+
+activate ScanCP
+ScanCP -> ScanCP : extract destination from Bundle
+note right of ScanCP #lightyellow
+<color:red><b>Extract destination with default:</b></color>
+
+<color:red><b>Destination destination = 
+    extras != null && extras.containsKey("DESTINATION")
+        ? (Destination) extras.getSerializable("DESTINATION")
+        : <color:blue><b>Global.Destination.HTTP</b></color>;  // default for API 1</b></color>
+
+**API 1**: No DESTINATION key → defaults to <color:blue><b>Global.Destination.HTTP</b></color>
+<color:red><b>API 2</b></color>: DESTINATION key present → use specified value
+end note
+
+ScanCP -> ScanAdapter : getDefaults(appPackageName, deviceService, <color:red><b>destination</b></color>)
+activate ScanAdapter
+
+note right of ScanAdapter #lightblue
+<color:red><b>Updated method signature:</b></color>
+public static String getDefaults(
+    String packageName, 
+    IDeviceScanJobService deviceService,
+    <color:red><b>Destination destination</b></color>)
+end note
+
+ScanAdapter -> ScanAdapter : getDefaults(packageName, deviceService, <color:red><b>destination</b></color>)
+activate ScanAdapter
+
+ScanAdapter -> ScanDS : getProfile(appPackageName)
+activate ScanDS
+opt Not cached (Token & Profile)
+    ScanDS [#0000FF]-> PacMan : <<IPC>>\n queryUuidByPackageName\n(appPackageName)
+    activate PacMan
+    PacMan [#0000FF]--> ScanDS : <<IPC>>\n application UUID
+    deactivate PacMan
+    ScanDS [#0000FF]-> E2 : GET /cdm/e2WorkpathInterop/v1/appToken/{applicationId}
+    activate E2
+    note right of ScanDS #white
+    Request solution token for authorization
+    end note
+    E2 [#0000FF]--> ScanDS : solutionToken
+    deactivate E2
+end opt
+
+ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/profile
+activate E2
+note right of ScanDS #white
+GET /ext/scanJob/v1/profile HTTP/1.1
+Authorization: Bearer solutionToken
+end note
+E2 [#0000FF]--> ScanDS : scan profile
+deactivate E2
+note right of ScanDS #white
+**E2 Profile Response:**
+{ "base": { "definitions" : [...] },
+  **"http"**: { "definitions" : [...] },
+  **"networkFolder"**: { "definitions" : [...] },
+  <color:red><b>**"jobStorage"**: { "definitions" : [...] }</b></color>
+}
+// All destination profiles included
+end note
+ScanDS --> ScanAdapter : Return Profile<E2Type>
+deactivate ScanDS
+
+ScanAdapter -> ScanDS : getDefaultOptions(appPackageName)
+activate ScanDS
+ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/defaultOptions
+activate E2
+note right of ScanDS #white
+GET /ext/scanJob/v1/defaultOptions HTTP/1.1
+Authorization: Bearer solutionToken
+end note
+E2 [#0000FF]--> ScanDS : Return DefaultOptions
+deactivate E2
+note right of ScanDS #white
+**E2 DefaultOptions Response:**
+{ **"http"**: {
+    "colorMode": "color",
+    "resolution": 300,
+    "plexMode": "oneSided",
+    "mediaSize": "autoDetect",
+    ...
+  },
+  **"networkFolder"**: {
+    "colorMode": "color",
+    "resolution": 200,
+    ...
+  },
+  <color:red><b>**"jobStorage"**: {
+    "colorMode": "color",
+    "resolution": 300,
+    ...
+  }</b></color>
+}
+// All destination defaults included
+end note
+ScanDS --> ScanAdapter : Return DefaultOptions<E2Type>
+deactivate ScanDS
+
+ScanAdapter -> ScanAdapter : getDefaultsForDestination(\nProfile, DefaultOptions, **destination**)
+activate ScanAdapter
+
+note right of ScanAdapter #lightyellow
+**Build ScanAttributesCaps (for validation):**
+1. createScanAttributesCapsBuilder(Profile, TransmissionMode.JOB)
+2. Extract capabilities to validate defaults against
+end note
+
+alt destination is HTTP (API 1 default, or API 2 HTTP)
+    ScanAdapter -> ScanAdapter : Create ScanTicketHelper(\n  profile.getBase(), profile.getHttp())
+    ScanAdapter -> ScanAdapter : Extract OptionProfileHelper:\n  helper.getHttpScanOptionsProfileHelper()
+
+    note right of ScanAdapter #lightblue
+    **Extract HTTP default options:**
+    case HTTP:
+      helper = new ScanTicketHelper(profile.getBase(), profile.getHttp());
+      return buildScanAttributes(
+        helper.getHttpScanOptionsProfileHelper(),
+        **defaultOptions.getHttp()**,
+        scanAttributesCaps,
+        builder);
+    end note
+
+    ScanAdapter -> ScanAdapter : buildScanAttributes(\n  httpProfileHelper,\n  **httpDefaultOptions**,\n  scanAttributesCaps,\n  meBuilder)
+
+else destination is FTP or NETWORK_FOLDER (API 2)
+    ScanAdapter -> ScanAdapter : Create ScanTicketHelper(\n  profile.getBase(), profile.getHttp(),\n  profile.getNetworkFolder())
+    ScanAdapter -> ScanAdapter : Extract OptionProfileHelper:\n  helper.getNetworkFolderScanOptionsProfileHelper()
+
+    note right of ScanAdapter #lightgreen
+    **Extract NetworkFolder default options:**
+    case FTP:
+    case NETWORK_FOLDER:
+      helper = new ScanTicketHelper(
+        profile.getBase(),
+        profile.getHttp(),
+        profile.getNetworkFolder());
+      return buildScanAttributes(
+        helper.getNetworkFolderScanOptionsProfileHelper(),
+        **defaultOptions.getNetworkFolder()**,
+        scanAttributesCaps,
+        builder);
+    end note
+
+    ScanAdapter -> ScanAdapter : buildScanAttributes(\n  networkFolderProfileHelper,\n  **networkFolderDefaultOptions**,\n  scanAttributesCaps,\n  meBuilder)
+
+else destination is ME, EMAIL, or USB (API 2)
+        ScanAdapter -> ScanAdapter : <color:red><b>Create ScanTicketHelper(\n  profile.getBase(), profile.getHttp(),\n  profile.getNetworkFolder(), profile.getJobStorage())</b></color>
+        ScanAdapter -> ScanAdapter : <color:red><b>Extract OptionProfileHelper:\n  helper.getJobStorageScanOptionsProfileHelper()</b></color>
+
+        note right of ScanAdapter #pink
+        <color:red><b>**Extract JobStorage default options:**</b></color>
+        <color:red><b>case ME:
+        case EMAIL:
+        case USB:
+          helper = new ScanTicketHelper(
+            profile.getBase(),
+            profile.getHttp(),
+            profile.getNetworkFolder(),
+            profile.getJobStorage());
+          return buildScanAttributes(
+            helper.getJobStorageScanOptionsProfileHelper(),
+            **defaultOptions.getJobStorage()**,
+            scanAttributesCaps,
+            builder);</b></color>
+        end note
+
+        ScanAdapter -> ScanAdapter : buildScanAttributes(\n  jobStorageProfileHelper,\n  <color:red><b>jobStorageDefaultOptions</b></color>,\n  scanAttributesCaps,\n  meBuilder)
+
+end
+
+activate ScanAdapter
+
+note right of ScanAdapter #lightyellow
+**Convert E2 DefaultOptions → ScanAttributes:**
+For each scan option in DefaultOptions:
+1. Check if option is available in Profile
+   - optionProfileHelper.getOptionDefinition(name).getIsAvailable()
+2. Convert E2 type → Workpath API type using **ScanTypeMapping**
+3. Set converted value to MeBuilder
+
+**Mapped options (20+ options):**
+- colorMode, resolution, duplex (plexMode + bindingFormat)
+- scanSize, orientation, scanPreview
+- backgroundCleanup, contrast, sharpness
+- blankPageSuppression, captureMode
+- documentFormat, fileTransmissionMode
+- mediaSource, misfeedDetection
+- outputQuality, progressDialogMode
+- textPhotoOptimization, automaticStraighten
+- fileName (if explicit)
+end note
+
+ScanAdapter -> ScanAdapter : Set each default option:\n- setColorMode()\n- setResolution()\n- setDuplex()\n- setScanSize()\n- etc. (20+ options)
+
+note right of ScanAdapter #white
+**Example conversions (destination-specific):**
+
+**HTTP defaults:**
+E2: resolution = 300 → Workpath: 300
+E2: colorMode = "color" → Workpath: ColorMode.COLOR
+
+**NetworkFolder defaults:**
+E2: resolution = 200 → Workpath: 200
+E2: colorMode = "grayscale" → Workpath: ColorMode.GRAYSCALE
+
+// Different destinations may have different defaults!
+end note
+
+ScanAdapter -> ScanAdapter : builder.build(scanAttributesCaps)
+note right of ScanAdapter #pink
+**Validation against capabilities**
+Ensures default values are within
+device's supported capabilities
+end note
+
+ScanAdapter --> ScanAdapter : Return ScanAttributes
+deactivate ScanAdapter
+deactivate ScanAdapter
+
+ScanAdapter -> ScanAdapter : JsonParser.toJson(ScanAttributes)
+ScanAdapter --> ScanCP : Return Json String\n(ScanAttributes)
+deactivate ScanAdapter
+
+ScanCP -[#0000FF]-> lib : <<IPC>>\n Return Bundle
+deactivate ScanCP
+note left of ScanCP #white
+**Response Bundle:**
+{"resultCode": -1,
+ "result": ScanAttributes Json String }
+end note
+
+lib -> lib : JsonParser.fromJson(jsonStr, ScanAttributes.class)
+lib --> User : Return\nScanAttributes
+deactivate lib
+
+@enduml

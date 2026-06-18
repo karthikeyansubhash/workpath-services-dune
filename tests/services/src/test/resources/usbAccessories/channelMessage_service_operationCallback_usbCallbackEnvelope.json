@@ -1,0 +1,25 @@
+{
+  "channelMessage": {
+    "channelId": "9abba4d0-0a82-4616-bbe7-d40cb436fcc5",
+    "message": {
+      "service": {
+        "attachments": [],
+        "httpMethod": "POST",
+        "path": "/operationCallback",
+        "requestBody": {
+          "typeGUN": "com.hp.ext.service.usbAccessories.version.1.type.usbCallbackEnvelope",
+          "value": {
+            "operationContext": "com.hp.workpath.sample.accessorysample/56a88191-b64b-4cff-9bf2-b7037a8d52df",
+            "usbCallback": {
+              "hidRead": {
+                "data": "ODA0NDE2MzM=",
+                "hidReadSequence": 1
+              }
+            }
+          }
+        },
+        "serviceCallId": "de081437-e2b7-40ea-8107-f99866022f5e"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">작업 진행</string>
+<string name="progress_dialog_progressing_message">작업 %1$s 진행 중...</string>
+<string name="progress_dialog_complete_message">작업 %1$s 완료…</string>
+<string name="job_number_label">작업 번호:</string>
+<string name="job_name_label">작업 이름:</string>
+<string name="confirmation_dialog_title">작업 확인</string>
+<string name="confirmation_dialog_message">다음 페이지를 스캔하시겠습니까?</string>
+<string name="yes">예</string>
+<string name="no">아니오</string>
+<string name="close">닫기</string>
+<string name="cancel">취소</string>
+<string name="completed">완료됨</string>
+<string name="pages">페이지</string>
+<string name="job_sending">송신 중</string>
+<string name="job_cancelling">취소중</string>
+<string name="job_scanning">스캔 중</string>
+<string name="job_progressing">진행 중</string>
+<string name="job_waiting">대기 중</string>
+<string name="job_image_number">페이지 %1$d</string>
+<string name="job_dst_number">- %1$s</string>
+<string name="job_canceled">취소됨</string>
+<string name="job_failed">실패함</string>
+<string name="job_completed">완료함. 전체</string>
+<string name="job_progress_notification_title">작업 진행</string>
+<string name="job_progress_notification_message">작업 진행으로 돌아가려면 터치하세요.</string>
+<string name="copying">복사 중</string>
+<string name="faxing">팩스 중</string>
+<string name="printing">인쇄 중</string>
+<string name="scanning">스캔 중</string>
+<string name="sending">송신 중</string>
+<string name="saving">저장 중</string>
+<string name="copies">복사매수</string>
+<string name="set">/ %1$s 설정</string>
+<string name="noti_jobs_progressing">%1$s 작업 진행 중</string>
+<string name="noti_jobs_waiting">%1$s 작업 대기 중</string>
+<string name="noti_jobs_canceled">%1$s 작업 취소됨</string>
+<string name="failed">결과 코드 %1$s와(과) 함께 실패함</string>
+<string name="job_confirmation_title">추가 스캔</string>
+</resources>

@@ -1,0 +1,119 @@
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <permission-group
+        android:name="com.hp.jetadvantage.link.permission.SDK"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/sdk_permissions"
+        android:description="@string/sdk_permissions_desc"/>
+
+    <permission
+        android:name="${SERVICES_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <!-- Internal SDK permissions to be used for broadcasts, to avoid events interception.
+        Should be used for internal broadcasts etc. -->
+    <permission
+        android:name="${SERVICES_PERMISSION_INTERNAL}"
+        android:protectionLevel="signature" />
+
+    <permission
+        android:name="${SDK_ACCESS_DEVICE_EVENTS_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <permission
+        android:name="${SDK_ACCESS_DEVICE_USAGE_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <permission
+        android:name="${SDK_ACCESS_STATISTICS_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <permission
+        android:name="${SDK_ACCESS_SUPPLIES_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <permission
+        android:name="${DISABLE_PRINTING_PORTS_PERMISSION}"
+        android:permissionGroup="com.hp.jetadvantage.link.permission.SDK"
+        android:protectionLevel="normal"
+        android:description="@string/use_sdk_service_desc"
+        android:label="@string/use_sdk_service_label" />
+
+    <!-- Network specific permissions LSM, PORTAL, DEH -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- To access internal stuff between modules -->
+    <uses-permission android:name="${SERVICES_PERMISSION}"/>
+    <uses-permission android:name="${SERVICES_PERMISSION_INTERNAL}"/>
+
+    <uses-permission android:name="${SDK_ACCESS_DEVICE_EVENTS_PERMISSION}" />
+    <uses-permission android:name="${SDK_ACCESS_DEVICE_USAGE_PERMISSION}" />
+    <uses-permission android:name="${SDK_ACCESS_STATISTICS_PERMISSION}" />
+    <uses-permission android:name="${SDK_ACCESS_SUPPLIES_PERMISSION}" />
+    <uses-permission android:name="${DISABLE_PRINTING_PORTS_PERMISSION}" />
+
+    <!-- Additional panel-specific permissions -->
+
+
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_SYNC_STATS" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <!-- For AA checks -->
+    <uses-permission android:name="android.permission.GET_TASKS" />
+
+    <!-- For System app's event -->
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application
+        android:allowBackup="false"
+        android:name=".JetAdvantageLinkServicesApplication"
+        android:icon="@drawable/ic_launcher"
+        android:logo="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+
+
+<!--        <service android:name=".discoverylet.service.DiscoveryIntentService"-->
+<!--                 android:exported="true"-->
+<!--                 android:process=":Discovery"/>-->
+
+        <service
+            android:name="com.hp.jetadvantage.link.device.services.standard.services.StandardDeviceInitService"
+            android:exported="true">
+        </service>
+
+    </application>
+
+</manifest>

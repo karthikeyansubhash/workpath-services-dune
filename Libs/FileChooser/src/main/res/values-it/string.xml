@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">Directory vuota</string>
+<string name="storage_removed">Il dispositivo di memorizzazione è stato rimosso o smontato.</string>
+<string name="choose_file">Seleziona un file</string>
+<string name="error_selecting_file">Errore selezione file</string>
+<string name="internal_storage">Memoria interna</string>
+<string name="base_path_name">Memoria</string>
+<string name="select_file_source">Seleziona file sorgente</string>
+<string name="input_address">Condividi selezione</string>
+<string name="input_address_toast">Immettere un indirizzo per la condivisione.</string>
+<string name="shares_discovery_wifi_only">Il rilevamento può essere condiviso solo tramite Wi-Fi.</string>
+<string name="change_host">Modifica host</string>
+<string name="invalid_ip_input">Immettere un indirizzo IP valido.</string>
+<string name="downloading">Download in corso</string>
+<string name="downloading_message">Download di %s sul dispositivo in corso…</string>
+<string name="share_login">Login</string>
+<string name="input_login_text">Immettere informazioni di login per %s</string>
+<string name="input_login_label_domain">Dominio:</string>
+<string name="input_login_label_user">Nome utente:</string>
+<string name="input_login_label_password">Password:</string>
+<string name="can_be_empty">Può essere vuoto</string>
+<string name="download_failed">Download non riuscito. Riprovare.</string>
+<string name="downloaded_to">File scaricato in %s</string>
+<string name="failed_to_access">Impossibile accedere alla condivisione. Riprovare.</string>
+<string name="failed_to_login">Accesso non riuscito. Riprovare più tardi o utilizzare credenziali differenti.</string>
+<string name="failed_to_access_share">Accesso alla cartella condivisa. Riprovare più tardi con un indirizzo differente.</string>
+<string name="enter_ip">Immetti IP</string>
+<string name="choose_list_ip">Da Elenco</string>
+<string name="ip_address_label">Immetti IP:</string>
+<string name="ip_address_select">Seleziona IP</string>
+<string name="loading_hosts">Ricerca host in corso…</string>
+<string name="no_hosts">Nessun host trovato</string>
+<string name="refresh">Aggiorna</string>
+<string name="please_select_ip">Selezionare l\'IP dall\'elenco o immetterlo manualmente.</string>
+<string name="error_file_format">È possibile stampare solo i file PDF e JPG.</string>
+</resources>

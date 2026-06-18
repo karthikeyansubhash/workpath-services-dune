@@ -1,0 +1,69 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link'
+
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+
+    useLibrary 'android.test.base' // for AndroidTestCase
+    useLibrary 'android.test.runner' // for ProviderTestCase2
+    useLibrary 'android.test.mock' // for MockContentProvider
+}
+
+dependencies {
+    implementation rootProject.ext.androidXWork
+    implementation rootProject.ext.guavaVersion
+
+    implementation project(':DeviceServices-Interfaces')
+    implementation project(':DeviceServices-Clients')
+    implementation project(':DeviceServices-Standard')
+
+    implementation project(':Let-AccessoryLet')
+    implementation project(':Let-AttestationLet')
+    implementation project(':Let-ConfigLet')
+    implementation project(':Let-CopyLet')
+    implementation project(':Let-DeviceEventsLet')
+    implementation project(':Let-DeviceLet')
+    implementation project(':Let-DeviceUsageLet')
+    implementation project(':Let-EmailLet')
+    implementation project(':Let-JobLet')
+    implementation project(':Let-PrintLet')
+    implementation project(':Let-ScanLet')
+    implementation project(':Let-StatisticsLet')
+    implementation project(':Let-StorageLet')
+
+    implementation project(':Util-CommonServices')
+
+    implementation rootProject.ext.okhttpVersion
+    implementation rootProject.ext.gsonVersion
+
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoCoreVersion
+    testImplementation rootProject.ext.mockWebserverVersion
+    testImplementation rootProject.ext.orgJsonVersion
+    testImplementation rootProject.ext.mockitoInlineVersion
+    testImplementation rootProject.ext.androidxWorkTestingVersion
+
+    testImplementation project(':Let-AccessoryLet')
+    testImplementation project(':Let-AttestationLet')
+    testImplementation project(':Let-DeviceEventsLet')
+    testImplementation project(':Let-StatisticsLet')
+    testImplementation project(':Util-Jabberwocky')
+
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+    androidTestImplementation rootProject.ext.androidxTestCore
+    androidTestImplementation "androidx.test:rules:1.6.1"
+    androidTestImplementation rootProject.ext.mockitoAndroidVersion
+
+    androidTestImplementation project(':Let-DeviceUsageLet')
+}

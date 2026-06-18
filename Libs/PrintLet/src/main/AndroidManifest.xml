@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+
+        <provider
+            android:name="com.hp.jetadvantage.link.services.printlet.provider.OXPPrintletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.oxp.printletcp"
+            android:exported="true"/>
+
+        <receiver
+            android:name="com.hp.jetadvantage.link.services.printlet.receiver.OXPPrintletBroadcastReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="com.hp.jetadvantage.link.intent.action.PRINT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+         <service
+            android:name="com.hp.jetadvantage.link.services.printlet.service.OXPCreatePrintSpoolerIntentService"
+            android:exported="false"
+            android:permission="${SERVICES_PERMISSION}">
+        </service>
+
+        <service
+            android:name="com.hp.jetadvantage.link.services.printlet.service.PrintJobIntentService"
+            android:exported="false"
+            android:permission="${SERVICES_PERMISSION}" >
+            <intent-filter>
+                <action android:name="com.hp.jetadvantage.link.intent.action.BASIC_API_CANCEL_PRINT" />
+            </intent-filter>
+        </service>
+
+    </application>
+
+</manifest>

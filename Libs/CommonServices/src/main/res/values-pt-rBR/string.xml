@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">Falha em obter permissões HP Workpath SDK. Chame JetAdvantageLink.requestPermissions() para obter as permissões.</string>
+<string name="sps_permission">Permissões HP Workpath SDK</string>
+<string name="sps_self_permission">Permissões de HP Workpath SDK</string>
+<string name="grant">Conceder</string>
+<string name="deny">Negar</string>
+<string name="permission_text" formatted="false">Deseja dar ao aplicativo %s (%s) acesso pleno ao HP Workpath SDK?</string>
+<string name="more_permission_text_small">Mais detalhes</string>
+<string name="more_permission_text_big">O aplicativo poderá usar os recursos Digitalização, Impressão, Cópia e Fax de qualquer impressora conectada usando o HP Workpath SDK. Para revogar todas as permissões, acesse Gerenciamento de aplicativos e limpe todos os dados do aplicativo HP Workpath SDK.</string>
+<string name="sps_sd_card">HP Workpath SDK precisa usar o cartão SD do seu dispositivo para salvar os arquivos digitalizados. Conceda permissões nas seguintes caixas de diálogo de sistema.</string>
+<string name="permission_not_granted">O aplicativo não pode gravar no seu armazenamento. Por isso, poderá não funcionar adequadamente. Considere conceder-lhe essa permissão.</string>
+</resources>

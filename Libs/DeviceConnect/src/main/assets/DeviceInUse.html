@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head>
+    <title>Device In Use</title>
+    <script type="text/javascript">
+		var secondsCounter = 0;
+		var resetCounter = 0;
+	
+		function updateSeconds() {
+			secondsCounter = secondsCounter + 1;
+			document.getElementById("seconds").firstChild.nodeValue = secondsCounter;
+		}
+
+		function updateResets() {
+			resetCounter = resetCounter + 1;
+			document.getElementById("resets").firstChild.nodeValue = resetCounter;
+		}
+
+		function initialize() {
+		    if (window.OXPd != undefined) {
+			    OXPd.homeButtonVisible = true;
+			    OXPd.homeButtonEnabled = true;
+				setInterval("OXPd.resetUIInactivityTimer(); updateResets()",5000);
+			}
+			setInterval("updateSeconds()", 1000);
+		}
+	</script>
+</head>
+<body onload="initialize()" style="background: #FFFFFF">
+    <!--- This document can be used when you call UIConfigurationService.ReserveUIContext() as the uri -->
+    <center>
+        <img src="stop.jpg"/>
+        <h1>This device is in use by a remote application.</h1>
+	    <hr/>
+	    <h2>This device has been in use for <span id="seconds" style="background-color: #000000; color: #FFFFFF">0</span> seconds.</h2>
+	    <h2>This device's ui inactivity timer has been reset <span id="resets" style="background-color: #000000; color: #FFFFFF">0</span> times.</h2>
+	</center>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "featureReportLength": 10,
+  "hardwareCountryCode": 0,
+  "inputReportLength": 42,
+  "links": [
+    {
+      "href": "/ext/usbAccessories/v1/accessories/c07df593-7c0e-49ee-9625-cd429e5ffb6a/hid/68cf7870-a75d-440a-baba-70d10de688eb",
+      "rel": "self"
+    },
+    {
+      "href": "/ext/usbAccessories/v1/accessories/c07df593-7c0e-49ee-9625-cd429e5ffb6a/hid/68cf7870-a75d-440a-baba-70d10de688eb/readReport",
+      "rel": "readReport"
+    },
+    {
+      "href": "/ext/usbAccessories/v1/accessories/c07df593-7c0e-49ee-9625-cd429e5ffb6a/hid/68cf7870-a75d-440a-baba-70d10de688eb/writeReport",
+      "rel": "writeReport"
+    }
+  ],
+  "openHIDAccessoryID": "68cf7870-a75d-440a-baba-70d10de688eb",
+  "outputReportLength": 12,
+  "reportReadingActive": true,
+  "resourceId": "68cf7870-a75d-440a-baba-70d10de688eb"
+}

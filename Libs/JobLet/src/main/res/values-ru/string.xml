@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">Ход выполнения задания</string>
+<string name="progress_dialog_progressing_message">Выполнено %1$s задания...</string>
+<string name="progress_dialog_complete_message">Задание выполнено на %1$s…</string>
+<string name="job_number_label">Номер задания:</string>
+<string name="job_name_label">Имя задания:</string>
+<string name="confirmation_dialog_title">Подтверждение задания</string>
+<string name="confirmation_dialog_message">Сканировать следующую страницу?</string>
+<string name="yes">Да</string>
+<string name="no">Нет</string>
+<string name="close">Закрыть</string>
+<string name="cancel">Отменить</string>
+<string name="completed">Завершено</string>
+<string name="pages">Страница(ы)</string>
+<string name="job_sending">Отправка</string>
+<string name="job_cancelling">Отменяется</string>
+<string name="job_scanning">Сканирование</string>
+<string name="job_progressing">Выполняется</string>
+<string name="job_waiting">Ожидание</string>
+<string name="job_image_number">Страница %1$d</string>
+<string name="job_dst_number">до %1$s</string>
+<string name="job_canceled">Отменено</string>
+<string name="job_failed">Не выполнено</string>
+<string name="job_completed">Завершено. Всего</string>
+<string name="job_progress_notification_title">Ход выполнения заданий</string>
+<string name="job_progress_notification_message">Коснитесь, чтобы вернуть к экрану "Ход выполнения задания"</string>
+<string name="copying">Копирование</string>
+<string name="faxing">Передача факса</string>
+<string name="printing">Печать</string>
+<string name="scanning">Сканирование</string>
+<string name="sending">Отправка</string>
+<string name="saving">Сохранение</string>
+<string name="copies">копии</string>
+<string name="set">/ комплект %1$s</string>
+<string name="noti_jobs_progressing">Выполняется заданий: %1$s</string>
+<string name="noti_jobs_waiting">Заданий в очереди: %1$s</string>
+<string name="noti_jobs_canceled">Отменено заданий: %1$s</string>
+<string name="failed">Не выполнено. Код результата: %1$s</string>
+<string name="job_confirmation_title">Сканировать еще</string>
+</resources>

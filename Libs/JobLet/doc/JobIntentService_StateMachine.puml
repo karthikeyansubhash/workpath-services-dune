@@ -1,0 +1,31 @@
+@startuml
+title State machine for JobIntentService
+
+CreatingJob : create a job\nacquire WakeLock
+MonitoringJob : wait for the job notification
+note top : Job is created and is being processed
+ReportError : Report error to the app
+note top : Job could not be created because of an error
+JobCompleted : emit TL_EV_JOB_COMPLETED event
+JobFailed : emit TL_EV_JOB_FAILED event
+JobCanceled : emit TL_EV_JOB_CANCELED event
+End : release WakeLock
+
+'[*] --> BUSY : MSG_REPORT_BUSY
+'[*] --> CANCEL : MSG_XXX(CANCEL)
+
+[*] --> CreatingJob : MSG_START
+CreatingJob --> End : <param not found>
+CreatingJob --down-> MonitoringJob : <job created>
+CreatingJob --right--> ReportError : <report error>
+
+MonitoringJob --> JobFailed : MSG_REPORT_FAIL
+MonitoringJob --> JobCompleted : MSG_REPORT_COMPLETED
+MonitoringJob --> JobCanceled : MSG_REPORT_CANCELLED
+
+JobCompleted --> End : <end>
+JobCanceled --> End : <end>
+JobFailed --> End : <end>
+ReportError --> End : <end>
+End --> [*]
+@enduml

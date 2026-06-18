@@ -1,0 +1,29 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/device/v1/deploymentInformation",
+      "rel": "self"
+    }
+  ],
+  "networkInfo": [
+    {
+      "adapterName": "eth0",
+      "hostName": "HPI1014FC",
+      "ipV4": "15.26.148.154",
+      "ipV6": [],
+      "macAddress": "14:CB:19:10:14:FC"
+    }
+  ],
+  "ownerInfo": {
+    "assetNumber" : "123",
+    "companyName" : "HP",
+    "contactName" : "John",
+    "deviceLocation" : "Office",
+    "deviceName" : "HP Printer"
+  }
+}

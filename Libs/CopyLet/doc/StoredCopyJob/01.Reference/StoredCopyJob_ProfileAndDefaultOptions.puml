@@ -1,0 +1,112 @@
+
+
+
+@startuml
+title Stored Copy Job - Option Profile and Defaults Options
+hide footbox
+autonumber "<b>#."
+skinparam sequenceArrowThickness 1
+skinparam ArrowColor black
+skinparam SequenceLifeLineBorderColor black
+skinparam ParticipantBorderColor black
+skinparam SequenceBoxBorderColor black
+skinparam NoteBorderColor black
+skinparam NoteFontSize 12  // Adjust the value as needed for smaller text
+
+note right App
+"The existing Workpath API provides one common copy profile for both standard copy and stored copy in Jedi/Jolt. 
+ On the other hand, Dune E2 offers separate copy profiles for standard copy and stored copy, but the existing Workpath API cannot support them separately. 
+ In Dune, the existing Workpath API can only provide the standard copy profile. (same approach for default options)"
+end note
+
+participant "Workpath App" as App
+box "Workpath Services" #d6f5d6
+participant "Copy Service" as CopyService #85e085
+participant "Scan Service" as ScanService #85e085
+participant "Job Service" as JobService #85e085
+endbox
+
+box "E2/Dune Platform" #b3d9ff
+participant "E2 Copy Agent" as E2CopyAgent #66b3ff
+participant "E2 Scan Agent" as E2ScanAgent #66b3ff
+endbox
+
+' == Option Profile and Defaults Options ==
+opt Existing Workpath API
+    App -> CopyService : getCapabilities()
+    activate App
+    activate CopyService
+    CopyService -> E2CopyAgent : GET /ext/copy/v1/profile
+    activate E2CopyAgent
+    E2CopyAgent --> CopyService : Return copy profiles
+    note right CopyService #white
+    {"base": {},
+    "storedCopy:{}"}
+    end note
+    deactivate E2CopyAgent
+    CopyService --> App : Return (Standard Copy) CopyAttributesCaps
+    deactivate CopyService
+
+    App -> CopyService : getDefaults()
+    activate CopyService
+    CopyService -> E2CopyAgent : GET /ext/copy/v1/defaultOptions
+    activate E2CopyAgent
+    E2CopyAgent --> CopyService : Return copy defaultOptions
+    deactivate E2CopyAgent
+    CopyService --> App : Return (Standard Copy) default CopyAttributes
+    deactivate CopyService
+    deactivate App
+
+else New Workpath API
+    App -> CopyService : getAllCapabilities()
+    activate App
+    activate CopyService
+    CopyService -> E2CopyAgent : GET /ext/copy/v1/profile
+    activate E2CopyAgent
+    E2CopyAgent --> CopyService : Return copy profiles ({"base": {}, "storedCopy:{}"})
+    deactivate E2CopyAgent
+    CopyService -> ScanService : getCapabilities(jobStorage)
+    activate ScanService
+    ScanService -> E2ScanAgent : GET /ext/scan/v1/profile
+    activate E2ScanAgent
+    E2ScanAgent --> ScanService : Return scan profiles ({"base": {},"http": {},"jobStorage:{}"})
+    deactivate E2ScanAgent
+    ScanService --> CopyService : Return jobStorage ScanAttributesCaps
+    deactivate ScanService
+    note over CopyService #orange
+    Generate CopyAttributesCaps for standard copy and stored copy
+    - Standard Copy : from E2 copy profiles("base")
+    - Stored Copy : from E2 copy profiles("storedCopy") + E2 scan profiles("jobStorage")
+    end note
+    CopyService --> App : Return List<CopyAttributesCaps>
+    deactivate CopyService
+    deactivate App
+
+
+    App -> CopyService : getAllDefaults()
+    activate App
+    activate CopyService
+    CopyService -> E2CopyAgent : GET /ext/copy/v1/defaultOptions
+    activate E2CopyAgent
+    E2CopyAgent --> CopyService : Return copy defaultOptions
+    deactivate E2CopyAgent
+    CopyService -> ScanService : getCapabilities(jobStorage)
+    activate ScanService
+    ScanService -> E2ScanAgent : GET /ext/scan/v1/defaultOptions
+    activate E2ScanAgent
+    E2ScanAgent --> ScanService : Return scan default options ({"http": {},"jobStorage:{}"})
+    deactivate E2ScanAgent
+    ScanService --> CopyService : Return ScanAttributes for jobStorage
+    note over CopyService #orange
+    Generate CopyAttributesCaps for standard copy and stored copy
+    - Standard Copy : from E2 copy defaultOptions
+    - Stored Copy : from E2 copy defaultOptions + E2 scan defaultOptions("jobStorage")
+    end note
+    deactivate ScanService
+    CopyService --> App : Return List<CopyAttributes>
+    deactivate CopyService
+    deactivate App
+end
+
+@enduml
+

@@ -1,0 +1,90 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.name = "workpath-services"
+include ':Util-Common'
+project(':Util-Common').projectDir = new File(settingsDir, 'Libs/Common')
+include ':Util-CommonServices'
+project(':Util-CommonServices').projectDir = new File(settingsDir, 'Libs/CommonServices')
+include ':Util-DeviceConnect'
+project(':Util-DeviceConnect').projectDir = new File(settingsDir, 'Libs/DeviceConnect')
+include ':Util-Jabberwocky'
+project(':Util-Jabberwocky').projectDir = new File(settingsDir, 'Libs/jabberwocky')
+include ':Util-OXPd'
+project(':Util-OXPd').projectDir = new File(settingsDir, 'Libs/oxpd')
+include ':Util-OXPd2'
+project(':Util-OXPd2').projectDir = new File(settingsDir, 'Libs/oxpd2')
+//include ':Util-OXPd2Example'
+//project(':Util-OXPd2Example').projectDir = new File(settingsDir, 'Libs/oxpd2example')
+include ':Let-EmailLet'
+project(':Let-EmailLet').projectDir = new File(settingsDir, 'Libs/EmailLet')
+include ':API-JetAdvantageLinkApi'
+project(':API-JetAdvantageLinkApi').projectDir = new File(settingsDir, 'Libs/JetAdvantageLinkApi')
+include ':Let-AccessLet'
+project(':Let-AccessLet').projectDir = new File(settingsDir, 'Libs/AccessLet')
+include ':Let-AccessoryLet'
+project(':Let-AccessoryLet').projectDir = new File(settingsDir, 'Libs/AccessoryLet')
+include ':Let-AttestationLet'
+project(':Let-AttestationLet').projectDir = new File(settingsDir, 'Libs/AttestationLet')
+include ':Let-ConfigLet'
+project(':Let-ConfigLet').projectDir = new File(settingsDir, 'Libs/ConfigLet')
+include ':Let-DeviceLet'
+project(':Let-DeviceLet').projectDir = new File(settingsDir, 'Libs/DeviceLet')
+include ':Let-DeviceUsageLet'
+project(':Let-DeviceUsageLet').projectDir = new File(settingsDir, 'Libs/DeviceUsageLet')
+include ':Let-JobLet'
+project(':Let-JobLet').projectDir = new File(settingsDir, 'Libs/JobLet')
+include ':Let-CopyLet'
+project(':Let-CopyLet').projectDir = new File(settingsDir, 'Libs/CopyLet')
+include ':Let-ScanLet'
+project(':Let-ScanLet').projectDir = new File(settingsDir, 'Libs/ScanLet')
+include ':Let-PrintLet'
+project(':Let-PrintLet').projectDir = new File(settingsDir, 'Libs/PrintLet')
+include ':Let-StorageLet'
+project(':Let-StorageLet').projectDir = new File(settingsDir, 'Libs/StorageLet')
+include ':Let-StatisticsLet'
+project(':Let-StatisticsLet').projectDir = new File(settingsDir, 'Libs/StatisticsLet')
+include ':Let-SuppliesLet'
+project(':Let-SuppliesLet').projectDir = new File(settingsDir, 'Libs/SuppliesLet')
+include ':Let-LauncherLet'
+project(':Let-LauncherLet').projectDir = new File(settingsDir, 'Libs/LauncherLet')
+include ':Let-DeviceSettingsLet'
+project(':Let-DeviceSettingsLet').projectDir = new File(settingsDir, 'Libs/DeviceSettingsLet')
+include ':Let-DeviceEventsLet'
+project(':Let-DeviceEventsLet').projectDir = new File(settingsDir, 'Libs/DeviceEventsLet')
+include ':UI-FileChooser'
+project(':UI-FileChooser').projectDir = new File(settingsDir, 'Libs/FileChooser')
+include ':UI-SettingsUiLib'
+project(':UI-SettingsUiLib').projectDir = new File(settingsDir, 'Libs/SettingsUiLib')
+include ':Library-LinkDataCollectorLib'
+project(':Library-LinkDataCollectorLib').projectDir = new File(settingsDir, 'Libs/LinkDataCollectorLib')
+include ':App-WorkpathServices'
+project(':App-WorkpathServices').projectDir = new File(settingsDir, 'apps/workpathServices')
+include ':DeviceServices-Interfaces'
+project(':DeviceServices-Interfaces').projectDir = new File(settingsDir, 'Libs/DeviceServices/Interfaces')
+include ':DeviceServices-Standard'
+project(':DeviceServices-Standard').projectDir = new File(settingsDir, 'Libs/DeviceServices/Standard')
+include ':DeviceServices-Clients'
+project(':DeviceServices-Clients').projectDir = new File(settingsDir, 'Libs/DeviceServices/Clients')
+include ':DeviceServices-Sim'
+project(':DeviceServices-Sim').projectDir = new File(settingsDir, 'Libs/DeviceServices/Sim')
+
+// Include modules for testing purposes
+include ':Test-WorkpathServices'
+project(':Test-WorkpathServices').projectDir = new File(settingsDir, 'tests/services')
+include ':Test-WorkpathAPIs'
+project(':Test-WorkpathAPIs').projectDir = new File(settingsDir, 'tests/api/apiTest')
+include ':Test-WorkpathLib'
+project(':Test-WorkpathLib').projectDir = new File(settingsDir, 'tests/api/workpathLib')

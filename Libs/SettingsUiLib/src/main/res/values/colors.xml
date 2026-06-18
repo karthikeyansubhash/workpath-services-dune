@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="toolbar_bg">#1582D5</color>
+    <color name="picker_text_color">#454545</color>
+    <color name="default_text_color">#222222</color>
+    <color name="default_line_color">#e2e2e2</color>
+    <color name="primary_light_indigo">#bec5ec</color>
+    <color name="preference_summary_color">#a6a6a6</color>
+
+    <color name="floating_button_normal">#1582D5</color>
+    <color name="floating_button_pressed">#284584</color>
+</resources>

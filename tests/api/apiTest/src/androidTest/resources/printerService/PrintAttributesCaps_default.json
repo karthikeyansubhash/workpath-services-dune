@@ -1,0 +1,118 @@
+{
+    "mCapsCreator": {
+        "mColorModeList": [
+            "DEFAULT",
+            "AUTO",
+            "COLOR",
+            "MONO"
+        ],
+        "mPlexList": [
+            "DEFAULT",
+            "NONE",
+            "BOOK",
+            "FLIP"
+        ],
+        "mMaxCopies": 99,
+        "mAutoFitList": [
+            "DEFAULT"
+        ],
+        "mStapleModeList": [
+            "DEFAULT",
+            "NONE"
+        ],
+        "mPaperSourceList": [
+            "DEFAULT",
+            "AUTO",
+            "TRAY_1",
+            "TRAY_2",
+            "TRAY_3"
+        ],
+        "mPaperSizeList": [
+            "DEFAULT",
+            "A3",
+            "A4",
+            "A5",
+            "A6",
+            "LETTER",
+            "LEGAL",
+            "LEDGER",
+            "EXECUTIVE",
+            "INCH8POINT5X13",
+            "GENERAL_4X6in",
+            "GENERAL_5X7in",
+            "GENERAL_5X8in",
+            "JB4",
+            "JB5",
+            "JB6",
+            "GENERAL_10X15cm",
+            "OFICIO",
+            "K16",
+            "K16_184x260mm",
+            "PK16",
+            "ENVELOPE_COMM10",
+            "ENVELOPE_MONARCH",
+            "B5",
+            "C5",
+            "C6",
+            "ENVELOPE_DL",
+            "JCHOU3",
+            "JPOSTCARD",
+            "JDOUBLE_POSTCARD",
+            "STATEMENT",
+            "RA4",
+            "SRA4",
+            "K8",
+            "K8_260x368mm",
+            "PK8",
+            "ENVELOPE_9"
+        ],
+        "mPaperTypeList": [
+            "DEFAULT",
+            "CARDSTOCK",
+            "HEAVY",
+            "GLOSSY",
+            "LIGHT",
+            "RECYCLED",
+            "ENVELOPE",
+            "LABELS",
+            "PLAIN",
+            "TRANSPARENCY"
+        ],
+        "mDocumentFormatList": [
+            "AUTO",
+            "PDF",
+            "POSTSCRIPT",
+            "JPEG",
+            "PWG_RASTER"
+        ],
+        "mSourceList": [
+            "AUTO"
+        ],
+        "mCollateModeList": [
+            "DEFAULT",
+            "COLLATED",
+            "UNCOLLATED"
+        ],
+        "mOrientationList": [
+            "DEFAULT",
+            "PORTRAIT",
+            "LANDSCAPE",
+            "REVERSE_LANDSCAPE",
+            "REVERSE_PORTRAIT"
+        ],
+        "mPrintQualityList": [
+            "DEFAULT",
+            "DRAFT",
+            "NORMAL",
+            "HIGH"
+        ],
+        "mOutputBinList": [
+            "DEFAULT",
+            "FACE_DOWN"
+        ],
+        "mFinishingsList": [
+            "DEFAULT",
+            "NONE"
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "$opMeta": {
+        "contentFilter": [
+            "*"
+        ]
+    },
+    "apiVersion": "1.0",
+    "availableUsageContent": [
+        "ucgJob",
+        "ucgPrint",
+        "ucgFax",
+        "ucgScan"
+    ],
+    "description": "APIs to acquire device usage information and statistics",
+    "implInfo": [
+        {
+            "typeGUN": "com.hp.ext.service.extensibility.version.1.impl.futuresmart.type.apiInformation",
+            "value": {
+                "apiMajorVersion": 1,
+                "apiMinorVersion": 0,
+                "releaseLevel": "Beta",
+                "releaseSequence": 3,
+                "toolVersions": [
+                    "dsl 2.17.0.202407181406",
+                    "umsgen 0.6.0"
+                ]
+            }
+        }
+    ],
+    "implVersion": "v=6.28.0.108-202411112256;r=6.28.0.108;d=202411112256;s=6.28;p=6D6664-0035",
+    "links": [
+        {
+            "href": "/ext/deviceUsage/v1/capabilities",
+            "rel": "self"
+        },
+        {
+            "href": "/ext/deviceUsage/v1/capabilities",
+            "rel": "capabilities"
+        },
+        {
+            "href": "/ext/deviceUsage/v1/deviceUsageAgents",
+            "rel": "deviceUsageAgents"
+        }
+    ],
+    "serviceGun": "com.hp.ext.service.deviceUsage.version.1"
+}

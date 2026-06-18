@@ -1,0 +1,257 @@
+{
+  "version": "1.8.0-alpha.1",
+  "alerts": [
+    {
+      "id": 1127143938,
+      "category": "outOfMedia",
+      "instanceId": "5",
+      "sequenceNum": 2,
+      "dateTime": "2024-07-02T04:28:58Z",
+      "severity": "warning",
+      "priority": 175,
+      "stringId": 81020,
+      "data": [
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/mediaSourceId",
+          "value": {
+            "seValue": "tray-5"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaType",
+          "value": {
+            "seValue": "stationery"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaSize",
+          "value": {
+            "seValue": "na_letter_8.5x11in"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/deviceTrayConfiguration",
+          "value": {
+            "seValue": "w45s"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/currentWidth",
+          "value": {
+            "iValue": 279400
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/currentLength",
+          "value": {
+            "iValue": 215900
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/units",
+          "value": {
+            "seValue": "metric"
+          }
+        }
+      ],
+      "actions": {
+        "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaAction",
+        "resourcePath": "/cdm/media/v1/mediaAction",
+        "propertyPointer": "/selectedAction",
+        "supported": [
+          {
+            "value": {
+              "seValue": "hideOnUi"
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "/cdm/media/v1/alerts/1127143938/action",
+            "rel": "alertAction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "/cdm/media/v1/alerts/1127143938",
+          "rel": "self"
+        }
+      ]
+    },
+    {
+      "id": 1127143937,
+      "category": "outOfMedia",
+      "instanceId": "4",
+      "sequenceNum": 1,
+      "dateTime": "2024-07-02T04:28:58Z",
+      "severity": "warning",
+      "priority": 175,
+      "stringId": 81020,
+      "data": [
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/mediaSourceId",
+          "value": {
+            "seValue": "tray-4"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaType",
+          "value": {
+            "seValue": "stationery"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaSize",
+          "value": {
+            "seValue": "na_ledger_11x17in"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/deviceTrayConfiguration",
+          "value": {
+            "seValue": "w45s"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/currentWidth",
+          "value": {
+            "iValue": 279400
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/currentLength",
+          "value": {
+            "iValue": 431800
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.mediaHandling.version.1",
+          "resourcePath": "/cdm/mediaHandling/v1/mediaHandling",
+          "propertyPointer": "/units",
+          "value": {
+            "seValue": "metric"
+          }
+        }
+      ],
+      "actions": {
+        "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaAction",
+        "resourcePath": "/cdm/media/v1/mediaAction",
+        "propertyPointer": "/selectedAction",
+        "supported": [
+          {
+            "value": {
+              "seValue": "hideOnUi"
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "/cdm/media/v1/alerts/1127143937/action",
+            "rel": "alertAction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "/cdm/media/v1/alerts/1127143937",
+          "rel": "self"
+        }
+      ]
+    },
+    {
+      "id": 1127143943,
+      "category": "trayOpen",
+      "instanceId": "1",
+      "sequenceNum": 7,
+      "dateTime": "2024-07-02T22:23:42Z",
+      "severity": "warning",
+      "priority": 258,
+      "stringId": 81000,
+      "data": [
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/mediaSourceId",
+          "value": {
+            "seValue": "tray-1"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaType",
+          "value": {
+            "seValue": "any"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaSize",
+          "value": {
+            "seValue": "any"
+          }
+        },
+        {
+          "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaConfiguration",
+          "resourcePath": "/cdm/media/v1/configuration",
+          "propertyPointer": "/mediaInputs/deviceTrayConfiguration",
+          "value": {
+            "seValue": "w45s"
+          }
+        }
+      ],
+      "actions": {
+        "resourceGun": "com.hp.cdm.service.media.version.1.resource.mediaAction",
+        "resourcePath": "/cdm/media/v1/mediaAction",
+        "propertyPointer": "/selectedAction",
+        "supported": [
+          {
+            "value": {
+              "seValue": "hideOnUi"
+            }
+          }
+        ],
+        "links": [
+          {
+            "href": "/cdm/media/v1/alerts/1127143943/action",
+            "rel": "alertAction"
+          }
+        ]
+      },
+      "links": [
+        {
+          "href": "/cdm/media/v1/alerts/1127143943",
+          "rel": "self"
+        }
+      ]
+    }
+  ]
+}

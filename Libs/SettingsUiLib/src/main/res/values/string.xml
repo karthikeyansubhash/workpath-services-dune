@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools" 
+    tools:ignore="MissingTranslation">
+    
+    <string name="default_value">Default</string>
+    <string name="normal_format">%s</string>
+    <string name="number_entry_title_format">\ [%1$d, %2$d]</string>
+    <string name="scan_size_pattern">scan_size_%s</string>
+    <string name="print_size_pattern">print_size_%s</string>
+    <string name="print_type_pattern">print_type_%s</string>
+    <string name="plex_mode_pattern">plex_mode_%s</string>
+    <string name="double_sided_pattern">double_sided_%s</string>
+    <string name="auto_fit_pattern">auto_fit_%s</string>
+    <string name="original_type_pattern">original_type_%s</string>
+    <string name="number_entry_limits_format">%1$d~%2$d %3$s</string>
+    <string name="scan_preview_pattern">scan_preview_%s</string>
+    <string name="number_up_direction_pattern">number_up_direction_%s</string>
+    <string name="scale_unit" formatted="false">%</string>
+    <string name="searchable_pdf">Searchable PDF (OCR)</string>
+    <string name="searchable_pdf_a">Searchable PDF/A (OCR)</string>
+    <string name="searchable_xps">Searchable XPS (OCR)</string>
+    <string name="ocr_csv">CSV (OCR)</string>
+    <string name="ocr_html">HTML (OCR)</string>
+    <string name="ocr_rtf">RTF (OCR)</string>
+    <string name="ocr_text">Text (OCR)</string>
+    <string name="ocr_unicode_text">Unicode Text (OCR)</string>
+    <string name="ocr_xml">XML (OCR)</string>
+    <string name="pdf_a">PDF/A (Archivable)</string>
+
+    <string name="pref_copies">Copies</string>
+    <string name="pref_scale">Scale</string>
+    <string name="pref_colorMode">Color</string>
+    <string name="pref_plex_mode">Duplex</string>
+
+    <!-- Print -->
+    <string name="pref_source">Source To Print</string>
+    <string name="pref_source_default">STORAGE</string>
+    <string name="pref_source_storage">Print from Storage Attributes</string>
+    <string name="pref_source_http">Print from HTTP Attributes</string>
+    <string name="pref_source_usb">Print From USB Attributes</string>
+    <string name="pref_source_stream">Print From Stream Attributes</string>
+    <string name="pref_uri">HTTP URL</string>
+    <string name="pref_uri_username">URL Username</string>
+    <string name="pref_uri_password">URL Password</string>
+    <string name="pref_uri_domain">URL Domain</string>
+
+    <string name="pref_value_default">DEFAULT</string>
+    <string name="pref_value_auto">AUTO</string>
+    <string name="pref_filename_required">File Name (*required)</string>
+    <string name="pref_filename">File Name</string>
+    <string name="pref_folder_name">Folder Name</string>
+    <string name="pref_autoFit">Auto Fit</string>
+    <string name="pref_staple_mode">Staple</string>
+    <string name="pref_paper_source">Paper Source</string>
+    <string name="pref_paper_size">Paper Size</string>
+    <string name="pref_paper_type">Paper Type</string>
+
+    <string name="pref_print_orientation">Orientation</string>
+    <string name="pref_print_quality">Print Quality</string>
+    <string name="pref_print_output_bin">Output Bin</string>
+    <string name="pref_print_start_pageRanges">Start Page Ranges</string>
+    <string name="pref_print_end_pageRanges">End Page Ranges</string>
+    <string name="pref_print_finishings">Finishings</string>
+
+    <!-- Scan -->
+    <string name="pref_destination_http">Scan To HTTP Attributes</string>
+    <string name="pref_destination_ftp">Scan To FTP Attributes</string>
+    <string name="pref_destination_nf">Scan To Network Folder Attributes</string>
+    <string name="pref_destination_usb">Scan To USB Attributes</string>
+    <string name="pref_http_uri">Destination HTTP URL (*required)</string>
+    <string name="pref_ftp_uri">Destination FTP URL (*required)</string>
+    <string name="pref_nf_uri">Destination Network Folder URL (*required)</string>
+    <string name="pref_usb_storage">USB Storage</string>
+
+    <string name="pref_docFormat">Document Format</string>
+    <string name="pref_resolution_type">Resolution</string>
+    <string name="pref_originalSize">Original Size</string>
+    <string name="pref_originalOrientation">Original Orientation</string>
+    <string name="pref_backgroundCleanup">Background Clean Up</string>
+    <string name="pref_contrastAdjustment">Contrast Adjustment</string>
+    <string name="pref_darknessAdjustment">Darkness Adjustment</string>
+    <string name="pref_blankImageRemovalMode">Blank Image Removal Mode</string>
+    <string name="pref_colorDropoutMode">Color Dropout Mode</string>
+    <string name="pref_cropMode">Crop Mode</string>
+    <string name="pref_progressDialogMode">Progress Dialog Mode</string>
+    <string name="pref_outputQuality">Output Quality</string>
+    <string name="pref_transmissionMode">Transmission Mode</string>
+    <string name="pref_jobAssemblyMode">Job Assembly Mode</string>
+    <string name="pref_mediaWeightAdjustment">Media Weight Adjustment</string>
+    <string name="pref_textPhotoOptimization">Text/Photo Optimization</string>
+    <string name="pref_customLength">Original Custom Length</string>
+    <string name="pref_customWidth">Original Custom Width</string>
+
+    <string name="pref_sharpnessAdjustment">Sharpness Adjustment</string>
+    <string name="pref_mediaSource">Media Source</string>
+    <string name="pref_misfeedDetectionMode">Misfeed Detection Mode</string>
+    <string name="pref_pdf_compression">PDF Compression</string>
+    <string name="pref_ocr_language">OCR Languages</string>
+    <string name="pref_pdf_password">PDF Encryption Password</string>
+    <string name="pref_tiff_compression">Tiff Compression</string>
+    <string name="pref_xps_compression">XPS Compression</string>
+
+    <string name="pref_body">Body</string>
+    <string name="pref_from">From</string>
+    <string name="pref_subject">Subject</string>
+    <string name="pref_to_list">To List</string>
+    <string name="pref_to_list_title">To List, separated by \',\'</string>
+    <string name="pref_to_cc_list">To CC List</string>
+    <string name="pref_to_cc_list_title">To CC List, separated by \',\'</string>
+    <string name="pref_to_bcc_list">To BCC List</string>
+    <string name="pref_to_bcc_list_title">To BCC List, separated by \',\'</string>
+    <string name="pref_attachment_name">File Name</string>
+    <string name="pref_attachment_folder_name">Folder name</string>
+    <string name="pref_scanPreview">Scan Preview</string>
+    <string name="pref_collate_mode">Collate</string>
+
+    <string name="pref_scan_splitAttachmentByPage">Split Attachment By Page</string>
+    <string name="pref_scan_maxPagesPerAttachment">Max Pages Per Attachment</string>
+    <string name="pref_scan_eraseMarginUnit">Erase Margin Unit</string>
+    <string name="pref_scan_eraseBackMargin">Erase Back Margin</string>
+    <string name="pref_scan_eraseFrontMargin">Erase Front Margin</string>
+    <string name="pref_scan_captureMode">Capture Mode</string>
+    <string name="pref_scan_automaticToneMode">Automatic Tone Mode</string>
+    <string name="pref_scan_automaticStraightenMode">Automatic Straighten Mode</string>
+
+    <string name="left">Left</string>
+    <string name="top">Top</string>
+    <string name="right">Right</string>
+    <string name="bottom">Bottom</string>
+
+    <string name="range_margin">Margin value must be in range [%1$.2f, %2$.2f]</string>
+    <string name="summary_margin">Left: %1$.2f, Top: %2$.2f, Right: %3$.2f, Bottom: %4$.2f</string>
+
+    <!-- Common -->
+    <string name="sdk_support_missing">Please install/update HP Workpath SDK to proceed</string>
+    <string name="unknown_error">Unexpected error:</string>
+    <string name="install_upgrade_support">Install/Update HP Workpath SDK?</string>
+    <string name="scan_options">Scan options</string>
+    <string name="print_options">Print options</string>
+    <string name="fax_options">Fax options</string>
+    <string name="copy_options">Copy options</string>
+    <string name="start">Start</string>
+    <string name="start_scan">Scan start</string>
+    <string name="start_print">Print start</string>
+    <string name="start_fax">Fax start</string>
+    <string name="start_copy">Copy start</string>
+
+    <!-- Scan to Me categories -->
+    <string name="general">General</string>
+    <!-- Scan To Email categories -->
+    <string name="pref_destination_email">Scan To Email Attributes</string>
+    <string name="pref_email_from">From</string>
+    <string name="pref_email_to">To</string>
+    <string name="pref_email_cc">Cc</string>
+    <string name="pref_email_bcc">Bcc</string>
+    <string name="pref_email_subject">Subject</string>
+    <string name="pref_email_message">Message</string>
+
+    <string name="pref_email_hostname">Host Name</string>
+    <string name="pref_email_port">Port</string>
+    <string name="pref_email_connection_timeout">Connection Timeout</string>
+    <string name="pref_email_read_timeout">Read Timeout</string>
+    <string name="pref_email_authentication">Authentication</string>
+    <string name="pref_email_username">Username</string>
+    <string name="pref_email_password">Password</string>
+    <string name="pref_email_transport_mode">Transport Mode</string>
+    <string name="pref_email_transport_mode_plain">PLAIN</string>
+    <string name="pref_email_transport_mode_ssl_tls">SSL/TLS</string>
+    <string name="pref_email_transport_mode_start_tls">START TLS</string>
+    <string name="pref_email_smtp_title">SMTP Settings</string>
+
+    <string name="pref_duplexMode">Duplex</string>
+    <!-- scan size values to be generated using the pattern -->
+    <string name="scan_size_DEFAULT">Default</string>
+    <string name="scan_size_A4_ROTATE">A4 (Rotate)</string>
+    <string name="scan_size_A4">A4</string>
+    <string name="scan_size_A5_ROTATE">A5 (Rotate)</string>
+    <string name="scan_size_A5">A5</string>
+    <string name="scan_size_A6_ROTATE">A6 (Rotate)</string>
+    <string name="scan_size_A6">A6</string>
+    <string name="scan_size_LETTER_ROTATE">Letter (Rotate)</string>
+    <string name="scan_size_A3">A3</string>
+    <string name="scan_size_LETTER">Letter</string>
+    <string name="scan_size_LEGAL">Legal</string>
+    <string name="scan_size_LEDGER">Ledger</string>
+    <string name="scan_size_B4">B4</string>
+    <string name="scan_size_B5">B5</string>
+    <string name="scan_size_B5_ROTATE">B5 (Rotate)</string>
+    <string name="scan_size_JB4">JB4</string>
+    <string name="scan_size_JB5">JB5</string>
+    <string name="scan_size_JB5_ROTATE">JB5 (Rotate)</string>
+    <string name="scan_size_JB6">JB6</string>
+    <string name="scan_size_EXECUTIVE">EXECUTIVE</string>
+    <string name="scan_size_STATEMENT">STATEMENT</string>
+    <string name="scan_size_STATEMENT_ROTATE">STATEMENT (Rotate)</string>
+    <string name="scan_size_OFICIO">OFICIO</string>
+    <string name="scan_size_K8">K8</string>
+    <string name="scan_size_K16">K16</string>
+    <string name="scan_size_PK8">PK8</string>
+    <string name="scan_size_PK16">PK16</string>
+    <string name="scan_size_INCH8POINT5X13">8.5 x 13 inches</string>
+    <string name="scan_size_INCH12X18">12 x 18 inches</string>
+    <string name="scan_size_AUTO">Auto</string>
+    <string name="scan_size_MIXED_LETTER_LEDGER">Mixed Letter/Ledger</string>
+    <string name="scan_size_MIXEDLETTERLEGAL">Mixed Letter/Legal</string>
+    <string name="scan_size_MIXEDA3A4">Mixed A3/A4</string>
+    <string name="scan_size_MIXED_LETTER_LEGAL">Mixed Letter/Legal</string>
+    <string name="scan_size_MIXED_A3_A4">Mixed A3/A4</string>
+    <string name="scan_size_MATCH_ORIGINAL">Match Original</string>
+    <string name="scan_size_CUSTOM">Custom</string>
+
+    <!-- print size values to be generated using the pattern -->
+    <string name="print_size_DEFAULT">Default</string>
+    <string name="print_size_A4_ROTATE">A4 (Rotate)</string>
+    <string name="print_size_A4">A4</string>
+    <string name="print_size_A5_ROTATE">A5 (Rotate)</string>
+    <string name="print_size_A5">A5</string>
+    <string name="print_size_A6_ROTATE">A6 (Rotate)</string>
+    <string name="print_size_A6">A6</string>
+    <string name="print_size_LETTER_ROTATE">Letter (Rotate)</string>
+    <string name="print_size_A3">A3</string>
+    <string name="print_size_LETTER">Letter</string>
+    <string name="print_size_LEGAL">Legal</string>
+    <string name="print_size_LEDGER">Ledger</string>
+    <string name="print_size_B4">B4</string>
+    <string name="print_size_B5">B5</string>
+    <string name="print_size_B5_ROTATE">B5 (Rotate)</string>
+    <string name="print_size_JB4">JB4</string>
+    <string name="print_size_JB5">JB5</string>
+    <string name="print_size_JB5_ROTATE">JB5 (Rotate)</string>
+    <string name="print_size_JB6">JB6</string>
+    <string name="print_size_EXECUTIVE">EXECUTIVE</string>
+    <string name="print_size_STATEMENT">STATEMENT</string>
+    <string name="print_size_STATEMENT_ROTATE">STATEMENT (Rotate)</string>
+    <string name="print_size_OFICIO">OFICIO</string>
+    <string name="print_size_K8">K8</string>
+    <string name="print_size_K16">K16</string>
+    <string name="print_size_PK8">PK8</string>
+    <string name="print_size_PK16">PK16</string>
+    <string name="print_size_INCH8POINT5X13">8.5 x 13 inches</string>
+    <string name="print_size_INCH12X18">12 x 18 inches</string>
+    <string name="print_size_AUTO">Auto</string>
+    <string name="print_size_MIXED_LETTER_LEDGER">Mixed Letter/Ledger</string>
+    <string name="print_size_MIXEDLETTERLEGAL">Mixed Letter/Legal</string>
+    <string name="print_size_MIXEDA3A4">Mixed A3/A4</string>
+    <string name="print_size_MIXED_LETTER_LEGAL">Mixed Letter/Legal</string>
+    <string name="print_size_MIXED_A3_A4">Mixed A3/A4</string>
+    <string name="print_size_MATCH_ORIGINAL">Match Original</string>
+    <string name="print_size_CUSTOM">Custom</string>
+
+    <!-- print type values to be generated using the pattern -->
+    <string name="print_type_DEFAULT">Default</string>
+    <string name="print_type_CARD_STOCK">Cardstock 176-220g</string>
+    <string name="print_type_CARD_STOCK_GLOSSY">Card Glossy 176-220g</string>
+    <string name="print_type_HP_ECOFFICIENT">HP EcoFFICIENT</string>
+    <string name="print_type_HP_GLOSSY_120G">HP Glossy 120g</string>
+    <string name="print_type_HP_GLOSSY_150G">HP Glossy 150g</string>
+    <string name="print_type_HP_GLOSSY_200G">HP Glossy 200g</string>
+    <string name="print_type_HP_MATTE_105G">HP Matte 105g</string>
+    <string name="print_type_HP_MATTE_120G">HP Matte 120g</string>
+    <string name="print_type_HP_MATTE_150G">HP Matter 150g</string>
+    <string name="print_type_HP_MATTE_200G">HP Matte 200g</string>
+    <string name="print_type_HP_MATTE_90G">HP Matte 90g</string>
+    <string name="print_type_HP_SOFT_GLOSS_120G">HP SoftGloss 120g</string>
+    <string name="print_type_EXTRA_HEAVY">Extra Heavy 131-175g</string>
+    <string name="print_type_EXTRA_HEAVY_GLOSSY">XHvyGlossy 131-175g</string>
+    <string name="print_type_HEAVY">Heavy 111-130g</string>
+    <string name="print_type_MID_WEIGHT">Mid-weight 96-110g</string>
+    <string name="print_type_INTERMEDIATE">Intermediate 85-95g</string>
+    <string name="print_type_LIGHT">Light 60-74g</string>
+    <string name="print_type_RECYCLED">Recycled</string>
+    <string name="print_type_ROUGH">Rough</string>
+    <string name="print_type_HEAVY_ROUGH">Heavy Rough</string>
+    <string name="print_type_ENVELOPE">Envelope</string>
+    <string name="print_type_HEAVY_ENVELOPE">Heavy Envelope</string>
+    <string name="print_type_LABELS">Labels</string>
+    <string name="print_type_PLAIN">Plain</string>
+    <string name="print_type_BOND">Bond</string>
+    <string name="print_type_COLORED">Colored</string>
+    <string name="print_type_LETTERHEAD">Letterhead</string>
+    <string name="print_type_PREPRINTED">Letterhead</string>
+    <string name="print_type_PREPUNCHED">Prepunched</string>
+    <string name="print_type_TRANSPARENCY">Transparency</string>
+    <string name="print_type_HP_ADVANCED_PHOTO">HP Advanced Photo</string>
+    <string name="print_type_HP_BROCHURE_GLOSSY">HP Brochure Glossy</string>
+    <string name="print_type_HP_BROCHURE_MATTE_180G">HP Brochure Matte 180g</string>
+    <string name="print_type_HP_INKJET_MATTE_120G">HP InkJet Matte 120g</string>
+
+    <!-- print doc format values to be generated using the pattern -->
+    <string name="scan_preview_DEFAULT">Default</string>
+    <string name="scan_preview_TRUE">Scan with preview</string>
+    <string name="scan_preview_FALSE">Scan without preview</string>
+
+    <!-- copy plex mode values to be generated using the pattern -->
+    <string name="plex_mode_DEFAULT">Default</string>
+    <string name="plex_mode_SIMPLEX">1-sided</string>
+    <string name="plex_mode_DUPLEX">2-sided</string>
+
+    <!-- print duplex / double-size values to be generated using the pattern -->
+    <string name="double_sided_DEFAULT">Default</string>
+    <string name="double_sided_NONE">None</string>
+    <string name="double_sided_LONG_EDGE">Long edge</string>
+    <string name="double_sided_SHORT_EDGE">Short edge</string>
+
+    <!-- print auto fit values to be generated using the pattern -->
+    <string name="auto_fit_DEFAULT">Default</string>
+    <string name="auto_fit_TRUE">Fit to printable area</string>
+    <string name="auto_fit_FALSE">Original</string>
+
+    <!-- Fax Original Type values to be generated using the pattern -->
+    <string name="original_type_DEFAULT">Default</string>
+    <string name="original_type_TEXT">Text</string>
+    <string name="original_type_TEXT_PHOTO">Text &amp; Photo</string>
+    <string name="original_type_PHOTO">Photo</string>
+    <string name="scan_from_field_is_not_provided">From field is not provided</string>
+    <string name="scan_to_field_is_not_provided">To field is not provided</string>
+    <string name="scan_creation_failed">Creation of scan job has failed</string>
+    <string name="fax_creation_failed">Creation of fax job has failed</string>
+    <string name="copy_creation_failed">Creation of copy job has failed</string>
+    <string name="print_creation_failed">Creation of print job has failed</string>
+    <string name="print_creation_failed_empty_name">Creation of print job has failed: no file provided.</string>
+    <string name="minus_button">Minus</string>
+    <string name="plus_button">Plus</string>
+    <string name="pref_destination">Destination</string>
+    <string name="pref_destination_me">ME</string>
+    <string name="select_file">Select your file to print out</string>
+    <string name="pref_double_sided">Double-sided</string>
+    <string name="default_attach_name">Untitled_YYYYMMDD_HHMMSS</string>
+    <string name="pref_destination_dialog_title">To:</string>
+    <string name="fax_destination_s_unavailable">Fax destination(s) unavailable</string>
+    <string name="enter_valid_fax_destination_allowed_characters_0_to_9_">Enter valid Fax destination, allowed characters: 0 to 9, *, #, -</string>
+    <string name="default_fax_destination">Provide Destination</string>
+    <string name="pref_singlePage">Single page</string>
+    <string name="printer_disconnected">Printer disconnected</string>
+    <string name="copies_range">Select between %1$d and %2$d.</string>
+    <string name="custom_range">Select between %1$.2f and %2$.2f.</string>
+
+    <!-- hint -->
+    <string name="hint_file_name">Please input file name.</string>
+    <string name="hint_folder_name">Please input folder name.</string>
+    <string name="hint_uri_http">Please input HTTP(S) URL (ex. http://server[:port]/path)</string>
+    <string name="hint_uri_ftp">Please input FTP URL (ex. ftp://server[:port]/path</string>
+    <string name="hint_uri_nf">Please input network location (ex. file:////server/path or \\\\server\\share)</string>
+    <string name="hint_uri_username">Username to access URL</string>
+    <string name="hint_uri_password">Password to access URL</string>
+    <string name="hint_uri_domain">Domain to access URL</string>
+    <string name="hint_uri">Please input destination URL</string>
+    <string name="hint_email_from">Please input email address</string>
+    <string name="hint_email_to">Please input TO (comma separated: aaa@hp.com, bbb@hp.com)</string>
+    <string name="hint_email_cc">Please input CC (comma separated: aaa@hp.com, bbb@hp.com)</string>
+    <string name="hint_email_bcc">Please input BCC (comma separated: aaa@hp.com, bbb@hp.com)</string>
+    <string name="hint_email_subject">Please input Subject</string>
+    <string name="hint_email_message">Please input Message</string>
+    <string name="hint_email_smtp">If SMTP settings are unchecked, printer default email settings will be used.</string>
+    <string name="hint_job_password">Password to protect stored copy job</string>
+
+    <!-- Copy -->
+    <string name="pref_copy_destination_default">NORMAL</string>
+    <string name="pref_default_password_value">NONE</string>
+
+    <string name="pref_scan_duplex_mode">Scan Duplex Mode</string>
+    <string name="pref_print_duplex_mode">Print Duplex Mode</string>
+    <string name="pref_orientation">Scan Orientation</string>
+    <string name="pref_copy_preview">Copy Preview</string>
+    <string name="pref_scan_source">Scan Source</string>
+    <string name="pref_scan_size">Scan Size</string>
+    <string name="pref_scan_customLength">Scan Custom Length</string>
+    <string name="pref_scan_customWidth">Scan Custom Width</string>
+    <string name="pref_print_size">Print Size</string>
+    <string name="pref_print_customLength">Print Custom Length</string>
+    <string name="pref_print_customWidth">Print Custom Width</string>
+    <string name="pref_store">Copy To Store Attributes</string>
+    <string name="pref_job_name">Job Name</string>
+    <string name="pref_job_folder_name">Job Folder Name</string>
+    <string name="pref_copy_store">Copy To Store Attributes</string>
+    <string name="pref_job_delete_on_power">Delete On Power Cycle</string>
+    <string name="pref_job_delete_on_release">Delete on Job Release</string>
+    <string name="pref_job_password_type">Password Type</string>
+    <string name="pref_password">Password</string>
+    <string name="pref_number_up_mode">Number Up Mode</string>
+    <string name="pref_number_up_direction">Number Up Direction</string>
+    <string name="pref_job_assembly_mode">Job Assembly Mode</string>
+    <string name="pref_scale_mode">Scale Mode</string>
+    <string name="pref_scale_percent">Scale Percent</string>
+    <string name="pref_textGraphicsOptimization">Text/Graphics Optimization</string>
+    <string name="pref_copy_output_bin">Output Bin</string>
+    <string name="pref_copy_progress_dialog_mode">Progress Dialog Mode</string>
+
+    <string name="hint_job_name">Job Name for stored copy</string>
+    <string name="hint_job_folder_name">Folder name to store copy job</string>
+</resources>

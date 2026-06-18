@@ -1,0 +1,44 @@
+<resources>
+    <string name="ellipces">&#8230;</string>
+    <string name="app_name" translatable="false">JobLet</string>
+
+    <string name="progress_dialog_title">Job progress</string>
+    <string name="progress_dialog_progressing_message">Job %1$s Progressing…</string>
+    <string name="progress_dialog_complete_message">Job %1$s Complete…</string>
+    <string name="job_number_label">Job Number: </string>
+    <string name="job_name_label">Job Name: </string>
+    <string name="confirmation_dialog_title">Job Confirmation</string>
+    <string name="confirmation_dialog_message">Do you want to scan the next page?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="close">Close</string>
+    <string name="cancel">Cancel</string>
+    <string name="completed">Completed</string>
+    <string name="pages">Page(s)</string>
+    <string name="job_sending">Sending</string>
+    <string name="job_cancelling">Cancelling</string>
+    <string name="job_scanning">Scanning</string>
+    <string name="job_progressing">Progressing</string>
+    <string name="job_waiting">Waiting</string>
+    <string name="job_image_number">Page %1$d</string>
+    <string name="job_dst_number">to %1$s</string>
+    <string name="job_canceled">Canceled</string>
+    <string name="job_failed">Failed</string>
+    <string name="job_completed">Completed. Total</string>
+    <string name="job_progress_notification_title">Job Progress</string>
+    <string name="job_progress_notification_message">Touch to return to Job Progress</string>
+    <string name="copying">Copying</string>
+    <string name="faxing">Faxing</string>
+    <string name="printing">Printing</string>
+    <string name="scanning">Scanning</string>
+    <string name="sending">Sending</string>
+    <string name="saving">Saving</string>
+    <string name="copies">copies</string>
+    <string name="set">/ set %1$s</string>
+    <string name="noti_jobs_progressing">%1$s Job(s) Progressing</string>
+    <string name="noti_jobs_waiting">%1$s Job(s) Waiting</string>
+    <string name="noti_jobs_canceled">%1$s Job(s) Canceled</string>
+    <string name="failed">Failed with Result Code %1$s</string>
+    <string name="job_confirmation_title">Scan More</string>
+
+</resources>

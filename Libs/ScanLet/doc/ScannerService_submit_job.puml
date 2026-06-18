@@ -1,0 +1,116 @@
+@startuml
+title
+<font size=20><b>ScannerService API : submit()</b></font>
+<font size=16>for HTTP or NetworkFolder destination</font>
+end title
+
+box "Workpath App" #FFFFFF
+actor User as "Workpath ScanApp"
+participant lib as "WorkpathLib"
+end box
+box "Workpath services " #C9FFB0
+    participant ScanBR as "ScanLet [receiver]\nBroadcastReceiver"
+    'participant ScanCP as "ScanLet [provider]\nContentProvider"
+    participant ScanSM as "ScanLet [service]\nScanJob\nStateMachine"
+    participant ScanIS as "ScanLet [service]\nScanJob\nIntentService"
+    participant ScanAdapter as "ScanLet [adapter]\nScanAdapter"
+    participant ScanDS as "DeviceService"
+
+'box "Workpath PacMan" #C9FFB0
+'    participant PacMan as "PacMan"
+'end box
+
+box "Android OS"
+    participant Android as "Android"
+end box
+
+box "Dune" #aliceblue
+participant E2 as "    E2    "
+end box
+
+/'
+rnote right of User
+end note
+'/
+
+autonumber
+== Submit a Scan Job  ==
+User -> lib : ScannerService.\n submit(Context, ScanAttributes, ScanletAttributes)
+activate lib
+lib [#0000FF]-> ScanBR : <<IPC>>\n sendOrderedBroadcast(Intent)
+note right of lib #white
+ScanToRequestIntent
+    action : "com.hp.jetadvantage.link.intent.action.SCANTO"
+    Extra : {"scanAttrExtra" : {},
+             "taskAttrExtra" : {},
+             "reqIDExtra" : "",
+             "packageName" : "",
+             "forcedApi" : null,
+             "applicationId" : "",
+             "username": "",
+             "password": "",
+             "apiLevel": ""
+             }
+end note
+
+activate ScanBR
+ScanBR -> Android : startForegroundService(Intent)
+deactivate ScanBR
+activate ScanIS
+Android -> ScanIS : onCreate()
+activate ScanIS
+note right of ScanIS
+create and start HandlerThread
+end note
+ScanIS --> ScanSM : new (IntentService, Looper)
+activate ScanSM
+deactivate ScanIS
+
+Android -> ScanIS : onStartCommand(Intent, flags, startId)
+activate ScanIS
+ScanIS --> ScanSM : sendMessage(MSG_START, Intent)
+ScanIS --> Android : START_NOT_STICKY
+deactivate ScanIS
+
+group CreatingScanJobState
+    ScanSM -> ScanSM : initializeJob(Intent)
+    ScanSM -> ScanSM : createScanJob(packageName, ScanAttributesReader)
+    ScanSM -> ScanAdapter : createScanJob()
+    ScanAdapter -> ScanAdapter : createScanTicket()
+    ScanAdapter -> ScanDS : createScanJob(packageName, ScanJob_Create)
+    ScanDS [#0000FF]-> E2 : POST /ext/scanJob/v1/scanJobAgents/{{SCANJOB_AGENT_ID}}/scanJobs
+    note right of ScanDS #white
+    {"scanTicket": {
+        "destinationOptions": {},
+        "scanOptions": {}
+    }}
+    end note
+    E2 [#0000FF]---> ScanDS : Return ScanJob
+    ScanDS --> ScanAdapter : Return ScanJob
+    ScanAdapter --> ScanSM : Return JobId
+end
+group MonitoringScanJobState
+    ScanSM -> ScanDS : registerNotificationCallback
+    E2 [#0000FF]--> ScanDS : <<WebSocket AppChannel>> ScanNotification
+    ScanDS -> ScanSM : onReceiveNotification
+activate ScanSM
+    ScanSM -> ScanSM : updateJobState
+    ScanSM -> ScanSM : processJobDoneStatus
+    ScanSM --> ScanSM : sendMessage(MSG_REPORT_COMPLETED, RESULT_OK)
+deactivate ScanSM
+end
+group ScanJobCompletedState
+    ScanSM -> ScanSM : processCompletedJob
+    ScanSM -> ScanSM : updateCompletedJobState
+end
+group EndState
+    ScanSM -> ScanSM : releaseWakeLock
+    ScanSM -> ScanSM : updateCompletedJobState
+    ScanSM -> ScanSM : removeCallbacksAndMessages
+    ScanSM -> ScanIS : stopSelf()
+deactivate ScanIS
+    ScanSM -> ScanSM : Looper.quitSafely
+deactivate ScanSM
+end
+
+@enduml

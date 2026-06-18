@@ -1,0 +1,157 @@
+/*
+ * Copyright (C) 2013 Paul Burke
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.ipaulpro.afilechooser;
+
+import android.annotation.TargetApi;
+import android.content.AsyncTaskLoader;
+import android.content.Context;
+import android.os.Build;
+import android.os.FileObserver;
+import android.text.TextUtils;
+
+import com.ipaulpro.afilechooser.utils.FileUtils;
+
+import java.io.File;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * Loader that returns a list of Files in a given file path.
+ * 
+ * @version 2013-12-11
+ * @author paulburke (ipaulpro)
+ */
+public class FileLoader extends AsyncTaskLoader<List<File>> {
+
+   private static final int FILE_OBSERVER_MASK = FileObserver.CREATE
+         | FileObserver.DELETE | FileObserver.DELETE_SELF
+         | FileObserver.MOVED_FROM | FileObserver.MOVED_TO
+         | FileObserver.MODIFY | FileObserver.MOVE_SELF;
+
+   private FileObserver mFileObserver;
+
+   private List<File> mData;
+   private String mPath;
+   private String mMode;
+
+   public FileLoader(Context context, String path, String mode) {
+      super(context);
+      this.mPath = path;
+      this.mMode = mode;
+   }
+
+   @Override
+   public List<File> loadInBackground() {
+
+        ArrayList<File> list = new ArrayList<File>();
+
+        // Current directory File instance
+        final File pathDir = new File(mPath);
+
+        // List file in this directory with the directory filter
+        final File[] dirs = pathDir.listFiles(FileUtils.sDirFilter);
+        if (dirs != null) {
+            // Sort the folders alphabetically
+            Arrays.sort(dirs, FileUtils.sComparator);
+            // Add each folder to the File list for the list adapter
+            Collections.addAll(list, dirs);
+        }
+
+        // List file in this directory with the file filter
+        if (!TextUtils.isEmpty(mMode) && mMode.equals(FileUtils.FILE)) {
+           final File[] files = pathDir.listFiles(FileUtils.sFileFilter);
+           if (files != null) {
+              // Sort the files alphabetically
+              Arrays.sort(files, FileUtils.sComparator);
+              // Add each file to the File list for the list adapter
+              Collections.addAll(list, files);
+           }
+        }
+        return list;
+   }
+
+   @Override
+   public void deliverResult(List<File> data) {
+      if (isReset()) {
+         onReleaseResources(data);
+         return;
+      }
+
+      List<File> oldData = mData;
+      mData = data;
+
+      if (isStarted()) {
+          super.deliverResult(data);
+      }
+
+      if (oldData != null && oldData != data) {
+          onReleaseResources(oldData);
+      }
+   }
+
+   @Override
+   protected void onStartLoading() {
+      if (mData != null)
+         deliverResult(mData);
+
+      if (mFileObserver == null) {
+         mFileObserver = new FileObserver(mPath, FILE_OBSERVER_MASK) {
+            @Override
+            public void onEvent(int event, String path) {
+               onContentChanged();
+            }
+         };
+      }
+      mFileObserver.startWatching();
+
+      if (takeContentChanged() || mData == null)
+         forceLoad();
+   }
+
+   @TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+   @Override
+   protected void onStopLoading() {
+      cancelLoad();
+   }
+
+   @Override
+   protected void onReset() {
+      onStopLoading();
+
+      if (mData != null) {
+         onReleaseResources(mData);
+         mData = null;
+      }
+   }
+
+   @Override
+   public void onCanceled(List<File> data) {
+      super.onCanceled(data);
+
+      onReleaseResources(data);
+   }
+
+   protected void onReleaseResources(List<File> data) {
+
+      if (mFileObserver != null) {
+         mFileObserver.stopWatching();
+         mFileObserver = null;
+      }
+   }
+}

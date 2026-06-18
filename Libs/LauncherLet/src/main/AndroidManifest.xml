@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name="com.hp.jetadvantage.link.services.launcherlet.provider.LauncherLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.launcherletcp"
+            android:exported="true"/>
+    </application>
+
+</manifest>

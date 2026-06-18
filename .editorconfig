@@ -1,0 +1,8 @@
+# indicate this is the root of the project
+root = true
+
+[*.{kt,java,xml,gradle,md,puml,json}]
+insert_final_newline = true
+
+[*.{kt,java}]
+max_line_length = 120

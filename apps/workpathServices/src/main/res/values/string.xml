@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name" translatable="false">HP Workpath Services</string>
+    <string name="use_sdk_service_desc" translatable="false">Allow this application to access to multi functional printer service of print, copy, scan and fax</string>
+    <string name="use_sdk_service_label" translatable="false">Use HP Workpath SDK Services</string>
+    <string name="untitled">Untitled</string>
+    <string name="sdk_permissions" translatable="false">HP Workpath SDK permissions</string>
+    <string name="sdk_permissions_desc" translatable="false">Permissions used by HP Workpath SDK</string>
+
+</resources>

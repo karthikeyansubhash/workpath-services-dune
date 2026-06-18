@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:padding="?attr/dialogPreferredPadding">
+
+    <EditText
+        android:layout_width="@dimen/picker_text_width"
+        android:layout_height="@dimen/picker_height"
+        android:id="@+id/value"
+        android:layout_centerInParent="true"
+        style="@style/NumberPickerTextApperance"
+        android:background="@drawable/co_list_input_bg"
+        android:text="1"
+        android:imeOptions="actionNone"
+        android:singleLine="true"
+        android:inputType="number"
+        android:gravity="center"
+        android:paddingLeft="?attr/dialogPreferredPadding"
+        android:paddingRight="?attr/dialogPreferredPadding"
+        />
+
+    <ImageButton
+        android:layout_width="@dimen/picker_btn_width"
+        android:layout_height="@dimen/picker_height"
+        android:id="@+id/minus"
+        android:layout_toLeftOf="@id/value"
+        android:layout_toStartOf="@id/value"
+        android:contentDescription="@string/minus_button"
+        android:src="@drawable/co_input_ic_minus"
+        android:background="@drawable/co_input_btn_left" />
+
+    <ImageButton
+        android:layout_width="@dimen/picker_btn_width"
+        android:layout_height="@dimen/picker_height"
+        android:id="@+id/plus"
+        android:layout_toRightOf="@id/value"
+        android:layout_toEndOf="@id/value"
+        android:contentDescription="@string/plus_button"
+        android:src="@drawable/co_input_ic_plus"
+        android:background="@drawable/co_input_btn_right" />
+
+</RelativeLayout>

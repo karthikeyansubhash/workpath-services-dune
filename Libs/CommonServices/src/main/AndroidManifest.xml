@@ -1,0 +1,45 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <application>
+        <activity
+            android:name=".ui.SpsPermissionActivity"
+            android:theme="@style/Transparent"
+            android:excludeFromRecents="true"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.SDKAlertDialog"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
+        </activity>
+
+        <provider
+            android:name=".providers.SPSVersionContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.spsvcp"
+            android:exported="true"/>
+
+        <provider
+            android:name=".providers.SelectedPrinterContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.lsmcp.oxp"
+            android:exported="true"/>
+
+        <provider
+            android:name=".providers.SelectedAccessContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accesslet.internalcp.access"
+            android:exported="true"/>
+
+        <provider
+            android:name=".providers.SelectedAccessoryContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accessorylet.internalcp.accessory"
+            android:exported="true"/>
+
+    </application>
+
+</manifest>

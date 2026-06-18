@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">HP Workpath SDK 권한을 받지 못했습니다. JetAdvantageLink.requestPermissions()를 호출하여 권한을 얻으세요.</string>
+<string name="sps_permission">HP Workpath SDK 권한</string>
+<string name="sps_self_permission">HP Workpath SDK 권한</string>
+<string name="grant">부여</string>
+<string name="deny">거절</string>
+<string name="permission_text" formatted="false">%s(%s) 애플리케이션에 프린팅 HP Workpath SDK에 대한 전체 액세스 권한을 부여하시겠습니까?</string>
+<string name="more_permission_text_small">더 많은 정보 보기</string>
+<string name="more_permission_text_big">애플리케이션에서 HP Workpath SDK를 사용하여 연결된 모든 프린터의 스캔, 복사 및 팩스 기능을 사용할 수 있게 됩니다. 허용된 권한을 모두 취소하려면 앱 관리로 이동하여 HP Workpath SDK 애플리케이션의 모든 데이터를 지우세요.</string>
+<string name="sps_sd_card">HP Workpath SDK는 장치에 있는 SD 카드를 사용하여 스캔한 파일을 저장합니다. 다음 시스템 대화 상자에서 권한을 부여하세요.</string>
+<string name="permission_not_granted">앱이 사용자의 저장소에 기록하도록 허용되지 않아 제대로 작동하지 않을 수 있습니다. 권한 부여를 고려해 보세요.</string>
+</resources>

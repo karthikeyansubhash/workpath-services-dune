@@ -1,0 +1,265 @@
+@startuml
+title
+<font size=20><b>ScannerService API : submit() - Default Options Handling</b></font>
+<font size=16>for all destinations (HTTP, FTP, NetworkFolder, ME, EMAIL, USB)</font>
+end title
+
+box "Workpath App" #FFFFFF
+actor User as "Workpath ScanApp"
+participant lib as "WorkpathLib"
+end box
+box "Workpath services " #C9FFB0
+    participant ScanBR as "ScanLet [receiver]\nBroadcastReceiver"
+    'participant ScanCP as "ScanLet [provider]\nContentProvider"
+    participant ScanSM as "ScanLet [service]\nScanJob\nStateMachine"
+    participant ScanIS as "ScanLet [service]\nScanJob\nIntentService"
+    participant ScanAdapter as "ScanLet [adapter]\nScanAdapter"
+    participant ScanDS as "DeviceService"
+
+'box "Workpath PacMan" #C9FFB0
+'    participant PacMan as "PacMan"
+'end box
+
+box "Android OS"
+    participant Android as "Android"
+end box
+
+box "Dune" #aliceblue
+participant E2 as "    E2    "
+end box
+
+/'
+rnote right of User
+end note
+'/
+
+autonumber
+== Submit a Scan Job ==
+alt API 1 (Current) - submit(Context, ScanAttributes, ScanletAttributes)
+    User -> lib : ScannerService.\n submit(Context, ScanAttributes, ScanletAttributes)
+    activate lib
+    lib -> lib : Intent intent = createScanToRequestIntent(...)
+    note right of lib #white
+    ScanToRequestIntent (unchanged)
+        action : "com.hp.jetadvantage.link.intent.action.SCANTO"
+        Extra : {"scanAttrExtra" : {},
+                 "taskAttrExtra" : {},
+                 "reqIDExtra" : "",
+                 "packageName" : "",
+                 "forcedApi" : null,
+                 "applicationId" : "",
+                 "username": "",
+                 "password": "",
+                 "apiLevel": ""
+                 }
+    end note
+    note right of lib #lightblue
+    **API 1: No extra flag added**
+    // intent.putExtra() NOT called
+    end note
+    lib [#0000FF]-> ScanBR : <<IPC>>\n sendOrderedBroadcast(intent)
+
+else <color:red><b>API 2 (Future) - submit(Context, ScanAttributes, ScanletAttributes, Destination)</b></color>
+    User -> lib : ScannerService.\n submit(Context, ScanAttributes, ScanletAttributes, <color:red><b>Destination</b></color>)
+    activate lib
+    lib -> lib : Intent intent = createScanToRequestIntent(...)
+    note right of lib #white
+    ScanToRequestIntent (unchanged)
+        action : "com.hp.jetadvantage.link.intent.action.SCANTO"
+        Extra : {"scanAttrExtra" : {},
+                 "taskAttrExtra" : {},
+                 "reqIDExtra" : "",
+                 "packageName" : "",
+                 "forcedApi" : null,
+                 "applicationId" : "",
+                 "username": "",
+                 "password": "",
+                 "apiLevel": ""
+                 }
+    end note
+    lib -> lib : <color:red><b>intent.putExtra("USE_DESTINATION_DEFAULTS", true)</b></color>
+    note right of lib #lightgreen
+    <color:red><b>API 2: Additional flag added</b></color>
+    Destination-specific defaults enabled
+    end note
+    lib [#0000FF]-> ScanBR : <<IPC>>\n sendOrderedBroadcast(intent)
+end
+
+activate ScanBR
+ScanBR -> Android : startForegroundService(Intent)
+deactivate ScanBR
+activate ScanIS
+Android -> ScanIS : onCreate()
+activate ScanIS
+note right of ScanIS
+create and start HandlerThread
+end note
+ScanIS --> ScanSM : new (IntentService, Looper)
+activate ScanSM
+deactivate ScanIS
+
+Android -> ScanIS : onStartCommand(Intent, flags, startId)
+activate ScanIS
+ScanIS --> ScanSM : sendMessage(MSG_START, Intent)
+ScanIS --> Android : START_NOT_STICKY
+deactivate ScanIS
+
+group CreatingScanJobState
+    ScanSM -> ScanSM : initializeJob(Intent)
+    note right of ScanSM #lightyellow
+    <color:red><b>Extract useDestinationDefaults flag from Intent</b></color>
+    <color:red><b>boolean useDestinationDefaults =
+        intent.getBooleanExtra("USE_DESTINATION_DEFAULTS", false);</b></color>
+
+    **API 1**: flag missing → defaults to **false** (HTTP defaults)
+    <color:red><b>API 2</b></color>: flag present and true → **true** (destination-specific defaults)
+    end note
+
+    ScanSM -> ScanSM : createScanJob(packageName, ScanAttributesReader, <color:red><b>useDestinationDefaults</b></color>)
+    ScanSM -> ScanAdapter : createScanJob(packageName, deviceService, scanAttributes, <color:red><b>useDestinationDefaults</b></color>)
+    activate ScanAdapter
+
+    alt useDestinationDefaults == false (API 1)
+        ScanAdapter -> ScanAdapter : getScanTicket(packageName, deviceService, scanAttributes)
+        activate ScanAdapter
+
+        note right of ScanAdapter #lightblue
+        **Default Option Handling (API 1)**
+        Always use HTTP default options
+        regardless of actual scan destination
+        end note
+
+        ScanAdapter -> ScanAdapter : getDefaults(packageName, deviceService, <color:blue>**Global.Destination.HTTP**</color>)
+        activate ScanAdapter
+        ScanAdapter -> ScanDS : getProfile(packageName)
+        activate ScanDS
+        ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/profile
+        activate E2
+        E2 [#0000FF]---> ScanDS : Return Profile
+        deactivate E2
+        ScanDS --> ScanAdapter : Return Profile
+        deactivate ScanDS
+
+        ScanAdapter -> ScanDS : getDefaultOptions(packageName)
+        activate ScanDS
+        ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/defaultOptions
+        activate E2
+        E2 [#0000FF]---> ScanDS : Return DefaultOptions
+        deactivate E2
+        ScanDS --> ScanAdapter : Return DefaultOptions
+        deactivate ScanDS
+
+        ScanAdapter -> ScanAdapter : extract **HTTP** default options
+        ScanAdapter --> ScanAdapter : Return HTTP defaultScanAttributes
+        deactivate ScanAdapter
+
+    else useDestinationDefaults == true (API 2)
+        ScanAdapter -> ScanAdapter : <color:red><b>getScanTicketWithDestinationDefaults</b></color>(packageName, deviceService, scanAttributes)
+        activate ScanAdapter
+
+        note right of ScanAdapter #lightgreen
+        <color:red><b>Default Option Handling (API 2)</b></color>
+        Use destination-specific default options
+        based on actual scan destination
+        end note
+
+        ScanAdapter -> ScanAdapter : getDefaults(packageName, deviceService, <color:red><b>scanAttributes.getDestination()</b></color>)
+        activate ScanAdapter
+        ScanAdapter -> ScanDS : getProfile(packageName)
+        activate ScanDS
+        ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/profile
+        activate E2
+        E2 [#0000FF]---> ScanDS : Return Profile
+        deactivate E2
+        ScanDS --> ScanAdapter : Return Profile
+        deactivate ScanDS
+
+        ScanAdapter -> ScanDS : getDefaultOptions(packageName)
+        activate ScanDS
+        ScanDS [#0000FF]-> E2 : GET /ext/scanJob/v1/defaultOptions
+        activate E2
+        E2 [#0000FF]---> ScanDS : Return DefaultOptions
+        deactivate E2
+        ScanDS --> ScanAdapter : Return DefaultOptions
+        deactivate ScanDS
+
+        alt destination is HTTP
+            ScanAdapter -> ScanAdapter : extract HTTP default options
+        else destination is FTP or NETWORK_FOLDER
+            ScanAdapter -> ScanAdapter : extract NetworkFolder default options
+        else destination is ME, EMAIL, or USB
+            ScanAdapter -> ScanAdapter : <color:red><b>extract JobStorage default options</b></color>
+            note right of ScanAdapter #pink
+            <color:red><b>ME/EMAIL/USB use JobStorage defaults</b></color>
+            JobStorage section provides destination-specific defaults
+            end note
+        end
+
+        ScanAdapter --> ScanAdapter : Return destination defaultScanAttributes
+        deactivate ScanAdapter
+
+    end
+
+    note right of ScanAdapter #lightyellow
+    **Merge User Options with Defaults**
+    For each scan option:
+    - If user specified value → use user value
+    - If user specified DEFAULT → use default value
+    end note
+
+    ScanAdapter -> ScanAdapter : getScanOptions(scanAttributes, defaultScanAttributes)
+    ScanAdapter -> ScanAdapter : getDestinationOptions(scanAttributes)
+    ScanAdapter -> ScanAdapter : create ScanTicket\n(destinationOptions + scanOptions)
+    deactivate ScanAdapter
+
+    ScanAdapter -> ScanDS : createScanJob(packageName, ScanJob_Create)
+    activate ScanDS
+    ScanDS [#0000FF]-> E2 : POST /ext/scanJob/v1/scanJobAgents/{{SCANJOB_AGENT_ID}}/scanJobs
+    activate E2
+    note right of ScanDS #white
+    POST body:
+    {"scanTicket": {
+        "destinationOptions": {
+            "destination": "http|ftp|networkFolder|me|email|usb",
+            ...
+        },
+        "scanOptions": {
+            "colorMode": {...},
+            "resolution": {...},
+            "plexMode": {...},
+            ...
+        }
+    }}
+    end note
+    E2 [#0000FF]---> ScanDS : Return ScanJob
+    deactivate E2
+    ScanDS --> ScanAdapter : Return ScanJob
+    deactivate ScanDS
+    ScanAdapter --> ScanSM : Return JobId
+    deactivate ScanAdapter
+end
+group MonitoringScanJobState
+    ScanSM -> ScanDS : registerNotificationCallback
+    E2 [#0000FF]--> ScanDS : <<WebSocket AppChannel>> ScanNotification
+    ScanDS -> ScanSM : onReceiveNotification
+activate ScanSM
+    ScanSM -> ScanSM : updateJobState
+    ScanSM -> ScanSM : processJobDoneStatus
+    ScanSM --> ScanSM : sendMessage(MSG_REPORT_COMPLETED, RESULT_OK)
+deactivate ScanSM
+end
+group ScanJobCompletedState
+    ScanSM -> ScanSM : processCompletedJob
+    ScanSM -> ScanSM : updateCompletedJobState
+end
+group EndState
+    ScanSM -> ScanSM : releaseWakeLock
+    ScanSM -> ScanSM : updateCompletedJobState
+    ScanSM -> ScanSM : removeCallbacksAndMessages
+    ScanSM -> ScanIS : stopSelf()
+deactivate ScanIS
+    ScanSM -> ScanSM : Looper.quitSafely
+deactivate ScanSM
+end
+
+@enduml

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">空目录</string>
+<string name="storage_removed">已删除或卸载存储。</string>
+<string name="choose_file">选择文件</string>
+<string name="error_selecting_file">文件选择错误</string>
+<string name="internal_storage">内部存储</string>
+<string name="base_path_name">存储</string>
+<string name="select_file_source">选择文件源</string>
+<string name="input_address">共享选择</string>
+<string name="input_address_toast">请输入要共享的地址！</string>
+<string name="shares_discovery_wifi_only">只能通过 Wi-Fi 共享发现。</string>
+<string name="change_host">更改主机</string>
+<string name="invalid_ip_input">请输入有效的 IP 地址。</string>
+<string name="downloading">正在下载</string>
+<string name="downloading_message">正在将 %s 下载到您的设备上…</string>
+<string name="share_login">登录</string>
+<string name="input_login_text">输入 %s 的登录信息</string>
+<string name="input_login_label_domain">域：</string>
+<string name="input_login_label_user">用户名:</string>
+<string name="input_login_label_password">密码：</string>
+<string name="can_be_empty">可以为空</string>
+<string name="download_failed">下载失败。请重试</string>
+<string name="downloaded_to">已将文件下载到 %s</string>
+<string name="failed_to_access">无法访问共享。请重试。</string>
+<string name="failed_to_login">无法登录。请稍后重试，或者使用其他的凭证重试。</string>
+<string name="failed_to_access_share">无法访问共享文件夹。请稍后用另一个地址重试。</string>
+<string name="enter_ip">输入 IP</string>
+<string name="choose_list_ip">收件人列表</string>
+<string name="ip_address_label">输入 IP：</string>
+<string name="ip_address_select">选择 IP</string>
+<string name="loading_hosts">正在搜索主机…</string>
+<string name="no_hosts">未找到主机</string>
+<string name="refresh">刷新</string>
+<string name="please_select_ip">请从列表中选择 IP，或者手动输入 IP。</string>
+<string name="error_file_format">只能打印 PDF 和 JPG 文件。</string>
+</resources>

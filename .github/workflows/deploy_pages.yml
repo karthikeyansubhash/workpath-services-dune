@@ -1,0 +1,49 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - api_reports
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: [ self-hosted ]
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      with:
+        path: ${{ vars.API_REPORTS_WORKING_FOLDER }}
+        ref: api_reports
+    
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+    
+    - name: Archive artifact
+      shell: powershell
+      run: |
+        tar --dereference --directory "${{ vars.API_REPORTS_WORKING_FOLDER }}/docs" -cvf "$env:RUNNER_TEMP\artifact.tar" --exclude=.git --exclude=.github "."
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: github-pages
+        path: ${{ runner.temp }}/artifact.tar
+        retention-days: 1
+    
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v2

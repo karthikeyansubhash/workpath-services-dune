@@ -1,0 +1,35 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.copylet.oxp'
+
+    sourceSets {
+        main {
+            res.srcDirs = ['res']
+        }
+    }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.localBroadcastManager
+    implementation rootProject.ext.guavaVersion
+    implementation project(':Util-CommonServices')
+    implementation project(':Let-JobLet')
+    implementation project(':UI-SettingsUiLib')
+    implementation project(':DeviceServices-Interfaces')
+    implementation project(':DeviceServices-Standard')
+
+    testImplementation rootProject.ext.junitVersion
+    testImplementation rootProject.ext.mockitoInlineVersion
+
+    androidTestImplementation rootProject.ext.androidxJunitVersion
+    androidTestImplementation rootProject.ext.androidxEspressoVersion
+}

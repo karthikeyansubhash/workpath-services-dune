@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${SDK_ACCESS_STATISTICS_PERMISSION}" />
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+    <uses-permission android:name="${PACMAN_READ_PROVIDERS_PERMISSION}" />
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.StatisticsLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.statisticsletcp"
+            android:exported="true"
+            android:permission="${SDK_ACCESS_STATISTICS_PERMISSION}" />
+
+        <service android:name=".service.StatisticsNotificationObserverService" />
+
+        <receiver
+            android:name=".receiver.BootCompletedReceiver"
+            android:exported="true"
+            android:permission="${SYSTEM_PERMISSION}">
+            <intent-filter>
+                <action android:name="${WORKPATH_SERVICE_READY}" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

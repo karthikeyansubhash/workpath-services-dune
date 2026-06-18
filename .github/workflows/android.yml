@@ -1,0 +1,253 @@
+name: PI for Workpath Services
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  schedule:
+    - cron: '0 14 * * *'
+  workflow_dispatch:
+
+jobs:
+  build_and_run_tests:
+
+    runs-on: [ self-hosted ]
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        sparse-checkout: |
+          /*
+        sparse-checkout-cone-mode: false
+        path: ${{ vars.PI_WORKING_FOLDER }}
+
+    - name: "Set up OpenJDK 17"
+      uses: actions/setup-java@v3
+      with:
+        java-version: '17'
+        distribution: 'adopt'
+        cache: gradle
+
+    - name: "[Preparation] Grant execute permission for gradlew"
+      run: |
+        if ($env:RUNNER_OS -eq "Linux") {
+          chmod +x gradlew
+        }
+
+    - name: "[Preparation] Check if ANDROID_HOME is set"
+      if: ${{ runner.os == 'Windows' }}
+      run: |
+        if (Test-Path env:ANDROID_HOME) {
+          Write-Output "ANDROID_HOME is set to: $env:ANDROID_HOME"
+        } else {
+          Write-Output "ANDROID_HOME is not set"
+        }
+
+      ################### Build  ###################
+    - name: "[Build] Clean before building"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: ./gradlew clean
+
+    - name: "[Build] Build with Gradle"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: ./gradlew build -x test
+
+    ################### Unit Tests  ###################
+    - name: "[UnitTest] Run Unit Tests (v1.0.7)"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: ./gradlew :Test-WorkpathServices:testDebugUnitTest
+
+    - name: "[UnitTest] Compress test results"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      if: ${{ failure() || success() }}
+      run: tar -czf ./tests/services/build/reports/tests/testDebugUnitTest.tar.gz ./tests/services/build/reports/tests/testDebugUnitTest
+
+    - name: "[UnitTest] Upload Artifact"
+      if: ${{ failure() || success() }}
+      uses: actions/upload-artifact@v3
+      id: artifact-upload-step
+      with:
+        name: WorkpathSDK_PI_UnitTest_Result
+        path: ./${{ vars.PI_WORKING_FOLDER }}/tests/services/build/reports/tests/testDebugUnitTest.tar.gz
+        retention-days: 2
+
+    - name: "[UnitTest] Output artifact ID"
+      run: echo 'Artifact ID is ${{ steps.artifact-upload-step.outputs.artifact-id }}'
+
+    - name: "[InstrumentedTest] Connect to a DUNE emulator"
+      run: adb connect ${{vars.DUNE_EMU_IP}}:5555
+
+    - name: "[InstrumentedTest] Uninstall existing test package before run"
+      run: |
+        try {
+          adb -s ${{vars.DUNE_EMU_IP}}:5555 uninstall com.hp.jetadvantage.link.test 2>&1 | Out-Null
+          Write-Output "Package uninstalled successfully"
+        } catch {
+          Write-Output "Package not installed or uninstall failed, continuing..."
+        }
+        exit 0
+
+    ################### Instrumented Tests  ###################
+    - name: "[InstrumentedTest] Run Android Instrumented Tests (v1.0.1)"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: ./gradlew :Test-WorkpathServices:connectedDebugAndroidTest --project-prop android.testInstrumentationRunnerArguments.dutInfoIp=${{vars.DUNE_EMU_IP}}
+
+    - name: "[InstrumentedTest] Uninstall test package after run"
+      if: ${{ failure() || success() }}
+      run: |
+        try {
+          adb -s ${{vars.DUNE_EMU_IP}}:5555 uninstall com.hp.jetadvantage.link.test 2>&1 | Out-Null
+          Write-Output "Package uninstalled successfully"
+        } catch {
+          Write-Output "Package not installed or already removed, continuing..."
+        }
+        exit 0
+
+    - name: "[InstrumentedTest] Disconnect from the DUNE emulator"
+      run: adb disconnect ${{vars.DUNE_EMU_IP}}:5555
+
+    - name: "[InstrumentedTest] Compress instrumented test results"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      if: ${{ failure() || success() }}
+      run: tar -czf ./tests/services/build/reports/tests/testDebugInsTest.tar.gz ./tests/services/build/reports/androidTests/connected/debug ./tests/services/build/outputs/androidTest-results/connected/debug
+
+    - name: "[InstrumentedTest] Upload Artifact 2"
+      if: ${{ failure() || success() }}
+      uses: actions/upload-artifact@v3
+      id: artifact-upload2-step
+      with:
+        name: WorkpathSDK_PI_InstrumentedTest_Result
+        path: ./${{ vars.PI_WORKING_FOLDER }}/tests/services/build/reports/tests/testDebugInsTest.tar.gz
+        retention-days: 2
+
+    ################### API Tests  ###################
+    - name: "[API Test] Connect to a DUNE emulator and install Workpath service apk"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: | 
+        adb connect ${{vars.DUNE_EMU_IP}}:5555
+        adb -s ${{vars.DUNE_EMU_IP}}:5555 install -r ./apps/workpathServices/build/outputs/apk/release/WorkpathServices-dune-release.apk
+        adb -s ${{vars.DUNE_EMU_IP}}:5555 shell am broadcast -a com.hp.workpath.intent.action.CALL_DEVICE_READY  -n com.hp.jetadvantage.link.system/.receivers.CDMCallReceiver
+
+    - name: "[API Test] Run Dune API Tests (v1.0.0)"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: ./gradlew :Test-WorkpathAPIs:connectedDebugAndroidTest --project-prop android.testInstrumentationRunnerArguments.dutInfoIp=${{vars.DUNE_EMU_IP}} --project-prop android.testInstrumentationRunnerArguments.notAnnotation=androidx.test.filters.FlakyTest
+
+    - name: "[API Test] Disconnect from the DUNE emulator"
+      run: adb disconnect ${{vars.DUNE_EMU_IP}}:5555
+
+    - name: "[API Test] Compress API test results"
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      if: ${{ failure() || success() }}
+      run: tar -czf ./tests/api/apiTest/build/reports/testDebugApiTest.tar.gz ./tests/api/apiTest/build/reports/androidTests/connected/debug ./tests/api/apiTest/build/outputs/androidTest-results/connected/debug
+
+    - name: "[API Test] Upload Artifact 3"
+      if: ${{ failure() || success() }}
+      uses: actions/upload-artifact@v3
+      id: artifact-upload3-step
+      with:
+        name: WorkpathSDK_PI_APITest_Result
+        path: ./${{ vars.PI_WORKING_FOLDER }}/tests/api/apiTest/build/reports/testDebugApiTest.tar.gz
+        retention-days: 2
+
+    ################### API Test HTML Report  ###################
+    - name: "[API Test Report] Generate HTML Report from XML"
+      if: ${{ success() && github.ref == 'refs/heads/master' }}
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: |
+        # Read version from version.properties
+        $versionFile = "./version.properties"
+        $version = (Get-Content $versionFile | Where-Object { $_ -match "^\s*version\s*=" }) -replace "^\s*version\s*=\s*", ""
+        $version = $version.Trim()
+        Write-Output "Version: $version"
+        
+        $xmlPath = Get-ChildItem -Path "./tests/api/apiTest/build/outputs/androidTest-results/connected/debug/" -Filter "*.xml" | Select-Object -First 1 -ExpandProperty FullName
+        $apiListPath = "./tests/api/apiTest/docs/workpath-api-list.md"
+        $outputDir = "./api-test-report"
+        
+        if ($xmlPath -and (Test-Path $apiListPath)) {
+          New-Item -ItemType Directory -Force -Path $outputDir | Out-Null
+          py ./tests/api/apiTest/scripts/generate_html_report_from_xml.py --xml-file $xmlPath --api-list $apiListPath --output-dir $outputDir --no-csv --version $version
+          
+          # Copy API_Test_Results.html to index.html for GitHub Pages default page
+          Copy-Item -Path "$outputDir/API_Test_Results.html" -Destination "$outputDir/index.html"
+          
+          Write-Output "HTML report generated successfully"
+          Write-Output "Report location: $outputDir"
+          Write-Output "Files: API_Test_Results.html, index.html"
+        } else {
+          Write-Output "Error: Required files not found"
+          Write-Output "XML Path: $xmlPath"
+          Write-Output "API List exists: $(Test-Path $apiListPath)"
+          exit 1
+        }
+
+    - name: "[API Test Report] Deploy to GitHub Pages"
+      if: ${{ success() && github.ref == 'refs/heads/master' }}
+      working-directory: ./${{ vars.PI_WORKING_FOLDER }}
+      run: |
+        $reportDir = "./api-test-report"
+        $branch = "api_reports"
+        
+        # Get absolute paths
+        $workspaceRoot = (Get-Location).Path
+        $reportPath = Join-Path $workspaceRoot $reportDir
+        $tempDir = Join-Path (Split-Path $workspaceRoot -Parent) "temp_deploy_$((Get-Date).Ticks)"
+        
+        # Read version from version.properties
+        $versionFile = Join-Path $workspaceRoot "version.properties"
+        $version = (Get-Content $versionFile | Where-Object { $_ -match "^\s*version\s*=" }) -replace "^\s*version\s*=\s*", ""
+        $version = $version.Trim()
+        
+        Write-Output "Workspace: $workspaceRoot"
+        Write-Output "Report path: $reportPath"
+        Write-Output "Temp dir: $tempDir"
+        Write-Output "Version: $version"
+        
+        # Get repository URL (remove .git if present and add it back)
+        $repoUrl = git config --get remote.origin.url
+        if (-not $repoUrl.EndsWith('.git')) {
+          $repoUrl += '.git'
+        }
+        Write-Output "Repository URL: $repoUrl"
+        
+        # Check if branch exists on remote
+        $branchExists = git ls-remote --heads origin $branch
+        
+        if ($branchExists) {
+          Write-Output "Branch $branch exists, cloning with --depth 1..."
+          git clone --single-branch --branch $branch --depth 1 $repoUrl $tempDir
+        } else {
+          Write-Output "Branch $branch does not exist, creating orphan branch..."
+          New-Item -ItemType Directory -Path $tempDir -Force | Out-Null
+          Push-Location $tempDir
+          git init
+          git checkout --orphan $branch
+          git remote add origin $repoUrl
+          Pop-Location
+        }
+        
+        # Configure git in temp directory
+        Push-Location $tempDir
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        
+        # Copy report files to docs directory
+        Copy-Item -Path "$reportPath\*" -Destination ".\docs\" -Force
+        
+        # Commit and push
+        git add docs/index.html docs/API_Test_Results.html
+        
+        if (git diff --staged --quiet) {
+          Write-Output "No changes to deploy"
+        } else {
+          git commit -m "Deploy API Test Report - v$version"
+          git push origin $branch
+          Write-Output "Successfully deployed to $branch branch"
+        }
+        
+        Pop-Location
+        
+        # Cleanup
+        Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue
+        Remove-Item -Path $reportPath -Recurse -Force -ErrorAction SilentlyContinue
+        Write-Output "Deployment completed and temp directory cleaned up"
+

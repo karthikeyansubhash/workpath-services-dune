@@ -1,0 +1,939 @@
+{
+  "$opMeta": {
+    "contentFilter": [
+      "*"
+    ]
+  },
+  "base": {
+    "definitions": [
+      {
+        "isAvailable": true,
+        "optionName": "scanProgressMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "spmNone",
+                "spmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanCaptureMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "scmStandard",
+                "scmJobBuild",
+                "scmBook",
+                "scmIdCard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "imagePreviewMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ipmNone",
+                "ipmStandard"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "autoColorDetect",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "acdmDetectOnly",
+                "acdmTreatNonColorAsMonochrome",
+                "acdmTreatNonColorAsGrayscale"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "colorMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cmAutoDetect",
+                "cmMonochrome",
+                "cmColor",
+                "cmGrayscale"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "outputFileFormat",
+                  "optionValue": "ffJpeg"
+                }
+              },
+              "message": "JPEG file format does not support Monochrome color mode.",
+              "optionValues": [
+                "cmColor",
+                "cmGrayscale"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaSource",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "miFlatbed",
+                "miAdf"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "msAny",
+                "msANSI_A_8point5x11in",
+                "msANSI_A_Rotated_8point5x11in",
+                "msLegal_8point5x14in",
+                "msExecutive_7point25x10point5in",
+                "msInvoice_5point5x8point5in",
+                "msANSI_B_11x17in",
+                "msGeneral_5x7in",
+                "msGeneral_5x8in",
+                "msFoolscap_8point5x13in",
+                "msOficio_216x340mm",
+                "msISO_A3_297x420mm",
+                "msISO_A4_210x297mm",
+                "msISO_A5_148x210mm",
+                "msISO_A6_105x148mm",
+                "msJIS_B5_182x257mm",
+                "msJIS_B6_128x182mm",
+                "msK16_195x270mm",
+                "msK16_184x260mm",
+                "msK16_197x273mm",
+                "msJDoublePostcard_148x200mm"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "xOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "yOffset",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 1000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "plexMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "pmSimplex",
+                "pmDuplex"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "resolution",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dpi75",
+                "dpi150",
+                "dpi200",
+                "dpi300",
+                "dpi400",
+                "dpi600"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "dctMixed",
+                "dctPhoto",
+                "dctText",
+                "dctImage",
+                "dctAutoDetect"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contentOrientation",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "coPortrait",
+                "coLandscape"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "mediaBindingFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bfFlipLeft",
+                "bfFlipUp"
+              ]
+            }
+          },
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                "value": {
+                  "optionName": "originalPlexMode",
+                  "optionValue": "pmDuplex"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "blackBackground",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "mediaType",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "mtPlain",
+                "mtPhoto"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoExposure",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "exposureLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "gamma",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 2000
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "highlightLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 9
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorSensitivity",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "colorRange",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "ccdChannel",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "cctNtsc",
+                "cctGray",
+                "cctGrayEmulated",
+                "cctRed",
+                "cctGreen",
+                "cctBlue"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "binaryRendering",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "brHalftone",
+                "brThreshold",
+                "brErrorDiffusion"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "descreen",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "misfeedDetection",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "shadowLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "compressionFactor",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 10
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "threshold",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "scanningSpeed",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ssAuto",
+                "ssSlow"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "autoDeskew",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "edgeToEdgeScan",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "longPlotScan",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "invertColors",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "sharpness",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "backgroundCleanup",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 100
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "contrast",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 8
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "blankPageSuppression",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "bpdDisable",
+                "bpdDetectAndSuppress"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "pagesPerSheet",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ppsOneUp",
+                "ppsTwoUp"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "backgroundNoiseRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemoval",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "backgroundColorRemovalLevel",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "blackEnhancementLevel",
+        "rules": [
+          {
+            "range": {
+              "lowerBoundary": 0,
+              "step": 1,
+              "upperBoundary": 255
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputFileFormat",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ffJpeg",
+                "ffPdf",
+                "ffTiff",
+                "ffMtiff",
+                "ffPdfa"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputQualityVsSize",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "qvsLowest",
+                "qvsLow",
+                "qvsMedium",
+                "qvsHigh",
+                "qvsLowest"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "description": "supported with PDF/A only (basically the normal/high compression setting)",
+        "isAvailable": true,
+        "optionName": "outputFileCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffTiff"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffMiff"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "description": "supported for TIFF/MTIFF when color is MONO. Supported values are Auto and G4",
+        "isAvailable": true,
+        "optionName": "monoCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdfa"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmColor"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmGrayscale"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ctAuto",
+                "ctG4"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "description": "supported for TIFF/MTIFF when color is color/gray. Supported values are tiff60 and posttiff60. OJPEG is tiff6, JPEG is postTiff6",
+        "isAvailable": true,
+        "optionName": "colorAndGrayCompression",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdfa"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                      "value": {
+                        "optionName": "colorMode",
+                        "optionValue": "cmMonochrome"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          {
+            "possibleValues": {
+              "optionValues": [
+                "ctOJpeg",
+                "ctJpeg"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "outputFileEncryption",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                "value": {
+                  "optionName": "outputFileFormat",
+                  "optionValue": "ffPdf"
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "encryptionPassword",
+        "rules": [
+          {
+            "disable": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffPdf"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileEncryption",
+                        "optionValue": "true"
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "fileTransmissionMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "tmJob"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSize",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasMediaSource",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasXExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasYExtent",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasAnchor",
+        "rules": []
+      },
+      {
+        "isAvailable": false,
+        "optionName": "outputCanvasOrientation",
+        "rules": []
+      },
+      {
+        "isAvailable": true,
+        "optionName": "filename.explicit.explicitValue",
+        "rules": [
+          {
+            "stringLength": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "filename.isExplicit",
+                  "optionValue": "true"
+                }
+              },
+              "maximumLength": 255,
+              "minimumLength": 1
+            }
+          }
+        ]
+      },
+      {
+        "isAvailable": true,
+        "optionName": "filename.expression.expressionPattern",
+        "rules": [
+          {
+            "stringLength": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                "value": {
+                  "optionName": "filename.isExpression",
+                  "optionValue": "true"
+                }
+              },
+              "maximumLength": 1024,
+              "minimumLength": 1
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "http": {
+    "definitions": [
+      {
+        "isAvailable": true,
+        "optionName": "fileTransmissionMode",
+        "rules": [
+          {
+            "possibleValues": {
+              "optionValues": [
+                "tmJob",
+                "tmImage"
+              ]
+            }
+          },
+          {
+            "validValues": {
+              "condition": {
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.andOperator",
+                "value": {
+                  "operators": [
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffJpeg"
+                      }
+                    },
+                    {
+                      "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                      "value": {
+                        "optionName": "outputFileFormat",
+                        "optionValue": "ffTiff"
+                      }
+                    }
+                  ]
+                }
+              },
+              "optionValues": [
+                "tmJob"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "links": [
+    {
+      "href": "/ext/scanJob/v1/profile",
+      "rel": "self"
+    }
+  ]
+}

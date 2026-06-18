@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">...</string>
+<string name="progress_dialog_title">作业进度</string>
+<string name="progress_dialog_progressing_message">作业 %1$s 正在进行中…</string>
+<string name="progress_dialog_complete_message">作业 %1$s 完成…</string>
+<string name="job_number_label">作业编号：</string>
+<string name="job_name_label">作业名称：</string>
+<string name="confirmation_dialog_title">作业确认</string>
+<string name="confirmation_dialog_message">是否要扫描下一页？</string>
+<string name="yes">是</string>
+<string name="no">否</string>
+<string name="close">关闭</string>
+<string name="cancel">取消</string>
+<string name="completed">已完成</string>
+<string name="pages">页</string>
+<string name="job_sending">正在发送</string>
+<string name="job_cancelling">正在取消</string>
+<string name="job_scanning">正在扫描</string>
+<string name="job_progressing">正在进行中</string>
+<string name="job_waiting">正在等待</string>
+<string name="job_image_number">第 %1$d 页</string>
+<string name="job_dst_number">至 %1$s</string>
+<string name="job_canceled">已取消</string>
+<string name="job_failed">失败</string>
+<string name="job_completed">已完成。总计</string>
+<string name="job_progress_notification_title">作业进度</string>
+<string name="job_progress_notification_message">轻触以返回到作业进度</string>
+<string name="copying">正在复印</string>
+<string name="faxing">正在传真</string>
+<string name="printing">正在打印</string>
+<string name="scanning">正在扫描</string>
+<string name="sending">正在发送</string>
+<string name="saving">正在保存</string>
+<string name="copies">份数</string>
+<string name="set">/ 设置 %1$s</string>
+<string name="noti_jobs_progressing">%1$s 个作业正在进行中</string>
+<string name="noti_jobs_waiting">%1$s 个作业正在等待</string>
+<string name="noti_jobs_canceled">%1$s 个作业已取消</string>
+<string name="failed">失败，结果代码：%1$s</string>
+<string name="job_confirmation_title">扫描更多</string>
+</resources>

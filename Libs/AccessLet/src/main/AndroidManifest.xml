@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="${PACMAN_READ_PROVIDERS_PERMISSION}"/>
+    <uses-permission android:name="com.hp.packagemanager.permission.PACKAGE_LIFECYCLE_EVENTS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.AccessletContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.accessletcp"
+            android:exported="true"
+            tools:ignore="ExportedContentProvider" />
+
+        <service android:name=".service.AuthenticationObserverService"/>
+
+        <receiver
+            android:name=".receiver.AppInstalledEventReceiver"
+            android:exported="true"
+            android:permission="${PACMAN_PACKAGE_LIFECYCLE_EVENTS_PERMISSION}">
+            <intent-filter>
+                <action android:name="com.hp.packagemanager.intent.action.PACKAGE_INSTALLED" />
+                <action android:name="com.hp.packagemanager.intent.action.PACKAGE_UPDATED" />
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".receiver.BootCompletedReceiver"
+            android:exported="true"
+            android:permission="${SYSTEM_PERMISSION}">
+            <intent-filter>
+                <action android:name="${WORKPATH_SERVICE_READY}"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

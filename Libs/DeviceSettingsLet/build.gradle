@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.services.devicesettingslet'
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    implementation project(':Util-CommonServices')
+    implementation project(':DeviceServices-Interfaces')
+    implementation project(':DeviceServices-Standard')
+}

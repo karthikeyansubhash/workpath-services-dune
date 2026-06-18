@@ -1,0 +1,30 @@
+{
+  "simulatedHidDeviceName": "ApiTestCardReader773333",
+  "usbVersion": 1,
+  "deviceClass": 3,
+  "deviceSubclass": 0,
+  "deviceProtocol": 4,
+  "vendorId": 3333,
+  "productId": 77,
+  "deviceVersion": 1,
+  "languagesSupported": [
+    345,
+    654,
+    123
+  ],
+  "manufacturerName": "Api, Test.",
+  "productName": "X773333",
+  "serialNumber": "NULL",
+  "hardwareCountryCode": 44,
+  "inputReportLength": 42,
+  "outputReportLength": 12,
+  "featureReportLength": 10,
+  "reports": [
+    {
+      "reportType": "hrtFeature",
+      "reportId": 0,
+      "data": "TG9ydXMgaXNwc3Vt",
+      "writable": true
+    }
+  ]
+}

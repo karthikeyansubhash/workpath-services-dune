@@ -1,0 +1,19 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.common'
+
+    buildFeatures {
+        aidl true
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    api rootProject.ext.androidXWork
+    api rootProject.ext.gsonVersion
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ActivityTheme" parent="@style/Theme.AppCompat.Light">
+        <item name="android:background">@color/toolbar_bg</item>
+        <item name="android:colorBackground">@color/toolbar_bg</item>
+        <item name="android:actionBarStyle">@style/ActivityTheme.ActionBar</item>
+    </style>
+
+    <style name="ActivityTheme.ActionBar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:background">@color/toolbar_bg</item>
+    </style>
+
+    <style name="NumberPickerTextApperance" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">@dimen/picker_text_size</item>
+        <item name="android:textColor">@color/picker_text_color</item>
+    </style>
+
+    <style name="RadioButtonStyle" parent="@style/Widget.AppCompat.CompoundButton.RadioButton" />
+</resources>

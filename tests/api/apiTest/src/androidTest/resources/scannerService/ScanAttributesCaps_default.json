@@ -1,0 +1,244 @@
+{
+  "mCapsCreator": {
+    "mAutomaticStraightenModeList": [
+      "DEFAULT",
+      "DISABLE",
+      "ENABLE"
+    ],
+    "mAutomaticToneModeList": [
+      "DEFAULT"
+    ],
+    "mBackgroundCleanupList": [
+      "DEFAULT",
+      "LEVEL_0",
+      "LEVEL_1",
+      "LEVEL_2",
+      "LEVEL_3",
+      "LEVEL_4",
+      "LEVEL_5",
+      "LEVEL_6",
+      "LEVEL_7",
+      "LEVEL_8"
+    ],
+    "mBlankImageRemovalModeList": [
+      "DEFAULT",
+      "OFF",
+      "ON"
+    ],
+    "mCaptureModeList": [
+      "DEFAULT"
+    ],
+    "mColorDropoutModeList": [
+      "DEFAULT"
+    ],
+    "mColorModeList": [
+      "DEFAULT",
+      "AUTO",
+      "MONO",
+      "COLOR",
+      "GRAY"
+    ],
+    "mContrastAdjustmentList": [
+      "DEFAULT",
+      "LEVEL_0",
+      "LEVEL_1",
+      "LEVEL_2",
+      "LEVEL_3",
+      "LEVEL_4",
+      "LEVEL_5",
+      "LEVEL_6",
+      "LEVEL_7",
+      "LEVEL_8"
+    ],
+    "mCropModeList": [
+      "DEFAULT"
+    ],
+    "mCustomLengthRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mCustomWidthRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mDarknessAdjustmentList": [
+      "DEFAULT"
+    ],
+    "mDestinationList": [
+      "HTTP"
+    ],
+    "mDocumentFormatsByColorMode": {
+      "DEFAULT": [
+        "DEFAULT"
+      ],
+      "COLOR": [
+        "JPEG",
+        "PDF",
+        "TIFF",
+        "MTIFF",
+        "PDF_A"
+      ],
+      "AUTO": [
+        "PDF",
+        "TIFF",
+        "MTIFF",
+        "PDF_A"
+      ],
+      "MONO": [
+        "PDF",
+        "TIFF",
+        "MTIFF",
+        "PDF_A"
+      ],
+      "GRAY": [
+        "JPEG",
+        "PDF",
+        "TIFF",
+        "MTIFF",
+        "PDF_A"
+      ]
+    },
+    "mEraseBackBottomRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseBackLeftRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseBackRightRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseBackTopRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseFrontBottomRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseFrontLeftRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseFrontRightRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseFrontTopRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mEraseMarginUnitList": [
+      "DEFAULT"
+    ],
+    "mJobAssemblyModeList": [
+      "DEFAULT"
+    ],
+    "mMaxPagesPerAttachmentRange": {
+      "mLowerBound": 0,
+      "mUpperBound": 0
+    },
+    "mMeDocFormatList": [
+      "DEFAULT",
+      "JPEG",
+      "PDF",
+      "TIFF",
+      "MTIFF",
+      "PDF_A"
+    ],
+    "mMediaSourceList": [
+      "DEFAULT",
+      "FLATBED",
+      "ADF",
+      "AUTO"
+    ],
+    "mMediaWeightAdjustmentList": [
+      "DEFAULT"
+    ],
+    "mMisfeedDetectionModeList": [
+      "DEFAULT",
+      "OFF",
+      "ON"
+    ],
+    "mOrientationList": [
+      "DEFAULT",
+      "PORTRAIT",
+      "LANDSCAPE"
+    ],
+    "mOutputQualityList": [
+      "DEFAULT",
+      "LOW",
+      "MEDIUM",
+      "HIGH"
+    ],
+    "mPlexList": [
+      "DEFAULT",
+      "BOOK",
+      "NONE",
+      "FLIP"
+    ],
+    "mProgressDialogModeList": [
+      "DEFAULT",
+      "OFF",
+      "ON"
+    ],
+    "mResolutionList": [
+      "DEFAULT",
+      "DPI_75",
+      "DPI_150",
+      "DPI_200",
+      "DPI_300",
+      "DPI_400",
+      "DPI_600"
+    ],
+    "mScanPreviewList": [
+      "DEFAULT"
+    ],
+    "mScanSizeList": [
+      "DEFAULT",
+      "AUTO",
+      "LETTER",
+      "LEGAL",
+      "EXECUTIVE",
+      "STATEMENT",
+      "LEDGER",
+      "GENERAL_5X7in",
+      "GENERAL_5X8in",
+      "GENERAL_8POINT5X13in",
+      "OFICIO",
+      "A3",
+      "A4",
+      "A5",
+      "A6",
+      "JB5",
+      "JB6",
+      "K16",
+      "K16_184X260mm",
+      "PK16",
+      "JDOUBLE_POSTCARD"
+    ],
+    "mSharpnessAdjustmentList": [
+      "DEFAULT",
+      "LEVEL_0",
+      "LEVEL_1",
+      "LEVEL_2",
+      "LEVEL_3",
+      "LEVEL_4"
+    ],
+    "mSplitAttachmentByPageList": [
+      "DEFAULT"
+    ],
+    "mTextPhotoOptimizationList": [
+      "DEFAULT",
+      "TEXT",
+      "GRAPHIC"
+    ],
+    "mTransmissionModeList": [
+      "DEFAULT",
+      "JOB",
+      "IMAGE"
+    ]
+  }
+}

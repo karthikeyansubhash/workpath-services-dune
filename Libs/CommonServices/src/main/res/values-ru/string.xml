@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="sps_permission_not_granted">Разрешения HP Workpath SDK не получены. Чтобы получить необходимые разрешения, вызовите метод JetAdvantageLink.requestPermissions().</string>
+<string name="sps_permission">Разрешения HP Workpath SDK</string>
+<string name="sps_self_permission">Разрешения HP Workpath SDK</string>
+<string name="grant">Предоставить</string>
+<string name="deny">Отказать</string>
+<string name="permission_text" formatted="false">Предоставить приложению %s (%s) полный доступ к комплекту разработчика HP Workpath SDK?</string>
+<string name="more_permission_text_small">Подробнее</string>
+<string name="more_permission_text_big">С помощью комплекта разработчика HP Workpath SDK приложение будет иметь доступ к функциям сканирования, копирования и передачи факсов любого подключенного принтера. Чтобы отозвать все предоставленные разрешения, перейдите к разделу "Управление приложением" и удалите все со</string>
+<string name="sps_sd_card">Приложению HP Workpath SDK необходимо использовать SD-карту на вашем устройстве, чтобы сохранять отсканированные файлы. Предоставьте разрешения, когда отобразятся системные запросы.</string>
+<string name="permission_not_granted">Приложению не было предоставлено разрешение на запись в память устройства, что может стать причиной его некорректной работы. Рекомендуется предоставить приложению это разрешение.</string>
+</resources>

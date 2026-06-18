@@ -1,0 +1,168 @@
+# To enable ProGuard in your project, edit project.properties
+# to define the proguard.config property as described in that file.
+#
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in ${sdk.dir}/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+-keep public class net.xoaframework.**
+-keep public class org.apache.**
+-keep public class org.snmp4j.**
+-keep public class com.hp.jetadvantage.link.api.**
+-keep public class okhttp3.**
+-keep public class com.google.code.gson.**
+-keep public class com.hp.jetadvantage.link.common.data.**
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Application
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+-keep public class * extends android.content.ContentProvider
+-keep public class SelectedPrinter
+-keep public class ISpsIntentWrapper
+-keep public class Sdk
+-keep public class com.hp.jetadvantage.link.services.common.util.MergeSupport
+-keep public class Platform
+-keep public class Config
+-keep public class Sdk
+-keep public class Sdk$*
+-keep public class com.hp.jetadvantage.link.services.common.util.EventUtil
+-keep public class com.hp.jetadvantage.link.services.common.util.AAConstants
+-keep public class com.hp.jetadvantage.link.services.common.util.AAUtil
+-keep public class com.hp.jetadvantage.link.services.common.mfpsversion.helper.**
+-keep public class com.hp.jetadvantage.link.services.common.up.Constants
+-keep public class com.hp.jetadvantage.link.common.data.MFPID
+-keep public class com.hp.jetadvantage.link.services.common.util.UserDetails
+-keep public class MFPSVersionCP
+-keep public class MFPSVersionCP$*
+-keep public class com.hp.jetadvantage.link.services.common.up.CompositeFieldVisitorOverride
+-keep public class com.hp.jetadvantage.link.services.common.util.UserCredInfo
+-keep public class com.hp.jetadvantage.link.services.common.providers.SpsPermissionContentProvider
+-keep public class org.codehaus.jackson.**
+-keep public class org.joda.time.**
+-keep public class org.cups4j.**
+-keep public class jcifs.**
+-keep public class ch.ethz.vppserver.**
+-keep public class  com.hp.workpath.api.deviceusage.**
+-keep public class  com.hp.workpath.api.statistics.**
+
+-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,*Annotation*,EnclosingMethod
+
+-keepclassmembers class net.xoaframework.** { *; }
+-keepclassmembers class org.codehaus.jackson.** { *; }
+-keepclassmembers class org.apache.** { *; }
+-keepclassmembers class org.joda.time.** { *; }
+-keepclassmembers class com.hp.jetadvantage.link.** { *; }
+-keepclassmembers class okhttp3.** { *; }
+-keepclassmembers class com.google.code.gson.** { *; }
+-keepclassmembers class com.hp.jetadvantage.link.common.data.** { *; }
+-keepclassmembers class ISpsIntentWrapper { *; }
+-keepclassmembers class Platform { *; }
+-keepclassmembers class Config { *; }
+-keepclassmembers class Sdk { *; }
+-keepclassmembers class Sdk$* { *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.MergeSupport { *; }
+-keepclassmembers class com.hp.jetadvantage.link.api.SsdkUnsupportedException { *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.UserDetails { *; }
+-keepclassmembers class MFPSVersionCP$* { *; }
+-keepclassmembers class jcifs.** { *; }
+
+-keepclassmembers class SelectedPrinter { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.up.Constants { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.EventUtil { public *; }
+-keepclassmembers class ApiLevel { public *; }
+-keepclassmembers class MFPSVersionCP { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.up.CompositeFieldVisitorOverride { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.AAConstants { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.AAUtil { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.UserCredInfo { public *; }
+-keepclassmembers class com.hp.jetadvantage.link.services.common.util.AAUtil {
+   public ** extractLoggableUserName(***);
+}
+-keepclassmembers class com.hp.workpath.api.deviceusage.** { public *; }
+-keepclassmembers class com.hp.workpath.api.statistics.** { *; }
+
+# Keep all native
+-keepclasseswithmembernames class * {
+    native <methods>;
+}
+
+# Keep all parcelables
+-keepclassmembers class * implements android.os.Parcelable {
+    public <fields>;
+}
+
+-keepclassmembers class * implements android.os.Parcelable {
+    static ** CREATOR;
+}
+
+-keepclassmembers,allowoptimization enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclassmembers class * implements java.io.Serializable {
+    static final long serialVersionUID;
+    private static final java.io.ObjectStreamField[] serialPersistentFields;
+    private void writeObject(java.io.ObjectOutputStream);
+    private void readObject(java.io.ObjectInputStream);
+    java.lang.Object writeReplace();
+    java.lang.Object readResolve();
+}
+
+-keep public class **.R {
+  public *;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+# Warnings to be removed. Otherwise maven plugin stops, but not dangerous
+#-dontwarn android.support.**
+#-dontwarn org.codehaus.jackson.**
+#-dontwarn java.awt.**
+#-dontwarn javax.security.**
+#-dontwarn java.beans.**
+#-dontwarn javax.xml.**
+#-dontwarn java.util.**
+#-dontwarn com.google.common.**
+#-dontwarn org.apache.jackrabbit.**
+#-dontwarn org.apache.jackrabbit.webdav.**
+#-dontwarn org.apache.commons.httpclient.**
+-ignorewarnings
+
+#-dontobfuscate
+#-dontusemixedcaseclassnames
+-dontskipnonpubliclibraryclasses
+-dontskipnonpubliclibraryclassmembers
+#-dontpreverify
+#-dontoptimize
+-verbose
+
+-assumenosideeffects class android.util.Log {
+    public static *** e(...);
+    public static *** w(...);
+    public static *** wtf(...);
+    public static *** d(...);
+    public static *** v(...);
+}
+
+-assumenosideeffects class net.xoaframework.ui.local.android.lib.common.log.XLog {
+    public static *** d(...);
+    public static *** v(...);
+    public static *** i(...);
+}

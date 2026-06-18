@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="status_other">其他</string>
+<string name="status_unknown">未知</string>
+<string name="status_idle">闲置</string>
+<string name="status_printing">正在打印</string>
+<string name="status_warmup">预热</string>
+</resources>

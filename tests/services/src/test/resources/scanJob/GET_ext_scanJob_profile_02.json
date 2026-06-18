@@ -1,0 +1,1963 @@
+{
+    "base": {
+        "definitions": [{
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "scanProgressMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["spmNone", "spmStandard"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "scanCaptureMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["scmStandard", "scmJobBuild", "scmBook", "scmIdCard"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "imagePreviewMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ipmNone", "ipmStandard"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "autoColorDetect",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["acdmDetectOnly", "acdmTreatNonColorAsMonochrome", "acdmTreatNonColorAsGrayscale"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "colorMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["cmAutoDetect", "cmMonochrome", "cmColor", "cmGrayscale"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                "value": {
+                                    "optionName": "outputFileFormat",
+                                    "optionValue": "ffJpeg"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "message": "JPEG file format does not support Monochrome color mode.",
+                            "optionValues": ["cmColor", "cmGrayscale"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.validValuesRule",
+                            "typeName": "validValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "mediaSource",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["miFlatbed", "miAdf", "miAuto"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "mediaSize",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["msANSI_A_8point5x11in", "msANSI_A_Rotated_8point5x11in", "msLegal_8point5x14in", "msExecutive_7point25x10point5in", "msInvoice_5point5x8point5in", "msANSI_B_11x17in", "msGeneral_5x7in", "msGeneral_5x8in", "msFoolscap_8point5x13in", "msOficio_216x340mm", "msISO_A3_297x420mm", "msISO_A4_210x297mm", "msISO_A5_148x210mm", "msISO_A5_Rotated_148x210mm", "msISO_A6_105x148mm", "msJIS_B5_182x257mm", "msJIS_B5_Rotated_182x257mm", "msJIS_B6_128x182mm", "msK16_195x270mm", "msK16_184x260mm", "msK16_197x273mm", "msJDoublePostcard_148x200mm"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "scanCaptureMode",
+                                                "optionValue": "scmBook"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "scanCaptureMode",
+                                                "optionValue": "scmIdCard"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "optionValues": ["msANSI_A_8point5x11in", "msISO_A4_210x297mm"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.validValuesRule",
+                            "typeName": "validValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "xOffset",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 1000,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "yOffset",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 1000,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "plexMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["pmSimplex", "pmDuplex"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "resolution",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["dpi75", "dpi150", "dpi200", "dpi300", "dpi400", "dpi600"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "contentType",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["dctMixed", "dctPhoto", "dctText", "dctImage"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "contentOrientation",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["coPortrait", "coLandscape"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "scanCaptureMode",
+                                                "optionValue": "scmIdCard"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "optionValues": ["coPortrait"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.validValuesRule",
+                            "typeName": "validValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "mediaBindingFormat",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["bfFlipLeft", "bfFlipUp"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                "value": {
+                                    "optionName": "plexMode",
+                                    "optionValue": "pmDuplex"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "blackBackground",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "mediaType",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["mtPlain", "mtPhoto"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "autoExposure",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "exposureLevel",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 8,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "gamma",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 2000,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "highlightLevel",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 9,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "colorSensitivity",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 100,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "colorRange",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 100,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "ccdChannel",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["cctNtsc", "cctGray", "cctGrayEmulated", "cctRed", "cctGreen", "cctBlue"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "binaryRendering",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["brHalftone", "brThreshold", "brErrorDiffusion"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "descreen",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "misfeedDetection",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "shadowLevel",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 100,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "compressionFactor",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 10,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "threshold",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 100,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "scanningSpeed",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ssAuto", "ssSlow"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "autoDeskew",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "edgeToEdgeScan",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "longPlotScan",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "invertColors",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "sharpness",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 4,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "backgroundCleanup",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 8,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "contrast",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 8,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "blankPageSuppression",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["bpdDisable"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "pagesPerSheet",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ppsOneUp", "ppsTwoUp", "ppsFourUp"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "backgroundNoiseRemoval",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "backgroundColorRemoval",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "backgroundColorRemovalLevel",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "blackEnhancementLevel",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "lowerBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "majorVersion": 1,
+                            "step": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.rangeRule",
+                            "typeName": "rangeRule",
+                            "upperBoundary": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.signed64",
+                                "typeName": "signed64",
+                                "value": 255,
+                                "versionAdded": "1.0"
+                            },
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "outputFileFormat",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ffJpeg", "ffPdf", "ffTiff", "ffMtiff", "ffPdfa"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "outputQualityVsSize",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["qvsLowest", "qvsLow", "qvsMedium", "qvsHigh", "qvsHighest"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "description": "supported with PDF/A only (basically the normal/high compression setting)",
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "outputFileCompression",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffJpeg"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdf"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffTiff"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffMiff"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "description": "supported for TIFF/MTIFF when color is MONO. Supported values are Auto and G4",
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "monoCompression",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffJpeg"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdf"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdfa"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "colorMode",
+                                                "optionValue": "cmColor"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "colorMode",
+                                                "optionValue": "cmGrayscale"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ctAuto", "ctG4"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "description": "supported for TIFF/MTIFF when color is color/gray. Supported values are tiff60 and posttiff60. OJPEG is tiff6, JPEG is postTiff6",
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "colorAndGrayCompression",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffJpeg"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdf"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdfa"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                            "value": {
+                                                "optionName": "colorMode",
+                                                "optionValue": "cmMonochrome"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["ctOJpeg", "ctJpeg"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "outputFileEncryption",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                "value": {
+                                    "optionName": "outputFileFormat",
+                                    "optionValue": "ffPdf"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "encryptionPassword",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.orOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffPdf"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                            "value": {
+                                                "optionName": "outputFileEncryption",
+                                                "optionValue": "true"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.disableRule",
+                            "typeName": "disableRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "fileTransmissionMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["tmJob", "tmImage"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasMediaSize",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasMediaSource",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasXExtent",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasYExtent",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasAnchor",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputCanvasOrientation",
+                "rules": [],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "filename.explicit.explicitValue",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                "value": {
+                                    "optionName": "filename.isExplicit",
+                                    "optionValue": "true"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 255,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "filename.expression.expressionPattern",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                "value": {
+                                    "optionName": "filename.isExpression",
+                                    "optionValue": "true"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1024,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }
+        ],
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionProfile",
+        "typeName": "optionProfile",
+        "versionAdded": "1.0"
+    },
+    "email": {
+        "definitions": [{
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "fromAddress",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 256,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "toAddress",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 256,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "ccAddress",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 256,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "bccAddress",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 256,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "subject",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 255,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "body",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "maximumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 1000,
+                                "versionAdded": "1.0"
+                            },
+                            "minimumLength": {
+                                "majorVersion": 1,
+                                "typeGUN": "com.hp.ext.types.protocolTypes.version.1.type.unsigned32",
+                                "typeName": "unsigned32",
+                                "value": 0,
+                                "versionAdded": "1.0"
+                            },
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.stringLengthRule",
+                            "typeName": "stringLengthRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }
+        ],
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionProfile",
+        "typeName": "optionProfile",
+        "versionAdded": "1.0"
+    },
+    "http": {
+        "definitions": [{
+                "isAvailable": true,
+                "majorVersion": 1,
+                "optionName": "fileTransmissionMode",
+                "rules": [{
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "majorVersion": 1,
+                            "optionValues": ["tmJob", "tmImage"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.possibleValuesRule",
+                            "typeName": "possibleValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.andOperator",
+                                "value": {
+                                    "operators": [{
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffJpeg"
+                                            }
+                                        }, {
+                                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.notEqualsOperator",
+                                            "value": {
+                                                "optionName": "outputFileFormat",
+                                                "optionValue": "ffTiff"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            "majorVersion": 1,
+                            "optionValues": ["tmJob"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.validValuesRule",
+                            "typeName": "validValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }, {
+                        "majorVersion": 1,
+                        "polymorphInstance": {
+                            "condition": {
+                                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.equalsOperator",
+                                "value": {
+                                    "optionName": "outputFileFormat",
+                                    "optionValue": "ffJpeg"
+                                }
+                            },
+                            "majorVersion": 1,
+                            "optionValues": ["tmImage"],
+                            "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.validValuesRule",
+                            "typeName": "validValuesRule",
+                            "versionAdded": "1.0"
+                        },
+                        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionRule",
+                        "typeName": "optionRule",
+                        "versionAdded": "1.0"
+                    }
+                ],
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }
+        ],
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionProfile",
+        "typeName": "optionProfile",
+        "versionAdded": "1.0"
+    },
+    "jobStorage": {
+        "definitions": [{
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "xOffset",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "yOffset",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "resolution",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "outputFileFormat",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "filename.explicit.explicitValue",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }, {
+                "isAvailable": false,
+                "majorVersion": 1,
+                "optionName": "filename.expression.expressionPattern",
+                "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionDefinition",
+                "typeName": "optionDefinition",
+                "versionAdded": "1.0"
+            }
+        ],
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.optionProfile.version.1.type.optionProfile",
+        "typeName": "optionProfile",
+        "versionAdded": "1.0"
+    },
+    "links": [{
+            "href": "/ext/scanJob/v1/profile",
+            "majorVersion": 1,
+            "rel": "self",
+            "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.link",
+            "typeName": "link",
+            "versionAdded": "1.0"
+        }
+    ],
+    "majorVersion": 1,
+    "opMeta": {
+        "contentFilter": {
+            "items": [{
+                    "majorVersion": 1,
+                    "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.contentFilterString",
+                    "typeName": "contentFilterString",
+                    "value": "*",
+                    "versionAdded": "1.0"
+                }
+            ],
+            "majorVersion": 1,
+            "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.contentFilter",
+            "typeName": "contentFilter",
+            "versionAdded": "1.0"
+        },
+        "majorVersion": 1,
+        "typeGUN": "com.hp.ext.types.baseTypes.version.1.type.operationMeta",
+        "typeName": "operationMeta",
+        "versionAdded": "1.0"
+    },
+    "typeGUN": "com.hp.ext.service.scanJob.version.1.type.profile",
+    "typeName": "profile",
+    "versionAdded": "1.0"
+}

@@ -1,0 +1,30 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    
+    <uses-permission android:name="${SERVICES_PERMISSION}" />
+
+    <uses-permission android:name="${PACMAN_PACKAGE_LIFECYCLE_EVENTS_PERMISSION}" />
+
+    <uses-permission android:name="${SYSTEM_PERMISSION}" />
+
+    <application>
+        <provider
+            android:name=".provider.StorageLetContentProvider"
+            android:authorities="com.hp.jetadvantage.link.authority.storageletcp"
+            android:grantUriPermissions="true"
+            android:exported="true"/>
+
+        <service android:name=".service.MassstorageObserverService"/>
+
+        <receiver android:name=".receiver.StartMassStroageEventReceiver"
+            android:permission="${SYSTEM_PERMISSION}"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="${WORKPATH_SERVICE_READY}"/>
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

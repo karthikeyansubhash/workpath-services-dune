@@ -1,0 +1,23 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.device.services.interfaces'
+}
+
+
+dependencies {
+    api rootProject.ext.jacksonCore
+    api rootProject.ext.jacksonAnnotations
+    api rootProject.ext.jacksonDatabind
+    api rootProject.ext.okhttpVersion
+    api rootProject.ext.gsonVersion
+
+    implementation rootProject.ext.support_v4
+    implementation rootProject.ext.androidMaterialVersion
+
+    testImplementation rootProject.ext.junitVersion
+}

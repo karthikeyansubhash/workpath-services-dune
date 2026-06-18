@@ -1,0 +1,296 @@
+name: Merge PR on Label
+
+on:
+  pull_request:
+    branches: [ "master", "dune_*"]
+    types: [labeled]
+
+jobs:
+  ready-to-merge-label-check:
+    runs-on: self-hosted
+    if: contains(github.event.pull_request.labels.*.name, 'ready to merge')
+    steps:
+      - name: Check ready to merge label
+        run: echo "ready to merge label detected. Passing check."
+  version-up:
+    needs: ready-to-merge-label-check
+    runs-on: [ self-hosted ]
+    if: contains(github.event.pull_request.labels.*.name, 'ready to merge')
+    outputs:
+      bump_created: ${{ steps.update-version.outputs.bump_created }}
+      bump_commit_sha: ${{ steps.update-version.outputs.bump_commit_sha }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path : ${{ vars.VERSION_WORKING_FOLDER }}
+          ref: ${{ github.event.pull_request.base.ref }}
+          sparse-checkout: |
+            ${{ vars.VERSION_FILE }}
+          sparse-checkout-cone-mode: false
+
+      - name: "1. Get current version from base ref branch"
+        id : read-version-file
+        run: |
+          $versionFilePath = "${{ vars.VERSION_WORKING_FOLDER }}/${{ vars.VERSION_FILE }}"
+          $currentDate = Get-Date -Format "yyyyMMdd"
+          
+          $fileContent = Get-Content -Path $versionFilePath
+          $pattern = '^version = ((\d+\.\d+\.\d+)-([\w\s]+)\.(\d+)\+D\d+)'
+          $versionLine = Select-String -Path $versionFilePath -Pattern $pattern | Select-Object LineNumber
+          if ($versionLine) {
+            $oldLine = $fileContent[$versionLine.LineNumber - 1]
+            if($oldLine -match $pattern) {
+              Write-Output "Old version: $matches[1]"
+          
+              $fullMatch = $matches[0]
+              $versionPart = $matches[1]
+              $versionCore = $matches[2]
+              $branchName = $matches[3]
+              $sNumber = [int]$matches[4]
+              $incrementedSNumber = $sNumber + 1
+              $newVersion = "$versionCore-$branchName.$incrementedSNumber+D$currentDate"
+          
+              $newLine = $oldLine -replace $pattern, "version = $newVersion"
+              $fileContent[$versionLine.LineNumber - 1] = $newLine
+              # Set FILE_CONTENT and NEW_VERSION using GITHUB_ENV
+              $encodedFileContent = $fileContent | ForEach-Object {
+                if ($_.Trim() -ne "") {
+                  $_ + "%0A"
+                } else {
+                  $_
+                }
+              }
+              $encodedFileContent = $encodedFileContent -replace "%0A+(?=%0A$)", ""
+              echo "FILE_CONTENT=$encodedFileContent" | Out-File -FilePath $env:GITHUB_ENV -Append
+              echo "NEW_VERSION=$newVersion" | Out-File -FilePath $env:GITHUB_ENV -Append
+            }
+            Write-Output $env:GITHUB_ENV
+            Write-Output "Output:"
+            Write-Output $fileContent
+            Write-Output $encodedFileContent
+          } else {
+            Write-Output "cannot find version pattern."
+          }
+      - uses: actions/checkout@v4
+        with:
+          path : ${{ vars.VERSION_WORKING_FOLDER }}
+          ref: ${{ github.head_ref }}
+          sparse-checkout: |
+            ${{ vars.VERSION_FILE }}
+          sparse-checkout-cone-mode: false
+      - name: "2. Update version on PR branch"
+        id: update-version
+        run: |
+          $versionFilePath = "${{ vars.VERSION_WORKING_FOLDER }}/${{ vars.VERSION_FILE }}"
+          "bump_created=false" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+          "bump_commit_sha=" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+
+          if ([string]::IsNullOrWhiteSpace($env:FILE_CONTENT)) {
+            Write-Error "Version content was not prepared from the base branch."
+            exit 1
+          }
+
+          $fileContent = $env:FILE_CONTENT -replace "%0A ", "`n"
+          $fileContent = $fileContent -replace "%0A", "`n"
+          Set-Content -Path $versionFilePath -Value $fileContent
+          Write-Output "Modified file content:"
+          Write-Output $fileContent
+          
+          cd ${{ vars.VERSION_WORKING_FOLDER }}
+          git add ${{ vars.VERSION_FILE }}
+          git diff --cached --quiet
+          if ($LASTEXITCODE -eq 0)
+          {
+            Write-Output "No changes to commit."
+          }
+          else
+          {
+            git commit -m "$env:NEW_VERSION , PR #${{ github.event.pull_request.number }}"
+            if ($LASTEXITCODE -ne 0) {
+              Write-Error "git commit failed."
+              exit 1
+            }
+            git push
+            if ($LASTEXITCODE -ne 0) {
+              Write-Error "git push failed."
+              exit 1
+            }
+            $commitSha = git rev-parse HEAD
+            "bump_created=true" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            "bump_commit_sha=$commitSha" | Out-File -FilePath $env:GITHUB_OUTPUT -Append
+            Write-Output "Changes committed and pushed."
+          }
+  merge-pr:
+    needs: version-up
+    runs-on: [ self-hosted ]
+    if: contains(github.event.pull_request.labels.*.name, 'ready to merge')
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path : ${{ vars.VERSION_WORKING_FOLDER }}
+          ref: ${{ github.event.pull_request.base.ref }}
+          sparse-checkout: |
+            ${{ vars.VERSION_FILE }}
+          sparse-checkout-cone-mode: false
+      - name: "Wait for status check to be registered"
+        run: Start-Sleep -Seconds 5
+      - name: "Merge PR (action v0.0.5)"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Headers for API request
+          $headers = @{
+            "Authorization" = "token $env:GITHUB_TOKEN"
+            "Content-Type" = "application/json"
+          }
+          
+          # First, check PR status
+          $checkUrl = "https://github.azc.ext.hp.com/api/v3/repos/workpath-dune/workpath-services-dune/pulls/${{ github.event.pull_request.number }}"
+          Write-Output "Checking PR ${{ github.event.pull_request.number }} status via $checkUrl"
+          
+          try {
+            $prStatus = Invoke-RestMethod -Uri $checkUrl -Method Get -Headers $headers -ErrorAction Stop
+            
+            Write-Output "PR State: $($prStatus.state)"
+            Write-Output "PR Merged: $($prStatus.merged)"
+            Write-Output "PR Mergeable: $($prStatus.mergeable)"
+            Write-Output "PR Mergeable State: $($prStatus.mergeable_state)"
+            
+            if ($prStatus.merged -eq $true) {
+              Write-Output "PR ${{ github.event.pull_request.number }} is already merged. Workflow succeeded."
+              exit 0
+            }
+            
+            if ($prStatus.state -eq "closed") {
+              Write-Output "PR ${{ github.event.pull_request.number }} is closed but not merged. Exiting."
+              exit 1
+            }
+            
+            # Check if PR is actually mergeable
+            if ($prStatus.mergeable -eq $false) {
+              Write-Output "Warning: PR is not mergeable. State: $($prStatus.mergeable_state)"
+              Write-Output "Attempting merge anyway (may be temporarily not mergeable)..."
+            }
+          }
+          catch {
+            Write-Output "Failed to check PR status: $($_.Exception.Message)"
+            # Continue to try merge anyway
+          }
+          
+          # GitHub API endpoint for merging PR
+          $url = "https://github.azc.ext.hp.com/api/v3/repos/workpath-dune/workpath-services-dune/pulls/${{ github.event.pull_request.number }}/merge"
+          Write-Output "Merging PR ${{ github.event.pull_request.number }} via $url"
+          Write-Output "${env:GITHUB_REPOSITORY}"
+          
+          # Body specifying merge method (optional)
+          $body = @{
+            "merge_method" = "rebase"  # Specify merge method: merge, squash, rebase
+          } | ConvertTo-Json
+          
+          # Send HTTP PUT request to merge PR
+          try {
+            Invoke-RestMethod -Uri $url -Method Put -Headers $headers -Body $body -ErrorAction Stop
+            Write-Output "PR ${{ github.event.pull_request.number }} successfully merged."
+          }
+          catch {
+            $errorMessage = $_.Exception.Message
+            $errorMessage2 = $_
+            Write-Output "Failed to merge PR ${{ github.event.pull_request.number }} with error: $errorMessage"
+            Write-Output "Failed to merge PR ${{ github.event.pull_request.number }} with error: $errorMessage2"
+            $errorMessageJson = $errorMessage2 | ConvertFrom-Json
+            if ($errorMessageJson.message) {
+              Write-Output "Error message: $($errorMessageJson.message)"
+              $errorMessage = $errorMessageJson.message
+            }
+            
+            # Check again if PR was merged by someone else during the workflow
+            try {
+              $prStatusFinal = Invoke-RestMethod -Uri $checkUrl -Method Get -Headers $headers -ErrorAction Stop
+              Write-Output "Final PR State: $($prStatusFinal.state), Merged: $($prStatusFinal.merged)"
+              
+              if ($prStatusFinal.merged -eq $true) {
+                Write-Output "PR ${{ github.event.pull_request.number }} was merged by another process. Treating as success."
+                exit 0
+              }
+            }
+            catch {
+              Write-Output "Failed to recheck PR status: $($_.Exception.Message)"
+            }
+          
+            $comment_url = "https://github.azc.ext.hp.com/api/v3/repos/${env:GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/comments"
+            Write-Output "Comment via $comment_url"
+          
+            # Body for the comment
+            $comment_body = @{
+              "body" = "Failed to merge PR #${{ github.event.pull_request.number }}: $errorMessage"
+            } | ConvertTo-Json
+          
+            # Send HTTP POST request to create a comment
+            Invoke-RestMethod -Uri $comment_url -Method Post -Headers $headers -Body $comment_body -ErrorAction Stop
+            Write-Output "Commented on PR ${{ github.event.pull_request.number }} about the merge failure."
+          
+            $encodedLabelName = [Uri]::EscapeDataString("ready to merge")
+            $label_url = "https://github.azc.ext.hp.com/api/v3/repos/${env:GITHUB_REPOSITORY}/issues/${{ github.event.pull_request.number }}/labels/${encodedLabelName}"
+            Invoke-RestMethod -Uri $label_url -Method Delete -Headers $headers -ErrorAction Stop
+            Write-Output "Removed 'ready to merge' label from PR ${{ github.event.pull_request.number }}."
+          
+            exit 1
+          }
+
+  revert-version-up:
+    needs: [version-up, merge-pr]
+    runs-on: [ self-hosted ]
+    if: >
+      always() &&
+      contains(github.event.pull_request.labels.*.name, 'ready to merge') &&
+      needs.version-up.outputs.bump_created == 'true' &&
+      needs.merge-pr.result == 'failure'
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          path : ${{ vars.VERSION_WORKING_FOLDER }}
+          ref: ${{ github.head_ref }}
+          fetch-depth: 0
+          sparse-checkout: |
+            ${{ vars.VERSION_FILE }}
+          sparse-checkout-cone-mode: false
+      - name: "Revert version-up commit on PR branch"
+        run: |
+          $repoPath = "${{ vars.VERSION_WORKING_FOLDER }}"
+          $commitSha = "${{ needs.version-up.outputs.bump_commit_sha }}"
+
+          if ([string]::IsNullOrWhiteSpace($commitSha)) {
+            Write-Error "No version-up commit SHA was recorded."
+            exit 1
+          }
+
+          cd $repoPath
+          git fetch origin "${{ github.head_ref }}"
+          git checkout -B "${{ github.head_ref }}" "origin/${{ github.head_ref }}"
+
+          git cat-file -e "${commitSha}^{commit}" 2>$null
+          if ($LASTEXITCODE -ne 0) {
+            Write-Output "Commit $commitSha is not available on branch ${{ github.head_ref }}. Skipping revert."
+            exit 0
+          }
+
+          git merge-base --is-ancestor $commitSha HEAD
+          if ($LASTEXITCODE -ne 0) {
+            Write-Output "Commit $commitSha is no longer in the PR branch history. Skipping revert."
+            exit 0
+          }
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git revert --no-edit $commitSha
+          if ($LASTEXITCODE -ne 0) {
+            git status --short
+            git revert --abort
+            Write-Error "Automatic revert failed for commit $commitSha."
+            exit 1
+          }
+
+          git push origin HEAD:"${{ github.head_ref }}"
+          Write-Output "Version-up commit $commitSha was reverted on branch ${{ github.head_ref }}."
+

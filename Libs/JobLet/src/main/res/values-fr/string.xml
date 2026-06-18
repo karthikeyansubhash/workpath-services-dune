@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ellipces">…</string>
+<string name="progress_dialog_title">Progression de tâche</string>
+<string name="progress_dialog_progressing_message">Tâche %1$s en cours…</string>
+<string name="progress_dialog_complete_message">Tâche %1$s terminée…</string>
+<string name="job_number_label">Numéro de la tâche :</string>
+<string name="job_name_label">Nom de la tâche:</string>
+<string name="confirmation_dialog_title">Confirmation de la tâche</string>
+<string name="confirmation_dialog_message">Voulez-vous numériser la page suivante ?</string>
+<string name="yes">Oui</string>
+<string name="no">Non</string>
+<string name="close">Fermer</string>
+<string name="cancel">Annuler</string>
+<string name="completed">Terminée</string>
+<string name="pages">Page(s)</string>
+<string name="job_sending">Envoi</string>
+<string name="job_cancelling">Annulation</string>
+<string name="job_scanning">Numérisation</string>
+<string name="job_progressing">En cours</string>
+<string name="job_waiting">En attente</string>
+<string name="job_image_number">Page %1$d</string>
+<string name="job_dst_number">sur %1$s</string>
+<string name="job_canceled">Annulée</string>
+<string name="job_failed">Échec</string>
+<string name="job_completed">Terminée. Total</string>
+<string name="job_progress_notification_title">Progression de tâche</string>
+<string name="job_progress_notification_message">Appuyez pour retourner à la progression de la tâche</string>
+<string name="copying">Copie</string>
+<string name="faxing">Télécopie</string>
+<string name="printing">Impression</string>
+<string name="scanning">Numérisation</string>
+<string name="sending">Envoi</string>
+<string name="saving">Enregistrement</string>
+<string name="copies">copies</string>
+<string name="set">/ ensembles %1$s</string>
+<string name="noti_jobs_progressing">%1$s tâche(s) en cours</string>
+<string name="noti_jobs_waiting">%1$s tâche(s) en attente</string>
+<string name="noti_jobs_canceled">%1$s tâche(s) annulée(s)</string>
+<string name="failed">Échec avec le code de résultat %1$s</string>
+<string name="job_confirmation_title">Numériser plus</string>
+</resources>

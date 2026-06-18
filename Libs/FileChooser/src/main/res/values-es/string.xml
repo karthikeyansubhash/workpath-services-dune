@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+<string name="ip_address">___.___.___.___</string>
+<string name="empty_directory">Directorio vacío</string>
+<string name="storage_removed">El almacenamiento se ha eliminado o se ha desmontado.</string>
+<string name="choose_file">Seleccione un archivo</string>
+<string name="error_selecting_file">Error al seleccionar archivo</string>
+<string name="internal_storage">Almacenamiento interno</string>
+<string name="base_path_name">Almacenar</string>
+<string name="select_file_source">Seleccionar archivo de origen</string>
+<string name="input_address">Compartir selección</string>
+<string name="input_address_toast">Introduzca una dirección para compartir</string>
+<string name="shares_discovery_wifi_only">La detección solo se puede compartir por Wi-Fi.</string>
+<string name="change_host">Cambiar host</string>
+<string name="invalid_ip_input">Introduzca una dirección IP válida</string>
+<string name="downloading">Descargando</string>
+<string name="downloading_message">Descargando %s en su dispositivo…</string>
+<string name="share_login">Iniciar sesión</string>
+<string name="input_login_text">Escriba los datos de %s</string>
+<string name="input_login_label_domain">Dominio:</string>
+<string name="input_login_label_user">Usuario:</string>
+<string name="input_login_label_password">Contraseña:</string>
+<string name="can_be_empty">Puede estar vacío</string>
+<string name="download_failed">Error en la descarga. Inténtelo de nuevo.</string>
+<string name="downloaded_to">Archivo descargado en %s</string>
+<string name="failed_to_access">No es posible acceder a los datos compartidos. Inténtelo de nuevo.</string>
+<string name="failed_to_login">Error al iniciar sesión. Inténtelo de nuevo más tarde o utilice otras credenciales.</string>
+<string name="failed_to_access_share">Error al acceder a la carpeta compartida. Inténtelo de nuevo más tarde con una dirección diferente.</string>
+<string name="enter_ip">Introducir IP</string>
+<string name="choose_list_ip">Lista De</string>
+<string name="ip_address_label">Introducir IP:</string>
+<string name="ip_address_select">Seleccionar IP</string>
+<string name="loading_hosts">Buscando hosts…</string>
+<string name="no_hosts">No se han encontrado hosts</string>
+<string name="refresh">Actualizar</string>
+<string name="please_select_ip">Seleccione una IP de la lista o introdúzcala manualmente.</string>
+<string name="error_file_format">Solo se pueden imprimir archivos en formato PDF y JPG.</string>
+</resources>

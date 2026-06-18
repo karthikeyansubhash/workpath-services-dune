@@ -1,0 +1,21 @@
+plugins {
+    id 'com.android.library'
+}
+
+apply from: "${rootProject.projectDir}/common-config.gradle"
+
+android {
+    namespace 'com.hp.jetadvantage.link.api'
+}
+
+gradle.projectsEvaluated {
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-g:vars"
+    }
+}
+
+dependencies {
+    implementation rootProject.ext.support_v4
+    api project(':Util-Common')
+
+}
