@@ -1,0 +1,278 @@
+{
+    "generated_doc_filepath": "",
+    "purpose": "",
+    "associated_knowledge_bases": {
+        "raw_code": [
+            {
+                "file_identity": "README.md",
+                "README.md": {
+                    "chunks": [
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform",
+                            "language": "markdown",
+                            "id": "783efd490166c68c2f2a626064d9310d8b6002764a6fd9b39d903efc4736182e",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > Description",
+                            "language": "markdown",
+                            "id": "d32e85587899d3a0c1688eb03e7a502e92d4ef2dd9b32d69bb81da48343313b1",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > Installation",
+                            "language": "markdown",
+                            "id": "6992346508742b12149feaf39d95b4228e7682514f9740062ddc284b2552a8b4",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > PI Testing",
+                            "language": "markdown",
+                            "id": "21067d52ae51a70d4af2f67e8e2899f9bab8d78a495fb22a3ec17d4e34072816",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > Merging Changes from the PR",
+                            "language": "markdown",
+                            "id": "c977a61dbe232fcf0be49dd7ae56ed956172dc840af7acf4e47b55685b86443c",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > APK Version",
+                            "language": "markdown",
+                            "id": "01c1abd62eb9ef93ae7ff38ccd199119d01e7da5252b86c01d3ba51c85c626ae",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "Workpath Platform Services Repository for the Dune Platform > License",
+                            "language": "markdown",
+                            "id": "b9d6b6933f64210c3325720238f0c1282ca2153bff4db758516b4760f7048cb0",
+                            "chunkType": "section",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 1,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "README.md",
+                            "startLine": 1,
+                            "blobSha": "bf8b9fca48a3cc7e3bc40000180221f2f08c8828",
+                            "name": "README.md",
+                            "language": "markdown",
+                            "id": "d059c1a37a51c0ba970f673e2b6b0fa1b7891d14c148e16897b683351612597f",
+                            "chunkType": "module",
+                            "isTestFile": false
+                        }
+                    ]
+                }
+            },
+            {
+                "file_identity": "build.gradle",
+                "build.gradle": {
+                    "chunks": [
+                        {
+                            "endLine": 80,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "build.gradle",
+                            "startLine": 1,
+                            "blobSha": "47f8adf9679cfc4a7f975311795b1c0ab5200396",
+                            "name": "",
+                            "language": "unknown",
+                            "id": "abc042fcf4e52d9c24fdbc60e918cd1e5ea151ecf4460b8906fec2ad7877f2ed",
+                            "chunkType": "fallback",
+                            "isTestFile": false
+                        },
+                        {
+                            "endLine": 120,
+                            "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                            "filePath": "build.gradle",
+                            "startLine": 66,
+                            "blobSha": "47f8adf9679cfc4a7f975311795b1c0ab5200396",
+                            "name": "",
+                            "language": "unknown",
+                            "id": "5d2cee40e444c6f2232910d5d9d8c1f6e9245aaa81cfe785657849ab00ff7171",
+                            "chunkType": "fallback",
+                            "isTestFile": false
+                        }
+                    ]
+                }
+            }
+        ],
+        "code_doc": [
+            {
+                "kb_id": "",
+                "kb_name": ""
+            }
+        ]
+    },
+    "apps": {
+        "workpathServices": {
+            "generated_doc_filepath": "",
+            "purpose": "",
+            "associated_knowledge_bases": {
+                "raw_code": [
+                    {
+                        "file_identity": "build.gradle",
+                        "apps/workpathServices/build.gradle": {
+                            "chunks": [
+                                {
+                                    "endLine": 80,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": "apps/workpathServices/build.gradle",
+                                    "startLine": 1,
+                                    "blobSha": "cf1b7810ed585fee817a2b5283303531c6ab7ca4",
+                                    "name": "",
+                                    "language": "unknown",
+                                    "id": "c6485ef993d6486a69a4f99c3aaffff326d7f45d9b4b7e31ead19cfe5e03e1ed",
+                                    "chunkType": "fallback",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 145,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": "apps/workpathServices/build.gradle",
+                                    "startLine": 66,
+                                    "blobSha": "cf1b7810ed585fee817a2b5283303531c6ab7ca4",
+                                    "name": "",
+                                    "language": "unknown",
+                                    "id": "5f9b92bd977529f8f6a22c24cbe144091d5d51f393523c885a6eba4b4903e621",
+                                    "chunkType": "fallback",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 150,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": "apps/workpathServices/build.gradle",
+                                    "startLine": 131,
+                                    "blobSha": "cf1b7810ed585fee817a2b5283303531c6ab7ca4",
+                                    "name": "",
+                                    "language": "unknown",
+                                    "id": "a37edbed57a1e444209d9829fd059a77615db7458d101eeeaf2b80581dcc22ab",
+                                    "chunkType": "fallback",
+                                    "isTestFile": false
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code_doc": [
+                    {
+                        "kb_id": "",
+                        "kb_name": ""
+                    }
+                ]
+            },
+            "src": {
+                "main": {
+                    "java": {
+                        "com": {
+                            "hp": {
+                                "jetadvantage": {
+                                    "link": {
+                                        "services": {
+                                            "generated_doc_filepath": "",
+                                            "purpose": "",
+                                            "associated_knowledge_bases": {
+                                                "raw_code": [
+                                                    {
+                                                        "file_identity": "JetAdvantageLinkServicesApplication.java",
+                                                        "apps/workpathServices/src/main/java/com/hp/jetadvantage/link/services/JetAdvantageLinkServicesApplication.java": {
+                                                            "chunks": [
+                                                                {
+                                                                    "endLine": 36,
+                                                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                                                    "filePath": "apps/workpathServices/src/main/java/com/hp/jetadvantage/link/services/JetAdvantageLinkServicesApplication.java",
+                                                                    "startLine": 33,
+                                                                    "blobSha": "d849701ece5e570e9b46cfeaf02d3ce398d56bc3",
+                                                                    "name": "JetAdvantageLinkServicesApplication",
+                                                                    "language": "java",
+                                                                    "id": "fbd9f592db06adcb9432b5c917cea826705d514841289ec8a061acf9ae1017b7",
+                                                                    "chunkType": "class",
+                                                                    "isTestFile": false
+                                                                },
+                                                                {
+                                                                    "endLine": 45,
+                                                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                                                    "filePath": "apps/workpathServices/src/main/java/com/hp/jetadvantage/link/services/JetAdvantageLinkServicesApplication.java",
+                                                                    "startLine": 37,
+                                                                    "blobSha": "d849701ece5e570e9b46cfeaf02d3ce398d56bc3",
+                                                                    "name": "CopyOptionProfileAdapter.onCreate",
+                                                                    "language": "java",
+                                                                    "id": "d169e6fd875397467c10846e1f2fc72a50442eec7eccc8169f40759b7dcc8e76",
+                                                                    "chunkType": "method",
+                                                                    "isTestFile": false
+                                                                },
+                                                                {
+                                                                    "endLine": 57,
+                                                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                                                    "filePath": "apps/workpathServices/src/main/java/com/hp/jetadvantage/link/services/JetAdvantageLinkServicesApplication.java",
+                                                                    "startLine": 46,
+                                                                    "blobSha": "d849701ece5e570e9b46cfeaf02d3ce398d56bc3",
+                                                                    "name": "KeyType.ENABLE_STRICT_MODE",
+                                                                    "language": "java",
+                                                                    "id": "eddc775d80b4ca028cb69bdbbcc3470b025a8140ed8af2822fa48ddc2d1a178c",
+                                                                    "chunkType": "method",
+                                                                    "isTestFile": false
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ],
+                                                "code_doc": [
+                                                    {
+                                                        "kb_id": "",
+                                                        "kb_name": ""
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
