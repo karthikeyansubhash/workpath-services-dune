@@ -1,0 +1,1434 @@
+{
+    ".github": {
+        "generated_doc_filepath": "",
+        "purpose": "",
+        "associated_knowledge_bases": {
+            "raw_code": [
+                {
+                    "file_identity": "copilot-instructions.md",
+                    ".github/copilot-instructions.md": {
+                        "chunks": [
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project)",
+                                "language": "markdown",
+                                "id": "d54021e3c93687070fd793b2e5f8a8ad4c7cc90593ff89507e3e0041bc8a2eee",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > Project Overview",
+                                "language": "markdown",
+                                "id": "815046a3693f19132ac1732fc3d1ed83775514cfa876f68b2267ac49c6de83b5",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles",
+                                "language": "markdown",
+                                "id": "63a1f619db868d41e3a77f1a847ee7cf5854b0eb5a6b95ae326e6fb2ef7bb06a",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.1 Analysis-Derive-Review Loop",
+                                "language": "markdown",
+                                "id": "acdf6d2c2902481fd87fe0416baf8feb09b3e15240565227a8c06e90cabf4a9e",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.2 Cross-Validation",
+                                "language": "markdown",
+                                "id": "6482749b639b575d0b11fba34ae0b61a4e6c2451c6f191be2cc9c2b07c526a4c",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.3 Session Splitting Principle",
+                                "language": "markdown",
+                                "id": "c9782bdf3e8cdb3dc8cc241a1cffbd7120037d439f7adaffd255bdc9df0e6c31",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.4 Documentation Principle",
+                                "language": "markdown",
+                                "id": "ee53d9ecc82515502c87f04c24614e097fe2c3daadb10af4c3e7ec03eaf06090",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.5 Build-Fix Loop",
+                                "language": "markdown",
+                                "id": "4a4230c20c0d0460e63199d15b819cebee259635c3706412f73ea59ffcc7fd77",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 1. Development Process Principles > 1.6 Test Coverage",
+                                "language": "markdown",
+                                "id": "d0ad612957cc7cdf37ad59ca4b4eee6e6cb15b525099fbfa2b1a350c890bcdd1",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Copilot Development Guidelines (Workpath-services Project) > 2. Build Commands",
+                                "language": "markdown",
+                                "id": "f59eb24a841c28decf1362a6b78fbfe81c5cf49e23644c4aa9946d21e0e6b705",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Individual module build",
+                                "language": "markdown",
+                                "id": "6ef51ea447a32dd3409873984720cb441127e780ee644b5cd819788c6a64d089",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Full Services build (production code integration check)",
+                                "language": "markdown",
+                                "id": "8226da344d298d7a80fe07ee0506b7dda5f69989e2499020ed0ad96e83ce4a2c",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Sim build (for simulator)",
+                                "language": "markdown",
+                                "id": "49a6d143cc9130a9ea0b8ec119a3937fe0f55a760b85780c6fb787faf4393ede",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Release build",
+                                "language": "markdown",
+                                "id": "5885308ea7795f6c0457c340909a39acb8fdfa37a3b0d83cb922d167e5f53df7",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Unit tests",
+                                "language": "markdown",
+                                "id": "1efda28b4115a4cd684ba4406f7147c4ce1ba8ae75ea9bc8c587f32a8856e519",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Run specific test class only",
+                                "language": "markdown",
+                                "id": "f8c78cb72ce3a1813c7ea81393c34a5f1d6ec651b38f967fa9441358a251834d",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Android instrumented tests",
+                                "language": "markdown",
+                                "id": "54edf2f02e401e6442d7110aacf52464a932665a9a91dcc2f940adab4857d4da",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Android instrumented tests > 3. Code Writing Rules",
+                                "language": "markdown",
+                                "id": "9d5db37aebc58eda90f0f197e063068159fb62fb7d2e2799433e25648c2f8940",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Android instrumented tests > 3. Code Writing Rules > 3.1 Java Code Style",
+                                "language": "markdown",
+                                "id": "fb8da5f456c84d5b666da024e019c5a53b5a26354b8b3d3c99f04b9267a4f14c",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Android instrumented tests > 3. Code Writing Rules > 3.2 Test Code Patterns",
+                                "language": "markdown",
+                                "id": "93b5429e02f3e40ef8c59a690aa4192b5885b81064dc0bbd36f4688bd68a4c60",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "Android instrumented tests > 3. Code Writing Rules > 3.3 Build Variant Handling",
+                                "language": "markdown",
+                                "id": "6fafda2ceca5a277533275d1c657e3e1941da12775a7814145041d3e000cd0a1",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/copilot-instructions.md",
+                                "startLine": 1,
+                                "blobSha": "f5d25a2d0a43468418f8d46dc33dfd75ff5a184a",
+                                "name": "copilot-instructions.md",
+                                "language": "markdown",
+                                "id": "469893294ffb4291d0806706cac895377875bbe74c9e0e6b85dec53815394895",
+                                "chunkType": "module",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "file_identity": "pull_request_template.md",
+                    ".github/pull_request_template.md": {
+                        "chunks": [
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "Description",
+                                "language": "markdown",
+                                "id": "9131c9c5f898fff494b827345f6fe23ef195071fc9e78354174697382179ae58",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "Motivation and Context",
+                                "language": "markdown",
+                                "id": "24e15f2ee44b71996f9ec8b7cccb8f7c219cb0a1eaf1dfaaedb5999f667c6e7a",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "Affected Modules",
+                                "language": "markdown",
+                                "id": "8b42b6e1b3202363998b254bdc02ce7fee601ae83b398e8d7a026832f6c57b20",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "Types of changes",
+                                "language": "markdown",
+                                "id": "aee4162d41789459de3bc7ec695c2dcb840769d31f1ce2b6f179e8002d3ccf3e",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "Testing - Describe how this was qualified",
+                                "language": "markdown",
+                                "id": "a8b5d671880caacfa72114b51c0fe87c746d06ad5e9f48b99d7262315d14b55a",
+                                "chunkType": "section",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 1,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": ".github/pull_request_template.md",
+                                "startLine": 1,
+                                "blobSha": "1817e3024da3af8496c973153af5a8da44796a7f",
+                                "name": "pull_request_template.md",
+                                "language": "markdown",
+                                "id": "5ce60b525ae4c85514140e8ce880bfb3079eadd722319e4e641913942dc20567",
+                                "chunkType": "module",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                }
+            ],
+            "code_doc": [
+                {
+                    "kb_id": "",
+                    "kb_name": ""
+                }
+            ]
+        },
+        "workflows": {
+            "generated_doc_filepath": "",
+            "purpose": "",
+            "associated_knowledge_bases": {
+                "raw_code": [
+                    {
+                        "file_identity": "android.yml",
+                        ".github/workflows/android.yml": {
+                            "chunks": [
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "4fd9b02667781312284f330d63482a2d0618fb1932444d573f83c9b9b7803cee",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "on",
+                                    "language": "yaml",
+                                    "id": "ce9f46f3d6b61bb51f78e951a800b79f9ae0241288304c739d6b4194b2d74d5b",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "on > pull_request",
+                                    "language": "yaml",
+                                    "id": "324e128d72f03c0e1fd73b1558145fad75e6acba846a6b7ad2da2e8e0501d08e",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "on > pull_request > branches",
+                                    "language": "yaml",
+                                    "id": "50891138e70564e0913f1b07b1d70df48d29e6f82c382bfe2645c86bd7baeecc",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "on > schedule",
+                                    "language": "yaml",
+                                    "id": "b67c6f07a6dbd009b089b249266c78f668c52c918616fe647c6024e5dc3222c9",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "on > workflow_dispatch",
+                                    "language": "yaml",
+                                    "id": "b0ea45ec1f10073877c272bbfb1f0b5a274d3690f9095e1f23032b085458730d",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "jobs",
+                                    "language": "yaml",
+                                    "id": "084a3957653296cfcb41fa41a63ba3730a416371398c48c2f2f3c8a57b584634",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "jobs > build_and_run_tests",
+                                    "language": "yaml",
+                                    "id": "b14626594c48c82e89909f1da15aa18ec9c934510598f4aeb5531522e65fc936",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "jobs > build_and_run_tests > runs-on",
+                                    "language": "yaml",
+                                    "id": "d606d78f6cba9de7487a46d37ec2289c5a1a3d087c8b969c32c7c23b846e3343",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "jobs > build_and_run_tests > steps",
+                                    "language": "yaml",
+                                    "id": "f031cc21faa882216d5b1522fab101cac954f3791dd30fbdef154e6cbc77b184",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/android.yml",
+                                    "startLine": 1,
+                                    "blobSha": "f2163979ba24b394df6f2e3c289510a08d19ac90",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "85e56b9e8da3669000d9e85be9ae86ee24c65b554e2b194e8e0e3ad0dfbfe6e8",
+                                    "chunkType": "module",
+                                    "isTestFile": false
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "file_identity": "deploy_pages.yml",
+                        ".github/workflows/deploy_pages.yml": {
+                            "chunks": [
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "498d58b699d2eb9441f18f2bca6d9ea2e6f99be1fd75c50f4b961a9dfe305e56",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "on",
+                                    "language": "yaml",
+                                    "id": "04ec94ced358a952efdb49583801a6c0d38692a0c957a38d6be87721b3b4f6ee",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "on > push",
+                                    "language": "yaml",
+                                    "id": "65452e1c9857f37cbf0c0c775942a56407bcc5cf1916a46092e05533115c1959",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "on > push > branches",
+                                    "language": "yaml",
+                                    "id": "425a84bbd2f21d7f7ae87912726d51051b146bfc4190b466b609d6c753e4d5a8",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "on > workflow_dispatch",
+                                    "language": "yaml",
+                                    "id": "eb3d30baa787a1ef3c720cb470822a6dff4cd44ea31258bf3689eeb5620ce2d7",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "permissions",
+                                    "language": "yaml",
+                                    "id": "10bd6f6a719424a76710b1ea7865424ca1e0975b1a4c073d1cb33d70053eaea8",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "permissions > contents",
+                                    "language": "yaml",
+                                    "id": "ccc237f8b6706a77a93c5a0e71520920bb7a3bbfab443897fb6ddc4ce6e007de",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "permissions > pages",
+                                    "language": "yaml",
+                                    "id": "5b48a088258c15f0760e2745fcf0367fe65e449e78ce5f608880ecfd3cd8ad4b",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "permissions > id-token",
+                                    "language": "yaml",
+                                    "id": "491851dff400a365b739d0cb1842ac6f1d4f309b3643752f978d31de954623be",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "concurrency",
+                                    "language": "yaml",
+                                    "id": "763f486c3b45ab3f07c18b3090a506ae6fb7dc463f2e289bd169bf70050caa37",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "concurrency > group",
+                                    "language": "yaml",
+                                    "id": "5d123faaabdcc0b9e47bada4461973d0ca11aa79627cd73b29e7c320e5853c15",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "concurrency > cancel-in-progress",
+                                    "language": "yaml",
+                                    "id": "ea537cd39b12df618a518221c14a3276e3d8429349c94cd6a7899967db8ec906",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "jobs",
+                                    "language": "yaml",
+                                    "id": "8433f78a272879e713fb1840b0c383217f661b836b847be59294b25bf7f66baa",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "jobs > deploy",
+                                    "language": "yaml",
+                                    "id": "eba447a5f97dc536feebd58589b222fb5fe18f58d079c706b6ef1762e0446080",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "jobs > deploy > runs-on",
+                                    "language": "yaml",
+                                    "id": "774bbe98d6bc77ccf10fb11f5c1764ce6fbd734a43bc1f70cf11140eae2f5789",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "jobs > deploy > environment",
+                                    "language": "yaml",
+                                    "id": "32c2fdcffa46dc3615ac9bfc10726229895d7dfb13c469cfbebdf35d1969a679",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "jobs > deploy > steps",
+                                    "language": "yaml",
+                                    "id": "49435210026242ec82ed61f04a1602842f200476fabfe0103b8496c0ea7caf1b",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/deploy_pages.yml",
+                                    "startLine": 1,
+                                    "blobSha": "99fd7560036380c6c2760d03dc705cf3b1ac10c6",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "e1756586d92c294ef51b69e3c38b96464d38ee5a59b91ed23e9a63032d9714eb",
+                                    "chunkType": "module",
+                                    "isTestFile": false
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "file_identity": "pr_lable.yml",
+                        ".github/workflows/pr_lable.yml": {
+                            "chunks": [
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "befa808174d61d7789bb6660b838caa0eddcd2c526d54b81e223b1d7d394a5d0",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "on",
+                                    "language": "yaml",
+                                    "id": "f15b9a913c5da7610883fe2d5026d3ae9bb250d25e22bb800580ba9ad1f64897",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "on > pull_request",
+                                    "language": "yaml",
+                                    "id": "b133017007c180ce367d99933043ba32a3e810d1679b32f2efe3360cc6d7d62d",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "on > pull_request > types",
+                                    "language": "yaml",
+                                    "id": "e79362c46c98eef726f5005f9079890367b01dfb6c0eea799fec48d25e1368e5",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "jobs",
+                                    "language": "yaml",
+                                    "id": "0b24b5d79308d4caaf62047f895b5823171e40e2a591e8e4f3059488e1795319",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "jobs > remove-label",
+                                    "language": "yaml",
+                                    "id": "45ba6c6bae54814811a912248133439fe9ba5cdeb855ec4ae930dfe9753553f7",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "jobs > remove-label > if",
+                                    "language": "yaml",
+                                    "id": "b7d410bad0d2b7357abe3b5c3cfd10c1a28ff35abbfbd407b84b6ac5e520742b",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "jobs > remove-label > runs-on",
+                                    "language": "yaml",
+                                    "id": "dffe036e6a5456ca3cdbac41a7d883bc79a450353622f2e726966cfe58c005bd",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "jobs > remove-label > steps",
+                                    "language": "yaml",
+                                    "id": "7a38bb845d2550d0fce1afd9db70eb9722ffc843ef687fbddc7913dc6426551c",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/pr_lable.yml",
+                                    "startLine": 1,
+                                    "blobSha": "995ebd0c35dd26b613dc0830ab3f4055c804e995",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "8069bc79c43af3f710d5f95027016fb17dfa8548997c1aba29ef9468233bc314",
+                                    "chunkType": "module",
+                                    "isTestFile": false
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "file_identity": "version.yml",
+                        ".github/workflows/version.yml": {
+                            "chunks": [
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "efbbbeffcde061e49b0b7439d324f66d4f866a26ed20d5787af9e8bce12b60d6",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "on",
+                                    "language": "yaml",
+                                    "id": "e0195b9598438729a1adb48734d1e390ee773e07cd6f1403ef8689deca280200",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "on > pull_request",
+                                    "language": "yaml",
+                                    "id": "8c142836d2d87c38776a4f4133259872fb2615ab0974fa6a483b3d36915bdd89",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "on > pull_request > branches",
+                                    "language": "yaml",
+                                    "id": "39e1ed3a1f82253515d54bbc59a17a23e8dc0efce4f180f16096cab7e5c02ede",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "on > pull_request > types",
+                                    "language": "yaml",
+                                    "id": "9a8e4c524f27037e352af017cc1e49c7fd04dba115b040846c73fcb3817722dd",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs",
+                                    "language": "yaml",
+                                    "id": "47a58be70df8130ab7291045655992fc8276d0025abb7ca4d3e7ac174972ca33",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > ready-to-merge-label-check",
+                                    "language": "yaml",
+                                    "id": "529e6e855e5160eb66a56cede63f2218f55c6279bae423c4df8468fcfb80059f",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > ready-to-merge-label-check > runs-on",
+                                    "language": "yaml",
+                                    "id": "6683fd91c91d3073a48fa94f321991848319f74d66933dc05840c2070b923c8e",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > ready-to-merge-label-check > if",
+                                    "language": "yaml",
+                                    "id": "3dd704a1783e109c6cfbed8646b6bb9a516f990222d29c2fc85597715c707197",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > ready-to-merge-label-check > steps",
+                                    "language": "yaml",
+                                    "id": "6f8ab918b3717a14836e5ed2346f9fd3b7c781e083a584289eaf7e7f5190437a",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up",
+                                    "language": "yaml",
+                                    "id": "be70c1487d4596805e349fd429d821f06fc91458406720b764e7a9a7468dbf6d",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up > needs",
+                                    "language": "yaml",
+                                    "id": "b3c20d33cd2ee039f2bb765b7f8694265517897b57b3475fdbc607d62fa00125",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up > runs-on",
+                                    "language": "yaml",
+                                    "id": "b12bceffa19ec816bb3677795a861718fc95f421954bd48e24dffd35edb26a03",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up > if",
+                                    "language": "yaml",
+                                    "id": "cfe2a63a6b072ee538afd42e63685d2cedcaa3967ec248f048fa9f474076d682",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up > outputs",
+                                    "language": "yaml",
+                                    "id": "b1ca2fc7058a6eed1a38fb53f263bdaeb2162ceba6dce877ea26456e43fb9d65",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > version-up > steps",
+                                    "language": "yaml",
+                                    "id": "c83700fb6318676cc479a7b000136577016a34f63e2d74bd09d94538df5f3ab4",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > merge-pr",
+                                    "language": "yaml",
+                                    "id": "f3cba74adbb241dea9ef3e682ad2d036cf01e411402770708c01119748e847a5",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > merge-pr > needs",
+                                    "language": "yaml",
+                                    "id": "b326961e9df9a12a09facebceedf370efe7aae7263a6a1ae243285a864ed8003",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > merge-pr > runs-on",
+                                    "language": "yaml",
+                                    "id": "ef3e114fc4513ed2cd63a96c3b108afdb87095bd5a2a0377647e341e83c32c5e",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > merge-pr > if",
+                                    "language": "yaml",
+                                    "id": "4ea664a4fa248e254517fa9b056c2511d307ee8266e955259942aae2562556dc",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > merge-pr > steps",
+                                    "language": "yaml",
+                                    "id": "0d12bb5aeb72c13336e12b0f254ab7ecbdb5342bfa52cb51f17febf040cd8826",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > revert-version-up",
+                                    "language": "yaml",
+                                    "id": "cd65db360478c5f9f715d2909a62ccff8c8949a0d533866520d93b68bb24bd5c",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > revert-version-up > needs",
+                                    "language": "yaml",
+                                    "id": "da22d25802de5aab681270a8ce01d9689633154f863013890594d871b504f832",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > revert-version-up > runs-on",
+                                    "language": "yaml",
+                                    "id": "30d0526070332ca22fc1c1363780288e3fc4ea07f03be7578e38faef6c63a08e",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > revert-version-up > if",
+                                    "language": "yaml",
+                                    "id": "079f70aeeed9cdbc341f5ec525210b5a2295f3d5f22f15b8bf4824b601eea932",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "jobs > revert-version-up > steps",
+                                    "language": "yaml",
+                                    "id": "f636b9364812caed15425f96a9d9c8761564ecc181bd981bf8ca64e2fbc5f03a",
+                                    "chunkType": "config",
+                                    "isTestFile": false
+                                },
+                                {
+                                    "endLine": 1,
+                                    "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                    "filePath": ".github/workflows/version.yml",
+                                    "startLine": 1,
+                                    "blobSha": "c27e4a853f9deaf344f24ba8b107919e9545271b",
+                                    "name": "name",
+                                    "language": "yaml",
+                                    "id": "beba1edbc1cff23b4447bab3fcd1e7a896d392c9030cd51d19e2d991b417378b",
+                                    "chunkType": "module",
+                                    "isTestFile": false
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "code_doc": [
+                    {
+                        "kb_id": "",
+                        "kb_name": ""
+                    }
+                ]
+            }
+        }
+    },
+    "ForBuild": {
+        "generated_doc_filepath": "",
+        "purpose": "",
+        "associated_knowledge_bases": {
+            "raw_code": [
+                {
+                    "file_identity": "IpsendLib.py",
+                    "ForBuild/IpsendLib.py": {
+                        "chunks": [
+                            {
+                                "endLine": 17,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/IpsendLib.py",
+                                "startLine": 11,
+                                "blobSha": "d5582d54cc60ebb8f9b4f05a8070642c812d98bf",
+                                "name": "WirelessConfig.printTimeTick",
+                                "language": "python",
+                                "id": "fef9791e0294d4d87722a47e7f5c9cc08e2e775cd63ae59ec71d4928914112d7",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 70,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/IpsendLib.py",
+                                "startLine": 18,
+                                "blobSha": "d5582d54cc60ebb8f9b4f05a8070642c812d98bf",
+                                "name": "Subscription.firePRN",
+                                "language": "python",
+                                "id": "399cca1b8c1f991bc1d6210f09f46cded35442a4100aa61c52de42272d2f9e15",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 93,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/IpsendLib.py",
+                                "startLine": 71,
+                                "blobSha": "d5582d54cc60ebb8f9b4f05a8070642c812d98bf",
+                                "name": "OXPdConnect.sendfile",
+                                "language": "python",
+                                "id": "f0e3a2fd2c598f36b32b8639dcb62e73cb96f1635cc4a11918236e4e6278d053",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 98,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/IpsendLib.py",
+                                "startLine": 94,
+                                "blobSha": "d5582d54cc60ebb8f9b4f05a8070642c812d98bf",
+                                "name": "LauncherType.executeBatch",
+                                "language": "python",
+                                "id": "2027fcb3d98ddae02eb86e267e0ba0c819625d8f7ee92babc753c519a817b3f1",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 106,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/IpsendLib.py",
+                                "startLine": 99,
+                                "blobSha": "d5582d54cc60ebb8f9b4f05a8070642c812d98bf",
+                                "name": "NotificationMode.executeIpPrnSend",
+                                "language": "python",
+                                "id": "a64e4f1153a29d14f572363baa65d391e4a75379b0494565ca3edacb846fa4cb",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "file_identity": "composeoutfolder.py",
+                    "ForBuild/composeoutfolder.py": {
+                        "chunks": [
+                            {
+                                "endLine": 28,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 18,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "EmailInfo.silentremove",
+                                "language": "python",
+                                "id": "9f1e9d2c4f80bd0b3825aaa089f767fc9624e6445dbd0f03305c6f01666fb264",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 40,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 29,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "AppChannelMessageHandler.move_rename",
+                                "language": "python",
+                                "id": "a4bcdb5d9da760835fa4e616f57912a8d7cd0e95197fde8dd6b6f0158d5db34b",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 67,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 41,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "SelectedPrinterContentProvider.copy",
+                                "language": "python",
+                                "id": "5d28a7ced6da591809c3825bbc52be439c2360878181a69edce2442175c74aa6",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 94,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 68,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "OXPdConnect.copyRaw",
+                                "language": "python",
+                                "id": "4c29e2c0d94cf36b364e429db26c7df0f31d268860c72c2e7ce3f296ea28152c",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 101,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 95,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "ServiceDetails.makeWritable",
+                                "language": "python",
+                                "id": "ee47b74976e442ef281b8f334b2cfb1cd4a7ea3dacb6e8563b2f335c46475ffe",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 142,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/composeoutfolder.py",
+                                "startLine": 109,
+                                "blobSha": "f0095ed7a70ce75887f55e75163a554a4cb4c62e",
+                                "name": "DestResult.main",
+                                "language": "python",
+                                "id": "1aaec35d17fed40de8377806c8155f7846746aac7e485288ef190c4fbc3daeda",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "file_identity": "module_locator.py",
+                    "ForBuild/module_locator.py": {
+                        "chunks": [
+                            {
+                                "endLine": 9,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/module_locator.py",
+                                "startLine": 6,
+                                "blobSha": "8de394c42d61c9f625c08ab1ea969ea70ca8d73c",
+                                "name": "TokenData.we_are_frozen",
+                                "language": "python",
+                                "id": "b7625951ebcf39373b0ee3a002fe93d99ec70fca185b94fe63fcee6c055db56d",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 16,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/module_locator.py",
+                                "startLine": 10,
+                                "blobSha": "8de394c42d61c9f625c08ab1ea969ea70ca8d73c",
+                                "name": "DeviceConnector.module_path",
+                                "language": "python",
+                                "id": "912e9471c65fcdeac6f6a58b2c631374de7db3b246d2c02f049ef4315cee8a0c",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                },
+                {
+                    "file_identity": "setenvvariables.py",
+                    "ForBuild/setenvvariables.py": {
+                        "chunks": [
+                            {
+                                "endLine": 64,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/setenvvariables.py",
+                                "startLine": 32,
+                                "blobSha": "903a684d66a8c76c71e271cfd7752f31fcccf181",
+                                "name": "SimpleAuthority.get_build_name",
+                                "language": "python",
+                                "id": "41c227f2890782f79bd340dc25828bb341278df2ab96a3d2d338ed4662539ce2",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 91,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/setenvvariables.py",
+                                "startLine": 65,
+                                "blobSha": "903a684d66a8c76c71e271cfd7752f31fcccf181",
+                                "name": "CounterUnit.store_properties_file",
+                                "language": "python",
+                                "id": "28c07561b9a07df30acc1497ee91d42d52870dcd85b91b9d32f8fbbb0a46a608",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            },
+                            {
+                                "endLine": 145,
+                                "indexedAt": "2026-06-19T11:36:42.304257392Z",
+                                "filePath": "ForBuild/setenvvariables.py",
+                                "startLine": 92,
+                                "blobSha": "903a684d66a8c76c71e271cfd7752f31fcccf181",
+                                "name": "DestResult.main",
+                                "language": "python",
+                                "id": "5819d2acce9de986fd4e8ccffd64386d58e4d18b1df12e0ce7c66854d1cc5855",
+                                "chunkType": "function",
+                                "isTestFile": false
+                            }
+                        ]
+                    }
+                }
+            ],
+            "code_doc": [
+                {
+                    "kb_id": "",
+                    "kb_name": ""
+                }
+            ]
+        }
+    }
+}
